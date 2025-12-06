@@ -1,0 +1,287 @@
+"rt","stimulus","button_pressed","trial_type","trial_index","time_elapsed","internal_node_id","subject","list","ppt_gender","ppt_language","ptptID","url","first_guess","correct","key_press","responses","image","verb","phrase","condition","test_part"
+"3079.600000023842","Welcome to the experiment. Press Continue to begin.",0,"html-button-response",0,3080,"0.0-0.0",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"262161.3000000119",NA,NA,"external-html",1,266280,"0.0-1.0",70039,"ListA","man","english","EMA7","consent.html",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"76069.30000001192","<p>On the next page, you will see portraits of 8 people and their names.</p><p>Your first task is to take a few minutes to memorise the names of these people.</p><p>You will have to recall their names during the rest of the experiment, so it is</p><p>essential that you try to memorise these people and their names as best as you can.</p><p><strong>You will then be tested on your memory of these names and portraits.</strong></p><p>The experiment will start after you have completed this memory test.</p><p>Ready?</p>",0,"html-button-response",2,342349,"0.0-2.0",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"375518.59999996424","<img src='img/portrait_matrix_listA.jpg' style='width:900px;height:500px;''></img><p>If you have memorised all the portraits and names and are ready to start, press Continue.</p><p><strong>Please note: Your memory of these faces will be tested 5 times during this experiment.</strong></p>",0,"html-button-response",3,718876,"0.0-3.0-0.0",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"20232","<img src=""portrait/WW1.jpg""style=""height:400px;""></img>",1,"html-button-response",4,740111,"0.0-3.0-1.0",70039,"ListA","man","english","EMA7",NA,"true",1,NA,NA,NA,NA,NA,NA,NA
+"null","CORRECT",NA,"html-keyboard-response",5,741622,"0.0-3.0-2.0-0.0",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"4673.399999976158","<img src=""portrait/WM1.jpg""style=""height:400px;""></img>",6,"html-button-response",6,746296,"0.0-3.0-4.0",70039,"ListA","man","english","EMA7",NA,"true",6,NA,NA,NA,NA,NA,NA,NA
+"null","CORRECT",NA,"html-keyboard-response",7,747805,"0.0-3.0-5.0-0.0",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"1564.699999988079","<img src=""portrait/WW2.jpg""style=""height:400px;""></img>",3,"html-button-response",8,749371,"0.0-3.0-7.0",70039,"ListA","man","english","EMA7",NA,"true",3,NA,NA,NA,NA,NA,NA,NA
+"null","CORRECT",NA,"html-keyboard-response",9,750886,"0.0-3.0-8.0-0.0",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"4903.699999988079","<img src=""portrait/BW1.jpg""style=""height:400px;""></img>",0,"html-button-response",10,755790,"0.0-3.0-10.0",70039,"ListA","man","english","EMA7",NA,"true",0,NA,NA,NA,NA,NA,NA,NA
+"null","CORRECT",NA,"html-keyboard-response",11,757302,"0.0-3.0-11.0-0.0",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"1873.0999999642372","<img src=""portrait/BW2.jpg""style=""height:400px;""></img>",2,"html-button-response",12,759176,"0.0-3.0-13.0",70039,"ListA","man","english","EMA7",NA,"true",2,NA,NA,NA,NA,NA,NA,NA
+"null","CORRECT",NA,"html-keyboard-response",13,760686,"0.0-3.0-14.0-0.0",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"2009.4000000357628","<img src=""portrait/WM2.jpg""style=""height:400px;""></img>",7,"html-button-response",14,762695,"0.0-3.0-16.0",70039,"ListA","man","english","EMA7",NA,"true",7,NA,NA,NA,NA,NA,NA,NA
+"null","CORRECT",NA,"html-keyboard-response",15,764205,"0.0-3.0-17.0-0.0",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"3793.300000011921","<img src=""portrait/BM2.jpg""style=""height:400px;""></img>",5,"html-button-response",16,767999,"0.0-3.0-19.0",70039,"ListA","man","english","EMA7",NA,"true",5,NA,NA,NA,NA,NA,NA,NA
+"null","CORRECT",NA,"html-keyboard-response",17,769510,"0.0-3.0-20.0-0.0",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"1467.7000000476837","<img src=""portrait/BM1.jpg""style=""height:400px;""></img>",4,"html-button-response",18,770978,"0.0-3.0-22.0",70039,"ListA","man","english","EMA7",NA,"true",4,NA,NA,NA,NA,NA,NA,NA
+"null","CORRECT",NA,"html-keyboard-response",19,772485,"0.0-3.0-23.0-0.0",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"22780.700000047684","<p>You got 8 out of 8 right first time. Press Continue.</p>",0,"html-button-response",20,795266,"0.0-3.0-25.0",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"72586.19999998808","<p>In this experiment, you will view photographs of the people from the memory game.</p><p>By using the <strong>exact</strong> phrase given <i>after</i> the photograph appears and recalling the correct names of the people in the photographs, form a sentence describing an interaction. You do not need to capitalise names.</p><p>Type your answer in the space provided. Please complete every sentence before moving onto the next trial.</p><p>You will only have a few seconds to memorise each given photograph and phrase before you can respond, so try your best to focus.</p><p>An example is given below. Press 'Continue' when you are ready.</p><img src='img/speaking_example.jpg' style='width:800px;height:460px;''></img>",0,"html-button-response",21,868854,"0.0-4.0",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"3543.900000035763","<p>Before the experiment starts, you will watch two example trials. Press 'Continue'.</p>",0,"html-button-response",22,873407,"0.0-5.0",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"null","<img src='img/meet.gif' style='height:400px;''></img>",NA,"html-keyboard-response",23,876413,"0.0-6.0",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<p>is meeting</p>",NA,"html-keyboard-response",24,878422,"0.0-7.0",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"4858.800000011921","<p><b>Answer:</b> kate is meeting beth</p>",0,"html-button-response",25,883282,"0.0-8.0",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"null","<img src='img/spy.gif' style='height:400px;''></img>",NA,"html-keyboard-response",26,886293,"0.0-9.0",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<p>is being spied on by</p>",NA,"html-keyboard-response",27,888302,"0.0-10.0",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"26413.69999998808","<p><b>Answer:</b> luke is being spied on by dave</p>",0,"html-button-response",28,914716,"0.0-11.0",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"147606.80000001192","<p>Ready to start the experiment?</p><br><p><strong>Remember to describe the picture using a full sentence,</strong></p><p><strong>that combines the names of the people with the <i>exact</i> phrase given.</strong></p><p><strong>To receive full payment you must do this correctly.</strong></p><p><strong> You do not need to capitalise names or use punctuation.</strong></p><br><p>Press 'Continue' to begin.</p>",0,"html-button-response",29,1063325,"0.0-12.0",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",30,1064833,"0.0-13.0-0.0",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/MaleRace4a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",31,1066837,"0.0-13.0-1.0",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is following",NA,"html-keyboard-response",32,1069845,"0.0-13.0-2.0",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"56036.60000002384",NA,NA,"survey-text",33,1125883,"0.0-13.0-3.0",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""dave is following mike""}","<img src='gifs/MaleRace4a.gif' style='height:400px;''></img>","following","is following","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",34,1126395,"0.0-13.0-0.1",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/ChineseGender4a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",35,1128398,"0.0-13.0-1.1",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is facing",NA,"html-keyboard-response",36,1131406,"0.0-13.0-2.1",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"52640.30000001192",NA,NA,"survey-text",37,1184047,"0.0-13.0-3.1",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""kate is facing mike""}","<img src='gifs/ChineseGender4a.gif' style='height:400px;''></img>","facing","is facing","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",38,1184554,"0.0-13.0-0.2",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/BlackGender1b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",39,1186556,"0.0-13.0-1.2",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is employing",NA,"html-keyboard-response",40,1189558,"0.0-13.0-2.2",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"25461.900000035763",NA,NA,"survey-text",41,1215020,"0.0-13.0-3.2",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""ruth is employing luke""}","<img src='gifs/BlackGender1b.gif' style='height:400px;''></img>","employing","is employing","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",42,1215526,"0.0-13.0-0.3",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/MaleRace4a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",43,1217534,"0.0-13.0-1.3",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is introducing",NA,"html-keyboard-response",44,1220543,"0.0-13.0-2.3",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"21589.100000023842",NA,NA,"survey-text",45,1242133,"0.0-13.0-3.3",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""dave is introducing mike""}","<img src='gifs/MaleRace4a.gif' style='height:400px;''></img>","introducing","is introducing","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",46,1242639,"0.0-13.0-0.4",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/ChineseGender2a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",47,1244645,"0.0-13.0-1.4",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is touching",NA,"html-keyboard-response",48,1247654,"0.0-13.0-2.4",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"24369.200000047684",NA,NA,"survey-text",49,1272024,"0.0-13.0-3.4",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""beth is touching fred""}","<img src='gifs/ChineseGender2a.gif' style='height:400px;''></img>","touching","is touching","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",50,1272538,"0.0-13.0-0.5",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/ChineseGender2b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",51,1274547,"0.0-13.0-1.5",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is facing",NA,"html-keyboard-response",52,1277561,"0.0-13.0-2.5",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"7321.200000047684",NA,NA,"survey-text",53,1284883,"0.0-13.0-3.5",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""fred is facing beth""}","<img src='gifs/ChineseGender2b.gif' style='height:400px;''></img>","facing","is facing","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",54,1285396,"0.0-13.0-0.6",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/FemaleRace1a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",55,1287403,"0.0-13.0-1.6",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is employing",NA,"html-keyboard-response",56,1290419,"0.0-13.0-2.6",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"8612.5",NA,NA,"survey-text",57,1299033,"0.0-13.0-3.6",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""kate is employing ruth""}","<img src='gifs/FemaleRace1a.gif' style='height:400px;''></img>","employing","is employing","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",58,1299542,"0.0-13.0-0.7",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/FemaleRace2b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",59,1301549,"0.0-13.0-1.7",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is praising",NA,"html-keyboard-response",60,1304568,"0.0-13.0-2.7",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"10043.600000023842",NA,NA,"survey-text",61,1314612,"0.0-13.0-3.7",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""kate is praising jane""}","<img src='gifs/FemaleRace2b.gif' style='height:400px;''></img>","praising","is praising","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",62,1315117,"0.0-13.0-0.8",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/ChineseGender3b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",63,1317125,"0.0-13.0-1.8",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is convincing",NA,"html-keyboard-response",64,1320134,"0.0-13.0-2.8",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"22202",NA,NA,"survey-text",65,1342337,"0.0-13.0-3.8",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""mike is convincing beth""}","<img src='gifs/ChineseGender3b.gif' style='height:400px;''></img>","convincing","is convincing","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",66,1342841,"0.0-13.0-0.9",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/BlackGender1a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",67,1344846,"0.0-13.0-1.9",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is contacting",NA,"html-keyboard-response",68,1347867,"0.0-13.0-2.9",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"14198.5",NA,NA,"survey-text",69,1362066,"0.0-13.0-3.9",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""ruth is contacting luke""}","<img src='gifs/BlackGender1a.gif' style='height:400px;''></img>","contacting","is contacting","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",70,1362570,"0.0-13.0-0.10",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/MaleRace1b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",71,1364573,"0.0-13.0-1.10",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is accompanying",NA,"html-keyboard-response",72,1367582,"0.0-13.0-2.10",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"27713.30000001192",NA,NA,"survey-text",73,1395296,"0.0-13.0-3.10",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""luke is accompanying fred""}","<img src='gifs/MaleRace1b.gif' style='height:400px;''></img>","accompanying","is accompanying","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",74,1395797,"0.0-13.0-0.11",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/BlackGender2a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",75,1397801,"0.0-13.0-1.11",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is accompanying",NA,"html-keyboard-response",76,1400811,"0.0-13.0-2.11",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"9114.699999988079",NA,NA,"survey-text",77,1409927,"0.0-13.0-3.11",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""dave is accompanying ruth""}","<img src='gifs/BlackGender2a.gif' style='height:400px;''></img>","accompanying","is accompanying","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",78,1410430,"0.0-13.0-0.12",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/ChineseGender3a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",79,1412437,"0.0-13.0-1.12",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is approaching",NA,"html-keyboard-response",80,1415449,"0.0-13.0-2.12",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"7643.699999988079",NA,NA,"survey-text",81,1423094,"0.0-13.0-3.12",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""beth is approaching mike""}","<img src='gifs/ChineseGender3a.gif' style='height:400px;''></img>","approaching","is approaching","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",82,1423594,"0.0-13.0-0.13",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/BlackGender3a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",83,1425595,"0.0-13.0-1.13",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is looking at",NA,"html-keyboard-response",84,1428598,"0.0-13.0-2.13",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"33059.60000002384",NA,NA,"survey-text",85,1461659,"0.0-13.0-3.13",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""jane is looking at luke""}","<img src='gifs/BlackGender3a.gif' style='height:400px;''></img>","looking at","is looking at","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",86,1462165,"0.0-13.0-0.14",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/MaleRace2b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",87,1464173,"0.0-13.0-1.14",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is following",NA,"html-keyboard-response",88,1467181,"0.0-13.0-2.14",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"5706.900000035763",NA,NA,"survey-text",89,1472888,"0.0-13.0-3.14",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""dave is following fred""}","<img src='gifs/MaleRace2b.gif' style='height:400px;''></img>","following","is following","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",90,1473393,"0.0-13.0-0.15",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/ChineseGender2b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",91,1475402,"0.0-13.0-1.15",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is mentioning",NA,"html-keyboard-response",92,1478415,"0.0-13.0-2.15",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"13023.600000023842",NA,NA,"survey-text",93,1491441,"0.0-13.0-3.15",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""fred is mentioning beth""}","<img src='gifs/ChineseGender2b.gif' style='height:400px;''></img>","mention","is mentioning","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",94,1491959,"0.0-13.0-0.16",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/BlackGender3b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",95,1493966,"0.0-13.0-1.16",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is employing",NA,"html-keyboard-response",96,1496988,"0.0-13.0-2.16",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"18294.099999964237",NA,NA,"survey-text",97,1515283,"0.0-13.0-3.16",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""jane is employing luke""}","<img src='gifs/BlackGender3b.gif' style='height:400px;''></img>","employing","is employing","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",98,1515789,"0.0-13.0-0.17",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/MaleRace4b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",99,1517792,"0.0-13.0-1.17",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is joining",NA,"html-keyboard-response",100,1520804,"0.0-13.0-2.17",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"10203.299999952316",NA,NA,"survey-text",101,1531008,"0.0-13.0-3.17",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""dave is joining mike""}","<img src='gifs/MaleRace4b.gif' style='height:400px;''></img>","join","is joining","english",NA
+"43044.80000001192","<img src='img/portrait_matrix_listA.jpg' style='width:900px;height:500px;''></img><p>If you have memorised all the portraits and names and are ready to start, press Continue.</p><p><strong>Please note: Your memory of these faces will be tested 5 times during this experiment.</strong></p>",0,"html-button-response",102,1574054,"0.0-14.0-0.0",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"3507.199999988079","<img src=""portrait/WW1.jpg""style=""height:400px;""></img>",1,"html-button-response",103,1578569,"0.0-14.0-1.0",70039,"ListA","man","english","EMA7",NA,"true",1,NA,NA,NA,NA,NA,NA,NA
+"null","CORRECT",NA,"html-keyboard-response",104,1580092,"0.0-14.0-2.0-0.0",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"1675.699999988079","<img src=""portrait/BM1.jpg""style=""height:400px;""></img>",4,"html-button-response",105,1581768,"0.0-14.0-4.0",70039,"ListA","man","english","EMA7",NA,"true",4,NA,NA,NA,NA,NA,NA,NA
+"null","CORRECT",NA,"html-keyboard-response",106,1583278,"0.0-14.0-5.0-0.0",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"2012.8999999761581","<img src=""portrait/BM2.jpg""style=""height:400px;""></img>",5,"html-button-response",107,1585292,"0.0-14.0-7.0",70039,"ListA","man","english","EMA7",NA,"true",5,NA,NA,NA,NA,NA,NA,NA
+"null","CORRECT",NA,"html-keyboard-response",108,1586799,"0.0-14.0-8.0-0.0",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"923","<img src=""portrait/WW2.jpg""style=""height:400px;""></img>",3,"html-button-response",109,1587723,"0.0-14.0-10.0",70039,"ListA","man","english","EMA7",NA,"true",3,NA,NA,NA,NA,NA,NA,NA
+"null","CORRECT",NA,"html-keyboard-response",110,1589230,"0.0-14.0-11.0-0.0",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"2212.099999964237","<img src=""portrait/WM1.jpg""style=""height:400px;""></img>",6,"html-button-response",111,1591443,"0.0-14.0-13.0",70039,"ListA","man","english","EMA7",NA,"true",6,NA,NA,NA,NA,NA,NA,NA
+"null","CORRECT",NA,"html-keyboard-response",112,1592951,"0.0-14.0-14.0-0.0",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"1010","<img src=""portrait/WM2.jpg""style=""height:400px;""></img>",7,"html-button-response",113,1593962,"0.0-14.0-16.0",70039,"ListA","man","english","EMA7",NA,"true",7,NA,NA,NA,NA,NA,NA,NA
+"null","CORRECT",NA,"html-keyboard-response",114,1595480,"0.0-14.0-17.0-0.0",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"6916","<img src=""portrait/BW1.jpg""style=""height:400px;""></img>",0,"html-button-response",115,1602397,"0.0-14.0-19.0",70039,"ListA","man","english","EMA7",NA,"true",0,NA,NA,NA,NA,NA,NA,NA
+"null","CORRECT",NA,"html-keyboard-response",116,1603900,"0.0-14.0-20.0-0.0",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"916.5","<img src=""portrait/BW2.jpg""style=""height:400px;""></img>",2,"html-button-response",117,1604817,"0.0-14.0-22.0",70039,"ListA","man","english","EMA7",NA,"true",2,NA,NA,NA,NA,NA,NA,NA
+"null","CORRECT",NA,"html-keyboard-response",118,1606335,"0.0-14.0-23.0-0.0",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"3984.800000011921","<p>You got 8 out of 8 right first time. Press Continue.</p>",0,"html-button-response",119,1610321,"0.0-14.0-25.0",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",120,1611830,"0.0-15.0-0.0",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/BlackGender4b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",121,1613833,"0.0-15.0-1.0",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is promising",NA,"html-keyboard-response",122,1616842,"0.0-15.0-2.0",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"36318.09999996424",NA,NA,"survey-text",123,1653161,"0.0-15.0-3.0",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""jane is promising dave""}","<img src='gifs/BlackGender4b.gif' style='height:400px;''></img>","promising","is promising","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",124,1653662,"0.0-15.0-0.1",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/FemaleRace4a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",125,1655676,"0.0-15.0-1.1",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is promising",NA,"html-keyboard-response",126,1658689,"0.0-15.0-2.1",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"46085.39999997616",NA,NA,"survey-text",127,1704775,"0.0-15.0-3.1",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""jane is promising beth""}","<img src='gifs/FemaleRace4a.gif' style='height:400px;''></img>","promising","is promising","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",128,1705284,"0.0-15.0-0.2",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/BlackGender3b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",129,1707285,"0.0-15.0-1.2",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is approaching",NA,"html-keyboard-response",130,1710306,"0.0-15.0-2.2",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"11621.899999976158",NA,NA,"survey-text",131,1721928,"0.0-15.0-3.2",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""luke is approaching jane""}","<img src='gifs/BlackGender3b.gif' style='height:400px;''></img>","approaching","is approaching","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",132,1722429,"0.0-15.0-0.3",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/MaleRace3b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",133,1724437,"0.0-15.0-1.3",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is accompanying",NA,"html-keyboard-response",134,1727451,"0.0-15.0-2.3",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"10966",NA,NA,"survey-text",135,1738418,"0.0-15.0-3.3",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""luke is accompanying mike""}","<img src='gifs/MaleRace3b.gif' style='height:400px;''></img>","accompanying","is accompanying","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",136,1738925,"0.0-15.0-0.4",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/FemaleRace4a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",137,1740927,"0.0-15.0-1.4",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is touching",NA,"html-keyboard-response",138,1743940,"0.0-15.0-2.4",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"7702.800000011921",NA,NA,"survey-text",139,1751644,"0.0-15.0-3.4",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""beth is touching jane""}","<img src='gifs/FemaleRace4a.gif' style='height:400px;''></img>","touching","is touching","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",140,1752150,"0.0-15.0-0.5",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/MaleRace2b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",141,1754154,"0.0-15.0-1.5",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is following",NA,"html-keyboard-response",142,1757163,"0.0-15.0-2.5",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"7445.699999988079",NA,NA,"survey-text",143,1764610,"0.0-15.0-3.5",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""dave is following fred""}","<img src='gifs/MaleRace2b.gif' style='height:400px;''></img>","following","is following","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",144,1765115,"0.0-15.0-0.6",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/ChineseGender1a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",145,1767117,"0.0-15.0-1.6",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is convincing",NA,"html-keyboard-response",146,1770132,"0.0-15.0-2.6",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"6509.399999976158",NA,NA,"survey-text",147,1776643,"0.0-15.0-3.6",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""fred is convincing kate""}","<img src='gifs/ChineseGender1a.gif' style='height:400px;''></img>","convincing","is convincing","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",148,1777145,"0.0-15.0-0.7",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/FemaleRace1a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",149,1779150,"0.0-15.0-1.7",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is mentioning",NA,"html-keyboard-response",150,1782166,"0.0-15.0-2.7",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"56814.19999998808",NA,NA,"survey-text",151,1838981,"0.0-15.0-3.7",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""kate is mentioning ruth""}","<img src='gifs/FemaleRace1a.gif' style='height:400px;''></img>","mention","is mentioning","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",152,1839486,"0.0-15.0-0.8",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/MaleRace1a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",153,1841493,"0.0-15.0-1.8",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is joining",NA,"html-keyboard-response",154,1844509,"0.0-15.0-2.8",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"7225.899999976158",NA,NA,"survey-text",155,1851735,"0.0-15.0-3.8",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""fred is joining luke""}","<img src='gifs/MaleRace1a.gif' style='height:400px;''></img>","join","is joining","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",156,1852237,"0.0-15.0-0.9",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/MaleRace3a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",157,1854245,"0.0-15.0-1.9",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is touching",NA,"html-keyboard-response",158,1857261,"0.0-15.0-2.9",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"34325.90000003576",NA,NA,"survey-text",159,1891588,"0.0-15.0-3.9",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""luke is touching mike""}","<img src='gifs/MaleRace3a.gif' style='height:400px;''></img>","touching","is touching","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",160,1892093,"0.0-15.0-0.10",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/FemaleRace4b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",161,1894102,"0.0-15.0-1.10",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is listening to",NA,"html-keyboard-response",162,1897123,"0.0-15.0-2.10",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"87687.5",NA,NA,"survey-text",163,1984811,"0.0-15.0-3.10",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""beth is listening to jane""}","<img src='gifs/FemaleRace4b.gif' style='height:400px;''></img>","listening to","is listening to","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",164,1985318,"0.0-15.0-0.11",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/BlackGender2b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",165,1987326,"0.0-15.0-1.11",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is listening to",NA,"html-keyboard-response",166,1990334,"0.0-15.0-2.11",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"50383.5",NA,NA,"survey-text",167,2040719,"0.0-15.0-3.11",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""dave is listening to ruth""}","<img src='gifs/BlackGender2b.gif' style='height:400px;''></img>","listening to","is listening to","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",168,2041222,"0.0-15.0-0.12",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/FemaleRace2a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",169,2043225,"0.0-15.0-1.12",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is convincing",NA,"html-keyboard-response",170,2046244,"0.0-15.0-2.12",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"67212.19999998808",NA,NA,"survey-text",171,2113457,"0.0-15.0-3.12",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""kate is convincing jane""}","<img src='gifs/FemaleRace2a.gif' style='height:400px;''></img>","convincing","is convincing","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",172,2113958,"0.0-15.0-0.13",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/ChineseGender3b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",173,2115963,"0.0-15.0-1.13",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is walking towards",NA,"html-keyboard-response",174,2118981,"0.0-15.0-2.13",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"8217",NA,NA,"survey-text",175,2127199,"0.0-15.0-3.13",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""beth is walking towards mike""}","<img src='gifs/ChineseGender3b.gif' style='height:400px;''></img>","walking towards","is walking towards","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",176,2127702,"0.0-15.0-0.14",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/MaleRace1a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",177,2129703,"0.0-15.0-1.14",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is joining",NA,"html-keyboard-response",178,2132710,"0.0-15.0-2.14",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"4806.699999988079",NA,NA,"survey-text",179,2137518,"0.0-15.0-3.14",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""luke is joining fred""}","<img src='gifs/MaleRace1a.gif' style='height:400px;''></img>","join","is joining","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",180,2138020,"0.0-15.0-0.15",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/ChineseGender4a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",181,2140022,"0.0-15.0-1.15",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is listening to",NA,"html-keyboard-response",182,2143044,"0.0-15.0-2.15",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"10060.599999964237",NA,NA,"survey-text",183,2153106,"0.0-15.0-3.15",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""mike is listening to kate""}","<img src='gifs/ChineseGender4a.gif' style='height:400px;''></img>","listening to","is listening to","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",184,2153614,"0.0-15.0-0.16",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/ChineseGender1a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",185,2155617,"0.0-15.0-1.16",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is looking at",NA,"html-keyboard-response",186,2158634,"0.0-15.0-2.16",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"5853.800000011921",NA,NA,"survey-text",187,2164489,"0.0-15.0-3.16",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""kate is looking at fred""}","<img src='gifs/ChineseGender1a.gif' style='height:400px;''></img>","looking at","is looking at","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",188,2165006,"0.0-15.0-0.17",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/MaleRace2a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",189,2167013,"0.0-15.0-1.17",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is mentioning",NA,"html-keyboard-response",190,2170028,"0.0-15.0-2.17",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"28418.599999964237",NA,NA,"survey-text",191,2198448,"0.0-15.0-3.17",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""fred is mentioning dave""}","<img src='gifs/MaleRace2a.gif' style='height:400px;''></img>","mention","is mentioning","english",NA
+"18812.19999998808","<img src='img/portrait_matrix_listA.jpg' style='width:900px;height:500px;''></img><p>If you have memorised all the portraits and names and are ready to start, press Continue.</p><p><strong>Please note: Your memory of these faces will be tested 5 times during this experiment.</strong></p>",0,"html-button-response",192,2217261,"0.0-16.0-0.0",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"5536.599999964237","<img src=""portrait/BW1.jpg""style=""height:400px;""></img>",0,"html-button-response",193,2223803,"0.0-16.0-1.0",70039,"ListA","man","english","EMA7",NA,"true",0,NA,NA,NA,NA,NA,NA,NA
+"null","CORRECT",NA,"html-keyboard-response",194,2225306,"0.0-16.0-2.0-0.0",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"1144.5","<img src=""portrait/WW2.jpg""style=""height:400px;""></img>",3,"html-button-response",195,2226452,"0.0-16.0-4.0",70039,"ListA","man","english","EMA7",NA,"true",3,NA,NA,NA,NA,NA,NA,NA
+"null","CORRECT",NA,"html-keyboard-response",196,2227971,"0.0-16.0-5.0-0.0",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"1614.3999999761581","<img src=""portrait/BM2.jpg""style=""height:400px;""></img>",5,"html-button-response",197,2229586,"0.0-16.0-7.0",70039,"ListA","man","english","EMA7",NA,"true",5,NA,NA,NA,NA,NA,NA,NA
+"null","CORRECT",NA,"html-keyboard-response",198,2231093,"0.0-16.0-8.0-0.0",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"1049.9000000357628","<img src=""portrait/BM1.jpg""style=""height:400px;""></img>",4,"html-button-response",199,2232144,"0.0-16.0-10.0",70039,"ListA","man","english","EMA7",NA,"true",4,NA,NA,NA,NA,NA,NA,NA
+"null","CORRECT",NA,"html-keyboard-response",200,2233651,"0.0-16.0-11.0-0.0",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"1761.4000000357628","<img src=""portrait/WM1.jpg""style=""height:400px;""></img>",6,"html-button-response",201,2235413,"0.0-16.0-13.0",70039,"ListA","man","english","EMA7",NA,"true",6,NA,NA,NA,NA,NA,NA,NA
+"null","CORRECT",NA,"html-keyboard-response",202,2236931,"0.0-16.0-14.0-0.0",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"1379.300000011921","<img src=""portrait/WM2.jpg""style=""height:400px;""></img>",7,"html-button-response",203,2238312,"0.0-16.0-16.0",70039,"ListA","man","english","EMA7",NA,"true",7,NA,NA,NA,NA,NA,NA,NA
+"null","CORRECT",NA,"html-keyboard-response",204,2239821,"0.0-16.0-17.0-0.0",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"2345.5","<img src=""portrait/WW1.jpg""style=""height:400px;""></img>",1,"html-button-response",205,2242167,"0.0-16.0-19.0",70039,"ListA","man","english","EMA7",NA,"true",1,NA,NA,NA,NA,NA,NA,NA
+"null","CORRECT",NA,"html-keyboard-response",206,2243685,"0.0-16.0-20.0-0.0",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"2924.699999988079","<img src=""portrait/BW2.jpg""style=""height:400px;""></img>",2,"html-button-response",207,2246611,"0.0-16.0-22.0",70039,"ListA","man","english","EMA7",NA,"true",2,NA,NA,NA,NA,NA,NA,NA
+"null","CORRECT",NA,"html-keyboard-response",208,2248118,"0.0-16.0-23.0-0.0",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"1381.800000011921","<p>You got 8 out of 8 right first time. Press Continue.</p>",0,"html-button-response",209,2249501,"0.0-16.0-25.0",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",210,2251013,"0.0-17.0-0.0",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/BlackGender1b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",211,2253024,"0.0-17.0-1.0",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is approaching",NA,"html-keyboard-response",212,2256034,"0.0-17.0-2.0",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"15866.300000011921",NA,NA,"survey-text",213,2271901,"0.0-17.0-3.0",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""ruth is approaching luke""}","<img src='gifs/BlackGender1b.gif' style='height:400px;''></img>","approaching","is approaching","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",214,2272402,"0.0-17.0-0.1",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/BlackGender4a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",215,2274406,"0.0-17.0-1.1",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is convincing",NA,"html-keyboard-response",216,2277418,"0.0-17.0-2.1",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"35949.69999998808",NA,NA,"survey-text",217,2313369,"0.0-17.0-3.1",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""dave is convincing jane""}","<img src='gifs/BlackGender4a.gif' style='height:400px;''></img>","convincing","is convincing","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",218,2313870,"0.0-17.0-0.2",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/BlackGender4a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",219,2315878,"0.0-17.0-1.2",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is facing",NA,"html-keyboard-response",220,2318900,"0.0-17.0-2.2",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"4581.800000011921",NA,NA,"survey-text",221,2323483,"0.0-17.0-3.2",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""dave is facing jane""}","<img src='gifs/BlackGender4a.gif' style='height:400px;''></img>","facing","is facing","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",222,2323995,"0.0-17.0-0.3",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/MaleRace2a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",223,2326000,"0.0-17.0-1.3",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is promising",NA,"html-keyboard-response",224,2329015,"0.0-17.0-2.3",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"6009.899999976158",NA,NA,"survey-text",225,2335026,"0.0-17.0-3.3",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""dave is promising fred""}","<img src='gifs/MaleRace2a.gif' style='height:400px;''></img>","promising","is promising","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",226,2335529,"0.0-17.0-0.4",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/BlackGender1a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",227,2337533,"0.0-17.0-1.4",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is following",NA,"html-keyboard-response",228,2340546,"0.0-17.0-2.4",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"10966.300000011921",NA,NA,"survey-text",229,2351513,"0.0-17.0-3.4",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""ruth is following luke""}","<img src='gifs/BlackGender1a.gif' style='height:400px;''></img>","following","is following","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",230,2352032,"0.0-17.0-0.5",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/FemaleRace3a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",231,2354037,"0.0-17.0-1.5",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is walking towards",NA,"html-keyboard-response",232,2357057,"0.0-17.0-2.5",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"6853.400000035763",NA,NA,"survey-text",233,2363911,"0.0-17.0-3.5",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""beth is walking towards ruth""}","<img src='gifs/FemaleRace3a.gif' style='height:400px;''></img>","walking towards","is walking towards","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",234,2364419,"0.0-17.0-0.6",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/MaleRace4b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",235,2366425,"0.0-17.0-1.6",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is walking towards",NA,"html-keyboard-response",236,2369441,"0.0-17.0-2.6",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"6909.5",NA,NA,"survey-text",237,2376351,"0.0-17.0-3.6",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""dave is walking towards mike""}","<img src='gifs/MaleRace4b.gif' style='height:400px;''></img>","walking towards","is walking towards","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",238,2376855,"0.0-17.0-0.7",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/FemaleRace3b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",239,2378873,"0.0-17.0-1.7",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is introducing",NA,"html-keyboard-response",240,2381884,"0.0-17.0-2.7",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"8164.800000011921",NA,NA,"survey-text",241,2390049,"0.0-17.0-3.7",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""ruth is introducing beth""}","<img src='gifs/FemaleRace3b.gif' style='height:400px;''></img>","introducing","is introducing","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",242,2390551,"0.0-17.0-0.8",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/BlackGender3a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",243,2392553,"0.0-17.0-1.8",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is introducing",NA,"html-keyboard-response",244,2395562,"0.0-17.0-2.8",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"9118.399999976158",NA,NA,"survey-text",245,2404682,"0.0-17.0-3.8",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""jane is introducing luke""}","<img src='gifs/BlackGender3a.gif' style='height:400px;''></img>","introducing","is introducing","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",246,2405194,"0.0-17.0-0.9",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/ChineseGender1b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",247,2407199,"0.0-17.0-1.9",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is looking at",NA,"html-keyboard-response",248,2410216,"0.0-17.0-2.9",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"5394.300000011921",NA,NA,"survey-text",249,2415611,"0.0-17.0-3.9",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""kate is looking at fred""}","<img src='gifs/ChineseGender1b.gif' style='height:400px;''></img>","looking at","is looking at","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",250,2416115,"0.0-17.0-0.10",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/MaleRace1b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",251,2418131,"0.0-17.0-1.10",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is praising",NA,"html-keyboard-response",252,2421134,"0.0-17.0-2.10",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"16968.600000023842",NA,NA,"survey-text",253,2438103,"0.0-17.0-3.10",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""luke is praising fred""}","<img src='gifs/MaleRace1b.gif' style='height:400px;''></img>","praising","is praising","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",254,2438606,"0.0-17.0-0.11",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/FemaleRace1b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",255,2440617,"0.0-17.0-1.11",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is employing",NA,"html-keyboard-response",256,2443632,"0.0-17.0-2.11",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"5615.099999964237",NA,NA,"survey-text",257,2449248,"0.0-17.0-3.11",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""kate is employing ruth""}","<img src='gifs/FemaleRace1b.gif' style='height:400px;''></img>","employing","is employing","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",258,2449750,"0.0-17.0-0.12",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/BlackGender2a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",259,2451754,"0.0-17.0-1.12",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is contacting",NA,"html-keyboard-response",260,2454764,"0.0-17.0-2.12",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"14356.600000023842",NA,NA,"survey-text",261,2469122,"0.0-17.0-3.12",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""dave is contacting ruth""}","<img src='gifs/BlackGender2a.gif' style='height:400px;''></img>","contacting","is contacting","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",262,2469630,"0.0-17.0-0.13",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/ChineseGender4b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",263,2471638,"0.0-17.0-1.13",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is praising",NA,"html-keyboard-response",264,2474646,"0.0-17.0-2.13",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"6555.600000023842",NA,NA,"survey-text",265,2481203,"0.0-17.0-3.13",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""kate is praising mike""}","<img src='gifs/ChineseGender4b.gif' style='height:400px;''></img>","praising","is praising","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",266,2481704,"0.0-17.0-0.14",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/FemaleRace3a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",267,2483709,"0.0-17.0-1.14",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is listening to",NA,"html-keyboard-response",268,2486722,"0.0-17.0-2.14",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"6459.5",NA,NA,"survey-text",269,2493183,"0.0-17.0-3.14",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""ruth is listening to beth""}","<img src='gifs/FemaleRace3a.gif' style='height:400px;''></img>","listening to","is listening to","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",270,2493684,"0.0-17.0-0.15",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/FemaleRace1b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",271,2495693,"0.0-17.0-1.15",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is mentioning",NA,"html-keyboard-response",272,2498714,"0.0-17.0-2.15",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"6126.5",NA,NA,"survey-text",273,2504842,"0.0-17.0-3.15",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""kate is mentioning ruth""}","<img src='gifs/FemaleRace1b.gif' style='height:400px;''></img>","mention","is mentioning","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",274,2505349,"0.0-17.0-0.16",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/BlackGender4b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",275,2507357,"0.0-17.0-1.16",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is promising",NA,"html-keyboard-response",276,2510374,"0.0-17.0-2.16",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"6909.799999952316",NA,NA,"survey-text",277,2517285,"0.0-17.0-3.16",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""jane is promising dave""}","<img src='gifs/BlackGender4b.gif' style='height:400px;''></img>","promising","is promising","english",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",278,2517786,"0.0-17.0-0.17",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/ChineseGender4b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",279,2519789,"0.0-17.0-1.17",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","is walking towards",NA,"html-keyboard-response",280,2522807,"0.0-17.0-2.17",70039,"ListA","man","english","EMA7",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"6650",NA,NA,"survey-text",281,2529459,"0.0-17.0-3.17",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""kate is walking towards mike""}","<img src='gifs/ChineseGender4b.gif' style='height:400px;''></img>","walking towards","is walking towards","english",NA
+"8722","<p>Thank you for completing that task.</p><p>The final part of this session is a short questionnaire.</p><p>Press Continue.</p>",0,"html-button-response",282,2538182,"0.0-18.0",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"257714.60000002384",NA,NA,"survey-text",283,2796905,"0.0-19.0",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""Q0"":""22"",""Q1"":""Chinese"",""Q2"":""Chinese"",""Q3"":""United Kingdom"",""Q4"":""Chinese"",""Q5"":""Chinese"",""Q6"":""male""}",NA,NA,NA,NA,"demographics"
+"161377.60000002384",NA,NA,"external-html",284,2958376,"0.0-20.0",70039,"ListA","man","english","EMA7","debrief.html",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"78905.39999997616",NA,NA,"survey-text",285,3037282,"0.0-21.0",70039,"ListA","man","english","EMA7",NA,NA,NA,NA,"{""ptpt_id"":""EMA7""}",NA,NA,NA,NA,"worker_id"

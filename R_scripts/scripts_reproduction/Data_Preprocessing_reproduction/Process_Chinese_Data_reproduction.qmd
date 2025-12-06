@@ -1,0 +1,15 @@
+---
+title: "adjusted_Process_Chinese_Data"
+format: html
+editor: visual
+---
+
+```{r}
+#| label: original code lines 1-20
+
+```
+
+```{r}
+#| label: adjusted code lines 1-20
+ 
+```

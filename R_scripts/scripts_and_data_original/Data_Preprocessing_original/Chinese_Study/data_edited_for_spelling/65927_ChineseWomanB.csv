@@ -1,0 +1,353 @@
+"rt","stimulus","button_pressed","trial_type","trial_index","time_elapsed","internal_node_id","subject","list","ppt_gender","ppt_language","ptptID","url","first_guess","correct","key_press","responses","image","verb","phrase","condition","test_part"
+"3137.0999999999185","Welcome to the experiment. Press Continue to begin.",0,"html-button-response",0,3152,"0.0-0.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"9586.699999999837",NA,NA,"external-html",1,13794,"0.0-1.0",65927,"ListB","woman","chinese","SW_C_F_B6","consent.html",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"15185.4000000003","<p>在下一页中，您将看到8个人物肖像和他们各自的名字。</p><p>请花费几分钟的时间记住这些人物及其所对应的名字。</p><p>之后的实验中需要您对人物的名字做出回忆，</p><p>因此在实验开始前请确保您已 经完全记住这些人物及其所对应的名字。</p><p><strong>然后您将完成一个测试以检验您对人物和名字的记忆。</strong></p><p>完成此记忆测试后，您将正式进入实验。</p><p>准备好了吗？</p>",0,"html-button-response",2,28995,"0.0-2.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"86281.50000000096","<img src='img/portrait_matrix_listB_chinese.jpg' style='width:900px;height:500px;''></img><p>如果您已经记住了所有的人物和名字，请点击继续。</p><p><strong>请注意：您对先前记忆的面孔将在本实验中被测试5次。</strong></p>",0,"html-button-response",3,116292,"0.0-3.0-0.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"4150.599999999031","<img src=""portrait/WM1.jpg""style=""height:400px;""></img>",6,"html-button-response",4,121465,"0.0-3.0-1.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",6,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",5,122987,"0.0-3.0-2.0-0.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"4457.900000001246","<img src=""portrait/WW1.jpg""style=""height:400px;""></img>",1,"html-button-response",6,127461,"0.0-3.0-4.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",1,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",7,128978,"0.0-3.0-5.0-0.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"3404.5999999998603","<img src=""portrait/WW2.jpg""style=""height:400px;""></img>",7,"html-button-response",8,132414,"0.0-3.0-7.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",3,NA,NA,NA,NA,NA,NA,NA
+"4027.3999999990338","<img src=""portrait/WW2.jpg""style=""height:400px;""></img>",3,"html-button-response",9,137459,"0.0-3.0-9.0-0.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"false",3,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",10,138973,"0.0-3.0-9.0-1.0-0.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"5405.399999999645","<img src=""portrait/BW2.jpg""style=""height:400px;""></img>",0,"html-button-response",11,144392,"0.0-3.0-10.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",2,NA,NA,NA,NA,NA,NA,NA
+"5341.800000000134","<img src=""portrait/BW2.jpg""style=""height:400px;""></img>",2,"html-button-response",12,150748,"0.0-3.0-12.0-0.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"false",2,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",13,152258,"0.0-3.0-12.0-1.0-0.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"9407.799999999057","<img src=""portrait/BW1.jpg""style=""height:400px;""></img>",0,"html-button-response",14,161679,"0.0-3.0-13.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",0,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",15,163186,"0.0-3.0-14.0-0.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"7823.3000000000175","<img src=""portrait/BM1.jpg""style=""height:400px;""></img>",4,"html-button-response",16,171019,"0.0-3.0-16.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",4,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",17,172526,"0.0-3.0-17.0-0.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"4961.5000000012515","<img src=""portrait/WM2.jpg""style=""height:400px;""></img>",6,"html-button-response",18,177498,"0.0-3.0-19.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",7,NA,NA,NA,NA,NA,NA,NA
+"3768.499999998312","<img src=""portrait/WM2.jpg""style=""height:400px;""></img>",7,"html-button-response",19,182284,"0.0-3.0-21.0-0.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"false",7,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",20,183792,"0.0-3.0-21.0-1.0-0.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"4636.700000000943","<img src=""portrait/BM2.jpg""style=""height:400px;""></img>",5,"html-button-response",21,188446,"0.0-3.0-22.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",5,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",22,189955,"0.0-3.0-23.0-0.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"2197.199999998702","<p>您第一次在8题里答对了 5 题。 请点击继续</p>",0,"html-button-response",23,192169,"0.0-3.0-25.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"2535.700000000361","因为您没有全部答对，记忆游戏将重新开始。请点击继续。",0,"html-button-response",24,195714,"0.0-3.0-26.0-0.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"19494.800000000396","<img src='img/portrait_matrix_listB_chinese.jpg' style='width:900px;height:500px;''></img><p>如果您已经记住了所有的人物和名字，请点击继续。</p><p><strong>请注意：您对先前记忆的面孔将在本实验中被测试5次。</strong></p>",0,"html-button-response",25,216227,"0.0-3.1-0.1",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"4697.699999998818","<img src=""portrait/WM1.jpg""style=""height:400px;""></img>",6,"html-button-response",26,221944,"0.0-3.1-1.1",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",6,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",27,223452,"0.0-3.1-2.1-0.1",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"2803.8999999989755","<img src=""portrait/WW1.jpg""style=""height:400px;""></img>",1,"html-button-response",28,226267,"0.0-3.1-4.1",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",1,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",29,227775,"0.0-3.1-5.1-0.1",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"2418.5999999990745","<img src=""portrait/WW2.jpg""style=""height:400px;""></img>",3,"html-button-response",30,230207,"0.0-3.1-7.1",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",3,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",31,231717,"0.0-3.1-8.1-0.1",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"4647.800000000658","<img src=""portrait/BW2.jpg""style=""height:400px;""></img>",7,"html-button-response",32,236380,"0.0-3.1-10.1",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",2,NA,NA,NA,NA,NA,NA,NA
+"2773.999999999447","<img src=""portrait/BW2.jpg""style=""height:400px;""></img>",2,"html-button-response",33,240171,"0.0-3.1-12.1-0.1",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"false",2,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",34,241683,"0.0-3.1-12.1-1.1-0.1",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"3894.400000001013","<img src=""portrait/BW1.jpg""style=""height:400px;""></img>",0,"html-button-response",35,245590,"0.0-3.1-13.1",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",0,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",36,247103,"0.0-3.1-14.1-0.1",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"4561.7999999994645","<img src=""portrait/BM1.jpg""style=""height:400px;""></img>",4,"html-button-response",37,251679,"0.0-3.1-16.1",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",4,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",38,253187,"0.0-3.1-17.1-0.1",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"7989.099999998871","<img src=""portrait/WM2.jpg""style=""height:400px;""></img>",6,"html-button-response",39,261198,"0.0-3.1-19.1",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",7,NA,NA,NA,NA,NA,NA,NA
+"2241.2999999996973","<img src=""portrait/WM2.jpg""style=""height:400px;""></img>",7,"html-button-response",40,264457,"0.0-3.1-21.1-0.1",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"false",7,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",41,265964,"0.0-3.1-21.1-1.1-0.1",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"4693.599999998696","<img src=""portrait/BM2.jpg""style=""height:400px;""></img>",5,"html-button-response",42,270672,"0.0-3.1-22.1",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",5,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",43,272181,"0.0-3.1-23.1-0.1",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"1542.8000000010943","<p>您第一次在8题里答对了 6 题。 请点击继续</p>",0,"html-button-response",44,273734,"0.0-3.1-25.1",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"2070.899999998801","因为您没有全部答对，记忆游戏将重新开始。请点击继续。",0,"html-button-response",45,276813,"0.0-3.1-26.1-0.1",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"24914.399999999674","<img src='img/portrait_matrix_listB_chinese.jpg' style='width:900px;height:500px;''></img><p>如果您已经记住了所有的人物和名字，请点击继续。</p><p><strong>请注意：您对先前记忆的面孔将在本实验中被测试5次。</strong></p>",0,"html-button-response",46,302736,"0.0-3.2-0.2",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"2228.399999999965","<img src=""portrait/WM1.jpg""style=""height:400px;""></img>",6,"html-button-response",47,305980,"0.0-3.2-1.2",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",6,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",48,307487,"0.0-3.2-2.2-0.2",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"4250.599999999395","<img src=""portrait/WW1.jpg""style=""height:400px;""></img>",1,"html-button-response",49,311752,"0.0-3.2-4.2",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",1,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",50,313263,"0.0-3.2-5.2-0.2",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"8881.900000000314","<img src=""portrait/WW2.jpg""style=""height:400px;""></img>",2,"html-button-response",51,322158,"0.0-3.2-7.2",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",3,NA,NA,NA,NA,NA,NA,NA
+"2045.699999998731","<img src=""portrait/WW2.jpg""style=""height:400px;""></img>",4,"html-button-response",52,325220,"0.0-3.2-9.2-0.2",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"false",3,NA,NA,NA,NA,NA,NA,NA
+"null","不正确",NA,"html-keyboard-response",53,326741,"0.0-3.2-9.2-2.2-0.2",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"10211.499999999418","<img src=""portrait/BW2.jpg""style=""height:400px;""></img>",2,"html-button-response",54,336966,"0.0-3.2-10.2",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",2,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",55,338474,"0.0-3.2-11.2-0.2",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"3938.4000000008964","<img src=""portrait/BW1.jpg""style=""height:400px;""></img>",6,"html-button-response",56,342426,"0.0-3.2-13.2",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",0,NA,NA,NA,NA,NA,NA,NA
+"2999.2999999995227","<img src=""portrait/BW1.jpg""style=""height:400px;""></img>",0,"html-button-response",57,346438,"0.0-3.2-15.2-0.2",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"false",0,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",58,347948,"0.0-3.2-15.2-1.2-0.2",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"7508.900000000722","<img src=""portrait/BM1.jpg""style=""height:400px;""></img>",7,"html-button-response",59,355472,"0.0-3.2-16.2",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",4,NA,NA,NA,NA,NA,NA,NA
+"2043.9000000006054","<img src=""portrait/BM1.jpg""style=""height:400px;""></img>",4,"html-button-response",60,358531,"0.0-3.2-18.2-0.2",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"false",4,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",61,360037,"0.0-3.2-18.2-1.2-0.2",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"2425.3000000008033","<img src=""portrait/WM2.jpg""style=""height:400px;""></img>",7,"html-button-response",62,362482,"0.0-3.2-19.2",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",7,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",63,363990,"0.0-3.2-20.2-0.2",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"2613.299999999057","<img src=""portrait/BM2.jpg""style=""height:400px;""></img>",5,"html-button-response",64,366621,"0.0-3.2-22.2",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",5,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",65,368128,"0.0-3.2-23.2-0.2",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"1388.1999999993714","<p>您第一次在8题里答对了 5 题。 请点击继续</p>",0,"html-button-response",66,369524,"0.0-3.2-25.2",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"1543.3999999986263","因为您没有全部答对，记忆游戏将重新开始。请点击继续。",0,"html-button-response",67,372078,"0.0-3.2-26.2-0.2",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"15144.200000000652","<img src='img/portrait_matrix_listB_chinese.jpg' style='width:900px;height:500px;''></img><p>如果您已经记住了所有的人物和名字，请点击继续。</p><p><strong>请注意：您对先前记忆的面孔将在本实验中被测试5次。</strong></p>",0,"html-button-response",68,388233,"0.0-3.3-0.3",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"2112.9000000000815","<img src=""portrait/WM1.jpg""style=""height:400px;""></img>",6,"html-button-response",69,391361,"0.0-3.3-1.3",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",6,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",70,392872,"0.0-3.3-2.3-0.3",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"1919.299999999581","<img src=""portrait/WW1.jpg""style=""height:400px;""></img>",1,"html-button-response",71,394804,"0.0-3.3-4.3",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",1,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",72,396310,"0.0-3.3-5.3-0.3",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"3330.1000000010827","<img src=""portrait/WW2.jpg""style=""height:400px;""></img>",3,"html-button-response",73,399646,"0.0-3.3-7.3",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",3,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",74,401152,"0.0-3.3-8.3-0.3",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"8513.999999999243","<img src=""portrait/BW2.jpg""style=""height:400px;""></img>",2,"html-button-response",75,409677,"0.0-3.3-10.3",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",2,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",76,411186,"0.0-3.3-11.3-0.3",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"2223.700000000419","<img src=""portrait/BW1.jpg""style=""height:400px;""></img>",0,"html-button-response",77,413418,"0.0-3.3-13.3",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",0,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",78,414926,"0.0-3.3-14.3-0.3",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"6352.200000001176","<img src=""portrait/BM1.jpg""style=""height:400px;""></img>",4,"html-button-response",79,421287,"0.0-3.3-16.3",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",4,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",80,422793,"0.0-3.3-17.3-0.3",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"5405.00000000064","<img src=""portrait/WM2.jpg""style=""height:400px;""></img>",7,"html-button-response",81,428211,"0.0-3.3-19.3",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",7,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",82,429719,"0.0-3.3-20.3-0.3",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"3921.899999999325","<img src=""portrait/BM2.jpg""style=""height:400px;""></img>",5,"html-button-response",83,433653,"0.0-3.3-22.3",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",5,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",84,435158,"0.0-3.3-23.3-0.3",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"1764.6999999997206","<p>您第一次在8题里答对了 8 题。 请点击继续</p>",0,"html-button-response",85,436929,"0.0-3.3-25.3",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"56555.30000000005","<p>此次实验您将会看到先前记忆任务里的人物照片。</p><p>人物照片消失后您将看到一个动词短语，请正确回忆人物的名字并用特定的 动词短语组成一句完整的句子。</p><p>请在指定的框内输入您的答案。在进入下一题之前请确保您填写了完整的句子。</p><p>人物照片和动词短语只会在屏幕上出现几秒钟，因此请您答题时尽量集中注意力。</p><p>以下是例子。请您在准备好后按下“继续”。</p><img src='img/chinese_speaking_example.jpg' style='width:800px;height:460px;''></img>",0,"html-button-response",86,494498,"0.0-4.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"2085.099999998405","<p>在实验开始前，将为您展示两个示例实验。</p>",0,"html-button-response",87,497592,"0.0-5.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"null","<img src='img/meet.gif' style='height:400px;''></img>",NA,"html-keyboard-response",88,500608,"0.0-6.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<p>正在约见</p>",NA,"html-keyboard-response",89,502613,"0.0-7.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"14491.599999999395","<p><b>答案：</b> 霍普正在会见露丝</p>",0,"html-button-response",90,517113,"0.0-8.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"null","<img src='img/spy.gif' style='height:400px;''></img>",NA,"html-keyboard-response",91,520130,"0.0-9.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<p>正在监视</p>",NA,"html-keyboard-response",92,522136,"0.0-10.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"3243.2000000008848","<p><b>答案：</b> 弗雷正在监视麦克</p>",0,"html-button-response",93,525387,"0.0-11.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"9315.899999999674","<p>准备好开始了吗？</p><br><p><strong>请记住，您的答案需是一句完整的句子</strong></p><p><strong>，并用给到的图片人物和动词短语作答。</strong></p><p><strong>只有正确并完整完成实验才可获得报酬。</strong></p><p><strong> 您不需要加入任何标点符号。</strong></p><br><p>请按 ‘继续’ 键开始。</p>",0,"html-button-response",94,535716,"0.0-12.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",95,537227,"0.0-13.0-0.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/MaleRace3b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",96,539243,"0.0-13.0-1.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在接近",NA,"html-keyboard-response",97,542249,"0.0-13.0-2.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"19843.89999999979",NA,NA,"survey-text",98,562125,"0.0-13.0-3.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""卢克正在接近弗雷""}","<img src='gifs/MaleRace3b.gif' style='height:400px;''></img>","接近","正在接近","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",99,562636,"0.0-13.0-0.1",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/MaleRace2a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",100,564651,"0.0-13.0-1.1",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在提到",NA,"html-keyboard-response",101,571116,"0.0-13.0-2.1",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"12457.600000001607",NA,NA,"survey-text",102,583583,"0.0-13.0-3.1",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""麦克正在提到卢克""}","<img src='gifs/MaleRace2a.gif' style='height:400px;''></img>","提到","正在提到","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",103,584087,"0.0-13.0-0.2",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/MaleRace4b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",104,586096,"0.0-13.0-1.2",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在聆听",NA,"html-keyboard-response",105,589105,"0.0-13.0-2.2",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"15469.90000000014",NA,NA,"survey-text",106,604595,"0.0-13.0-3.2",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""戴夫正在聆听麦克""}","<img src='gifs/MaleRace4b.gif' style='height:400px;''></img>","聆听","正在聆听","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",107,605105,"0.0-13.0-0.3",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/BlackGender3a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",108,607117,"0.0-13.0-1.3",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在加入",NA,"html-keyboard-response",109,612594,"0.0-13.0-2.3",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"11723.900000000955",NA,NA,"survey-text",110,624326,"0.0-13.0-3.3",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""凯特正在加入弗雷""}","<img src='gifs/BlackGender3a.gif' style='height:400px;''></img>","加入","正在加入","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",111,624834,"0.0-13.0-0.4",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/FemaleRace1b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",112,626850,"0.0-13.0-1.4",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在说服",NA,"html-keyboard-response",113,632462,"0.0-13.0-2.4",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"13518",NA,NA,"survey-text",114,645991,"0.0-13.0-3.4",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""霍普正在说服贝斯""}","<img src='gifs/FemaleRace1b.gif' style='height:400px;''></img>","说服","正在说服","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",115,646496,"0.0-13.0-0.5",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/ChineseGender2b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",116,648506,"0.0-13.0-1.5",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在答应",NA,"html-keyboard-response",117,653910,"0.0-13.0-2.5",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"9890.99999999965",NA,NA,"survey-text",118,663819,"0.0-13.0-3.5",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""卢克正在答应露丝""}","<img src='gifs/ChineseGender2b.gif' style='height:400px;''></img>","答应","正在答应","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",119,664330,"0.0-13.0-0.6",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/FemaleRace3b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",120,666345,"0.0-13.0-1.6",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在答应",NA,"html-keyboard-response",121,669349,"0.0-13.0-2.6",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"35471.79999999935",NA,NA,"survey-text",122,704829,"0.0-13.0-3.6",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""露丝正在答应贝斯""}","<img src='gifs/FemaleRace3b.gif' style='height:400px;''></img>","答应","正在答应","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",123,705339,"0.0-13.0-0.7",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/BlackGender3a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",124,707356,"0.0-13.0-1.7",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在陪伴",NA,"html-keyboard-response",125,714363,"0.0-13.0-2.7",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"10490.79999999958",NA,NA,"survey-text",126,724873,"0.0-13.0-3.7",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""贝斯正在陪伴凯特""}","<img src='gifs/BlackGender3a.gif' style='height:400px;''></img>","陪伴","正在陪伴","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",127,725378,"0.0-13.0-0.8",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/FemaleRace4a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",128,727414,"0.0-13.0-1.8",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在走向",NA,"html-keyboard-response",129,730419,"0.0-13.0-2.8",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"9641.999999999884",NA,NA,"survey-text",130,740072,"0.0-13.0-3.8",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""露丝正在走向凯特""}","<img src='gifs/FemaleRace4a.gif' style='height:400px;''></img>","走向","正在走向","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",131,740575,"0.0-13.0-0.9",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/ChineseGender3b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",132,742594,"0.0-13.0-1.9",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在面向",NA,"html-keyboard-response",133,745599,"0.0-13.0-2.9",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"22283.199999999837",NA,NA,"survey-text",134,767902,"0.0-13.0-3.9",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""戴夫正在面向露丝""}","<img src='gifs/ChineseGender3b.gif' style='height:400px;''></img>","面向","正在面向","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",135,768415,"0.0-13.0-0.10",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/BlackGender4a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",136,770435,"0.0-13.0-1.10",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在触摸",NA,"html-keyboard-response",137,773440,"0.0-13.0-2.10",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"14216.199999998906",NA,NA,"survey-text",138,787674,"0.0-13.0-3.10",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""麦克正在触摸凯特""}","<img src='gifs/BlackGender4a.gif' style='height:400px;''></img>","触摸","正在触摸","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",139,788180,"0.0-13.0-0.11",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/ChineseGender4a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",140,790197,"0.0-13.0-1.11",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在答应",NA,"html-keyboard-response",141,793201,"0.0-13.0-2.11",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"21060.99999999965",NA,NA,"survey-text",142,814275,"0.0-13.0-3.11",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""戴夫正在答应霍普""}","<img src='gifs/ChineseGender4a.gif' style='height:400px;''></img>","答应","正在答应","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",143,814781,"0.0-13.0-0.12",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/MaleRace2b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",144,816801,"0.0-13.0-1.12",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在表扬",NA,"html-keyboard-response",145,820501,"0.0-13.0-2.12",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"12870.899999999907",NA,NA,"survey-text",146,833395,"0.0-13.0-3.12",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""麦克正在表扬卢克""}","<img src='gifs/MaleRace2b.gif' style='height:400px;''></img>","表扬","正在表扬","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",147,833901,"0.0-13.0-0.13",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/ChineseGender2a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",148,835915,"0.0-13.0-1.13",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在介绍",NA,"html-keyboard-response",149,838924,"0.0-13.0-2.13",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"20115.30000000121",NA,NA,"survey-text",150,859060,"0.0-13.0-3.13",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""露丝正在介绍卢克""}","<img src='gifs/ChineseGender2a.gif' style='height:400px;''></img>","介绍","正在介绍","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",151,859566,"0.0-13.0-0.14",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/FemaleRace2a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",152,861586,"0.0-13.0-1.14",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在接近",NA,"html-keyboard-response",153,864591,"0.0-13.0-2.14",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"9064.099999999627",NA,NA,"survey-text",154,873669,"0.0-13.0-3.14",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""霍普正在接近凯特""}","<img src='gifs/FemaleRace2a.gif' style='height:400px;''></img>","接近","正在接近","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",155,874175,"0.0-13.0-0.15",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/ChineseGender1b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",156,876188,"0.0-13.0-1.15",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在走向",NA,"html-keyboard-response",157,879194,"0.0-13.0-2.15",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"11724.500000000233",NA,NA,"survey-text",158,890938,"0.0-13.0-3.15",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""霍普正在走向戴夫""}","<img src='gifs/ChineseGender1b.gif' style='height:400px;''></img>","走向","正在走向","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",159,891446,"0.0-13.0-0.16",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/FemaleRace4b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",160,893461,"0.0-13.0-1.16",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在联系",NA,"html-keyboard-response",161,896468,"0.0-13.0-2.16",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"8325.699999999371",NA,NA,"survey-text",162,904818,"0.0-13.0-3.16",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""露丝正在联系凯特""}","<img src='gifs/FemaleRace4b.gif' style='height:400px;''></img>","联系","正在联系","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",163,905325,"0.0-13.0-0.17",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/ChineseGender2a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",164,907337,"0.0-13.0-1.17",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在跟随",NA,"html-keyboard-response",165,910343,"0.0-13.0-2.17",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"12385.699999998906",NA,NA,"survey-text",166,922755,"0.0-13.0-3.17",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""露丝正在跟随卢克""}","<img src='gifs/ChineseGender2a.gif' style='height:400px;''></img>","跟随","正在跟随","chinese",NA
+"8268.500000000233","<img src='img/portrait_matrix_listB_chinese.jpg' style='width:900px;height:500px;''></img><p>如果您已经记住了所有的人物和名字，请点击继续。</p><p><strong>请注意：您对先前记忆的面孔将在本实验中被测试5次。</strong></p>",0,"html-button-response",167,931037,"0.0-14.0-0.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"15586.299999998999","<img src=""portrait/BM1.jpg""style=""height:400px;""></img>",4,"html-button-response",168,947647,"0.0-14.0-1.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",4,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",169,949156,"0.0-14.0-2.0-0.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"4323.599999999744","<img src=""portrait/BW1.jpg""style=""height:400px;""></img>",0,"html-button-response",170,953493,"0.0-14.0-4.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",0,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",171,955004,"0.0-14.0-5.0-0.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"3006.600000000675","<img src=""portrait/WM1.jpg""style=""height:400px;""></img>",6,"html-button-response",172,958028,"0.0-14.0-7.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",6,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",173,959539,"0.0-14.0-8.0-0.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"2214.700000000419","<img src=""portrait/WM2.jpg""style=""height:400px;""></img>",7,"html-button-response",174,961775,"0.0-14.0-10.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",7,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",175,963283,"0.0-14.0-11.0-0.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"2049.3000000005122","<img src=""portrait/BM2.jpg""style=""height:400px;""></img>",5,"html-button-response",176,965347,"0.0-14.0-13.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",5,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",177,966857,"0.0-14.0-14.0-0.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"2438.2999999998137","<img src=""portrait/WW2.jpg""style=""height:400px;""></img>",3,"html-button-response",178,969310,"0.0-14.0-16.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",3,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",179,970819,"0.0-14.0-17.0-0.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"3134.7000000005355","<img src=""portrait/WW1.jpg""style=""height:400px;""></img>",1,"html-button-response",180,973971,"0.0-14.0-19.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",1,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",181,975483,"0.0-14.0-20.0-0.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"1925.9000000001397","<img src=""portrait/BW2.jpg""style=""height:400px;""></img>",2,"html-button-response",182,977421,"0.0-14.0-22.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",2,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",183,978929,"0.0-14.0-23.0-0.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"2661.200000000419","<p>您第一次在8题里答对了 8 题。 请点击继续</p>",0,"html-button-response",184,981603,"0.0-14.0-25.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",185,983122,"0.0-15.0-0.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/MaleRace4a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",186,985135,"0.0-15.0-1.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在加入",NA,"html-keyboard-response",187,988145,"0.0-15.0-2.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"12016.799999999464",NA,NA,"survey-text",188,1000175,"0.0-15.0-3.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""戴夫正在加入麦克""}","<img src='gifs/MaleRace4a.gif' style='height:400px;''></img>","加入","正在加入","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",189,1000683,"0.0-15.0-0.1",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/ChineseGender4a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",190,1002700,"0.0-15.0-1.1",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在跟随",NA,"html-keyboard-response",191,1005705,"0.0-15.0-2.1",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"10165.399999999907",NA,NA,"survey-text",192,1015887,"0.0-15.0-3.1",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""霍普正在跟随戴夫""}","<img src='gifs/ChineseGender4a.gif' style='height:400px;''></img>","跟随","正在跟随","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",193,1016396,"0.0-15.0-0.2",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/BlackGender3b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",194,1018422,"0.0-15.0-1.2",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在介绍",NA,"html-keyboard-response",195,1021429,"0.0-15.0-2.2",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"11689.200000000652",NA,NA,"survey-text",196,1033138,"0.0-15.0-3.2",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""凯特正在介绍弗雷""}","<img src='gifs/BlackGender3b.gif' style='height:400px;''></img>","介绍","正在介绍","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",197,1033646,"0.0-15.0-0.3",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/ChineseGender1a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",198,1035663,"0.0-15.0-1.3",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在介绍",NA,"html-keyboard-response",199,1038668,"0.0-15.0-2.3",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"7524.999999999534",NA,NA,"survey-text",200,1046215,"0.0-15.0-3.3",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""卢克正在介绍霍普""}","<img src='gifs/ChineseGender1a.gif' style='height:400px;''></img>","介绍","正在介绍","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",201,1046722,"0.0-15.0-0.4",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/FemaleRace1b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",202,1048740,"0.0-15.0-1.4",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在表扬",NA,"html-keyboard-response",203,1051746,"0.0-15.0-2.4",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"10779.500000000698",NA,NA,"survey-text",204,1062548,"0.0-15.0-3.4",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""贝斯正在表扬霍普""}","<img src='gifs/FemaleRace1b.gif' style='height:400px;''></img>","表扬","正在表扬","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",205,1063056,"0.0-15.0-0.5",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/BlackGender1b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",206,1065073,"0.0-15.0-1.5",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在说服",NA,"html-keyboard-response",207,1068936,"0.0-15.0-2.5",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"10579.499999999767",NA,NA,"survey-text",208,1079522,"0.0-15.0-3.5",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""贝斯正在说服弗雷""}","<img src='gifs/BlackGender1b.gif' style='height:400px;''></img>","说服","正在说服","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",209,1080028,"0.0-15.0-0.6",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/FemaleRace2a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",210,1082042,"0.0-15.0-1.6",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在接近",NA,"html-keyboard-response",211,1085047,"0.0-15.0-2.6",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"9202.599999998696",NA,NA,"survey-text",212,1094269,"0.0-15.0-3.6",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""霍普正在接近凯特""}","<img src='gifs/FemaleRace2a.gif' style='height:400px;''></img>","接近","正在接近","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",213,1094776,"0.0-15.0-0.7",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/ChineseGender1a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",214,1096791,"0.0-15.0-1.7",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在提到",NA,"html-keyboard-response",215,1099797,"0.0-15.0-2.7",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"9275.30000000121",NA,NA,"survey-text",216,1109093,"0.0-15.0-3.7",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""霍普正在提到卢克""}","<img src='gifs/ChineseGender1a.gif' style='height:400px;''></img>","提到","正在提到","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",217,1109600,"0.0-15.0-0.8",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/MaleRace4a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",218,1111611,"0.0-15.0-1.8",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在加入",NA,"html-keyboard-response",219,1114617,"0.0-15.0-2.8",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"17528.500000000466",NA,NA,"survey-text",220,1132168,"0.0-15.0-3.8",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""麦克正在加入戴夫""}","<img src='gifs/MaleRace4a.gif' style='height:400px;''></img>","加入","正在加入","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",221,1132678,"0.0-15.0-0.9",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/MaleRace2a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",222,1134694,"0.0-15.0-1.9",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在加入",NA,"html-keyboard-response",223,1137705,"0.0-15.0-2.9",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"9626.899999999208",NA,NA,"survey-text",224,1147351,"0.0-15.0-3.9",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""麦克正在加入卢克""}","<img src='gifs/MaleRace2a.gif' style='height:400px;''></img>","加入","正在加入","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",225,1147858,"0.0-15.0-0.10",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/BlackGender4b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",226,1149879,"0.0-15.0-1.10",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在陪伴",NA,"html-keyboard-response",227,1152885,"0.0-15.0-2.10",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"8041.600000000326",NA,NA,"survey-text",228,1160947,"0.0-15.0-3.10",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""麦克正在陪伴凯特""}","<img src='gifs/BlackGender4b.gif' style='height:400px;''></img>","陪伴","正在陪伴","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",229,1161459,"0.0-15.0-0.11",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/ChineseGender3b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",230,1163475,"0.0-15.0-1.11",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在看着",NA,"html-keyboard-response",231,1166481,"0.0-15.0-2.11",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"9904.400000001304",NA,NA,"survey-text",232,1176410,"0.0-15.0-3.11",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""戴夫正在看着露丝""}","<img src='gifs/ChineseGender3b.gif' style='height:400px;''></img>","看着","正在看着","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",233,1176917,"0.0-15.0-0.12",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/BlackGender2b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",234,1178941,"0.0-15.0-1.12",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在聘用",NA,"html-keyboard-response",235,1181946,"0.0-15.0-2.12",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"9778.10000000149",NA,NA,"survey-text",236,1191749,"0.0-15.0-3.12",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""麦克正在聘用贝斯""}","<img src='gifs/BlackGender2b.gif' style='height:400px;''></img>","聘用","正在聘用","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",237,1192259,"0.0-15.0-0.13",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/ChineseGender4b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",238,1194275,"0.0-15.0-1.13",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在走向",NA,"html-keyboard-response",239,1197285,"0.0-15.0-2.13",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"8793.79999999958",NA,NA,"survey-text",240,1206100,"0.0-15.0-3.13",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""霍普正在走向戴夫""}","<img src='gifs/ChineseGender4b.gif' style='height:400px;''></img>","走向","正在走向","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",241,1206609,"0.0-15.0-0.14",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/FemaleRace4b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",242,1208623,"0.0-15.0-1.14",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在面向",NA,"html-keyboard-response",243,1211631,"0.0-15.0-2.14",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"14643.799999999814",NA,NA,"survey-text",244,1226293,"0.0-15.0-3.14",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""凯特正在面向露丝""}","<img src='gifs/FemaleRace4b.gif' style='height:400px;''></img>","面向","正在面向","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",245,1226800,"0.0-15.0-0.15",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/ChineseGender3a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",246,1228819,"0.0-15.0-1.15",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在表扬",NA,"html-keyboard-response",247,1231827,"0.0-15.0-2.15",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"9771.800000000512",NA,NA,"survey-text",248,1241624,"0.0-15.0-3.15",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""露丝正在表扬戴夫""}","<img src='gifs/ChineseGender3a.gif' style='height:400px;''></img>","表扬","正在表扬","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",249,1242130,"0.0-15.0-0.16",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/BlackGender1a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",250,1244145,"0.0-15.0-1.16",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在聘用",NA,"html-keyboard-response",251,1247150,"0.0-15.0-2.16",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"8814.700000000885",NA,NA,"survey-text",252,1255986,"0.0-15.0-3.16",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""贝斯正在聘用弗雷""}","<img src='gifs/BlackGender1a.gif' style='height:400px;''></img>","聘用","正在聘用","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",253,1256492,"0.0-15.0-0.17",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/MaleRace1b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",254,1258513,"0.0-15.0-1.17",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在跟随",NA,"html-keyboard-response",255,1261523,"0.0-15.0-2.17",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"14560.799999999115",NA,NA,"survey-text",256,1276103,"0.0-15.0-3.17",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""卢克正在跟随弗雷""}","<img src='gifs/MaleRace1b.gif' style='height:400px;''></img>","跟随","正在跟随","chinese",NA
+"4327.40000000014","<img src='img/portrait_matrix_listB_chinese.jpg' style='width:900px;height:500px;''></img><p>如果您已经记住了所有的人物和名字，请点击继续。</p><p><strong>请注意：您对先前记忆的面孔将在本实验中被测试5次。</strong></p>",0,"html-button-response",257,1280442,"0.0-16.0-0.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"4285.6000000010245","<img src=""portrait/WW2.jpg""style=""height:400px;""></img>",3,"html-button-response",258,1285746,"0.0-16.0-1.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",3,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",259,1287264,"0.0-16.0-2.0-0.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"2910.400000000838","<img src=""portrait/WM1.jpg""style=""height:400px;""></img>",6,"html-button-response",260,1290195,"0.0-16.0-4.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",6,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",261,1291706,"0.0-16.0-5.0-0.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"2503.9999999990687","<img src=""portrait/BW2.jpg""style=""height:400px;""></img>",2,"html-button-response",262,1294220,"0.0-16.0-7.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",2,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",263,1295726,"0.0-16.0-8.0-0.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"4404.700000000885","<img src=""portrait/BW1.jpg""style=""height:400px;""></img>",0,"html-button-response",264,1300145,"0.0-16.0-10.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",0,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",265,1301655,"0.0-16.0-11.0-0.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"6174.799999998882","<img src=""portrait/WM2.jpg""style=""height:400px;""></img>",7,"html-button-response",266,1307853,"0.0-16.0-13.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",7,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",267,1309366,"0.0-16.0-14.0-0.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"5679.5999999996275","<img src=""portrait/BM2.jpg""style=""height:400px;""></img>",5,"html-button-response",268,1315062,"0.0-16.0-16.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",5,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",269,1316572,"0.0-16.0-17.0-0.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"3878.6999999994878","<img src=""portrait/BM1.jpg""style=""height:400px;""></img>",4,"html-button-response",270,1320465,"0.0-16.0-19.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",4,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",271,1321974,"0.0-16.0-20.0-0.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"1500.2999999998137","<img src=""portrait/WW1.jpg""style=""height:400px;""></img>",1,"html-button-response",272,1323485,"0.0-16.0-22.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,"true",1,NA,NA,NA,NA,NA,NA,NA
+"null","正确",NA,"html-keyboard-response",273,1324994,"0.0-16.0-23.0-0.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"1372.300000000978","<p>您第一次在8题里答对了 8 题。 请点击继续</p>",0,"html-button-response",274,1326377,"0.0-16.0-25.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",275,1327890,"0.0-17.0-0.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/ChineseGender3a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",276,1329901,"0.0-17.0-1.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在看着",NA,"html-keyboard-response",277,1332909,"0.0-17.0-2.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"7304.400000001071",NA,NA,"survey-text",278,1340235,"0.0-17.0-3.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""露丝正在看着戴夫""}","<img src='gifs/ChineseGender3a.gif' style='height:400px;''></img>","看着","正在看着","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",279,1340750,"0.0-17.0-0.1",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/MaleRace1a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",280,1342765,"0.0-17.0-1.1",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在联系",NA,"html-keyboard-response",281,1345773,"0.0-17.0-2.1",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"9957.80000000028",NA,NA,"survey-text",282,1355753,"0.0-17.0-3.1",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""卢克正在联系弗雷""}","<img src='gifs/MaleRace1a.gif' style='height:400px;''></img>","联系","正在联系","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",283,1356260,"0.0-17.0-0.2",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/BlackGender4a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",284,1358279,"0.0-17.0-1.2",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在跟随",NA,"html-keyboard-response",285,1361287,"0.0-17.0-2.2",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"10203.799999999348",NA,NA,"survey-text",286,1371512,"0.0-17.0-3.2",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""麦克正在跟随凯特""}","<img src='gifs/BlackGender4a.gif' style='height:400px;''></img>","跟随","正在跟随","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",287,1372016,"0.0-17.0-0.3",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/FemaleRace1a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",288,1374032,"0.0-17.0-1.3",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在聆听",NA,"html-keyboard-response",289,1377038,"0.0-17.0-2.3",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"14603.19999999972",NA,NA,"survey-text",290,1391663,"0.0-17.0-3.3",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""贝斯正在聆听霍普""}","<img src='gifs/FemaleRace1a.gif' style='height:400px;''></img>","聆听","正在聆听","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",291,1392169,"0.0-17.0-0.4",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/FemaleRace2b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",292,1394182,"0.0-17.0-1.4",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在联系",NA,"html-keyboard-response",293,1397186,"0.0-17.0-2.4",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"7398.699999999721",NA,NA,"survey-text",294,1404609,"0.0-17.0-3.4",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""霍普正在联系凯特""}","<img src='gifs/FemaleRace2b.gif' style='height:400px;''></img>","联系","正在联系","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",295,1405125,"0.0-17.0-0.5",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/BlackGender4b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",296,1407151,"0.0-17.0-1.5",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在走向",NA,"html-keyboard-response",297,1410158,"0.0-17.0-2.5",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"16081.199999998556",NA,NA,"survey-text",298,1426259,"0.0-17.0-3.5",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""凯特正在走向麦克""}","<img src='gifs/BlackGender4b.gif' style='height:400px;''></img>","走向","正在走向","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",299,1426770,"0.0-17.0-0.6",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/ChineseGender2b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",300,1428791,"0.0-17.0-1.6",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在陪伴",NA,"html-keyboard-response",301,1431797,"0.0-17.0-2.6",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"11290.399999999674",NA,NA,"survey-text",302,1443108,"0.0-17.0-3.6",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""卢克正在陪伴露丝""}","<img src='gifs/ChineseGender2b.gif' style='height:400px;''></img>","陪伴","正在陪伴","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",303,1443619,"0.0-17.0-0.7",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/FemaleRace4a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",304,1445637,"0.0-17.0-1.7",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在表扬",NA,"html-keyboard-response",305,1448643,"0.0-17.0-2.7",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"15115.400000000605",NA,NA,"survey-text",306,1463789,"0.0-17.0-3.7",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""露丝正在表扬凯特""}","<img src='gifs/FemaleRace4a.gif' style='height:400px;''></img>","表扬","正在表扬","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",307,1464297,"0.0-17.0-0.8",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/FemaleRace3a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",308,1466312,"0.0-17.0-1.8",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在接近",NA,"html-keyboard-response",309,1469318,"0.0-17.0-2.8",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"7153.699999999022",NA,NA,"survey-text",310,1476493,"0.0-17.0-3.8",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""贝斯正在接近露丝""}","<img src='gifs/FemaleRace3a.gif' style='height:400px;''></img>","接近","正在接近","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",311,1477000,"0.0-17.0-0.9",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/MaleRace1b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",312,1479011,"0.0-17.0-1.9",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在看着",NA,"html-keyboard-response",313,1482017,"0.0-17.0-2.9",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"7123.000000001397",NA,NA,"survey-text",314,1489161,"0.0-17.0-3.9",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""卢克正在看着弗雷""}","<img src='gifs/MaleRace1b.gif' style='height:400px;''></img>","看着","正在看着","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",315,1489669,"0.0-17.0-0.10",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/BlackGender3b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",316,1491676,"0.0-17.0-1.10",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在聘用",NA,"html-keyboard-response",317,1494683,"0.0-17.0-2.10",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"8324.000000000466",NA,NA,"survey-text",318,1503030,"0.0-17.0-3.10",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""凯特正在聘用弗雷""}","<img src='gifs/BlackGender3b.gif' style='height:400px;''></img>","聘用","正在聘用","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",319,1503538,"0.0-17.0-0.11",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/BlackGender2b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",320,1505550,"0.0-17.0-1.11",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在提到",NA,"html-keyboard-response",321,1508559,"0.0-17.0-2.11",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"7058.699999999488",NA,NA,"survey-text",322,1515642,"0.0-17.0-3.11",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""贝斯正在提到麦克""}","<img src='gifs/BlackGender2b.gif' style='height:400px;''></img>","提到","正在提到","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",323,1516148,"0.0-17.0-0.12",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/BlackGender1a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",324,1518163,"0.0-17.0-1.12",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在提到",NA,"html-keyboard-response",325,1521169,"0.0-17.0-2.12",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"12017.29999999958",NA,NA,"survey-text",326,1533208,"0.0-17.0-3.12",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""弗雷正在提到贝斯""}","<img src='gifs/BlackGender1a.gif' style='height:400px;''></img>","提到","正在提到","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",327,1533717,"0.0-17.0-0.13",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/BlackGender2a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",328,1535737,"0.0-17.0-1.13",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在面向",NA,"html-keyboard-response",329,1538742,"0.0-17.0-2.13",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"8983.000000000233",NA,NA,"survey-text",330,1547748,"0.0-17.0-3.13",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""贝斯正在面向麦克""}","<img src='gifs/BlackGender2a.gif' style='height:400px;''></img>","面向","正在面向","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",331,1548258,"0.0-17.0-0.14",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/FemaleRace3b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",332,1550275,"0.0-17.0-1.14",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在说服",NA,"html-keyboard-response",333,1553281,"0.0-17.0-2.14",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"11685.499999999534",NA,NA,"survey-text",334,1564990,"0.0-17.0-3.14",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""贝斯正在说服露丝""}","<img src='gifs/FemaleRace3b.gif' style='height:400px;''></img>","说服","正在说服","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",335,1565497,"0.0-17.0-0.15",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/ChineseGender1b.gif' style='height:400px;''></img>",NA,"html-keyboard-response",336,1567503,"0.0-17.0-1.15",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在触摸",NA,"html-keyboard-response",337,1570510,"0.0-17.0-2.15",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"10216.80000000028",NA,NA,"survey-text",338,1580747,"0.0-17.0-3.15",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""卢克正在触摸霍普""}","<img src='gifs/ChineseGender1b.gif' style='height:400px;''></img>","触摸","正在触摸","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",339,1581255,"0.0-17.0-0.16",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/FemaleRace3a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",340,1583268,"0.0-17.0-1.16",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在面向",NA,"html-keyboard-response",341,1586275,"0.0-17.0-2.16",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"7303.499999999767",NA,NA,"survey-text",342,1593597,"0.0-17.0-3.16",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""露丝正在面向贝斯""}","<img src='gifs/FemaleRace3a.gif' style='height:400px;''></img>","面向","正在面向","chinese",NA
+"null","<div style=""font-size:60px;"">+</div>",NA,"html-keyboard-response",343,1594104,"0.0-17.0-0.17",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","<img src='gifs/FemaleRace1a.gif' style='height:400px;''></img>",NA,"html-keyboard-response",344,1596118,"0.0-17.0-1.17",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"null","正在触摸",NA,"html-keyboard-response",345,1599126,"0.0-17.0-2.17",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,"null",NA,NA,NA,NA,NA,NA
+"7717.59999999986",NA,NA,"survey-text",346,1606867,"0.0-17.0-3.17",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""霍普正在触摸贝斯""}","<img src='gifs/FemaleRace1a.gif' style='height:400px;''></img>","触摸","正在触摸","chinese",NA
+"5721.39999999851","<p>Thank you for completing that task.</p><p>The final part of this session is a short questionnaire.</p><p>Press Continue.</p>",0,"html-button-response",347,1612599,"0.0-18.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"61853.300000000745",NA,NA,"survey-text",348,1675518,"0.0-19.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""Q0"":""22"",""Q1"":""Chinese"",""Q2"":""English"",""Q3"":""uk"",""Q4"":""Chinese"",""Q5"":""Chinese"",""Q6"":""female""}",NA,NA,NA,NA,"demographics"
+"12364.80000000121","<p>Have you lived in the UK for the last 5 years or more?</p>",1,"html-button-response",349,1687899,"0.0-20.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,NA,NA,NA,NA,NA,"fiveyears"
+"12248.900000000605",NA,NA,"external-html",350,1701298,"0.0-21.0",65927,"ListB","woman","chinese","SW_C_F_B6","debrief.html",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"44181.80000000028",NA,NA,"survey-text",351,1745507,"0.0-22.0",65927,"ListB","woman","chinese","SW_C_F_B6",NA,NA,NA,NA,"{""ptpt_id"":""SW_C_F_B6""}",NA,NA,NA,NA,"worker_id"

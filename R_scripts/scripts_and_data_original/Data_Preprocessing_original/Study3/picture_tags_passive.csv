@@ -1,0 +1,321 @@
+verb,list,left,right,left_gender,left_race,right_gender,right_race,syntax,auxiliary
+challenge1,list1A,mike,beth,man,white,woman,white,active,is
+challenge2,list1A,kate,fred,woman,white,man,white,passive,is being
+challenge3,list1A,dave,ruth,man,black,woman,black,active,is
+challenge4,list1A,jane,luke,woman,black,man,black,passive,is being
+challenge5,list1A,mike,luke,man,white,man,black,active,is
+challenge6,list1A,dave,fred,man,black,man,white,passive,is being
+challenge7,list1A,kate,ruth,woman,white,woman,black,active,is
+challenge8,list1A,jane,beth,woman,black,woman,white,passive,is being
+challenge1,list1B,beth,mike,woman,white,man,white,active,is
+challenge2,list1B,fred,kate,man,white,woman,white,passive,is being
+challenge3,list1B,ruth,dave,woman,black,man,black,active,is
+challenge4,list1B,luke,jane,man,black,woman,black,passive,is being
+challenge5,list1B,luke,mike,man,black,man,white,active,is
+challenge6,list1B,fred,dave,man,white,man,black,passive,is being
+challenge7,list1B,ruth,kate,woman,black,woman,white,active,is
+challenge8,list1B,beth,jane,woman,white,woman,black,passive,is being
+challenge1,list2A,dave,ruth,man,white,woman,white,active,is
+challenge2,list2A,jane,luke,woman,white,man,white,passive,is being
+challenge3,list2A,mike,beth,man,black,woman,black,active,is
+challenge4,list2A,kate,fred,woman,black,man,black,passive,is being
+challenge5,list2A,dave,fred,man,white,man,black,active,is
+challenge6,list2A,mike,luke,man,black,man,white,passive,is being
+challenge7,list2A,jane,beth,woman,white,woman,black,active,is
+challenge8,list2A,kate,ruth,woman,black,woman,white,passive,is being
+challenge1,list2B,ruth,dave,woman,white,man,white,active,is
+challenge2,list2B,luke,jane,man,white,woman,white,passive,is being
+challenge3,list2B,beth,mike,woman,black,man,black,active,is
+challenge4,list2B,fred,kate,man,black,woman,black,passive,is being
+challenge5,list2B,fred,dave,man,black,man,white,active,is
+challenge6,list2B,luke,mike,man,white,man,black,passive,is being
+challenge7,list2B,beth,jane,woman,black,woman,white,active,is
+challenge8,list2B,ruth,kate,woman,white,woman,black,passive,is being
+hug1,list1A,fred,beth,man,white,woman,white,active,is
+hug2,list1A,kate,mike,woman,white,man,white,passive,is being
+hug3,list1A,luke,ruth,man,black,woman,black,active,is
+hug4,list1A,jane,dave,woman,black,man,black,passive,is being
+hug5,list1A,fred,luke,man,white,man,black,active,is
+hug6,list1A,dave,mike,man,black,man,white,passive,is being
+hug7,list1A,beth,ruth,woman,white,woman,black,active,is
+hug8,list1A,jane,kate,woman,black,woman,white,passive,is being
+hug1,list1B,beth,fred,woman,white,man,white,active,is
+hug2,list1B,mike,kate,man,white,woman,white,passive,is being
+hug3,list1B,ruth,luke,woman,black,man,black,active,is
+hug4,list1B,dave,jane,man,black,woman,black,passive,is being
+hug5,list1B,luke,fred,man,black,man,white,active,is
+hug6,list1B,mike,dave,man,white,man,black,passive,is being
+hug7,list1B,ruth,beth,woman,black,woman,white,active,is
+hug8,list1B,kate,jane,woman,white,woman,black,passive,is being
+hug1,list2A,luke,ruth,man,white,woman,white,active,is
+hug2,list2A,jane,dave,woman,white,man,white,passive,is being
+hug3,list2A,fred,beth,man,black,woman,black,active,is
+hug4,list2A,kate,mike,woman,black,man,black,passive,is being
+hug5,list2A,luke,fred,man,white,man,black,active,is
+hug6,list2A,mike,dave,man,black,man,white,passive,is being
+hug7,list2A,ruth,beth,woman,white,woman,black,active,is
+hug8,list2A,kate,jane,woman,black,woman,white,passive,is being
+hug1,list2B,ruth,luke,woman,white,man,white,active,is
+hug2,list2B,dave,jane,man,white,woman,white,passive,is being
+hug3,list2B,beth,fred,woman,black,man,black,active,is
+hug4,list2B,mike,kate,man,black,woman,black,passive,is being
+hug5,list2B,fred,luke,man,black,man,white,active,is
+hug6,list2B,dave,mike,man,white,man,black,passive,is being
+hug7,list2B,beth,ruth,woman,black,woman,white,active,is
+hug8,list2B,jane,kate,woman,white,woman,black,passive,is being
+oppose1,list1A,mike,kate,man,white,woman,white,active,is
+oppose2,list1A,beth,fred,woman,white,man,white,passive,is being
+oppose3,list1A,dave,jane,man,black,woman,black,active,is
+oppose4,list1A,ruth,luke,woman,black,man,black,passive,is being
+oppose5,list1A,mike,dave,man,white,man,black,active,is
+oppose6,list1A,luke,fred,man,black,man,white,passive,is being
+oppose7,list1A,kate,jane,woman,white,woman,black,active,is
+oppose8,list1A,ruth,beth,woman,black,woman,white,passive,is being
+oppose1,list1B,kate,mike,woman,white,man,white,active,is
+oppose2,list1B,fred,beth,man,white,woman,white,passive,is being
+oppose3,list1B,jane,dave,woman,black,man,black,active,is
+oppose4,list1B,luke,ruth,man,black,woman,black,passive,is being
+oppose5,list1B,dave,mike,man,black,man,white,active,is
+oppose6,list1B,fred,luke,man,white,man,black,passive,is being
+oppose7,list1B,jane,kate,woman,black,woman,white,active,is
+oppose8,list1B,beth,ruth,woman,white,woman,black,passive,is being
+oppose1,list2A,dave,jane,man,white,woman,white,active,is
+oppose2,list2A,ruth,luke,woman,white,man,white,passive,is being
+oppose3,list2A,mike,kate,man,black,woman,black,active,is
+oppose4,list2A,beth,fred,woman,black,man,black,passive,is being
+oppose5,list2A,dave,mike,man,white,man,black,active,is
+oppose6,list2A,fred,luke,man,black,man,white,passive,is being
+oppose7,list2A,jane,kate,woman,white,woman,black,active,is
+oppose8,list2A,beth,ruth,woman,black,woman,white,passive,is being
+oppose1,list2B,jane,dave,woman,white,man,white,active,is
+oppose2,list2B,luke,ruth,man,white,woman,white,passive,is being
+oppose3,list2B,kate,mike,woman,black,man,black,active,is
+oppose4,list2B,fred,beth,man,black,woman,black,passive,is being
+oppose5,list2B,mike,dave,man,black,man,white,active,is
+oppose6,list2B,luke,fred,man,white,man,black,passive,is being
+oppose7,list2B,kate,jane,woman,black,woman,white,active,is
+oppose8,list2B,ruth,beth,woman,white,woman,black,passive,is being
+seduce1,list1A,fred,kate,man,white,woman,white,active,is
+seduce2,list1A,beth,mike,woman,white,man,white,passive,is being
+seduce3,list1A,luke,jane,man,black,woman,black,active,is
+seduce4,list1A,ruth,dave,woman,black,man,black,passive,is being
+seduce5,list1A,fred,dave,man,white,man,black,active,is
+seduce6,list1A,luke,mike,man,black,man,white,passive,is being
+seduce7,list1A,beth,jane,woman,white,woman,black,active,is
+seduce8,list1A,ruth,kate,woman,black,woman,white,passive,is being
+seduce1,list1B,kate,fred,woman,white,man,white,active,is
+seduce2,list1B,mike,beth,man,white,woman,white,passive,is being
+seduce3,list1B,jane,luke,woman,black,man,black,active,is
+seduce4,list1B,dave,ruth,man,black,woman,black,passive,is being
+seduce5,list1B,dave,fred,man,black,man,white,active,is
+seduce6,list1B,mike,luke,man,white,man,black,passive,is being
+seduce7,list1B,jane,beth,woman,black,woman,white,active,is
+seduce8,list1B,kate,ruth,woman,white,woman,black,passive,is being
+seduce1,list2A,luke,jane,man,white,woman,white,active,is
+seduce2,list2A,ruth,dave,woman,white,man,white,passive,is being
+seduce3,list2A,fred,kate,man,black,woman,black,active,is
+seduce4,list2A,beth,mike,woman,black,man,black,passive,is being
+seduce5,list2A,luke,mike,man,white,man,black,active,is
+seduce6,list2A,fred,dave,man,black,man,white,passive,is being
+seduce7,list2A,ruth,kate,woman,white,woman,black,active,is
+seduce8,list2A,beth,jane,woman,black,woman,white,passive,is being
+seduce1,list2B,jane,luke,woman,white,man,white,active,is
+seduce2,list2B,dave,ruth,man,white,woman,white,passive,is being
+seduce3,list2B,kate,fred,woman,black,man,black,active,is
+seduce4,list2B,mike,beth,man,black,woman,black,passive,is being
+seduce5,list2B,mike,luke,man,black,man,white,active,is
+seduce6,list2B,dave,fred,man,white,man,black,passive,is being
+seduce7,list2B,kate,ruth,woman,black,woman,white,active,is
+seduce8,list2B,jane,beth,woman,white,woman,black,passive,is being
+kiss1,list1A,fred,beth,man,white,woman,white,active,is
+kiss2,list1A,kate,mike,woman,white,man,white,passive,is being
+kiss3,list1A,luke,ruth,man,black,woman,black,active,is
+kiss4,list1A,jane,dave,woman,black,man,black,passive,is being
+kiss5,list1A,fred,luke,man,white,man,black,active,is
+kiss6,list1A,dave,mike,man,black,man,white,passive,is being
+kiss7,list1A,beth,ruth,woman,white,woman,black,active,is
+kiss8,list1A,jane,kate,woman,black,woman,white,passive,is being
+kiss1,list1B,beth,fred,woman,white,man,white,active,is
+kiss2,list1B,mike,kate,man,white,woman,white,passive,is being
+kiss3,list1B,ruth,luke,woman,black,man,black,active,is
+kiss4,list1B,dave,jane,man,black,woman,black,passive,is being
+kiss5,list1B,luke,fred,man,black,man,white,active,is
+kiss6,list1B,mike,dave,man,white,man,black,passive,is being
+kiss7,list1B,ruth,beth,woman,black,woman,white,active,is
+kiss8,list1B,kate,jane,woman,white,woman,black,passive,is being
+kiss1,list2A,luke,ruth,man,white,woman,white,active,is
+kiss2,list2A,jane,dave,woman,white,man,white,passive,is being
+kiss3,list2A,fred,beth,man,black,woman,black,active,is
+kiss4,list2A,kate,mike,woman,black,man,black,passive,is being
+kiss5,list2A,luke,fred,man,white,man,black,active,is
+kiss6,list2A,mike,dave,man,black,man,white,passive,is being
+kiss7,list2A,ruth,beth,woman,white,woman,black,active,is
+kiss8,list2A,kate,jane,woman,black,woman,white,passive,is being
+kiss1,list2B,ruth,luke,woman,white,man,white,active,is
+kiss2,list2B,dave,jane,man,white,woman,white,passive,is being
+kiss3,list2B,beth,fred,woman,black,man,black,active,is
+kiss4,list2B,mike,kate,man,black,woman,black,passive,is being
+kiss5,list2B,fred,luke,man,black,man,white,active,is
+kiss6,list2B,dave,mike,man,white,man,black,passive,is being
+kiss7,list2B,beth,ruth,woman,black,woman,white,active,is
+kiss8,list2B,jane,kate,woman,white,woman,black,passive,is being
+copy1,list1A,mike,beth,man,white,woman,white,active,is
+copy2,list1A,kate,fred,woman,white,man,white,passive,is being
+copy3,list1A,dave,ruth,man,black,woman,black,active,is
+copy4,list1A,jane,luke,woman,black,man,black,passive,is being
+copy5,list1A,mike,luke,man,white,man,black,active,is
+copy6,list1A,dave,fred,man,black,man,white,passive,is being
+copy7,list1A,kate,ruth,woman,white,woman,black,active,is
+copy8,list1A,jane,beth,woman,black,woman,white,passive,is being
+copy1,list1B,beth,mike,woman,white,man,white,active,is
+copy2,list1B,fred,kate,man,white,woman,white,passive,is being
+copy3,list1B,ruth,dave,woman,black,man,black,active,is
+copy4,list1B,luke,jane,man,black,woman,black,passive,is being
+copy5,list1B,luke,mike,man,black,man,white,active,is
+copy6,list1B,fred,dave,man,white,man,black,passive,is being
+copy7,list1B,ruth,kate,woman,black,woman,white,active,is
+copy8,list1B,beth,jane,woman,white,woman,black,passive,is being
+copy1,list2A,dave,ruth,man,white,woman,white,active,is
+copy2,list2A,jane,luke,woman,white,man,white,passive,is being
+copy3,list2A,mike,beth,man,black,woman,black,active,is
+copy4,list2A,kate,fred,woman,black,man,black,passive,is being
+copy5,list2A,dave,fred,man,white,man,black,active,is
+copy6,list2A,mike,luke,man,black,man,white,passive,is being
+copy7,list2A,jane,beth,woman,white,woman,black,active,is
+copy8,list2A,kate,ruth,woman,black,woman,white,passive,is being
+copy1,list2B,ruth,dave,woman,white,man,white,active,is
+copy2,list2B,luke,jane,man,white,woman,white,passive,is being
+copy3,list2B,beth,mike,woman,black,man,black,active,is
+copy4,list2B,fred,kate,man,black,woman,black,passive,is being
+copy5,list2B,fred,dave,man,black,man,white,active,is
+copy6,list2B,luke,mike,man,white,man,black,passive,is being
+copy7,list2B,beth,jane,woman,black,woman,white,active,is
+copy8,list2B,ruth,kate,woman,white,woman,black,passive,is being
+greet1,list1A,mike,beth,man,white,woman,white,active,is
+greet2,list1A,kate,fred,woman,white,man,white,passive,is being
+greet3,list1A,dave,ruth,man,black,woman,black,active,is
+greet4,list1A,jane,luke,woman,black,man,black,passive,is being
+greet5,list1A,mike,luke,man,white,man,black,active,is
+greet6,list1A,dave,fred,man,black,man,white,passive,is being
+greet7,list1A,kate,ruth,woman,white,woman,black,active,is
+greet8,list1A,jane,beth,woman,black,woman,white,passive,is being
+greet1,list1B,beth,mike,woman,white,man,white,active,is
+greet2,list1B,fred,kate,man,white,woman,white,passive,is being
+greet3,list1B,ruth,dave,woman,black,man,black,active,is
+greet4,list1B,luke,jane,man,black,woman,black,passive,is being
+greet5,list1B,luke,mike,man,black,man,white,active,is
+greet6,list1B,fred,dave,man,white,man,black,passive,is being
+greet7,list1B,ruth,kate,woman,black,woman,white,active,is
+greet8,list1B,beth,jane,woman,white,woman,black,passive,is being
+greet1,list2A,dave,ruth,man,white,woman,white,active,is
+greet2,list2A,jane,luke,woman,white,man,white,passive,is being
+greet3,list2A,mike,beth,man,black,woman,black,active,is
+greet4,list2A,kate,fred,woman,black,man,black,passive,is being
+greet5,list2A,dave,fred,man,white,man,black,active,is
+greet6,list2A,mike,luke,man,black,man,white,passive,is being
+greet7,list2A,jane,beth,woman,white,woman,black,active,is
+greet8,list2A,kate,ruth,woman,black,woman,white,passive,is being
+greet1,list2B,ruth,dave,woman,white,man,white,active,is
+greet2,list2B,luke,jane,man,white,woman,white,passive,is being
+greet3,list2B,beth,mike,woman,black,man,black,active,is
+greet4,list2B,fred,kate,man,black,woman,black,passive,is being
+greet5,list2B,fred,dave,man,black,man,white,active,is
+greet6,list2B,luke,mike,man,white,man,black,passive,is being
+greet7,list2B,beth,jane,woman,black,woman,white,active,is
+greet8,list2B,ruth,kate,woman,white,woman,black,passive,is being
+shout1,list1A,fred,beth,man,white,woman,white,active,is
+shout2,list1A,kate,mike,woman,white,man,white,passive,is being
+shout3,list1A,luke,ruth,man,black,woman,black,active,is
+shout4,list1A,jane,dave,woman,black,man,black,passive,is being
+shout5,list1A,fred,luke,man,white,man,black,active,is
+shout6,list1A,dave,mike,man,black,man,white,passive,is being
+shout7,list1A,beth,ruth,woman,white,woman,black,active,is
+shout8,list1A,jane,kate,woman,black,woman,white,passive,is being
+shout1,list1B,beth,fred,woman,white,man,white,active,is
+shout2,list1B,mike,kate,man,white,woman,white,passive,is being
+shout3,list1B,ruth,luke,woman,black,man,black,active,is
+shout4,list1B,dave,jane,man,black,woman,black,passive,is being
+shout5,list1B,luke,fred,man,black,man,white,active,is
+shout6,list1B,mike,dave,man,white,man,black,passive,is being
+shout7,list1B,ruth,beth,woman,black,woman,white,active,is
+shout8,list1B,kate,jane,woman,white,woman,black,passive,is being
+shout1,list2A,luke,ruth,man,white,woman,white,active,is
+shout2,list2A,jane,dave,woman,white,man,white,passive,is being
+shout3,list2A,fred,beth,man,black,woman,black,active,is
+shout4,list2A,kate,mike,woman,black,man,black,passive,is being
+shout5,list2A,luke,fred,man,white,man,black,active,is
+shout6,list2A,mike,dave,man,black,man,white,passive,is being
+shout7,list2A,ruth,beth,woman,white,woman,black,active,is
+shout8,list2A,kate,jane,woman,black,woman,white,passive,is being
+shout1,list2B,ruth,luke,woman,white,man,white,active,is
+shout2,list2B,dave,jane,man,white,woman,white,passive,is being
+shout3,list2B,beth,fred,woman,black,man,black,active,is
+shout4,list2B,mike,kate,man,black,woman,black,passive,is being
+shout5,list2B,fred,luke,man,black,man,white,active,is
+shout6,list2B,dave,mike,man,white,man,black,passive,is being
+shout7,list2B,beth,ruth,woman,black,woman,white,active,is
+shout8,list2B,jane,kate,woman,white,woman,black,passive,is being
+look1,list1A,fred,beth,man,white,woman,white,active,is
+look2,list1A,kate,mike,woman,white,man,white,passive,is being
+look3,list1A,luke,ruth,man,black,woman,black,active,is
+look4,list1A,jane,dave,woman,black,man,black,passive,is being
+look5,list1A,fred,luke,man,white,man,black,active,is
+look6,list1A,dave,mike,man,black,man,white,passive,is being
+look7,list1A,beth,ruth,woman,white,woman,black,active,is
+look8,list1A,jane,kate,woman,black,woman,white,passive,is being
+look1,list1B,beth,fred,woman,white,man,white,active,is
+look2,list1B,mike,kate,man,white,woman,white,passive,is being
+look3,list1B,ruth,luke,woman,black,man,black,active,is
+look4,list1B,dave,jane,man,black,woman,black,passive,is being
+look5,list1B,luke,fred,man,black,man,white,active,is
+look6,list1B,mike,dave,man,white,man,black,passive,is being
+look7,list1B,ruth,beth,woman,black,woman,white,active,is
+look8,list1B,kate,jane,woman,white,woman,black,passive,is being
+look1,list2A,luke,ruth,man,white,woman,white,active,is
+look2,list2A,jane,dave,woman,white,man,white,passive,is being
+look3,list2A,fred,beth,man,black,woman,black,active,is
+look4,list2A,kate,mike,woman,black,man,black,passive,is being
+look5,list2A,luke,fred,man,white,man,black,active,is
+look6,list2A,mike,dave,man,black,man,white,passive,is being
+look7,list2A,ruth,beth,woman,white,woman,black,active,is
+look8,list2A,kate,jane,woman,black,woman,white,passive,is being
+look1,list2B,ruth,luke,woman,white,man,white,active,is
+look2,list2B,dave,jane,man,white,woman,white,passive,is being
+look3,list2B,beth,fred,woman,black,man,black,active,is
+look4,list2B,mike,kate,man,black,woman,black,passive,is being
+look5,list2B,fred,luke,man,black,man,white,active,is
+look6,list2B,dave,mike,man,white,man,black,passive,is being
+look7,list2B,beth,ruth,woman,black,woman,white,active,is
+look8,list2B,jane,kate,woman,white,woman,black,passive,is being
+touch1,list1A,mike,kate,man,white,woman,white,active,is
+touch2,list1A,beth,fred,woman,white,man,white,passive,is being
+touch3,list1A,dave,jane,man,black,woman,black,active,is
+touch4,list1A,ruth,luke,woman,black,man,black,passive,is being
+touch5,list1A,mike,dave,man,white,man,black,active,is
+touch6,list1A,luke,fred,man,black,man,white,passive,is being
+touch7,list1A,kate,jane,woman,white,woman,black,active,is
+touch8,list1A,ruth,beth,woman,black,woman,white,passive,is being
+touch1,list1B,kate,mike,woman,white,man,white,active,is
+touch2,list1B,fred,beth,man,white,woman,white,passive,is being
+touch3,list1B,jane,dave,woman,black,man,black,active,is
+touch4,list1B,luke,ruth,man,black,woman,black,passive,is being
+touch5,list1B,dave,mike,man,black,man,white,active,is
+touch6,list1B,fred,luke,man,white,man,black,passive,is being
+touch7,list1B,jane,kate,woman,black,woman,white,active,is
+touch8,list1B,beth,ruth,woman,white,woman,black,passive,is being
+touch1,list2A,dave,jane,man,white,woman,white,active,is
+touch2,list2A,ruth,luke,woman,white,man,white,passive,is being
+touch3,list2A,mike,kate,man,black,woman,black,active,is
+touch4,list2A,beth,fred,woman,black,man,black,passive,is being
+touch5,list2A,dave,mike,man,white,man,black,active,is
+touch6,list2A,fred,luke,man,black,man,white,passive,is being
+touch7,list2A,jane,kate,woman,white,woman,black,active,is
+touch8,list2A,beth,ruth,woman,black,woman,white,passive,is being
+touch1,list2B,jane,dave,woman,white,man,white,active,is
+touch2,list2B,luke,ruth,man,white,woman,white,passive,is being
+touch3,list2B,kate,mike,woman,black,man,black,active,is
+touch4,list2B,fred,beth,man,black,woman,black,passive,is being
+touch5,list2B,mike,dave,man,black,man,white,active,is
+touch6,list2B,luke,fred,man,white,man,black,passive,is being
+touch7,list2B,kate,jane,woman,black,woman,white,active,is
+touch8,list2B,ruth,beth,woman,white,woman,black,passive,is being
