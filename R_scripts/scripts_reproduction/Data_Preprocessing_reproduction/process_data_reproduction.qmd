@@ -160,7 +160,7 @@ The preprocessing script filters participants but does not export the resulting 
 ```{r, message=FALSE}
 
 #GR: added data reproduction code:
-write.csv(test, file = "empathy_data_test.csv", row.names = FALSE)
+write.csv(test, file = "R_scripts/scripts_reproduction/Data_Preprocessing_reproduction/reproduced_data/empathy_study/empathy_data_test.csv", row.names = FALSE)
 empathy_study_data_original <- read_csv(here("R_scripts", "scripts_and_data_original", "Data_Analysis_original", "empathy_study_data.csv")) #GR: this is the data used by the authors in their analysis (in the analysis script R_scripts/scripts_and_data_original/Data_Analysis_original/OSF_Analyses.r)
 
 length(unique(test$id)) #128 participants
@@ -173,7 +173,7 @@ reconstructed_df <- test |>
   filter(!id  %in% catch_ids$id)
 supposed_ids <- reconstructed_df |> distinct(id)
 
-write_csv(reconstructed_df, file = "reconstructed_df.csv")
+write_csv(reconstructed_df, file = "R_scripts/scripts_reproduction/Data_Preprocessing_reproduction/reproduced_data/empathy_study/reconstructed_df.csv")
 
 ```
 
