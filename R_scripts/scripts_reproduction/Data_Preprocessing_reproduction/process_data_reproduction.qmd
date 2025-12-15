@@ -93,7 +93,6 @@ catch = test %>% # Read in data
       TRUE ~ 0
     ))
 
-# ELF: As far as I can see 3 participants got all catch trials wrong
 catch %>% 
   group_by(id) %>% 
   dplyr::summarise(correct = mean(correct)) |> 
