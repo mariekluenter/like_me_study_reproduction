@@ -53,12 +53,12 @@ ci.high <- function(x,na.rm=T) {
 #######
 # Import and process data from Chinese study
 
-chinese_data = read_csv("study4_chinese.csv")
+#chinese_data = read_csv("study4_chinese.csv")
 
-chinese_data$ppt_gender = as.factor(chinese_data$ppt_gender)
-contrasts(chinese_data$ppt_gender)[1] <- -1
-chinese_data$condition = as.factor(chinese_data$condition)
-contrasts(chinese_data$condition)[1] <- -1
+#chinese_data$ppt_gender = as.factor(chinese_data$ppt_gender)
+#contrasts(chinese_data$ppt_gender)[1] <- -1
+#chinese_data$condition = as.factor(chinese_data$condition)
+#contrasts(chinese_data$condition)[1] <- -1
  
  
 ```
@@ -110,6 +110,10 @@ data5_condition_overallMeans
 ```
 
 minor differences becaus of the bootstrap
+"data5_overallMeans" refers to the overall effect
+"data5_demog_overallMeans" outputs the numbers for the man and women overall
+"data5_condition_overallMeans" differentiates between the chines overall and the
+english overall
 
 ```{r}
 {r}
@@ -124,7 +128,7 @@ overall_like_me <- glmer(OverallLikeMe ~ 1+condition+ (1|subject) + (1|verb),
 summary(overall_like_me)
 ```
 
-It was neccessary to write thise code chunk to reproduce the numbers mentioned in the paper
+It was neccessary to write thise code chunk to reproduce the numbers mentioned in the paper (size effect of the overall like me)
 
 ```{r}
 #| label: original code lines 834-848
@@ -144,6 +148,8 @@ overall_like_me_Chinese <- glmer(OverallLikeMe ~ 1+ (1|subject) + (1|verb),
 summary(overall_like_me_Chinese)
 ```
 
+M: size effect for English as an additional language and natively producing Chinese
+
 ```{r}
 #| label: original code lines 849-865
 
@@ -160,6 +166,8 @@ overall_like_me_female <- glmer(OverallLikeMe ~ 1+condition+ (1|subject) + (1+co
 
 summary(overall_like_me_female)
 ```
+
+M: those numbers are not reported in the paper for experiment 4
 
 ```{r}
 #| label: additional code neutral names
@@ -247,4 +255,3 @@ data5_condition_overallMeans_neutral = names_neutral %>%
 data5_condition_overallMeans_neutral
 
 ```
-
