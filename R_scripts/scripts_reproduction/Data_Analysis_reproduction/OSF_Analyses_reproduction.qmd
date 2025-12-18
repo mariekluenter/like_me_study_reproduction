@@ -866,6 +866,32 @@ data4_syntax = data4 %>%
 data4_syntax
 ```
 
+R: As a robustness check, we computed the preregistered models which were not included in the analysis code:
+
+```{r}
+#| label: robustness check Study 3
+model_gender_prereg <- glmer(OverallLikeMe ~  ppt_gender * syntax + (1 + syntax | subject) + (1 + ppt_gender | event),
+                             data = subset(data4, TrialType == "GenderTrial"),
+                             family = binomial(link = "logit"),
+                             control = glmerControl(optimizer = "bobyqa")
+)
+summary(model_gender_prereg)
+
+tab_model(model_gender_prereg, show.aic = TRUE)
+```
+
+When removing the random effect of event, the model computes without the optimizer.
+
+```{r}
+model_gender_prereg2 <- glmer(OverallLikeMe ~  ppt_gender * syntax + (1 + syntax | subject),
+                              data = subset(data4, TrialType == "GenderTrial"),
+                              family = binomial(link = "logit")
+)
+summary(model_gender_prereg2)
+
+tab_model(model_gender_prereg2, show.aic = TRUE)
+```
+
 ### Chinese study
 
 ```{r}
