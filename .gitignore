@@ -1,0 +1,12 @@
+.Rproj.user
+.Rproj.user/.*
+.Rhistory
+.RData
+.*.RData
+.Ruserdata
+.DS_store
+.~lock.*
+/.quarto/
+*_cache
+/site_libs/
+_extensions/

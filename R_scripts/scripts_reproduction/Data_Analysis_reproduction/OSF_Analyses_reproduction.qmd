@@ -1,8 +1,18 @@
 ---
-title: "adjusted_OSF_Analyses"
-format: html
-editor: visual
+title: "Reproduction and robustness checks based on OSF_Analyses.R script"
+date: last-modified
+freeze: true
+cache: true
+format:
+  html:
+    embed-resources: true
+    number-sections: true
+    toc: true
 ---
+
+## Set-up
+
+Load packages and set custom functions as listed in original script:
 
 ```{r}
 #| label: original code lines 1-36
@@ -46,27 +56,81 @@ ci.high <- function(x,na.rm=T) {
 
 ```
 
+Load additional packages needed for our reproduction and robustness checks:
+
 ```{r}
-#| label: original code lines 98-106
-#| echo: false
-
-#######
-# Import and process data from Chinese study
-
-#chinese_data = read_csv("study4_chinese.csv")
-
-#chinese_data$ppt_gender = as.factor(chinese_data$ppt_gender)
-#contrasts(chinese_data$ppt_gender)[1] <- -1
-#chinese_data$condition = as.factor(chinese_data$condition)
-#contrasts(chinese_data$condition)[1] <- -1
- 
- 
+library(here)
 ```
 
-```{r}
-#| label: reproduction code lines 98-106
+## Data import
 
-library(here)
+### Read in and process English data from Studies 1 thru 3
+
+```{r}
+#| label: adaptation of code lines 40-74 to include {here} paths
+
+#import and merge all three CSV files into one data frame
+data <- list.files(path = here("R_scripts", "scripts_and_data_original", "Data_Analysis_original"),  # Identify all CSV files
+                   pattern = "*english.csv", full.names = TRUE) %>% 
+  lapply(read_csv) %>%  # Store all files in list
+  bind_rows        # Combine data sets into one data set 
+
+
+data = data %>%
+  dplyr::mutate(TrialType = ifelse(left_gender == right_gender, 
+                                   "RaceTrial","GenderTrial"),
+                GenderTrialType = ifelse(left_race ==  "black" & right_race == "black",
+                                         "BlackTrial","WhiteTrial"),
+                RaceTrialType = ifelse(left_gender == "woman" & right_gender == "woman", 
+                                       "WomanTrial", "ManTrial")) 
+
+
+#Create column for "Like Me" (i.e. if ppts mentioned the person most like them first, or second)
+
+data$Like_Me_Gender <- ifelse(data$first_person_gender == data$ppt_gender, 1, 0) #create numerical column
+data$Like_Me_Race <- ifelse(data$first_person_race == data$ppt_race, 1, 0) #create numerical column
+data$OverallLikeMe = ifelse(data$TrialType == "RaceTrial", data$Like_Me_Race, data$Like_Me_Gender)
+
+# Set coding for contrasts
+
+data$syntax = as.factor(data$syntax)
+contrasts(data$syntax)[1] = -1
+
+data$ppt_race = as.factor(data$ppt_race)
+contrasts(data$ppt_race)[1] = -1
+
+data$ppt_gender = as.factor(data$ppt_gender)
+contrasts(data$ppt_gender)[1] = -1
+```
+
+### Import and process data from intuitions study
+
+```{r}
+#| label: reproduction of code lines 77-94 to include {here} paths
+
+intuitions_original = read_csv(here("R_scripts", "scripts_and_data_original", "Data_Analysis_original", "rating_study.csv")) %>%
+  select(-...1)
+
+intuitions_passive = read_csv(here("R_scripts", "scripts_and_data_original", "Data_Analysis_original", "rating_study_passive.csv")) %>%
+  mutate(ppt_age = NA, responses_new_reversed = NA)
+
+intuitions = rbind(intuitions_original, intuitions_passive)
+
+#####
+# Import and process empathy data
+
+empathy_data = read_csv(here("R_scripts", "scripts_and_data_original", "Data_Analysis_original", "empathy_study_data.csv")) %>%
+  filter(condition != "catch")  %>%
+  mutate(verb = gsub("_conjoined","",verb),
+         verb = gsub("_active","",verb),
+         verb = gsub("_passive","",verb))
+
+```
+
+### Import Chinese data
+
+```{r}
+#| label: reproduction code lines 98-106 to include {here} paths
 
 chinese_data = read_csv(here("R_scripts", "scripts_and_data_original", "Data_Analysis_original", "study4_chinese.csv"))
 
@@ -78,11 +142,736 @@ chinese_data$condition = as.factor(chinese_data$condition)
 contrasts(chinese_data$condition)[1] <- -1
 ```
 
-```{r}
-#| label: original code lines 808-833
+### Combine and process data from studies 1-3 with Chinese data
 
-######
-# Chinese study
+```{r}
+#| label: reproduction of code lines 109-123 to include {here} paths
+
+data_for_groups = bind_rows(data, read_csv(here("R_scripts", "scripts_and_data_original", "Data_Analysis_original", "data5_chinese.csv")) %>% mutate(study = "study5")) # data5_chinese is just a subset of the columns in study4_chinese.csv
+
+data_for_groups = data_for_groups %>% 
+  mutate(TrialType = ordered(ifelse(TrialType %in% c("RaceTrial","Race Trials"), "Race Trials","Gender Trials"), levels = c("Race Trials","Gender Trials")))
+
+data_for_groups$ppt_gender = as.character(data_for_groups$ppt_gender)
+data_for_groups[data_for_groups$ppt_demog == "Asian Man",]$ppt_gender = "man"
+data_for_groups[data_for_groups$ppt_demog == "Asian Woman",]$ppt_gender = "woman"
+
+data_for_groups$ppt_race = as.character(data_for_groups$ppt_race)
+data_for_groups[data_for_groups$ppt_demog == "Asian Man",]$ppt_race = "asian"
+data_for_groups[data_for_groups$ppt_demog == "Asian Woman",]$ppt_race = "asian"
+
+data_for_groups$ppt_race = factor(data_for_groups$ppt_race, levels = c("white","black","asian"))
+data_for_groups$ppt_gender = factor(data_for_groups$ppt_gender, levels = c("man","woman"))
+
+```
+
+## Data processing for graphs
+
+### Code for making the graphs for studies 1-3
+
+```{r}
+#| label: original code lines 132-180
+
+data$syntax_labels = ifelse(data$syntax == "transitive","Transitive",
+                            ifelse(data$syntax == "conjoined","Intransitive",ifelse(
+                              data$syntax == "active","Active","Passive"
+                            )))
+
+like_me_averages_subj <- data %>%
+  dplyr::mutate(OverallLikeMe2 = OverallLikeMe) %>%
+  dplyr::group_by(subject,TrialType,syntax_labels,study) %>%
+  dplyr::summarise(OverallLikeMe.m = 100*mean(OverallLikeMe2))
+
+like_me_averages_summary <- data %>%
+  dplyr::group_by(subject,TrialType,syntax_labels,study) %>%
+  dplyr::summarise(OverallLikeMe.m = 100*mean(OverallLikeMe))%>%
+  dplyr::group_by(TrialType,syntax_labels,study) %>%
+  dplyr::summarise(OverallLikeMe.mean = mean(OverallLikeMe.m),
+                   OverallLikeMe.sd = sd(OverallLikeMe.m),
+                   OverallLikeMe.se = sd(OverallLikeMe.m)/sqrt(length(subject)),
+                   OverallLikeMe.high = ci.high(OverallLikeMe.m),
+                   OverallLikeMe.low = ci.low(OverallLikeMe.m))
+
+
+study1_graph <- ggplot(subset(like_me_averages_summary, study == "study1"), 
+                       aes(x = syntax_labels,y = OverallLikeMe.mean,fill = syntax_labels)) +
+  #geom_path()+
+  scale_color_hue(h = c(270,200))+
+  scale_fill_hue(h = c(270,200))+
+  geom_jitter(data = subset(like_me_averages_subj, study == "study1"), aes(y = OverallLikeMe.m),alpha = 0.03, size = 1,
+              position = position_jitter(width=0.1,height=0)) +
+  geom_linerange(color = "black",data = subset(like_me_averages_summary, study == "study1"),aes(ymax = OverallLikeMe.high, ymin =
+                                                                                                  OverallLikeMe.low)) +
+  geom_point(size = 2.5, pch = 21,  color = "black",stroke = 0.7) +
+  labs(fill = "Participant Gender") +
+  theme_cowplot()+
+  theme(legend.position="none", 
+        axis.text.x = element_blank(),
+        axis.ticks.x = element_blank()) +
+  ylab("") +
+  xlab("") +
+  ylim(c(20,80)) +
+  geom_hline(yintercept = 50, size =0.5, linetype = 2)+
+  facet_wrap(~TrialType, labeller = as_labeller(c(GenderTrial='Gender Trials', RaceTrial='Race Trials')))+
+  coord_flip()+
+  guides(colour="none")#+
+# scale_y_continuous(breaks=c(5,25,40,50,60,75,95),
+#                    trans = squish_trans(c(40, 60))) 
+
+study1_graph
+
+study2_graph <- ggplot(subset(like_me_averages_summary, study == "study2"), 
+                       aes(x = syntax_labels,y = OverallLikeMe.mean,fill = syntax_labels)) +
+  #geom_path()+
+  scale_color_hue(h = c(270,200))+
+  scale_fill_hue(h = c(270,200))+
+  geom_jitter(data = subset(like_me_averages_subj, study == "study2"), aes(y = OverallLikeMe.m),alpha = 0.03, size = 1,
+              position = position_jitter(width=0.1,height=0)) +
+  geom_linerange(color = "black",data = subset(like_me_averages_summary, study == "study2"),aes(ymax = OverallLikeMe.high, ymin =
+                                                                                                  OverallLikeMe.low)) +
+  geom_point(size = 2.5, pch = 21,  color = "black",stroke = 0.7) +
+  labs(fill = "Participant Gender") +
+  theme_cowplot()+
+  theme(legend.position="none", 
+        axis.text.x = element_blank(),
+        axis.ticks.x = element_blank()) +
+  ylab("") +
+  xlab("") +
+  ylim(c(20,80)) +
+  geom_hline(yintercept = 50, size =0.5, linetype = 2)+
+  facet_wrap(~TrialType, labeller = as_labeller(c(GenderTrial='Gender Trials', RaceTrial='Race Trials')))+
+  coord_flip()+
+  guides(colour="none")+
+  #scale_y_continuous(breaks=c(5,25,40,50,60,75,95),
+  #                   trans = squish_trans(c(40, 60))) +
+  theme(
+    strip.background = element_blank(),
+    strip.text.x = element_blank()
+  )
+
+study2_graph
+
+study4_graph <- ggplot(subset(like_me_averages_summary, study == "study4"), aes(x = syntax_labels,y = OverallLikeMe.mean,fill = syntax_labels)) +
+  #geom_path()+
+  scale_color_hue(h = c(200,270))+
+  scale_fill_hue(h = c(200,270))+
+  geom_jitter(data = subset(like_me_averages_subj, study == "study4"), aes(y = OverallLikeMe.m),alpha = 0.05, size = 1,
+              position = position_jitter(width=0.1,height=0)) +
+  geom_linerange(color = "black",data = subset(like_me_averages_summary, study == "study4"),aes(ymax = OverallLikeMe.high, ymin =
+                                                                                                  OverallLikeMe.low)) +
+  geom_point(size = 2.5, pch = 21,  color = "black",stroke = 0.7) +
+  labs(fill = "Participant Gender") +
+  theme(legend.position="none", axis.text.x = element_text(colour = "black", size = 12)) +
+  ylab("Percentage Like Me") +
+  xlab("") +
+  ylim(c(20,80)) +
+  geom_hline(yintercept = 50, size =0.5, linetype = 2)+
+  theme_cowplot()+
+  facet_wrap(~TrialType, labeller = as_labeller(c(GenderTrial='Gender Trials', RaceTrial='Race Trials')))+
+  coord_flip()+
+  guides(colour="none", fill = "none")+
+  # scale_y_continuous(breaks=c(5,25,40,50,60,75,95),
+  #                   trans = squish_trans(c(40, 60))) +
+  theme(
+    strip.background = element_blank(),
+    strip.text.x = element_blank()
+  )+
+  scale_x_discrete(limits=rev)
+
+study4_graph
+
+all_graphs = cowplot::plot_grid(study1_graph,study2_graph,study4_graph, 
+                                nrow = 3,ncol=1,align = "v", 
+                                labels = c("Expt.1","Expt.2","Expt.3"), 
+                                vjust=c(1.7,0.5,0.5),hjust=-0.75,rel_heights = c(1.2,1,1.15))
+
+all_graphs
+
+```
+
+```{r}
+#| label: reproduction of original code lines 251-281 to include {here} paths
+
+example_img = image_read(here("R_scripts", "scripts_and_data_original", "Data_Analysis_original", "example_stim.jpeg"))
+trial_img = image_read(here("R_scripts", "scripts_and_data_original", "Data_Analysis_original", "Expt1-3_instruct.png"))
+trial_img_b = image_read(here("R_scripts", "scripts_and_data_original", "Data_Analysis_original", "Expt1-3_instruct_b.png"))
+trial_img_c = image_read(here("R_scripts", "scripts_and_data_original", "Data_Analysis_original", "Expt1-3_Procedure.png"))
+portrait_img = image_read(here("R_scripts", "scripts_and_data_original", "Data_Analysis_original", "portrait_matrix_listA.jpg"))
+example_img2 = image_read(here("R_scripts", "scripts_and_data_original", "Data_Analysis_original", "example_stimuli.png"))
+
+image_plot = cowplot::plot_grid(ggdraw()+draw_image(example_img),
+                                ggdraw()+draw_image(trial_img),ncol = 1,nrow=2,labels =c("A.","B."),rel_heights = c(1,1.8))
+
+image_plot2 = cowplot::plot_grid(ggdraw()+draw_image(portrait_img),
+                                 ggdraw()+draw_image(trial_img_b),ncol = 2,nrow=1,labels =c("A.","B."),rel_widths = c(1,1))
+
+image_plot3 = cowplot::plot_grid(ggdraw()+draw_image(portrait_img)+ggplot2::theme(plot.margin = ggplot2::margin(0, 0, 0, 15)),
+                                 ggdraw()+draw_image(trial_img_b),ncol = 1,nrow=2,labels =c("A.","B."),rel_heights = c(1,1.8))
+
+image_plot4 = cowplot::plot_grid(ggdraw()+draw_image(example_img2)+ggplot2::theme(plot.margin = ggplot2::margin(0, 0, 0, 15)),
+                                 ggdraw()+draw_image(trial_img_c),ncol = 1,nrow=2,labels =c("A.","B."),rel_heights = c(1,1.8))
+
+cowplot::plot_grid(image_plot,
+                   all_graphs,ncol = 2,rel_widths = c(1,1.8),labels = c("","C."))
+
+
+cowplot::plot_grid(image_plot3,
+                   all_graphs,ncol = 2,rel_widths = c(1,1.8),labels = c("","C."))
+
+cowplot::plot_grid(image_plot2,
+                   all_graphs,ncol = 1,nrow = 2,rel_heights = c(1,1.4),labels = c("","C."))
+
+cowplot::plot_grid(image_plot4,
+                   all_graphs,ncol = 2,rel_widths = c(1,1.8),labels = c("","C."))
+
+```
+
+### Code for making the Chinese graph
+
+```{r}
+#| label: original code lines 287-345
+
+chinese_data$ConditionLabel = ordered(ifelse(chinese_data$condition == "english","English","Chinese"), levels = c("English","Chinese"))
+chinese_data$TrialType = ifelse(chinese_data$picture_condition %in% c("race_male","race_female"),"Race Trials", "Gender Trials")
+
+like_me_averages_subj_study4 <- chinese_data %>%
+  dplyr::mutate(OverallLikeMe2 = OverallLikeMe) %>%
+  dplyr::group_by(subject,TrialType,ConditionLabel) %>%
+  dplyr::summarise(OverallLikeMe.m = 100*mean(OverallLikeMe2))
+
+like_me_averages_summary_study4 <- chinese_data %>%
+  dplyr::group_by(subject,TrialType,ConditionLabel) %>%
+  dplyr::summarise(OverallLikeMe.m = 100*mean(OverallLikeMe))%>%
+  dplyr::group_by(TrialType,ConditionLabel) %>%
+  dplyr::summarise(OverallLikeMe.mean = mean(OverallLikeMe.m),
+                   OverallLikeMe.sd = sd(OverallLikeMe.m),
+                   OverallLikeMe.se = sd(OverallLikeMe.m)/sqrt(length(subject)),
+                   OverallLikeMe.high = ci.high(OverallLikeMe.m),
+                   OverallLikeMe.low = ci.low(OverallLikeMe.m))
+
+study5_graph <- ggplot(like_me_averages_summary_study4, 
+                       aes(x = ConditionLabel,y = OverallLikeMe.mean,fill = ConditionLabel)) +
+  #geom_path()+
+  scale_color_hue(h = c(270,200))+
+  scale_fill_hue(h = c(270,200))+
+  geom_jitter(data = like_me_averages_subj_study4, aes(y = OverallLikeMe.m),alpha = 0.15, size = 1,
+              position = position_jitter(width=0.2,height=0)) +
+  geom_linerange(color = "black",data = like_me_averages_summary_study4,aes(ymax = OverallLikeMe.high, ymin =
+                                                                              OverallLikeMe.low)) +
+  geom_point(size = 3, pch = 21,  color = "black",stroke = 0.7) +
+  labs(fill = "Participant Gender") +
+  theme_cowplot()+
+  theme(legend.position="none") +
+  ylab("Percentage Like Me") +
+  xlab("") +
+  ylim(c(20,80))+
+  geom_hline(yintercept = 50, size =0.5, linetype = 2)+
+  facet_wrap(~TrialType)+
+  coord_flip()+
+  guides(colour="none")#+
+# scale_y_continuous(limits = c(0,100),breaks=c(5,25,40,50,60,75,95),
+#                   trans = squish_trans(c(40, 60))) 
+
+study5_graph
+
+trial_img = image_read(here("R_scripts", "scripts_and_data_original", "Data_Analysis_original", "chinese_trial_order.png"))
+trial_img2 = image_read(here("R_scripts", "scripts_and_data_original", "Data_Analysis_original", "chinese_trial_order2.png"))
+trial_img3 = image_read(here("R_scripts", "scripts_and_data_original", "Data_Analysis_original", "chinese_trial_order3.png"))
+trial_img4 = image_read(here("R_scripts", "scripts_and_data_original", "Data_Analysis_original", "chinese_trial_order4.png"))
+
+cowplot::plot_grid(ggdraw()+draw_image(trial_img),
+                   study5_graph,ncol = 2,rel_widths = c(1,1.9),labels = c("A.","B."))
+
+cowplot::plot_grid(ggdraw()+draw_image(trial_img2),
+                   study5_graph,ncol = 2,rel_widths = c(1,1.9),labels = c("A.","B."))
+
+
+cowplot::plot_grid(ggdraw()+draw_image(trial_img4),
+                   study5_graph,ncol = 2,rel_widths = c(1,1.9),labels = c("A.","B."))
+```
+
+### Code for making the graph combining all the social groups
+
+```{r}
+#| label: original code lines 352-427
+
+like_me_groups_subj <- data_for_groups %>%
+  dplyr::mutate(OverallLikeMe2 = OverallLikeMe,
+                ppt_demog = gsub("_"," ",ppt_demog),
+                ppt_demog = ordered(ppt_demog,
+                                    levels = c("Asian Man","Asian Woman","White Man","White Woman",
+                                               "Black Man","Black Woman"))) %>%
+  #filter(TrialType %in% c("RaceTrial","Race Trials")) %>%
+  mutate(TrialType = ordered(ifelse(TrialType %in% c("RaceTrial","Race Trials"), "Race Trials","Gender Trials"), levels = c("Race Trials","Gender Trials"))) %>%
+  dplyr::group_by(subject,ppt_demog,TrialType) %>%
+  dplyr::summarise(OverallLikeMe.m = 100*mean(OverallLikeMe2)) %>%
+  mutate(ppt_demog_n = case_when(
+    ppt_demog == "Asian Man" ~ "Asian Man\n(n=59)",
+    ppt_demog == "Asian Woman" ~ "Asian Woman\n(n=55)",
+    ppt_demog == "White Man" ~ "White Man\n(n=145)",
+    ppt_demog == "White Woman" ~ "White Woman\n(n=163)",
+    ppt_demog == "Black Man" ~ "Black Man\n(n=136)",
+    ppt_demog == "Black Woman" ~ "Black Woman\n(n=142)",
+    TRUE ~ NA_character_
+  ),
+  ppt_demog_n = ordered(ppt_demog_n, levels = c("Asian Man\n(n=59)","Asian Woman\n(n=55)","White Man\n(n=145)","White Woman\n(n=163)","Black Man\n(n=136)", "Black Woman\n(n=142)")))
+
+like_me_groups_summary <- data_for_groups %>%
+  dplyr::mutate(ppt_demog = gsub("_"," ",ppt_demog),
+                ppt_demog = ordered(ppt_demog,
+                                    levels = c("Asian Man","Asian Woman","White Man","White Woman",
+                                               "Black Man","Black Woman"))) %>%
+  #filter(TrialType %in% c("RaceTrial","Race Trials")) %>%
+  mutate(TrialType = ordered(ifelse(TrialType %in% c("RaceTrial","Race Trials"), "Race Trials","Gender Trials"), levels = c("Race Trials","Gender Trials"))) %>%
+  dplyr::group_by(subject,ppt_demog,TrialType) %>%
+  dplyr::summarise(OverallLikeMe.m = 100*mean(OverallLikeMe))%>%
+  dplyr::group_by(ppt_demog,TrialType) %>%
+  dplyr::summarise(OverallLikeMe.mean = mean(OverallLikeMe.m),
+                   OverallLikeMe.sd = sd(OverallLikeMe.m),
+                   OverallLikeMe.se = sd(OverallLikeMe.m)/sqrt(length(subject)),
+                   OverallLikeMe.high = ci.high(OverallLikeMe.m),
+                   OverallLikeMe.low = ci.low(OverallLikeMe.m), 
+                   n = n()) %>%
+  mutate(ppt_demog_n = case_when(
+    ppt_demog == "Asian Man" ~ "Asian Man\n(n=59)",
+    ppt_demog == "Asian Woman" ~ "Asian Woman\n(n=55)",
+    ppt_demog == "White Man" ~ "White Man\n(n=145)",
+    ppt_demog == "White Woman" ~ "White Woman\n(n=163)",
+    ppt_demog == "Black Man" ~ "Black Man\n(n=136)",
+    ppt_demog == "Black Woman" ~ "Black Woman\n(n=142)",
+    TRUE ~ NA_character_
+  ),
+  ppt_demog_n = ordered(ppt_demog_n, levels = c("Asian Man\n(n=59)","Asian Woman\n(n=55)","White Man\n(n=145)","White Woman\n(n=163)","Black Man\n(n=136)", "Black Woman\n(n=142)")))
+
+
+groups_graph <- ggplot(like_me_groups_summary, 
+                       aes(x = ppt_demog_n,y = OverallLikeMe.mean,fill=ppt_demog_n)) +
+  #geom_path()+
+  scale_color_hue(h = c(270,200))+
+  scale_fill_hue(h = c(270,200))+
+  geom_jitter(data = like_me_groups_subj, aes(y = OverallLikeMe.m),color = "grey",alpha = 0.2, size = 1,
+              position = position_jitter(width=0.1,height=0)) +
+  geom_linerange(colour = "black",data = like_me_groups_summary,aes(ymax = OverallLikeMe.high, ymin =
+                                                                      OverallLikeMe.low)) +
+  geom_point(size = 3, pch = 21,  color = "black",stroke = 0.7) +
+  theme_cowplot()+
+  theme(legend.position="none") +
+  ylab("Percentage Like Me") +
+  xlab("") +
+  ylim(c(20,80)) +
+  geom_hline(yintercept = 50, size =0.5, linetype = 2)+
+  facet_wrap(~TrialType)+
+  coord_flip()+
+  guides(colour="none")+
+  theme(axis.text = element_text(size = 11),
+        axis.title = element_text(size = 12))
+
+#+
+#scale_y_continuous(breaks=c(10,25,40,50,60,75,90),
+#                   trans = squish_trans(c(35, 65))) 
+
+groups_graph
+```
+
+### Code for intuitions graph
+
+```{r}
+#| label: original code lines 432-695
+
+# Begin by loading the original set of analyses in file OSF_Analyses
+
+summarised_like_me_data = data_for_groups %>% 
+  mutate(syntax_unique = case_when(syntax == "active" ~ "Active\nTransitive",
+                                   syntax == "transitive" ~ "Active\nTransitive",
+                                   syntax == "conjoined" ~ "Conjoined",
+                                   syntax == "passive" ~ "Passive",
+                                   syntax == "English Transitive (Chinese speaker)" ~ "English active",
+                                   TRUE ~ "Chinese active"),
+         subject_unique = paste(study, subject)) %>% 
+  group_by(subject_unique,syntax_unique) %>% 
+  dplyr::summarise(OverallLikeMe = mean(OverallLikeMe)) %>% 
+  group_by(syntax_unique) %>% 
+  dplyr::summarise(OverallLikeMe.m = mean(OverallLikeMe), 
+                   OverallLikeMe.lo = ci.low(OverallLikeMe),
+                   OverallLikeMe.hi = ci.high(OverallLikeMe)) %>%
+  mutate(Participant_Background = ifelse(syntax_unique %in% c("Passive","Active\nTransitive","Conjoined"), "English speakers","Chinese speakers"))
+
+summarised_like_me_data_ptpt = data_for_groups %>% 
+  mutate(syntax_unique = case_when(syntax == "active" ~ "Active\nTransitive",
+                                   syntax == "transitive" ~ "Active\nTransitive",
+                                   syntax == "conjoined" ~ "Conjoined",
+                                   syntax == "passive" ~ "Passive",
+                                   syntax == "English Transitive (Chinese speaker)" ~ "English active",
+                                   TRUE ~ "Chinese active"),
+         subject_unique = paste(study, subject)) %>% 
+  group_by(subject_unique,syntax_unique) %>% 
+  dplyr::summarise(OverallLikeMe.m = 100 * mean(OverallLikeMe))  %>%
+  mutate(Participant_Background = ifelse(syntax_unique %in% c("Passive","Active\nTransitive","Conjoined"), "English speakers","Chinese speakers"),
+         data_type = "Like me effect")
+
+
+# Intuitions data for participants
+intuitions_summary <- intuitions %>%
+  dplyr::select(id,subject,list,verb,event,score,condition,test_part) %>%
+  dplyr::group_by(subject,verb,condition) %>%
+  dplyr::summarise(score = mean(score,na.rm=T)) %>%
+  dplyr::group_by(subject,condition) %>%
+  dplyr::summarise(score = mean(score,na.rm=T)) %>%
+  dplyr::group_by(condition) %>%
+  dplyr::summarise(OverallLikeMe.m = mean(score,na.rm=T),
+                   OverallLikeMe.lo = ci.low(score),
+                   OverallLikeMe.hi = ci.high(score)) %>%
+  mutate(Participant_Background = "English speakers", 
+         condition = ifelse(condition == "transitive","active",condition),
+         data_type = "Communicated Agency",
+         predicted_data = "Actual data") %>%
+  rename(syntax_unique = condition)  %>% 
+  mutate(syntax_unique = case_when(syntax_unique == "active" ~ "Active\nTransitive",
+                                   syntax_unique == "transitive" ~ "Active\nTransitive",
+                                   syntax_unique == "conjoined" ~ "Conjoined",
+                                   syntax_unique == "passive" ~ "Passive"))
+intuitions_summary 
+
+intuitions_summary_subj <- intuitions %>%
+  dplyr::select(id,subject,list,verb,event,score,condition,test_part) %>%
+  dplyr::group_by(subject,verb,condition) %>%
+  dplyr::summarise(score = mean(score,na.rm=T)) %>%
+  dplyr::group_by(subject,condition) %>%
+  dplyr::summarise(OverallLikeMe.m = mean(score,na.rm=T)) %>%
+  mutate(Participant_Background = "English speakers", 
+         condition = ifelse(condition == "transitive","active",condition),
+         data_type = "Communicated Agency",
+         predicted_data = "Actual data") %>%
+  rename(syntax_unique = condition)%>% 
+  mutate(syntax_unique = case_when(syntax_unique == "active" ~ "Active\nTransitive",
+                                   syntax_unique == "transitive" ~ "Active\nTransitive",
+                                   syntax_unique == "conjoined" ~ "Conjoined",
+                                   syntax_unique == "passive" ~ "Passive"))
+intuitions_summary_subj 
+
+summary_like_me_and_ratings = summarised_like_me_data %>% 
+  mutate(OverallLikeMe.m = OverallLikeMe.m * 100,
+         OverallLikeMe.lo = OverallLikeMe.lo * 100,
+         OverallLikeMe.hi = OverallLikeMe.hi * 100,
+         data_type = "Like me effect",
+         predicted_data = "Actual data") %>%
+  rbind(intuitions_summary) %>%
+  filter(Participant_Background == "English speakers") 
+
+LikeMe_score = ggplot(data = summary_like_me_and_ratings %>% filter(data_type == "Like me effect"),
+                      aes(x = syntax_unique, y = OverallLikeMe.m,  group = data_type)) + 
+  #geom_hline(yintercept = 0.5,lty =2)+
+  geom_line(color = "black")+
+  geom_errorbar(color = "black", aes(ymin= OverallLikeMe.lo,ymax = OverallLikeMe.hi), width = 0) +
+  scale_color_hue(h = c(270,200))+
+  scale_fill_hue(h = c(270,200))+
+  geom_point(aes(fill = syntax_unique),size = 2, pch = 21,  color = "black",stroke = 0.7) +
+  #geom_point(size = 2, pch = 21, fill = "grey", color = "black",stroke = 0.7) +
+  geom_jitter(data = summarised_like_me_data_ptpt %>% filter(Participant_Background == "English speakers"), size = 1, alpha = 0.03, width = 0.1) +
+  facet_grid(Participant_Background ~ data_type, scales = "free")+
+  theme_cowplot()+ylim(c(45,60)) + 
+  geom_hline(yintercept = 50, lty =2 )+
+  xlab("")+ylab("Percentage Like Me\n")+
+  theme(axis.text = element_text(size = 10),
+        axis.title = element_text(size = 12))+
+  theme(legend.position="none")+ 
+  #      axis.text.x = element_blank(),
+  #      axis.ticks.x = element_blank())  +
+  theme(
+    strip.background.y = element_blank(),
+    strip.text.y = element_blank()
+  ) + 
+  scale_x_discrete(limits=rev) + 
+  coord_flip() 
+
+
+agency_score  = ggplot(data = summary_like_me_and_ratings %>% filter(data_type == "Communicated Agency"),
+                       aes(x = syntax_unique, y = OverallLikeMe.m, color = predicted_data,group = data_type)) + 
+  #geom_hline(yintercept = 0.5,lty =2)+
+  geom_line(color = "black")+
+  geom_errorbar(aes(ymin= OverallLikeMe.lo,ymax = OverallLikeMe.hi), width = 0) +
+  scale_color_hue(h = c(270,200))+
+  scale_fill_hue(h = c(270,200))+
+  geom_point(aes(fill = syntax_unique),size = 2, pch = 21,  color = "black",stroke = 0.7) +  
+  geom_jitter(data = intuitions_summary_subj, size = 1, alpha = 0.05, width = 0.1) +
+  facet_grid(Participant_Background ~ data_type, scales = "free")+
+  theme_cowplot()+ylim(c(-2,1.3)) + geom_hline(yintercept = 0, lty =2 )+
+  xlab("")+ylab("Relative agency of\nfirst mentioned") +
+  theme(legend.position=c(0.7,0.7), legend.title = element_blank(),
+        strip.background.y = element_blank(),
+        strip.text.y = element_blank()
+  )+scale_color_manual(values = c("black","red"))+
+  theme(axis.text = element_text(size = 10),
+        axis.title = element_text(size = 12))+ 
+  theme(legend.position="none", 
+        axis.text.y = element_blank(),
+        axis.ticks.y = element_blank())  +
+  scale_x_discrete(limits=rev) + 
+  coord_flip()
+agency_score
+
+
+empathy_results = empathy_data %>%
+  group_by(id, condition) %>%
+  dplyr::summarise(empathy_with_first_mentioned = mean(responses)) %>%
+  group_by(condition) %>%
+  dplyr::summarise(empathy_with_first_mentioned.m = mean(empathy_with_first_mentioned),
+                   empathy_with_first_mentioned.sd = sd(empathy_with_first_mentioned),
+                   OverallLikeMe.lo = ci.low(empathy_with_first_mentioned),
+                   OverallLikeMe.hi = ci.high(empathy_with_first_mentioned)) %>%
+  rename(syntax_unique = condition,
+         OverallLikeMe.m = empathy_with_first_mentioned.m) %>%
+  mutate(data_type = "Speaker Identification",
+         Participant_Background = "English speakers")
+
+empathy_results_ptpts = empathy_data %>%
+  group_by(id, condition) %>%
+  dplyr::summarise(empathy_with_first_mentioned.m = mean(responses)) %>%
+  rename(syntax_unique = condition,
+         OverallLikeMe.m = empathy_with_first_mentioned.m) %>%
+  mutate(data_type = "Speaker Identification",
+         Participant_Background = "English speakers")
+
+empathy_score  = ggplot(data = empathy_results,
+                        aes(x = syntax_unique, y = OverallLikeMe.m, group = data_type)) + 
+  #geom_hline(yintercept = 0.5,lty =2)+
+  geom_line(color = "black")+
+  geom_errorbar(aes(ymin= OverallLikeMe.lo,ymax = OverallLikeMe.hi), width = 0) +
+  scale_color_hue(h = c(270,200))+
+  scale_fill_hue(h = c(270,200))+
+  geom_point(aes(fill = syntax_unique),size = 2, pch = 21,  color = "black",stroke = 0.7) +  
+  geom_jitter(data = empathy_results_ptpts, size = 1, alpha = 0.05, width = 0.1) +
+  facet_grid(Participant_Background ~ data_type, scales = "free")+
+  theme_cowplot()+ylim(c(-1,2)) + geom_hline(yintercept = 0, lty =2 )+
+  xlab("")+ylab("Identification with\nfirst mentioned") +
+  theme(axis.text = element_text(size = 10),
+        axis.title = element_text(size = 12))+
+  theme(strip.background.y = element_blank(),
+        strip.text.y = element_blank()
+  )+ 
+  theme(legend.position="none", 
+        axis.text.y = element_blank(),
+        axis.ticks.y = element_blank())  +
+  scale_x_discrete(limits=rev) + 
+  coord_flip()
+
+
+intuitions_graph = cowplot::plot_grid(LikeMe_score,agency_score, empathy_score,
+                   nrow = 1,ncol = 3, rel_widths = c(0.4,0.3,0.3))
+
+
+cowplot::plot_grid(intuitions_graph,groups_graph, nrow = 2, 
+                   rel_heights = c(0.35,0.65), labels = "AUTO")
+
+
+```
+
+## Code for statistical analyses
+
+"Note that Study 3 in the paper is referred to as Study 4 in this dataset
+- a legacy of when the data was collected for Brough's thesis." (comment from original script).
+
+It would be interesting to know why the original Study 3 is not reported in the paper.
+
+```{r}
+#| label: original code lines 625-627
+
+data1 = subset(data, study == "study1")
+data2 = subset(data, study == "study2")
+data4 = subset(data, study == "study4")
+```
+
+### Study 1
+
+```{r}
+#| label: original code lines 634-688
+
+data1_overallMeans = data1 %>% 
+  dplyr::group_by(subject) %>% 
+  dplyr::summarise(OverallLikeMe = 100 *  mean(OverallLikeMe)) %>% 
+  dplyr::group_by() %>% 
+  dplyr::summarise(OverallLikeMe.m = mean(OverallLikeMe), OverallLikeMe.low = ci.low(OverallLikeMe),OverallLikeMe.high = ci.high(OverallLikeMe))
+
+data1_overallMeans
+
+data1_demog_overallMeans = data1 %>% 
+  dplyr::group_by(ppt_demog,subject) %>% 
+  dplyr::summarise(OverallLikeMe = 100 *  mean(OverallLikeMe)) %>% 
+  dplyr::group_by(ppt_demog) %>% 
+  dplyr::summarise(OverallLikeMe.m = round(mean(OverallLikeMe),1), OverallLikeMe.low = round(ci.low(OverallLikeMe),1),OverallLikeMe.high = round(ci.high(OverallLikeMe),1))
+
+data1_demog_overallMeans
+
+data1$syntax = as.factor(as.character(data1$syntax))
+contrasts(data1$syntax)[1] = -1
+data1_overallAnalysis = summary(glmer(OverallLikeMe ~ 1 + syntax + (1+syntax|subject) + (1+syntax|event), 
+                                      data = data1, family = "binomial"))
+
+data1_overallAnalysis_wm = summary(glmer(OverallLikeMe ~ 1 + syntax + (1+syntax|subject) + (1+syntax|event), 
+                                         data = subset(data1, ppt_demog == "White_Man"), family = "binomial"))
+data1_overallAnalysis_wm
+data1_overallAnalysis_ww = summary(glmer(OverallLikeMe ~ 1 + syntax + (1+syntax|subject) + (1+syntax|event), 
+                                         data = subset(data1, ppt_demog == "White_Woman"), family = "binomial"))
+data1_overallAnalysis_ww
+data1_overallAnalysis_bm = summary(glmer(OverallLikeMe ~ 1 + syntax + (1+syntax|subject) + (1+syntax|event), 
+                                         data = subset(data1, ppt_demog == "Black_Man"), family = "binomial"))
+data1_overallAnalysis_bm
+data1_overallAnalysis_bw = summary(glmer(OverallLikeMe ~ 1 + syntax + (1+syntax|subject) + (1+syntax|event), 
+                                         data = subset(data1, ppt_demog == "Black_Woman"), family = "binomial"))
+data1_overallAnalysis_bw
+
+data1_gender_race = data1 %>% 
+  dplyr::group_by(TrialType,subject) %>% 
+  dplyr::summarise(OverallLikeMe = 100 *  mean(OverallLikeMe)) %>% 
+  dplyr::group_by(TrialType) %>% 
+  dplyr::summarise(OverallLikeMe.m = round(mean(OverallLikeMe),1), OverallLikeMe.low = round(ci.low(OverallLikeMe),1),OverallLikeMe.high = round(ci.high(OverallLikeMe),1))
+
+data1_gender_race
+data1_overallAnalysis_gender = summary(glmer(OverallLikeMe ~ 1 + syntax + (1+syntax|subject) + (1+syntax|event), 
+                                             data = subset(data1, TrialType != "RaceTrial"), family = "binomial"))
+data1_overallAnalysis_gender
+
+data1_overallAnalysis_race = summary(glmer(OverallLikeMe ~ 1 + syntax + (1+syntax|subject) + (1+syntax|event), 
+                                           data = subset(data1, TrialType == "RaceTrial"), family = "binomial"))
+data1_overallAnalysis_race
+
+data1_syntax = data1 %>% 
+  dplyr::group_by(syntax,subject) %>% 
+  dplyr::summarise(OverallLikeMe = 100 *  mean(OverallLikeMe)) %>% 
+  dplyr::group_by(syntax) %>% 
+  dplyr::summarise(OverallLikeMe.m = round(mean(OverallLikeMe),1), OverallLikeMe.low = round(ci.low(OverallLikeMe),1),OverallLikeMe.high = round(ci.high(OverallLikeMe),1))
+data1_syntax
+```
+
+### Study 2
+
+```{r}
+#| label: original code lines 693-747
+
+data2_overallMeans = data2 %>% 
+  dplyr::group_by(subject) %>% 
+  dplyr::summarise(OverallLikeMe = 100 *  mean(OverallLikeMe)) %>% 
+  dplyr::group_by() %>% 
+  dplyr::summarise(OverallLikeMe.m = round(mean(OverallLikeMe),1), OverallLikeMe.low = round(ci.low(OverallLikeMe),1),OverallLikeMe.high = round(ci.high(OverallLikeMe),1))
+
+data2_overallMeans
+
+data2_demog_overallMeans = data2 %>% 
+  dplyr::group_by(ppt_demog,subject) %>% 
+  dplyr::summarise(OverallLikeMe = 100 *  mean(OverallLikeMe)) %>% 
+  dplyr::group_by(ppt_demog) %>% 
+  dplyr::summarise(OverallLikeMe.m = round(mean(OverallLikeMe),1), OverallLikeMe.low = round(ci.low(OverallLikeMe),1),OverallLikeMe.high = round(ci.high(OverallLikeMe),1))
+
+data2_demog_overallMeans
+
+data2$syntax = as.factor(as.character(data2$syntax))
+contrasts(data2$syntax)[1] = -1
+data2_overallAnalysis = summary(glmer(OverallLikeMe ~ 1 + syntax + (1+syntax|subject) + (1+syntax|event), 
+                                      data = data2, family = "binomial"))
+data2_overallAnalysis
+data2_overallAnalysis_wm = summary(glmer(OverallLikeMe ~ 1 + syntax + (1+syntax|subject) + (1+syntax|event), 
+                                         data = subset(data2, ppt_demog == "White_Man"), family = "binomial"))
+data2_overallAnalysis_wm
+data2_overallAnalysis_ww = summary(glmer(OverallLikeMe ~ 1 + syntax + (1+syntax|subject) + (1+syntax|event), 
+                                         data = subset(data2, ppt_demog == "White_Woman"), family = "binomial"))
+data2_overallAnalysis_ww
+data2_overallAnalysis_bm = summary(glmer(OverallLikeMe ~ 1 + syntax + (1+syntax|subject) + (1+syntax|event), 
+                                         data = subset(data2, ppt_demog == "Black_Man"), family = "binomial"))
+data2_overallAnalysis_bm
+data2_overallAnalysis_bw = summary(glmer(OverallLikeMe ~ 1 + syntax + (1+syntax|subject) + (1+syntax|event), 
+                                         data = subset(data2, ppt_demog == "Black_Woman"), family = "binomial"))
+data2_overallAnalysis_bw
+
+data2_gender_race = data2 %>% 
+  dplyr::group_by(TrialType,subject) %>% 
+  dplyr::summarise(OverallLikeMe = 100 *  mean(OverallLikeMe)) %>% 
+  dplyr::group_by(TrialType) %>% 
+  dplyr::summarise(OverallLikeMe.m = round(mean(OverallLikeMe),1), OverallLikeMe.low = round(ci.low(OverallLikeMe),1),OverallLikeMe.high = round(ci.high(OverallLikeMe),1))
+
+data2_gender_race
+data2_overallAnalysis_gender = summary(glmer(OverallLikeMe ~ 1 + syntax + (1+syntax|subject) + (1+syntax|event), 
+                                             data = subset(data2, TrialType != "RaceTrial"), family = "binomial"))
+data2_overallAnalysis_gender
+
+data2_overallAnalysis_race = summary(glmer(OverallLikeMe ~ 1 + syntax + (1+syntax|subject) + (1+syntax|event), 
+                                           data = subset(data2, TrialType == "RaceTrial"), family = "binomial"))
+data2_overallAnalysis_race
+
+data2_syntax = data2 %>% 
+  dplyr::group_by(syntax,subject) %>% 
+  dplyr::summarise(OverallLikeMe = 100 *  mean(OverallLikeMe)) %>% 
+  dplyr::group_by(syntax) %>% 
+  dplyr::summarise(OverallLikeMe.m = round(mean(OverallLikeMe),1), OverallLikeMe.low = round(ci.low(OverallLikeMe),1),OverallLikeMe.high = round(ci.high(OverallLikeMe),1))
+data2_syntax
+```
+
+### Study 3
+
+```{r}
+#| label: original code lines 751-805
+
+data4_overallMeans = data4 %>% 
+  dplyr::group_by(subject) %>% 
+  dplyr::summarise(OverallLikeMe = 100 *  mean(OverallLikeMe)) %>% 
+  dplyr::group_by() %>% 
+  dplyr::summarise(OverallLikeMe.m = round(mean(OverallLikeMe),1), OverallLikeMe.low = round(ci.low(OverallLikeMe),1),OverallLikeMe.high = round(ci.high(OverallLikeMe),1))
+
+data4_overallMeans
+
+data4_demog_overallMeans = data4 %>% 
+  dplyr::group_by(ppt_demog,subject) %>% 
+  dplyr::summarise(OverallLikeMe = 100 *  mean(OverallLikeMe)) %>% 
+  dplyr::group_by(ppt_demog) %>% 
+  dplyr::summarise(OverallLikeMe.m = round(mean(OverallLikeMe),1), OverallLikeMe.low = round(ci.low(OverallLikeMe),1),OverallLikeMe.high = round(ci.high(OverallLikeMe),1))
+
+data4_demog_overallMeans
+
+data4$syntax = as.factor(as.character(data4$syntax))
+contrasts(data4$syntax)[1] = -1
+data4_overallAnalysis = summary(glmer(OverallLikeMe ~ 1 + syntax + (1+syntax|subject) + (1+syntax|event), 
+                                      data = data4, family = "binomial"))
+data4_overallAnalysis
+data4_overallAnalysis_wm = summary(glmer(OverallLikeMe ~ 1 + syntax + (1+syntax|subject) + (1+syntax|event), 
+                                         data = subset(data4, ppt_demog == "White_Man"), family = "binomial"))
+data4_overallAnalysis_wm
+data4_overallAnalysis_ww = summary(glmer(OverallLikeMe ~ 1 + syntax + (1+syntax|subject) + (1+syntax|event), 
+                                         data = subset(data4, ppt_demog == "White_Woman"), family = "binomial"))
+data4_overallAnalysis_ww
+data4_overallAnalysis_bm = summary(glmer(OverallLikeMe ~ 1 + syntax + (1+syntax|subject) + (1+syntax|event), 
+                                         data = subset(data4, ppt_demog == "Black_Man"), family = "binomial"))
+data4_overallAnalysis_bm
+data4_overallAnalysis_bw = summary(glmer(OverallLikeMe ~ 1 + syntax + (1+syntax|subject) + (1+syntax|event), 
+                                         data = subset(data4, ppt_demog == "Black_Woman"), family = "binomial"))
+data4_overallAnalysis_bw
+
+data4_gender_race = data4 %>% 
+  dplyr::group_by(TrialType,subject) %>% 
+  dplyr::summarise(OverallLikeMe = 100 *  mean(OverallLikeMe)) %>% 
+  dplyr::group_by(TrialType) %>% 
+  dplyr::summarise(OverallLikeMe.m = round(mean(OverallLikeMe),1), OverallLikeMe.low = round(ci.low(OverallLikeMe),1),OverallLikeMe.high = round(ci.high(OverallLikeMe),1))
+
+data4_gender_race
+data4_overallAnalysis_gender = summary(glmer(OverallLikeMe ~ 1 + syntax + (1+syntax|subject) + (1+syntax|event), 
+                                             data = subset(data4, TrialType != "RaceTrial"), family = "binomial"))
+data4_overallAnalysis_gender
+
+data4_overallAnalysis_race = summary(glmer(OverallLikeMe ~ 1 + syntax + (1+syntax|subject) + (1+syntax|event), 
+                                           data = subset(data4, TrialType == "RaceTrial"), family = "binomial"))
+data4_overallAnalysis_race
+
+data4_syntax = data4 %>% 
+  dplyr::group_by(syntax,subject) %>% 
+  dplyr::summarise(OverallLikeMe = 100 *  mean(OverallLikeMe)) %>% 
+  dplyr::group_by(syntax) %>% 
+  dplyr::summarise(OverallLikeMe.m = round(mean(OverallLikeMe),1), OverallLikeMe.low = round(ci.low(OverallLikeMe),1),OverallLikeMe.high = round(ci.high(OverallLikeMe),1))
+data4_syntax
+```
+
+### Chinese study
+
+```{r}
+#| label: original code lines 810-833
+
 data5_overallMeans = chinese_data %>% 
   dplyr::group_by(subject) %>% 
   dplyr::summarise(OverallLikeMe = 100 *  mean(OverallLikeMe)) %>% 
@@ -109,14 +898,9 @@ data5_condition_overallMeans = chinese_data %>%
 data5_condition_overallMeans
 ```
 
-minor differences becaus of the bootstrap
-"data5_overallMeans" refers to the overall effect
-"data5_demog_overallMeans" outputs the numbers for the man and women overall
-"data5_condition_overallMeans" differentiates between the chines overall and the
-english overall
+minor differences becaus of the bootstrap "data5_overallMeans" refers to the overall effect "data5_demog_overallMeans" outputs the numbers for the man and women overall "data5_condition_overallMeans" differentiates between the chines overall and the english overall
 
 ```{r}
-{r}
 #| label: reproduction code lines 834-848
 
 # M: code to reproduce the results of the paper
@@ -128,11 +912,10 @@ overall_like_me <- glmer(OverallLikeMe ~ 1+condition+ (1|subject) + (1|verb),
 summary(overall_like_me)
 ```
 
-It was neccessary to write thise code chunk to reproduce the numbers mentioned in the paper (size effect of the overall like me)
+It was necessary to write these code chunk to reproduce the numbers mentioned in the paper (size effect of the overall like-me effect).
 
 ```{r}
 #| label: original code lines 834-848
-
 
 overall_like_me_English <- glmer(OverallLikeMe ~ 1+ (1|subject) + (1|verb), 
                                  data = subset(chinese_data, condition == "english"), 
@@ -255,3 +1038,178 @@ data5_condition_overallMeans_neutral = names_neutral %>%
 data5_condition_overallMeans_neutral
 
 ```
+
+### Analysis of Intuitions/Rating study
+
+```{r}
+#| label: original code lines 868-930
+# datafile was read in earlier
+
+data_summary_participant <- intuitions %>%
+  dplyr::select(id,subject,list,verb,event,score,condition,test_part) %>%
+  dplyr::group_by(subject,verb,condition) %>%
+  dplyr::summarise(score = mean(score,na.rm=T)) %>%
+  dplyr::group_by(subject,condition) %>%
+  dplyr::summarise(score = mean(score,na.rm=T)) %>%
+  dplyr::group_by(condition) %>%
+  dplyr::summarise(score.m = mean(score,na.rm=T),
+                   score.sd = sd(score,na.rm=T),
+                   score.low = ci.low(score),
+                   score.high = ci.high(score)) 
+data_summary_participant
+
+
+data_avgd_trial <- intuitions %>%
+  dplyr::select(id,subject,list,verb,event,score,condition,test_part) %>%
+  dplyr::group_by(subject,verb,event,condition) %>%
+  dplyr::summarise(score = mean(score,na.rm=T))
+
+
+avgd_ratings_conj = lmer(score ~ 1 + (1|subject) + (1|event), 
+                         data = subset(data_avgd_trial, condition == "conjoined"))
+avgd_ratings_conj.0 = lmer(score ~ 0 + (1|subject) + (1|event), 
+                           data = subset(data_avgd_trial, condition == "conjoined"))
+
+summary(avgd_ratings_conj)
+anova(avgd_ratings_conj,avgd_ratings_conj.0)
+
+
+avgd_ratings_tran = lmer(score ~ 1 + (1|subject) + (1|event), 
+                         data = subset(data_avgd_trial, condition == "transitive"))
+avgd_ratings_tran.0 = lmer(score ~ 0 + (1|subject) + (1|event), 
+                           data = subset(data_avgd_trial, condition == "transitive"))
+
+summary(avgd_ratings_tran)
+anova(avgd_ratings_tran,avgd_ratings_tran.0)
+
+avgd_ratings_passive = lmer(score ~ 1 + (1|subject) + (1|event), 
+                         data = subset(data_avgd_trial, condition == "passive"))
+avgd_ratings_passive.0 = lmer(score ~ 0 + (1|subject) + (1|event), 
+                           data = subset(data_avgd_trial, condition == "passive"))
+
+summary(avgd_ratings_passive)
+anova(avgd_ratings_passive,avgd_ratings_passive.0)
+
+# Preregistration here https://aspredicted.org/7698v.pdf
+intuitions$test_part = as.factor(intuitions$test_part)
+contrasts(intuitions$test_part)[1] = -1
+avgd_ratings = lmer(score ~ 1 +  condition*test_part + (1+test_part|subject) + (1|event), 
+                            data = intuitions)
+
+summary(avgd_ratings)
+
+avgd_ratings.1 = lmer(score ~ 1 +  condition+test_part + (1+test_part|subject) + (1|event), 
+                    data = intuitions)
+avgd_ratings.0 = lmer(score ~ 1  +test_part +(1+test_part|subject) + (1|event), 
+                      data = intuitions)
+
+anova(avgd_ratings.1,avgd_ratings.0)
+
+# See analysis of omnibus data for the comparison of like me over constructions
+```
+
+### Analysis of empathy data
+
+```{r}
+# https://aspredicted.org/7698v.pdf
+
+empathy_grammar = lmer(responses ~ 1 +  condition + (1+condition|subject) + (1|verb), 
+     data = empathy_data)
+summary(empathy_grammar)
+empathy_grammar.0 = lmer(responses ~ 1 + (1|subject) + (1|verb), 
+                       data = empathy_data)
+anova(empathy_grammar,empathy_grammar.0)
+```
+
+### Analysis of omnibus data
+
+```{r}
+#| label: original code lines 948-1031
+
+data_for_groups = data_for_groups %>% 
+  mutate(TrialType = ordered(ifelse(TrialType %in% c("RaceTrial","Race Trials"), "Race Trials","Gender Trials"), levels = c("Race Trials","Gender Trials")))
+data_for_groups$ppt_gender = as.character(data_for_groups$ppt_gender)
+data_for_groups[data_for_groups$ppt_demog == "Asian Man",]$ppt_gender = "man"
+data_for_groups[data_for_groups$ppt_demog == "Asian Woman",]$ppt_gender = "woman"
+
+data_for_groups$ppt_race = as.character(data_for_groups$ppt_race)
+data_for_groups[data_for_groups$ppt_demog == "Asian Man",]$ppt_race = "asian"
+data_for_groups[data_for_groups$ppt_demog == "Asian Woman",]$ppt_race = "asian"
+
+data_for_groups$ppt_race = factor(data_for_groups$ppt_race, levels = c("white","black","asian"))
+data_for_groups$ppt_gender = factor(data_for_groups$ppt_gender, levels = c("man","woman"))
+
+data_for_groups %>% 
+  dplyr::group_by(ppt_demog,subject) %>% 
+  dplyr::summarise(OverallLikeMe = 100 *  mean(OverallLikeMe)) %>% 
+  dplyr::group_by(ppt_demog) %>% 
+  dplyr::summarise(OverallLikeMe.m = round(mean(OverallLikeMe),1), OverallLikeMe.low = round(ci.low(OverallLikeMe),1),OverallLikeMe.high = round(ci.high(OverallLikeMe),1))
+
+print("for gender alone")
+data_for_groups %>% filter(TrialType == "Gender Trials") %>%
+  dplyr::group_by(ppt_gender,subject) %>% 
+  dplyr::summarise(OverallLikeMe = 100 *  mean(OverallLikeMe)) %>% 
+  dplyr::group_by(ppt_gender) %>% 
+  dplyr::summarise(OverallLikeMe.m = round(mean(OverallLikeMe),1), OverallLikeMe.low = round(ci.low(OverallLikeMe),1),OverallLikeMe.high = round(ci.high(OverallLikeMe),1))
+
+print("for gender alone")
+data_for_groups %>% filter(TrialType == "Gender Trials") %>%
+  dplyr::group_by(ppt_race, ppt_gender,subject) %>% 
+  dplyr::summarise(OverallLikeMe = 100 *  mean(OverallLikeMe)) %>% 
+  dplyr::group_by(ppt_race, ppt_gender) %>% 
+  dplyr::summarise(OverallLikeMe.m = round(mean(OverallLikeMe),1), OverallLikeMe.low = round(ci.low(OverallLikeMe),1),OverallLikeMe.high = round(ci.high(OverallLikeMe),1))
+
+
+# Set contrasts
+# Race
+c_race<-contr.treatment(3)
+race_codes<-matrix(rep(1/3, 6), ncol=2)
+race_contrasts = c_race - race_codes
+contrasts(data_for_groups$ppt_race) <- race_contrasts
+
+# Gender
+
+c_gender<-contr.treatment(2)
+gender_codes<-matrix(rep(1/2, 2), ncol=1)
+gender_contrasts = c_gender - gender_codes
+contrasts(data_for_groups$ppt_gender) <- gender_contrasts
+
+demographic_comparison_gender = summary(glmer(OverallLikeMe ~ 1 + ppt_gender*ppt_race + (1|subject) ,  # Have to get rid of random slopes for events by race because some events were only in the Asian study. And end up removing by event random effects altogether for convergence
+                                              data = subset(data_for_groups, TrialType == "Gender Trials"), family = "binomial"))
+demographic_comparison_gender
+
+
+demographic_comparison_race = summary(glmer(OverallLikeMe ~ 1 + ppt_gender*ppt_race + (1|subject) ,   # Have to get rid of random slopes for events by race because some events were only in the Asian study. And end up removing by event random effects altogether for convergence
+                                            data = subset(data_for_groups, TrialType == "Race Trials"), family = "binomial"))
+demographic_comparison_race
+
+
+
+black_women_gender = summary(glmer(OverallLikeMe ~ 1  + (1|subject) ,  # Have to get rid of random slopes for events by race because some events were only in the Asian study. And end up removing by event random effects altogether for convergence
+                                   data = subset(data_for_groups, TrialType == "Gender Trials" & ppt_gender == "woman" & ppt_race == "black"), family = "binomial"))
+black_women_gender
+
+
+data_for_groups %>% 
+  dplyr::group_by(TrialType,subject) %>% 
+  dplyr::summarise(OverallLikeMe = 100 *  mean(OverallLikeMe)) %>% 
+  dplyr::group_by(TrialType) %>% 
+  dplyr::summarise(OverallLikeMe.m = round(mean(OverallLikeMe),1), OverallLikeMe.low = round(ci.low(OverallLikeMe),1),OverallLikeMe.high = round(ci.high(OverallLikeMe),1))
+
+trial_type_comparison  = summary(glmer(OverallLikeMe ~ 1 + TrialType + (1+TrialType|subject) + (1+TrialType|event), 
+                                       data = data_for_groups, family = "binomial"))
+trial_type_comparison 
+
+# Test of grammar
+likeme_grammar = lmer(OverallLikeMe ~ 1 +  syntax + (1|subject) + (1|verb), 
+                       data = data_for_groups %>% filter(ppt_race != "asian") %>% mutate(syntax = ifelse(syntax == "active","transitive",syntax)))
+summary(likeme_grammar)
+
+likeme_grammar.0 = lmer(OverallLikeMe ~ 1  + (1|subject) + (1|verb), 
+                      data = data_for_groups %>% filter(ppt_race != "asian") %>% mutate(syntax = ifelse(syntax == "active","transitive",syntax)))
+summary(likeme_grammar.0)
+
+anova(likeme_grammar,likeme_grammar.0)
+
+```
+
