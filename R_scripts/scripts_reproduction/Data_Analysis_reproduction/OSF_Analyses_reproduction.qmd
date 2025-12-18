@@ -668,8 +668,7 @@ cowplot::plot_grid(intuitions_graph,groups_graph, nrow = 2,
 
 ## Code for statistical analyses
 
-"Note that Study 3 in the paper is referred to as Study 4 in this dataset
-- a legacy of when the data was collected for Brough's thesis." (comment from original script).
+"Note that Study 3 in the paper is referred to as Study 4 in this dataset - a legacy of when the data was collected for Brough's thesis." (comment from original script).
 
 It would be interesting to know why the original Study 3 is not reported in the paper.
 
@@ -898,7 +897,7 @@ data5_condition_overallMeans = chinese_data %>%
 data5_condition_overallMeans
 ```
 
-minor differences becaus of the bootstrap "data5_overallMeans" refers to the overall effect "data5_demog_overallMeans" outputs the numbers for the man and women overall "data5_condition_overallMeans" differentiates between the chines overall and the english overall
+M: original code lines 810-833: minor differences becaus of the bootstrap "data5_overallMeans" refers to the overall effect "data5_demog_overallMeans" outputs the numbers for the man and women overall "data5_condition_overallMeans" differentiates between the chinese overall and the english overall
 
 ```{r}
 #| label: reproduction code lines 834-848
@@ -912,7 +911,7 @@ overall_like_me <- glmer(OverallLikeMe ~ 1+condition+ (1|subject) + (1|verb),
 summary(overall_like_me)
 ```
 
-It was necessary to write these code chunk to reproduce the numbers mentioned in the paper (size effect of the overall like-me effect).
+It was necessary to write reproduction code lines 834-848 to reproduce the numbers mentioned in the paper (size effect of the overall like-me effect).
 
 ```{r}
 #| label: original code lines 834-848
@@ -931,7 +930,7 @@ overall_like_me_Chinese <- glmer(OverallLikeMe ~ 1+ (1|subject) + (1|verb),
 summary(overall_like_me_Chinese)
 ```
 
-M: size effect for English as an additional language and natively producing Chinese
+M: original code lines 834-848: size effect for English as an additional language and natively producing Chinese
 
 ```{r}
 #| label: original code lines 849-865
@@ -950,12 +949,11 @@ overall_like_me_female <- glmer(OverallLikeMe ~ 1+condition+ (1|subject) + (1+co
 summary(overall_like_me_female)
 ```
 
-M: those numbers are not reported in the paper for experiment 4
+M: original code lines 849-865: those numbers are not reported in the paper for experiment 4
 
 ```{r}
 #| label: additional code neutral names
 
-# Marie: Neutrale Namen aus Datensatz entfernen und schauen wie hoch der like_me_effect ist 
 
 names_neutral <- chinese_data |> 
     filter(!left_name %in% c("霍普", "贝斯")) |> 
@@ -967,7 +965,6 @@ left_name_not_neutral <- chinese_data |>
 right_name_not_neutral <- chinese_data |> 
   filter(right_name %in% c("霍普", "贝斯"))  #674
 
-# Überprüfung, dass die Namen wirklich raus sind 
 
 names_neutral |> 
   filter(right_name == "贝斯") |> 
@@ -987,46 +984,10 @@ names_neutral |>
 
 ```
 
+M: additional code neutral names First, we excluded the neutral names "霍普", "贝斯" from the data and saved it as "names_neutral". Then we double checked, to be sure that the neutral names "霍普", "贝斯" aren't in our new dataset "names_neutral".
+
 ```{r}
 #| label: additional code neutral names robustness
-
-overall_like_me_Chinese_neutral <- glmer(OverallLikeMe ~ 1+ (1|subject) + (1|verb), 
-                                 data = subset(names_neutral, condition == "chinese"), 
-                                 family = "binomial")
-
-summary(overall_like_me_Chinese_neutral)
-
-data5_condition_LikeMeGender_neutral_means = names_neutral |> 
-  dplyr::group_by(condition,subject) |> 
-  dplyr::summarise(LikeMeGender = 100 *  mean(LikeMeGender)) |> 
-  dplyr::group_by(condition) |> 
-  dplyr::summarise(LikeMeGender.m = round(mean(LikeMeGender),1), LikeMeGender.low = round(ci.low(LikeMeGender),1),LikeMeGender.high = round(ci.high(LikeMeGender),1))
-
-data5_condition_LikeMeGender_neutral_means
-
-data5_condition_LikeMeGender_means = chinese_data |> 
-  dplyr::group_by(condition,subject) |> 
-  dplyr::summarise(LikeMeGender = 100 *  mean(LikeMeGender)) |> 
-  dplyr::group_by(condition) |> 
-  dplyr::summarise(LikeMeGender.m = round(mean(LikeMeGender),1), LikeMeGender.low = round(ci.low(LikeMeGender),1),LikeMeGender.high = round(ci.high(LikeMeGender),1))
-
-data5_condition_LikeMeGender_means
-
-data5_overallMeans_neutral = names_neutral %>% 
-  dplyr::group_by(subject) %>% 
-  dplyr::summarise(OverallLikeMe = 100 *  mean(OverallLikeMe)) %>% 
-  dplyr::group_by() %>% 
-  dplyr::summarise(OverallLikeMe.m = mean(OverallLikeMe), OverallLikeMe.low = ci.low(OverallLikeMe),OverallLikeMe.high = ci.high(OverallLikeMe))
-
-data5_overallMeans_neutral
-
-data5_demog_overallMeans_neutral = names_neutral %>% 
-  dplyr::group_by(ppt_gender,subject) %>% 
-  dplyr::summarise(OverallLikeMe = 100 *  mean(OverallLikeMe)) %>% 
-  dplyr::group_by(ppt_gender) %>% 
-  dplyr::summarise(OverallLikeMe.m = round(mean(OverallLikeMe),1), OverallLikeMe.low = round(ci.low(OverallLikeMe),1),OverallLikeMe.high = round(ci.high(OverallLikeMe),1))
-
-data5_demog_overallMeans_neutral
 
 
 data5_condition_overallMeans_neutral = names_neutral %>% 
@@ -1037,7 +998,68 @@ data5_condition_overallMeans_neutral = names_neutral %>%
 
 data5_condition_overallMeans_neutral
 
+overall_like_me_Chinese_neutral <- glmer(OverallLikeMe ~ 1+ (1|subject) + (1|verb), 
+                                 data = subset(names_neutral, condition == "chinese"), 
+                                 family = "binomial")
+
+summary(overall_like_me_Chinese_neutral)
+
+
+# overall like me for the condition "chinese" + size effect
+
+###
+data5_overallMeans_neutral = names_neutral %>% 
+  dplyr::group_by(subject) %>% 
+  dplyr::summarise(OverallLikeMe = 100 *  mean(OverallLikeMe)) %>% 
+  dplyr::group_by() %>% 
+  dplyr::summarise(OverallLikeMe.m = mean(OverallLikeMe), OverallLikeMe.low = ci.low(OverallLikeMe),OverallLikeMe.high = ci.high(OverallLikeMe))
+
+data5_overallMeans_neutral
+
+overall_like_me_neutral <- glmer(OverallLikeMe ~ 1+condition+ (1|subject) + (1|verb), 
+                         data = subset(names_neutral), 
+                         family = "binomial")
+
+summary(overall_like_me_neutral)
+
+# overall like me effect without neutral names
+
+###
+
+data5_condition_LikeMeGender_neutral_means = names_neutral |> 
+  dplyr::group_by(condition,subject) |> 
+  dplyr::summarise(LikeMeGender = 100 *  mean(LikeMeGender)) |> 
+  dplyr::group_by(condition) |> 
+  dplyr::summarise(LikeMeGender.m = round(mean(LikeMeGender),1), LikeMeGender.low = round(ci.low(LikeMeGender),1),LikeMeGender.high = round(ci.high(LikeMeGender),1))
+
+data5_condition_LikeMeGender_neutral_means
+
+
+### Like me gender effect for chinese and english condition without neutral names
+
+data5_condition_LikeMeGender_means = chinese_data |> 
+  dplyr::group_by(condition,subject) |> 
+  dplyr::summarise(LikeMeGender = 100 *  mean(LikeMeGender)) |> 
+  dplyr::group_by(condition) |> 
+  dplyr::summarise(LikeMeGender.m = round(mean(LikeMeGender),1), LikeMeGender.low = round(ci.low(LikeMeGender),1),LikeMeGender.high = round(ci.high(LikeMeGender),1))
+
+data5_condition_LikeMeGender_means
+
+### Like me gender effect for chinese and english condition with neutral names
+
+
+data5_demog_overallMeans_neutral = names_neutral %>% 
+  dplyr::group_by(ppt_gender,subject) %>% 
+  dplyr::summarise(OverallLikeMe = 100 *  mean(OverallLikeMe)) %>% 
+  dplyr::group_by(ppt_gender) %>% 
+  dplyr::summarise(OverallLikeMe.m = round(mean(OverallLikeMe),1), OverallLikeMe.low = round(ci.low(OverallLikeMe),1),OverallLikeMe.high = round(ci.high(OverallLikeMe),1))
+
+data5_demog_overallMeans_neutral
+
+### overall like me for men and women
 ```
+
+M: additional code neutral names robustness: code to check, whether the like-me effect increases when neutral names are excluded.
 
 ### Analysis of Intuitions/Rating study
 
@@ -1212,4 +1234,3 @@ summary(likeme_grammar.0)
 anova(likeme_grammar,likeme_grammar.0)
 
 ```
-
