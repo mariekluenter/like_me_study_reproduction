@@ -880,10 +880,10 @@ summary(model_gender_prereg)
 tab_model(model_gender_prereg)
 
 
-data4_overallAnalysis_gender_model <- glmer(OverallLikeMe ~ 1 + syntax + (1+syntax|subject) + (1+syntax|event),
-                                           data = subset(data4, TrialType == "GenderTrial"), family = "binomial")
-
-tab_model(data4_overallAnalysis_gender_model)
+# data4_overallAnalysis_race_model <- glmer(OverallLikeMe ~ 1 + syntax + (1+syntax|subject) + (1+syntax|event),
+#                                            data = subset(data4, TrialType == "GenderTrial"), family = "binomial")
+# 
+# tab_model(data4_overallAnalysis_race_model)
 
 ```
 
@@ -897,6 +897,18 @@ model_race_prereg <- glmer(OverallLikeMe ~  ppt_race * syntax + (1 + syntax | su
 summary(model_race_prereg)
 
 tab_model(model_race_prereg)
+```
+
+```{r}
+#| label: compute M following original code lines 785-791
+
+data4_gender_race_prereg = data4 %>% 
+  dplyr::group_by(TrialType,subject) %>% 
+  dplyr::summarise(OverallLikeMe = 100 *  mean(OverallLikeMe)) %>% 
+  dplyr::group_by(TrialType) %>% 
+  dplyr::summarise(OverallLikeMe.m = round(mean(OverallLikeMe),1), OverallLikeMe.low = round(ci.low(OverallLikeMe),1),OverallLikeMe.high = round(ci.high(OverallLikeMe),1))
+
+data4_gender_race_prereg
 ```
 
 When removing the random effect of event, the model computes without the optimizer.
