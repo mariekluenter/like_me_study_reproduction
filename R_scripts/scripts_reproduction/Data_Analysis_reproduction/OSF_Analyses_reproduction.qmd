@@ -866,10 +866,10 @@ data4_syntax = data4 %>%
 data4_syntax
 ```
 
-Replication team: As a robustness check, we computed the preregistered models which were not included in the analysis code:
+Replication team: As a robustness check, we computed the preregistered models which were not included in the analysis code for both gender and race:
 
 ```{r}
-#| label: robustness check Study 3
+#| label: robustness check Study 3 gender
 model_gender_prereg <- glmer(OverallLikeMe ~  ppt_gender * syntax + (1 + syntax | subject) + (1 + ppt_gender | event),
                              data = subset(data4, TrialType == "GenderTrial"),
                              family = binomial(link = "logit"),
@@ -877,22 +877,57 @@ model_gender_prereg <- glmer(OverallLikeMe ~  ppt_gender * syntax + (1 + syntax 
 )
 summary(model_gender_prereg)
 
-tab_model(model_gender_prereg, show.aic = TRUE)
+tab_model(model_gender_prereg)
+
+
+data4_overallAnalysis_gender_model <- glmer(OverallLikeMe ~ 1 + syntax + (1+syntax|subject) + (1+syntax|event),
+                                           data = subset(data4, TrialType == "GenderTrial"), family = "binomial")
+
+tab_model(data4_overallAnalysis_gender_model)
+
+```
+
+```{r}
+#| label: robustness check Study 3 race
+model_race_prereg <- glmer(OverallLikeMe ~  ppt_race * syntax + (1 + syntax | subject) + (1 + ppt_race | event),
+                             data = subset(data4, TrialType == "RaceTrial"),
+                             family = binomial(link = "logit"),
+                             control = glmerControl(optimizer = "bobyqa")
+)
+summary(model_race_prereg)
+
+tab_model(model_race_prereg)
 ```
 
 When removing the random effect of event, the model computes without the optimizer.
 
 ```{r}
-#| label: robustness check Study 3 without optimizer
-#| 
+#| label: robustness check Study 3 gender without optimizer
+ 
 model_gender_prereg2 <- glmer(OverallLikeMe ~  ppt_gender * syntax + (1 + syntax | subject),
                               data = subset(data4, TrialType == "GenderTrial"),
                               family = binomial(link = "logit")
 )
 summary(model_gender_prereg2)
 
-tab_model(model_gender_prereg2, show.aic = TRUE)
+tab_model(model_gender_prereg2)
+
 ```
+
+
+```{r}
+#| label: robustness check Study 3 race without optimizer
+
+model_race_prereg2 <- glmer(OverallLikeMe ~  ppt_race * syntax + (1 + syntax | subject),
+                             data = subset(data4, TrialType == "RaceTrial"),
+                             family = binomial(link = "logit"),
+)
+
+summary(model_race_prereg2)
+
+tab_model(model_race_prereg2)
+```
+
 
 ### Chinese study
 
