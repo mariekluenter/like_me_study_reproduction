@@ -5,6 +5,8 @@ editor: visual
 ---
 
 ```{r}
+#| label: original code lines 1-6
+ 
 # From Mike Frank
 theta <- function(x,xdata,na.rm=T) {mean(xdata[x],na.rm=na.rm)}
 ci.low <- function(x,na.rm=T) {
@@ -17,14 +19,25 @@ ci.high <- function(x,na.rm=T) {
 We added code for library imports for the libraries needed to run the original script. Additionally, we used the {here} library for importing the data to ensure that our R project has robust relative file paths:
 
 ```{r, message=FALSE}
+#| label: original code line 8
 
 library(dplyr)
+
+```
+
+```{r, message=FALSE}
+
 #GR:added library imports (libraries needed to run the original script + library "here"):
 library(lme4)
 library(readr)
 library(ggplot2)
 library(cowplot)
 library(here)
+
+```
+
+```{r}
+#| label: original code lines 10-12
 
 #GR: adjusted import code to import data via "here": 
 files <- list.files(path = here("R_scripts/scripts_and_data_original/Data_Preprocessing_original/EmpathyStudy/full_empathy_data"), pattern = "\\.csv$", full.names = TRUE)
@@ -36,6 +49,7 @@ raw_data <- sapply(files, read_csv, simplify=FALSE) %>%
 The raw data that the authors provided are anonymised:
 
 ```{r}
+#| label: original code lines 13-29
 
 test = raw_data %>% # Read in data
   dplyr::filter(trial_type == "survey-likert-extra-labels" )%>%
@@ -60,6 +74,7 @@ test = raw_data %>% # Read in data
 The script includes a comment that reads: "Need to remove ptpts 62938_W and 83249_W who are both double completions" but there is no data from these participants in the folder (any more). We assume that they have already been removed from the dataset uploaded on the OSF.
 
 ```{r, results='hide'}
+#| label: original code lines 31-46
 
 #####
 # Process worker ids
@@ -81,6 +96,7 @@ write_csv(data.frame(cbind(ids$id,ids$responses)), file = "ids.csv")
 ```
 
 ```{r}
+#| label: original code lines 48-57
 
 #####
 # Process catch questions
@@ -93,8 +109,12 @@ catch = test %>% # Read in data
       TRUE ~ 0
     ))
 
-catch %>% 
-  group_by(id) %>% 
+```
+
+```{r}
+
+catch |> 
+  group_by(id) |>  
   dplyr::summarise(correct = mean(correct)) |> 
   View()
 
@@ -103,6 +123,7 @@ catch %>%
 In the authors' R script, 19 participants who failed **2 or more** catch trials are excluded. This differs from the pre-registration (<https://aspredicted.org/7698v.pdf>), which specified excluding participants who answered **more than 2** catch trials incorrectly:
 
 ```{r, message=FALSE}
+#| label: original code lines 59-81
 
 catch_ids = catch %>% 
   group_by(id) %>% 
@@ -130,6 +151,7 @@ empathy_pilot_results = test %>%
 ```
 
 ```{r, results='hide'}
+#| label: original code lines 83-101
 
 empathy_score_pilot  = ggplot(data = empathy_pilot_results,
                               aes(x = syntax_unique, y = OverallLikeMe.m, group = data_type)) + 
