@@ -142,6 +142,8 @@ chinese_data$condition = as.factor(chinese_data$condition)
 contrasts(chinese_data$condition)[1] <- -1
 ```
 
+## Data combining and processing
+
 ### Combine and process data from studies 1-3 with Chinese data
 
 ```{r}
@@ -706,15 +708,22 @@ contrasts(data1$syntax)[1] = -1
 data1_overallAnalysis = summary(glmer(OverallLikeMe ~ 1 + syntax + (1+syntax|subject) + (1+syntax|event), 
                                       data = data1, family = "binomial"))
 
+# Replication team: This model returns singular fit warning:
 data1_overallAnalysis_wm = summary(glmer(OverallLikeMe ~ 1 + syntax + (1+syntax|subject) + (1+syntax|event), 
                                          data = subset(data1, ppt_demog == "White_Man"), family = "binomial"))
 data1_overallAnalysis_wm
+
+# Replication team: This model also returns singular fit warning:
 data1_overallAnalysis_ww = summary(glmer(OverallLikeMe ~ 1 + syntax + (1+syntax|subject) + (1+syntax|event), 
                                          data = subset(data1, ppt_demog == "White_Woman"), family = "binomial"))
 data1_overallAnalysis_ww
+
+# Replication team: This model also returns singular fit warning:
 data1_overallAnalysis_bm = summary(glmer(OverallLikeMe ~ 1 + syntax + (1+syntax|subject) + (1+syntax|event), 
                                          data = subset(data1, ppt_demog == "Black_Man"), family = "binomial"))
 data1_overallAnalysis_bm
+
+# Replication team: This model returns singular fit warning:
 data1_overallAnalysis_bw = summary(glmer(OverallLikeMe ~ 1 + syntax + (1+syntax|subject) + (1+syntax|event), 
                                          data = subset(data1, ppt_demog == "Black_Woman"), family = "binomial"))
 data1_overallAnalysis_bw
@@ -726,10 +735,13 @@ data1_gender_race = data1 %>%
   dplyr::summarise(OverallLikeMe.m = round(mean(OverallLikeMe),1), OverallLikeMe.low = round(ci.low(OverallLikeMe),1),OverallLikeMe.high = round(ci.high(OverallLikeMe),1))
 
 data1_gender_race
+
+# Replication team: This model also returns singular fit warning:
 data1_overallAnalysis_gender = summary(glmer(OverallLikeMe ~ 1 + syntax + (1+syntax|subject) + (1+syntax|event), 
                                              data = subset(data1, TrialType != "RaceTrial"), family = "binomial"))
 data1_overallAnalysis_gender
 
+# Replication team: This model also returns singular fit warning:
 data1_overallAnalysis_race = summary(glmer(OverallLikeMe ~ 1 + syntax + (1+syntax|subject) + (1+syntax|event), 
                                            data = subset(data1, TrialType == "RaceTrial"), family = "binomial"))
 data1_overallAnalysis_race
@@ -765,18 +777,26 @@ data2_demog_overallMeans
 
 data2$syntax = as.factor(as.character(data2$syntax))
 contrasts(data2$syntax)[1] = -1
+
 data2_overallAnalysis = summary(glmer(OverallLikeMe ~ 1 + syntax + (1+syntax|subject) + (1+syntax|event), 
                                       data = data2, family = "binomial"))
 data2_overallAnalysis
+
 data2_overallAnalysis_wm = summary(glmer(OverallLikeMe ~ 1 + syntax + (1+syntax|subject) + (1+syntax|event), 
                                          data = subset(data2, ppt_demog == "White_Man"), family = "binomial"))
 data2_overallAnalysis_wm
+
+# Replication team: This model returns a singularity warning:
 data2_overallAnalysis_ww = summary(glmer(OverallLikeMe ~ 1 + syntax + (1+syntax|subject) + (1+syntax|event), 
                                          data = subset(data2, ppt_demog == "White_Woman"), family = "binomial"))
 data2_overallAnalysis_ww
+
+# Replication team: This model also returns a singularity warning:
 data2_overallAnalysis_bm = summary(glmer(OverallLikeMe ~ 1 + syntax + (1+syntax|subject) + (1+syntax|event), 
                                          data = subset(data2, ppt_demog == "Black_Man"), family = "binomial"))
 data2_overallAnalysis_bm
+
+# Replication team: This model returns a singularity warning:
 data2_overallAnalysis_bw = summary(glmer(OverallLikeMe ~ 1 + syntax + (1+syntax|subject) + (1+syntax|event), 
                                          data = subset(data2, ppt_demog == "Black_Woman"), family = "binomial"))
 data2_overallAnalysis_bw
@@ -788,10 +808,13 @@ data2_gender_race = data2 %>%
   dplyr::summarise(OverallLikeMe.m = round(mean(OverallLikeMe),1), OverallLikeMe.low = round(ci.low(OverallLikeMe),1),OverallLikeMe.high = round(ci.high(OverallLikeMe),1))
 
 data2_gender_race
+
+# Replication team: This model also returns a singularity warning:
 data2_overallAnalysis_gender = summary(glmer(OverallLikeMe ~ 1 + syntax + (1+syntax|subject) + (1+syntax|event), 
                                              data = subset(data2, TrialType != "RaceTrial"), family = "binomial"))
 data2_overallAnalysis_gender
 
+# Replication team: This model also returns a singularity warning:
 data2_overallAnalysis_race = summary(glmer(OverallLikeMe ~ 1 + syntax + (1+syntax|subject) + (1+syntax|event), 
                                            data = subset(data2, TrialType == "RaceTrial"), family = "binomial"))
 data2_overallAnalysis_race
@@ -926,7 +949,6 @@ tab_model(model_gender_prereg2)
 
 ```
 
-
 ```{r}
 #| label: robustness check Study 3 race without optimizer
 
@@ -939,7 +961,6 @@ summary(model_race_prereg2)
 
 tab_model(model_race_prereg2)
 ```
-
 
 ### Chinese study
 
@@ -972,12 +993,12 @@ data5_condition_overallMeans = chinese_data %>%
 data5_condition_overallMeans
 ```
 
-M: original code lines 810-833: minor differences becaus of the bootstrap "data5_overallMeans" refers to the overall effect "data5_demog_overallMeans" outputs the numbers for the man and women overall "data5_condition_overallMeans" differentiates between the chinese overall and the english overall
+Reproduction team: original code lines 810-833: minor differences becaus of the bootstrap "data5_overallMeans" refers to the overall effect "data5_demog_overallMeans" outputs the numbers for the man and women overall "data5_condition_overallMeans" differentiates between the chinese overall and the english overall
 
 ```{r}
 #| label: reproduction code lines 834-848
 
-# M: code to reproduce the results of the paper
+# Reproduction team: code to reproduce the results of the paper
 
 overall_like_me <- glmer(OverallLikeMe ~ 1+condition+ (1|subject) + (1|verb), 
                          data = subset(chinese_data), 
@@ -1005,7 +1026,7 @@ overall_like_me_Chinese <- glmer(OverallLikeMe ~ 1+ (1|subject) + (1|verb),
 summary(overall_like_me_Chinese)
 ```
 
-M: original code lines 834-848: size effect for English as an additional language and natively producing Chinese
+Reproduction team: original code lines 834-848: size effect for English as an additional language and natively producing Chinese
 
 ```{r}
 #| label: original code lines 849-865
@@ -1024,7 +1045,7 @@ overall_like_me_female <- glmer(OverallLikeMe ~ 1+condition+ (1|subject) + (1+co
 summary(overall_like_me_female)
 ```
 
-M: original code lines 849-865: those numbers are not reported in the paper for experiment 4
+Reproduction team: original code lines 849-865: those numbers are not reported in the paper for experiment 4
 
 ```{r}
 #| label: additional code neutral names
@@ -1059,7 +1080,7 @@ names_neutral |>
 
 ```
 
-M: additional code neutral names First, we excluded the neutral names "霍普", "贝斯" from the data and saved it as "names_neutral". Then we double checked, to be sure that the neutral names "霍普", "贝斯" aren't in our new dataset "names_neutral".
+Reproduction team: additional code neutral names First, we excluded the neutral names "霍普", "贝斯" from the data and saved it as "names_neutral". Then we double checked, to be sure that the neutral names "霍普", "贝斯" aren't in our new dataset "names_neutral".
 
 ```{r}
 #| label: additional code neutral names robustness
@@ -1134,7 +1155,7 @@ data5_demog_overallMeans_neutral
 ### overall like me for men and women
 ```
 
-M: additional code neutral names robustness: code to check, whether the like-me effect increases when neutral names are excluded.
+Reproduction team: additional code neutral names robustness: code to check, whether the like-me effect increases when neutral names are excluded.
 
 ### Analysis of Intuitions/Rating study
 
@@ -1164,6 +1185,7 @@ data_avgd_trial <- intuitions %>%
 
 avgd_ratings_conj = lmer(score ~ 1 + (1|subject) + (1|event), 
                          data = subset(data_avgd_trial, condition == "conjoined"))
+
 avgd_ratings_conj.0 = lmer(score ~ 0 + (1|subject) + (1|event), 
                            data = subset(data_avgd_trial, condition == "conjoined"))
 
@@ -1173,6 +1195,7 @@ anova(avgd_ratings_conj,avgd_ratings_conj.0)
 
 avgd_ratings_tran = lmer(score ~ 1 + (1|subject) + (1|event), 
                          data = subset(data_avgd_trial, condition == "transitive"))
+
 avgd_ratings_tran.0 = lmer(score ~ 0 + (1|subject) + (1|event), 
                            data = subset(data_avgd_trial, condition == "transitive"))
 
@@ -1197,7 +1220,7 @@ summary(avgd_ratings)
 
 avgd_ratings.1 = lmer(score ~ 1 +  condition+test_part + (1+test_part|subject) + (1|event), 
                     data = intuitions)
-avgd_ratings.0 = lmer(score ~ 1  +test_part +(1+test_part|subject) + (1|event), 
+avgd_ratings.0 = lmer(score ~ 1  + test_part +(1+test_part|subject) + (1|event), 
                       data = intuitions)
 
 anova(avgd_ratings.1,avgd_ratings.0)

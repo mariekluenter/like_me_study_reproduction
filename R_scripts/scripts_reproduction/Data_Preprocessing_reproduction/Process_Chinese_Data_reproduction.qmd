@@ -329,10 +329,10 @@ We get the error message, that the column TrialType does not exist.
 #| label: reproduction code lines 261-265, trial_type
 
 # This is the datafile that we use for our main statistical analyses of this study
-write_csv(data, file = here("R_scripts/scripts_reproduction/Data_Preprocessing_reproduction/reproduced_data/chinese_study/study5_chinese.csv"))
+write_csv(data, file = here("R_scripts", "scripts_reproduction", "Data_Preprocessing_reproduction", "reproduced_data", "chinese_study", "study5_chinese.csv"))
 # This is the datafile we join to studies 1-3 for the omnibus analysis
 write_csv(data %>% mutate(ppt_demog = ifelse(ppt_gender == "man", "Asian Man","Asian Woman")) %>% left_join(read_csv(here("R_scripts","scripts_and_data_original", "Data_Preprocessing_original", "Chinese_Study","verbs.csv"))) %>% 
-            select(subject,english_translation,OverallLikeMe, trial_type, ppt_demog)  %>% rename(event = english_translation) ,here("R_scripts/scripts_reproduction/Data_Preprocessing_reproduction/reproduced_data/chinese_study/data5_chinese.csv"))
+            select(subject,english_translation,OverallLikeMe, trial_type, ppt_demog)  %>% rename(event = english_translation), here("R_scripts", "scripts_reproduction" ,"Data_Preprocessing_reproduction", "reproduced_data", "chinese_study", "data5_chinese.csv"))
 ```
 
 Note: the command `write_csv()` does not work because of the following error: "Error in `select()`: ! Can't select columns that don't exist.✖ Column `TrialType` doesn't exist. Run `rlang::last_trace()` to see where the error occurred." By changing `TrialType` to `trial_type` it is possible to save a new csv-file, but the column in this dataset only contains the observation "survey-text".

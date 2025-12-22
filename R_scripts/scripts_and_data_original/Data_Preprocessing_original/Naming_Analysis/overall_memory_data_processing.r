@@ -1125,4 +1125,4 @@ study3_memory = subset(raw_data, trial_type == "html-button-response" & !is.na(f
   mutate(Study = "study3")
 
 memory = rbind(study1_memory,study2_memory,study3_memory)
-write_csv(memory, "studies1_2_3_memory.csv")
+write_csv(memory, here("R_scripts", "scripts_reproduction" ,"Data_Preprocessing_reproduction", "reproduced_data", "studies1_2_3_memory.csv"))
