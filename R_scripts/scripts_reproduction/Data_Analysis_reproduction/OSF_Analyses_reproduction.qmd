@@ -106,7 +106,7 @@ contrasts(data$ppt_gender)[1] = -1
 ### Import and process data from intuitions study
 
 ```{r}
-#| label: reproduction of code lines 77-94 to include {here} paths
+#| label: reproduction of code lines 77-84 to include {here} paths
 
 intuitions_original = read_csv(here("R_scripts", "scripts_and_data_original", "Data_Analysis_original", "rating_study.csv")) %>%
   select(-...1)
@@ -115,6 +115,14 @@ intuitions_passive = read_csv(here("R_scripts", "scripts_and_data_original", "Da
   mutate(ppt_age = NA, responses_new_reversed = NA)
 
 intuitions = rbind(intuitions_original, intuitions_passive)
+
+```
+
+The script imports the file `empathy_study_data.csv`, which is not result of the corresponding preprocessing script (osfstorage-archive/Data Preprocessing/EmpathyStudy/process_data.R):
+
+```{r}
+
+#| label: reproduction of code lines 87-94 to include {here} path
 
 #####
 # Import and process empathy data
