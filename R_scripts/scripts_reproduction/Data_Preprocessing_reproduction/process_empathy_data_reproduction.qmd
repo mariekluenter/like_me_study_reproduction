@@ -40,7 +40,7 @@ library(here)
 We adjusted the original code to use the {here} library for importing the data to ensure that our R project has robust relative file paths:
 
 ```{r}
-#| label: original code lines 10-12
+#| label: reproduction of code lines 10-12 to include {here} path
 
 files <- list.files(path = here("R_scripts/scripts_and_data_original/Data_Preprocessing_original/EmpathyStudy/full_empathy_data"), pattern = "\\.csv$", full.names = TRUE)
 raw_data <- sapply(files, read_csv, simplify=FALSE) %>% 
@@ -115,6 +115,7 @@ catch = test %>% # Read in data
 We added code to calculate the average number of correct trials for each id in the "catch" dataset, in order to check how each participant (id) performed:
 
 ```{r}
+#| label: additional code to check participants' correctness scores
 
 catch |> 
   group_by(id) |>  
@@ -156,7 +157,7 @@ empathy_pilot_results = test %>%
 We commented the `plot_grid()` code out as it does not work from this script because `LikeMe_score` is not defined:
 
 ```{r, results='hide'}
-#| label: original code lines 83-101
+#| label: reproduction of code lines 83-101 to cpmment out plot_grid() code
 
 empathy_score_pilot  = ggplot(data = empathy_pilot_results,
                               aes(x = syntax_unique, y = OverallLikeMe.m, group = data_type)) + 
@@ -183,6 +184,7 @@ summary(lmer(responses ~ condition + (1+condition|id), data = test %>%
 The preprocessing script filters participants but does not export the resulting dataset. Consequently, it was unclear to us whether the data used in the analysis script (Data Analysis/empathy_study_data.csv) matches the output of the preprocessing steps. We therefore wrote additional code to reconstruct the data frame that the authors used in their analysis:
 
 ```{r, message=FALSE}
+#| label: additional code to reconstruct data frame
 
 write.csv(test, file = "R_scripts/scripts_reproduction/Data_Preprocessing_reproduction/reproduced_data/empathy_study/empathy_data_test.csv", row.names = FALSE)
 
