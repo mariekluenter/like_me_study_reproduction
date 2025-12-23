@@ -901,6 +901,7 @@ Replication team: As a robustness check, we computed the preregistered models wh
 
 ```{r}
 #| label: robustness check Study 3 gender
+
 model_gender_prereg <- glmer(OverallLikeMe ~  ppt_gender * syntax + (1 + syntax | subject) + (1 + ppt_gender | event),
                              data = subset(data4, TrialType == "GenderTrial"),
                              family = binomial(link = "logit"),
@@ -910,16 +911,11 @@ summary(model_gender_prereg)
 
 tab_model(model_gender_prereg)
 
-
-# data4_overallAnalysis_race_model <- glmer(OverallLikeMe ~ 1 + syntax + (1+syntax|subject) + (1+syntax|event),
-#                                            data = subset(data4, TrialType == "GenderTrial"), family = "binomial")
-# 
-# tab_model(data4_overallAnalysis_race_model)
-
 ```
 
 ```{r}
 #| label: robustness check Study 3 race
+
 model_race_prereg <- glmer(OverallLikeMe ~  ppt_race * syntax + (1 + syntax | subject) + (1 + ppt_race | event),
                              data = subset(data4, TrialType == "RaceTrial"),
                              family = binomial(link = "logit"),
