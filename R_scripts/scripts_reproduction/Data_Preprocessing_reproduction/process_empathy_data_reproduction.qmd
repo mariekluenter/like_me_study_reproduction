@@ -25,7 +25,7 @@ library(dplyr)
 
 ```
 
-We added code for imports of the libraries needed to run the original script:
+We added missing code for imports of the libraries (other than dplyr) needed to run the original script:
 
 ```{r, message=FALSE}
 
@@ -39,7 +39,7 @@ library(here)
 
 We adjusted the original code to use the {here} library for importing the data to ensure that our R project has robust relative file paths:
 
-```{r}
+```{r, message=FALSE}
 #| label: reproduction of code lines 10-12 to include {here} path
 
 files <- list.files(path = here("R_scripts/scripts_and_data_original/Data_Preprocessing_original/EmpathyStudy/full_empathy_data"), pattern = "\\.csv$", full.names = TRUE)
@@ -73,7 +73,7 @@ test = raw_data %>% # Read in data
 
 ```
 
-The script includes a comment that reads: "Need to remove ptpts 62938_W and 83249_W who are both double completions" but there is no data from these participants in the folder (any more). We assume that they have already been removed from the dataset uploaded on the OSF:
+The script includes a comment that reads: "Need to remove ptpts 62938_W and 83249_W who are both double completions" but there is no data from these participants in the folder (anymore). We assume that they have already been removed from the dataset uploaded on the OSF:
 
 ```{r, results='hide'}
 #| label: original code lines 31-46
@@ -112,7 +112,7 @@ catch = test %>% # Read in data
 
 ```
 
-We added code to calculate the average number of correct trials for each id in the "catch" dataset, in order to check how each participant (id) performed:
+We added code to calculate the average number of correct trials for each id in the "catch" dataset, in order to check how each participant (=id) performed:
 
 ```{r}
 #| label: additional code to check participants' correctness scores
@@ -124,7 +124,7 @@ catch |>
 
 ```
 
-In the authors' original R script, 19 participants who failed **2 or more** catch trials are excluded. This differs from the pre-registration (<https://aspredicted.org/7698v.pdf>), which specified excluding participants who answered **more than 2** catch trials incorrectly. There were 8 catch trials, so a score of 0.25 corresponds to 2 out of 8 incorrect trials. Consequently, according to the following code, participants with 2 or more incorrect catch trials (including 3 who got all catch trials wrong) were excluded, resulting in a total of 19 participants excluded. The comment added by the original authors "Exclude 56517_W based on catch trials" is not relevant:
+In the authors' original R script, 19 participants who failed **2 or more** catch trials are excluded. This differs from the pre-registration (<https://aspredicted.org/7698v.pdf>), which specified excluding participants who answered **more than 2** catch trials incorrectly. As there were 8 catch trials, a score of 0.25 corresponds to 2 out of 8 incorrect trials. Consequently (according to the following code), participants with 2 or more incorrect catch trials (including 3 participants who got all catch trials wrong) were excluded, resulting in a total of 19 participants excluded. The comment added by the original authors "Exclude 56517_W based on catch trials" is not relevant:
 
 ```{r, message=FALSE}
 #| label: original code lines 59-81
@@ -154,7 +154,7 @@ empathy_pilot_results = test %>%
 
 ```
 
-We commented the `plot_grid()` code out as it does not work from this script because `LikeMe_score` is not defined:
+We commented the `plot_grid()` code out as it does not work from this script because the variable `LikeMe_score` is not defined:
 
 ```{r, results='hide'}
 #| label: reproduction of code lines 83-101 to cpmment out plot_grid() code
@@ -186,7 +186,7 @@ The preprocessing script filters participants but does not export the resulting 
 ```{r, message=FALSE}
 #| label: additional code to reconstruct data frame
 
-write.csv(test, file = "R_scripts/scripts_reproduction/Data_Preprocessing_reproduction/reproduced_data/empathy_study/empathy_data_test.csv", row.names = FALSE)
+write.csv(test, file = "reproduced_data/empathy_study/empathy_data_test.csv", row.names = FALSE)
 
 empathy_study_data_original <- read_csv(here("R_scripts", "scripts_and_data_original", "Data_Analysis_original", "empathy_study_data.csv")) #This is the data used by the authors in their analysis (in the analysis script R_scripts/scripts_and_data_original/Data_Analysis_original/OSF_Analyses.r)
 
@@ -201,7 +201,7 @@ reconstructed_df <- test |>
 
 supposed_ids <- reconstructed_df |> distinct(id)
 
-write_csv(reconstructed_df, file = "R_scripts/scripts_reproduction/Data_Preprocessing_reproduction/reproduced_data/empathy_study/reconstructed_df.csv")
+write_csv(reconstructed_df, file = "reproduced_data/empathy_study/reconstructed_df.csv")
 ```
 
-Result: We successfully recreated the dataframe that the authors used in the analysis. However, this procedure confirmed that the data used in the analysis were the data from the original 128 participant minus the 19 that the authors excluded due to catch trials. Therefore, no other exclusion criteria mentioned in the preregistration appear to have been applied by the authors. The preregistration stated that trials with response times more than 3 SD from the mean, participants whose self-reported gender did not match Prolific records, and participants who had reported not to have lived in the UK for the last five years would be excluded. While these additional exclusion criteria might not have been relevant, the shared preprocessing code of this rating study does not check for them.
+Result: We successfully recreated the dataframe that the authors used in the analysis. However, this procedure confirmed that the data used in the analysis were the data from the original 128 participant minus the 19 that the authors excluded due to catch trials. Therefore, no other exclusion criteria mentioned in the preregistration appear to have been applied by the authors. The preregistration stated that trials with response times more than 3 SD from the mean, participants whose self-reported gender did not match Prolific records, and participants who had reported not to have lived in the UK for the last five years would be excluded. These additional exclusion criteria might not have been relevant, however, the shared preprocessing code of this rating study does not check for them.
