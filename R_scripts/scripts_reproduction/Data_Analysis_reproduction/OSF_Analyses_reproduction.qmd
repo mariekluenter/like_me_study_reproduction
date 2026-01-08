@@ -834,6 +834,69 @@ data2_syntax = data2 %>%
   dplyr::summarise(OverallLikeMe.m = round(mean(OverallLikeMe),1), OverallLikeMe.low = round(ci.low(OverallLikeMe),1),OverallLikeMe.high = round(ci.high(OverallLikeMe),1))
 data2_syntax
 ```
+Replication team: As a robustness check, we computed the preregistered models which were not included in the analysis code, each for gender and race
+
+```{r}
+#| label: robustness check Study 2: Participant Gender and Race as fixed effects
+
+prereg_mod1_gender <- glmer(OverallLikeMe ~ ppt_gender * ppt_race
+  + (1 | subject)
+  + (1 + ppt_gender + ppt_race | event),
+  data = subset(data2, TrialType == "GenderTrial"),
+  family = "binomial"
+)
+
+summary(prereg_mod1_gender)
+
+prereg_mod1_race <- glmer(OverallLikeMe ~ ppt_gender * ppt_race
+                     + (1 | subject)
+                     + (1 + ppt_gender + ppt_race | event),
+                     data = subset(data2, TrialType == "RaceTrial"),
+                     family = "binomial"
+)
+
+summary(prereg_mod1_race)
+```
+
+```{r}
+#| label: robustness check Study 2: Adding Trial Type as fixed effect
+
+prereg_mod2_gender <- glmer(OverallLikeMe ~ ppt_gender * ppt_race * GenderTrialType 
+                                  + (1 + GenderTrialType | subject) 
+                                  + (1 + ppt_gender + ppt_race | event), 
+                                  data = subset(data2, TrialType =="GenderTrial"),
+                                  family = "binomial")
+
+summary(prereg_mod2_gender)
+
+prereg_mod2_race <- glmer(OverallLikeMe ~ ppt_gender * ppt_race * RaceTrialType 
+                            + (1 + RaceTrialType | subject) 
+                            + (1 + ppt_gender + ppt_race | event), 
+                            data = subset(data2, TrialType =="RaceTrial"),
+                            family = "binomial")
+
+summary(prereg_mod2_race)
+```
+
+```{r}
+#| label: robustness check Study 2: Adding Syntax as fixed effect
+
+prereg_mod3_gender <- glmer(OverallLikeMe ~ ppt_gender * ppt_race * GenderTrialType * syntax
+                     + (1 + GenderTrialType + syntax | subject)
+                     + (1 + ppt_gender + ppt_race | event),
+                     data = subset(data2, TrialType == "GenderTrial"),
+                     family = "binomial")
+
+summary(prereg_mod3_gender)
+
+prereg_mod3_race <- glmer(OverallLikeMe ~ ppt_gender * ppt_race * RaceTrialType * syntax
+                            + (1 + RaceTrialType + syntax | subject)
+                            + (1 + ppt_gender + ppt_race | event),
+                            data = subset(data2, TrialType == "RaceTrial"),
+                            family = "binomial")
+
+summary(prereg_mod3_race)
+```
 
 ### Study 3
 
