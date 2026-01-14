@@ -837,65 +837,55 @@ data2_syntax
 Replication team: As a robustness check, we computed the preregistered models which were not included in the analysis code, each for gender and race
 
 ```{r}
-#| label: robustness check Study 2: Participant Gender and Race as fixed effects
+#| label: robustness check Study 2: Participant Gender and Race as fixed effects on gender trials
 
 prereg_mod1_gender <- glmer(OverallLikeMe ~ ppt_gender * ppt_race
   + (1 | subject)
   + (1 + ppt_gender + ppt_race | event),
   data = subset(data2, TrialType == "GenderTrial"),
-  family = "binomial"
-)
+  family = "binomial")
 
 summary(prereg_mod1_gender)
+
+# Removing random slope at event level
+prereg_mod1_gender <- glmer(OverallLikeMe ~ ppt_gender * ppt_race
+  + (1 | subject)
+  + (1 | event),
+  data = subset(data2, TrialType == "GenderTrial"),
+  family = "binomial")
+
+# Removing all random effects for convergance
+prereg_mod1_gender_converge <- glm(OverallLikeMe ~ ppt_gender * ppt_race,
+                            data = subset(data2, TrialType == "GenderTrial"),
+                            family = "binomial")
+
+summary(prereg_mod1_gender_converge)
+tab_model(prereg_mod1_gender_converge)
+
+emmeans(prereg_mod1_gender_converge, ~ ppt_gender + ppt_race, type = "response")
+pairs(emmeans(prereg_mod1_gender_converge, ~ ppt_gender + ppt_race, type = "response"))
+
+```
+
+```{r}
+#| label: robustness check Study 2: Participant Gender and Race as fixed effects on race trials
 
 prereg_mod1_race <- glmer(OverallLikeMe ~ ppt_gender * ppt_race
                      + (1 | subject)
                      + (1 + ppt_gender + ppt_race | event),
                      data = subset(data2, TrialType == "RaceTrial"),
-                     family = "binomial"
-)
-
-summary(prereg_mod1_race)
-```
-
-```{r}
-#| label: robustness check Study 2: Adding Trial Type as fixed effect
-
-prereg_mod2_gender <- glmer(OverallLikeMe ~ ppt_gender * ppt_race * GenderTrialType 
-                                  + (1 + GenderTrialType | subject) 
-                                  + (1 + ppt_gender + ppt_race | event), 
-                                  data = subset(data2, TrialType =="GenderTrial"),
-                                  family = "binomial")
-
-summary(prereg_mod2_gender)
-
-prereg_mod2_race <- glmer(OverallLikeMe ~ ppt_gender * ppt_race * RaceTrialType 
-                            + (1 + RaceTrialType | subject) 
-                            + (1 + ppt_gender + ppt_race | event), 
-                            data = subset(data2, TrialType =="RaceTrial"),
-                            family = "binomial")
-
-summary(prereg_mod2_race)
-```
-
-```{r}
-#| label: robustness check Study 2: Adding Syntax as fixed effect
-
-prereg_mod3_gender <- glmer(OverallLikeMe ~ ppt_gender * ppt_race * GenderTrialType * syntax
-                     + (1 + GenderTrialType + syntax | subject)
-                     + (1 + ppt_gender + ppt_race | event),
-                     data = subset(data2, TrialType == "GenderTrial"),
                      family = "binomial")
 
-summary(prereg_mod3_gender)
+summary(prereg_mod1_race)
 
-prereg_mod3_race <- glmer(OverallLikeMe ~ ppt_gender * ppt_race * RaceTrialType * syntax
-                            + (1 + RaceTrialType + syntax | subject)
-                            + (1 + ppt_gender + ppt_race | event),
-                            data = subset(data2, TrialType == "RaceTrial"),
-                            family = "binomial")
+# Removing random effects for convergance
+prereg_mod1_race_converge <- glm(OverallLikeMe ~ ppt_gender * ppt_race,
+                                   data = subset(data2, TrialType == "RaceTrial"),
+                                   family = "binomial")
 
-summary(prereg_mod3_race)
+summary(prereg_mod1_race_converge)
+tab_model(prereg_mod1_race_converge)
+
 ```
 
 ### Study 3
