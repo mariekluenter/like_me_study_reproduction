@@ -1,0 +1,239 @@
+---
+title: "Standardized Reproduction Template"
+format: 
+  pdf:
+    number-sections: true
+editor: visual
+bibliography: references.bib
+---
+
+```{r echo=FALSE}
+#install.packages("knitcitations") 
+library(knitcitations)
+#install.packages("rmarkdown")
+library(rmarkdown)
+```
+
+This is a [template](https://osf.io/brxtd/files/wyxd3) that you can use to report results from reproduction studies in the social sciences. A reproduction is the repeated analysis of a published finding using the same data. Please ensure that the study you intend to report adheres to the following criteria.
+
+**Reproduction is assigned to one original study that tested at least one identical hypothesis.**
+
+- [ ] Reproduction is not “only” a numerical reproduction of the original report’s results but has some added feature (e.g., different software, code, robustness analyses).
+
+- [ ] No original authors have co-authored the reproduction: While involvement of the original authors in the form of consultancy is accepted, *Replication Research* does not publish reproductions co-authored by any of the original author.
+
+- [ ] A dataset from the original study is analysed. If *different* data is used, please use the template for replication studies instead: <https://osf.io/3jgxd>.
+
+- [ ] This is the most recent version of this document (check here: <https://osf.io/wyxd3>).
+
+To complete this template, please provide the information underneath each heading for your study. You need to use a single template for each reproduction study that you want to report. The paper has four main sections: (1) Background; (2) Methods; (3) Results; (4) Evaluation. This template is heavily based on the data paper template by @evans_journal_2024. Some parts (e.g., reproduction closeness) are based on suggestions by @brandt_replication_2014. Before publishing your report, please delete the instructions that are written in blue.
+
+Completed reports can be submitted to the non-peer reviewed [Zenodo Replication Research Community](https://zenodo.org/communities/r2/) or to the peer reviewed journal [Replication Research](https://replicationresearch.org).
+
+## License {.unnumbered}
+
+If you are using this template [@roseler_handbook_2025] or parts of this template to structure your report, please cite it:
+
+Röseler, L., Hein, M., & Oppong Boakye, P. (2025). StaRT Reports.\
+https://doi.org/10.17605/OSF.IO/BRXTD
+
+{{< pagebreak >}}
+
+## Title {.unnumbered}
+
+Describe what phenomenon or finding you have attempted to reproduce (e.g., “Reproduction of Anchoring Effects using River Lengths”).
+
+## Abstract {.unnumbered}
+
+A short (100 word maximum) summary of: the discipline, the phenomenon, the original study, why it should be reproduced, and what the outcome of the reproduction study was (e.g., success, mixed, failure).
+
+## Keywords {.unnumbered}
+
+Provide a maximum of 5 keywords to help quickly communicate the research foci of the reproduction, separated by a semicolon.
+
+{{< pagebreak >}}
+
+# Background
+
+Provide background to the reproduction. This might include a description of the original phenomenon/effect, focal studies about the phenomenon, references where theoretical backgrounds are covered in-depth, whether there have already been reproduction attempts and what their outcomes were, what research rests upon the reproducibility of the phenomenon, or why a reproduction on the topic is informative. Discuss the importance of testing the robustness and reliability of findings via alternate methods.
+
+## Original and Reproduction Study References
+
+Provide references with DOIs for the original and reproduction study that adhere to your field’s standard (e.g., APA citation style). If the reproduction study has not yet been published, provide a link to a repository where results and materials are stored (e.g., Zenodo.org, OSF.io).
+
+|              | Reference with DOI | Study number |
+|--------------|--------------------|--------------|
+| Original     |                    |              |
+| Study number |                    |              |
+
+## Reproduced Study, Hypothesis, and Findings
+
+If the original article reported multiple studies, hypotheses, or effects (e.g., for different items or sub-samples) please describe which of these you reproduced and provide its number in the original paper (e.g., 1 or 2A).
+
+# Methods
+
+Describe the methods used for data collection including all sub-headings below as detailed as possible. There is no word limit to this section; we are looking for a carefully detailed account of the data collection methods with sufficient detail to allow further reproductions and meaningful secondary use of the data.
+
+## Reproduction type
+
+Describe the type of the reproduction, that is, whether it is an assessment of computational reproducibility, a recreation of the script, whether partly different data are being used, and whether robustness checks are planned (see for example @ankel-peters_protocol_2025). The type of reproduction should be justified by the goals of this project (e.g., to test for a false-positive or examine generalizability).
+
+## Original and Reproduction Study Features
+
+Provide a clear overview of the hypothesis, original study, and reproduction study. Describe all differences between the studies using the table below, highlighting any changes or enhancements in the analysis procedures from the original work.
+
+**Table 1** *Differences Between the Original and the Reproduction Study*
+
+| Study Feature | Original Study | Reproduction Study | Justification and Possible Effect on Interpretability |
+|------------------|------------------|------------------|------------------|
+| Software and versions |  |  |  |
+| Functions |  |  |  |
+| ... | ... | ... | \[press Tab here to add new rows\] |
+
+## Involvement of Original Authors
+
+Describe whether you have contacted any of the original authors, what their recommendations were, and all materials that they provided you with. Original authors cannot be co-authors on the reproduction study if you plan to submit it to Replication Research.
+
+Did original authors provide:
+
+- Code/data? → Permitted (non-authorship) 
+
+- Analysis input? → Permitted (non-authorship) 
+
+- Draft revisions? → NOT permitted (co-authorship) 
+
+{{< pagebreak >}}
+
+## Preregistration
+
+If applicable, provide the links for the original and reproduction study’s preregistration. @ankel-peters_protocol_2025 recommend preregistering robustness checks after gaining familiarity with data and code but before implementing new analyses
+
+| Study        | Preregistration link |
+|--------------|----------------------|
+| Original     |                      |
+| Study number |                      |
+
+## Availability of Materials
+
+Provide an overview of all materials (raw and processed data, code), where to find them (e.g., openly accessible, shared upon request, accessible via a specific institution, access protocol), and, if applicable, what license they are under.
+
+# Results
+
+Describe potential changes that had to be made so that the reproduction could work (e.g., choosing specific software versions, fixing errors or typos, switching to other methods). Use the sections below and table to report findings from the original and reproduction study.
+
+## Original key statistical result and interpretation
+
+| Claim | Key results and interpretation | Reproduction result |
+|------------------------|------------------------|------------------------|
+| Please provide the original |  |  |
+| authors’ claim and page number | Key statistical result from the original report |  |
+| Correlations between variables of interest | Table 1 | Table 2 |
+| Relationship between variable x, y, and z | Figure 4 | Figure 2 |
+
+## Comparison of Results Between Original Study and Reproduction
+
+Report original and reproduction results and evaluate their similarity. Comment on the impact of using different analytical methods on the original findings (“robustness reproduction”, @ankel-peters_protocol_2025). Discuss whether the conclusions of the original study are upheld or reconsidered.
+
+## Further results
+
+If you conducted any sort of robustness checks, extensions or auxiliary/exploratory analyses, you can report them here. Include a justification for each robustness check. Beyond individual checks, you can also include specification curves.
+
+## Dataset and Materials link
+
+Please include a permanent identifier, such as a DOI, that points to the online location of the dataset and all used materials. If this resource has already been accessible, a new DOI is not required.
+
+## Object/file name
+
+Please note the exact name of the dataset used to arrive at the reproduction results (e.g., data.csv).
+
+## Limits to sharing
+
+If the data is currently under embargo, please give the length and date at which the data will be made open. Otherwise, please note any potential barriers to full sharing of the data e.g., if it contains identifying information, how gatekeeping is maintained. Please note that you will need to provide full access to the project contributors and potential reviewers for the sake of transparency, in full confidentiality.
+
+## FAIR data/Codebook
+
+- [ ] Data deposited in certified repository (e.g., OSF, Zenodo)
+
+- [ ] Dataset has persistent identifier (DOI)
+
+- [ ] Code shared with open license (e.g., MIT, GPL)
+
+- [ ] Codebook includes:
+
+  - [ ] Variable names Description
+  - [ ] Valid ranges
+  - [ ] Missing codes
+
+- [ ] Metadata uses standard schema (e.g., Datacite, CodeMeta)
+
+- [ ] File formats are non-proprietary (e.g., .csv, .txt, .R)
+
+## Deviations from the Preregistration
+
+If applicable, discuss for each deviation from the preregistration (1) how you deviated, (2) why you did so, and (3) how this might affect the results. Please also list cases where the preregistration was unspecific and you had to make decisions after data collection (e.g., no preregistered exclusion criterion, hypothesis test was not specified as one- vs. two-tailed). If you did not deviate in any way, write “We did not deviate from the preregistration in any way.” In cases where two different sets of results could be obtained (e.g., one- and two-tailed test), please describe the results for both cases.
+
+| Description of Deviation | Reason for Deviation | Influence on the Results |
+|--------------------------|----------------------|--------------------------|
+| ...                      | ...                  | ...                      |
+|                          |                      |                          |
+
+## FORRT Replication Database (FReD) Entry
+
+Please disclose whether your results have already been entered into the replication database. To check it, you can enter the DOI of the target study here: <https://forrt.org/apps/fred_annotator.html>. If they are, we will link this report to the entry. If they are not, we invite you to enter them in the spreadsheet or in case of a low number of replication effects here: <https://docs.google.com/forms/d/e/1FAIpQLSeMCwdtP0TPgL55stniuyyTxnNwyC34mO4VUuLcQwYrLI89sQ/viewform>.
+
+# Evaluation
+
+Please describe everything you learned from your reproduction. This may include acknowledging strengths and limitations of the original or reproduction study or materials, recommendations for future research on the topic, or how the findings are related to other studies in the area or previous reproduction studies. The evaluation should further cover computational reproducibility, robustness, and optionally external validity.
+
+## Feedback from the original study’s authors (optional)
+
+You may reach out to the original authors. In this case, we recommend adhering to the “golden rule of reproductions: treat others and their work, as you would like others to treat you and your work!” [@berkeleyinitiativefortransparencyinthesocialsciencesteam2020]. For email templates, see the ACRE guide: <https://bitss.github.io/ACRE/comunications.html#for-reproducers-contacting-the-authors-of-the-original-study>
+
+Original authors were contacted on \[date\].\
+Their response:\
+
+- [ ] Comments appended
+
+- [ ] Declined to comment 
+
+- [ ] No response after 4 weeks.
+
+If no response, editors may independently solicit feedback.
+
+## Limitations and Recommendations for Future Replications
+
+Discuss your study’s limitations (e.g., in terms of validity) and make recommendations for what future studies related to this topic should consider.
+
+## Brief Evaluation
+
+Describe in up to two sentences the level of reproducibility. If you use a specific metric such as reproducibility score, describe that metric.
+
+{{< pagebreak >}}
+
+Other information required for submission, not for review
+
+# Contribution Statement {.unnumbered}
+
+Please list all contributions towards this manuscript, including the contributions of all individuals who helped to conduct the data (who may also not be an author of a potential publication regarding this study), including their roles and affiliations at the time of data collection. We explicitly encourage you to include students or research assistants if they were involved in designing or conducting the study.
+
+# Ethical Statement  {.unnumbered}
+
+Please provide an appropriate ethical statement if your work involves live subjects (human or animal). For example, the research should have been conducted in accordance with the [Declaration of Helsinki](https://www.wma.net/policies-post/wma-declaration-of-helsinki-ethical-principles-for-medical-research-involving-human-subjects/) and local requirements.
+
+# Acknowledgements {.unnumbered}
+
+Please add any relevant acknowledgements to anyone else who supported the project in which the data was collected, but did not work directly on the data itself.
+
+# Conflicts of interest {.unnumbered}
+
+are defined as “when authors, reviewers, or editors have interests that are not fully apparent and that may influence their judgments on what is published. They have been described as those which, when revealed later, would make a reasonable reader feel misled or deceived” (COPE, 2003). Please note any potential conflict of interests, including but not limited to direct or indirect financial gains or non-financial implications. If you have no conflicts to declare, please state explicitly: “The author(s) declare no conflict of interest associated with the publication of this manuscript.
+
+# Funding statement {.unnumbered}
+
+If the data, or the project from which it came, required funding, please provide clear detail of this here. For example, if funded by a research council this would include the year of successful receipt of funding, the name of the funding council, and the grant number.
+
+{{< pagebreak >}}
+
+# References {.unnumbered}
+
+Please enter references (preferably in the APA style) and include a DOI where available.

@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Standardized Reproduction Template</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="Standardized Reproduction Template_TI_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Standardized Reproduction Template_TI_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="Standardized Reproduction Template_TI_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="Standardized Reproduction Template_TI_files/libs/quarto-html/popper.min.js"></script>
+<script src="Standardized Reproduction Template_TI_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Standardized Reproduction Template_TI_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Standardized Reproduction Template_TI_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Standardized Reproduction Template_TI_files/libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Standardized Reproduction Template_TI_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Standardized Reproduction Template_TI_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Standardized Reproduction Template_TI_files/libs/bootstrap/bootstrap-efbb37e9afcc02144ebbc7afd12a776f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Standardized Reproduction Template</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>This is a <a href="https://osf.io/brxtd/files/wyxd3">template</a> that you can use to report results from reproduction studies in the social sciences. A reproduction is the repeated analysis of a published finding using the same data. Please ensure that the study you intend to report adheres to the following criteria.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Reproduction is assigned to one original study that tested at least one identical hypothesis.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td>Reproduction is not “only” a numerical reproduction of the original report’s results but has some added feature (e.g., different software, code, robustness analyses).</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>No original authors have co-authored the reproduction: While involvement of the original authors in the form of consultancy is accepted, <em>Replication Research</em> does not publish reproductions co-authored by any of the original author.</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>A dataset from the original study is analysed. If <em>different</em> data is used, please use the template for replication studies instead: <a href="https://osf.io/3jgxd" class="uri">https://osf.io/3jgxd</a></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>This is the most recent version of this document (check here: <a href="https://osf.io/wyxd3" class="uri">https://osf.io/wyxd3</a>).</td>
+</tr>
+</tbody>
+</table>
+<p>To complete this template, please provide the information underneath each heading for your study. You need to use a single template for each reproduction study that you want to report. The paper has four main sections: (1) Background; (2) Methods; (3) Results; (4) Evaluation. This template is heavily based on the data paper template by <span class="citation" data-cites="evans_journal_2024">Evans (<a href="#ref-evans_journal_2024" role="doc-biblioref">2024</a>)</span>. Some parts (e.g., reproduction closeness) are based on suggestions by <span class="citation" data-cites="brandt_replication_2014">Brandt et al. (<a href="#ref-brandt_replication_2014" role="doc-biblioref">2014</a>)</span>. Before publishing your report, please delete the instructions that are written in blue.</p>
+<p>Completed reports can be submitted to the non-peer reviewed <a href="https://zenodo.org/communities/r2/">Zenodo Replication Research Community</a> or to the peer reviewed journal <a href="https://replicationresearch.org">Replication Research</a>.</p>
+<section id="license" class="level2">
+<h2 class="anchored" data-anchor-id="license">License</h2>
+<p>If you are using this template <span class="citation" data-cites="roseler_handbook_2025">(<a href="#ref-roseler_handbook_2025" role="doc-biblioref">Röseler et al. 2025</a>)</span> or parts of this template to structure your report, please cite it:</p>
+<p>Röseler, L., Hein, M., &amp; Oppong Boakye, P. (2025). StaRT Reports.<br>
+https://doi.org/10.17605/OSF.IO/BRXTD</p>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="title" class="level2">
+<h2 class="anchored" data-anchor-id="title">Title</h2>
+<p>Describe what phenomenon or finding you have attempted to reproduce (e.g., “Reproduction of Anchoring Effects using River Lengths”).</p>
+</section>
+<section id="abstract" class="level2">
+<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
+<p>A short (100 word maximum) summary of: the discipline, the phenomenon, the original study, why it should be reproduced, and what the outcome of the reproduction study was (e.g., success, mixed, failure).</p>
+</section>
+<section id="keywords" class="level2">
+<h2 class="anchored" data-anchor-id="keywords">Keywords</h2>
+<p>Provide a maximum of 5 keywords to help quickly communicate the research foci of the reproduction, separated by a semicolon.</p>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="background" class="level1">
+<h1>(1) Background</h1>
+<p>Provide background to the reproduction. This might include a description of the original phenomenon/effect, focal studies about the phenomenon, references where theoretical backgrounds are covered in-depth, whether there have already been reproduction attempts and what their outcomes were, what research rests upon the reproducibility of the phenomenon, or why a reproduction on the topic is informative. Discuss the importance of testing the robustness and reliability of findings via alternate methods.</p>
+<section id="original-and-reproduction-study-references" class="level2">
+<h2 class="anchored" data-anchor-id="original-and-reproduction-study-references">1.1 Original and Reproduction Study References</h2>
+<p>Provide references with DOIs for the original and reproduction study that adhere to your field’s standard (e.g., APA citation style). If the reproduction study has not yet been published, provide a link to a repository where results and materials are stored (e.g., Zenodo.org, OSF.io).</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Reference with DOI</th>
+<th>Study number</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Original</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Study number</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="reproduced-study-hypothesis-and-findings" class="level2">
+<h2 class="anchored" data-anchor-id="reproduced-study-hypothesis-and-findings">1.2 Reproduced Study, Hypothesis, and Findings</h2>
+<p>If the original article reported multiple studies, hypotheses, or effects (e.g., for different items or sub-samples) please describe which of these you reproduced and provide its number in the original paper (e.g., 1 or 2A).</p>
+</section>
+</section>
+<section id="methods" class="level1">
+<h1>(2) Methods</h1>
+<p>Describe the methods used for data collection including all sub-headings below as detailed as possible. There is no word limit to this section; we are looking for a carefully detailed account of the data collection methods with sufficient detail to allow further reproductions and meaningful secondary use of the data.</p>
+<section id="reproduction-type" class="level2">
+<h2 class="anchored" data-anchor-id="reproduction-type">2.1 Reproduction type</h2>
+<p>Describe the type of the reproduction, that is, whether it is an assessment of computational reproducibility, a recreation of the script, whether partly different data are being used, and whether robustness checks are planned (see for example <span class="citation" data-cites="ankel-peters_protocol_2025">Ankel-Peters et al. (<a href="#ref-ankel-peters_protocol_2025" role="doc-biblioref">2025</a>)</span>). The type of reproduction should be justified by the goals of this project (e.g., to test for a false-positive or examine generalizability).</p>
+</section>
+<section id="original-and-reproduction-study-features" class="level2">
+<h2 class="anchored" data-anchor-id="original-and-reproduction-study-features">2.2 Original and Reproduction Study Features</h2>
+<p>Provide a clear overview of the hypothesis, original study, and reproduction study. Describe all differences between the studies using the table below, highlighting any changes or enhancements in the analysis procedures from the original work.</p>
+<p><strong>Table 1</strong> <em>Differences Between the Original and the Reproduction Study</em></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 23%">
+<col style="width: 23%">
+<col style="width: 23%">
+<col style="width: 29%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Study Feature</th>
+<th>Original Study</th>
+<th>Reproduction Study</th>
+<th>Justification and Possible Effect on Interpretability</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Software and versions</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Functions</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>[press Tab here to add new rows]</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="involvement-of-original-authors" class="level2">
+<h2 class="anchored" data-anchor-id="involvement-of-original-authors">2.3 Involvement of Original Authors</h2>
+<p>Describe whether you have contacted any of the original authors, what their recommendations were, and all materials that they provided you with. Original authors cannot be co-authors on the reproduction study if you plan to submit it to Replication Research.</p>
+<p>Did original authors provide:</p>
+<ul>
+<li><p>Code/data? → Permitted (non-authorship)&nbsp;</p></li>
+<li><p>Analysis input? → Permitted (non-authorship)&nbsp;</p></li>
+<li><p>Draft revisions? → NOT permitted (co-authorship)&nbsp;</p></li>
+</ul>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="preregistration" class="level2">
+<h2 class="anchored" data-anchor-id="preregistration">2.4 Preregistration</h2>
+<p>If applicable, provide the links for the original and reproduction study’s preregistration. <span class="citation" data-cites="ankel-peters_protocol_2025">Ankel-Peters et al. (<a href="#ref-ankel-peters_protocol_2025" role="doc-biblioref">2025</a>)</span> recommend preregistering robustness checks after gaining familiarity with data and code but before implementing new analyses</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Study</th>
+<th>Preregistration link</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Original</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Study number</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="availability-of-materials" class="level2">
+<h2 class="anchored" data-anchor-id="availability-of-materials">2.5 Availability of Materials</h2>
+<p>Provide an overview of all materials (raw and processed data, code), where to find them (e.g., openly accessible, shared upon request, accessible via a specific institution, access protocol), and, if applicable, what license they are under.</p>
+</section>
+</section>
+<section id="results" class="level1">
+<h1>(3) Results</h1>
+<p>Describe potential changes that had to be made so that the reproduction could work (e.g., choosing specific software versions, fixing errors or typos, switching to other methods). Use the sections below and table to report findings from the original and reproduction study.</p>
+<section id="original-key-statistical-result-and-interpretation" class="level2">
+<h2 class="anchored" data-anchor-id="original-key-statistical-result-and-interpretation">3.1 Original key statistical result and interpretation</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Claim</th>
+<th>Key results and interpretation</th>
+<th>Reproduction result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Please provide the original</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>authors’ claim and page number</td>
+<td>Key statistical result from the original report</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Correlations between variables of interest</td>
+<td>Table 1</td>
+<td>Table 2</td>
+</tr>
+<tr class="even">
+<td>Relationship between variable x, y, and z</td>
+<td>Figure 4</td>
+<td>Figure 2</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="comparison-of-results-between-original-study-and-reproduction" class="level2">
+<h2 class="anchored" data-anchor-id="comparison-of-results-between-original-study-and-reproduction">3.2 Comparison of Results Between Original Study and Reproduction</h2>
+<p>Report original and reproduction results and evaluate their similarity. Comment on the impact of using different analytical methods on the original findings (“robustness reproduction”, <span class="citation" data-cites="ankel-peters_protocol_2025">Ankel-Peters et al. (<a href="#ref-ankel-peters_protocol_2025" role="doc-biblioref">2025</a>)</span>). Discuss whether the conclusions of the original study are upheld or reconsidered.</p>
+</section>
+<section id="further-results" class="level2">
+<h2 class="anchored" data-anchor-id="further-results">3.3 Further results</h2>
+<p>If you conducted any sort of robustness checks, extensions or auxiliary/exploratory analyses, you can report them here. Include a justification for each robustness check. Beyond individual checks, you can also include specification curves.</p>
+</section>
+<section id="dataset-and-materials-link" class="level2">
+<h2 class="anchored" data-anchor-id="dataset-and-materials-link">3.4 Dataset and Materials link</h2>
+<p>Please include a permanent identifier, such as a DOI, that points to the online location of the dataset and all used materials. If this resource has already been accessible, a new DOI is not required.</p>
+</section>
+<section id="objectfile-name" class="level2">
+<h2 class="anchored" data-anchor-id="objectfile-name">3.5 Object/file name</h2>
+<p>Please note the exact name of the dataset used to arrive at the reproduction results (e.g., data.csv).</p>
+</section>
+<section id="limits-to-sharing" class="level2">
+<h2 class="anchored" data-anchor-id="limits-to-sharing">3.6 Limits to sharing</h2>
+<p>If the data is currently under embargo, please give the length and date at which the data will be made open. Otherwise, please note any potential barriers to full sharing of the data e.g., if it contains identifying information, how gatekeeping is maintained. Please note that you will need to provide full access to the project contributors and potential reviewers for the sake of transparency, in full confidentiality.</p>
+</section>
+<section id="fair-datacodebook" class="level2">
+<h2 class="anchored" data-anchor-id="fair-datacodebook">3.7 FAIR data/Codebook</h2>
+<ul>
+<li><p>Data deposited in certified repository (e.g., OSF, Zenodo)</p></li>
+<li><p>Dataset has persistent identifier (DOI)</p></li>
+<li><p>Code shared with open license (e.g., MIT, GPL)</p></li>
+<li><p>Codebook includes: [ ] Variable names [ ] Description [ ] Valid ranges [ ] Missing codes</p></li>
+<li><p>Metadata uses standard schema (e.g., Datacite, CodeMeta)</p></li>
+<li><p>File formats are non-proprietary (e.g., .csv, .txt, .R)</p></li>
+</ul>
+</section>
+<section id="deviations-from-the-preregistration" class="level2">
+<h2 class="anchored" data-anchor-id="deviations-from-the-preregistration">3.8 Deviations from the Preregistration</h2>
+<p>If applicable, discuss for each deviation from the preregistration (1) how you deviated, (2) why you did so, and (3) how this might affect the results. Please also list cases where the preregistration was unspecific and you had to make decisions after data collection (e.g., no preregistered exclusion criterion, hypothesis test was not specified as one- vs.&nbsp;two-tailed). If you did not deviate in any way, write “We did not deviate from the preregistration in any way.” In cases where two different sets of results could be obtained (e.g., one- and two-tailed test), please describe the results for both cases.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 35%">
+<col style="width: 29%">
+<col style="width: 35%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Description of Deviation</th>
+<th>Reason for Deviation</th>
+<th>Influence on the Results</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="forrt-replication-database-fred-entry" class="level2">
+<h2 class="anchored" data-anchor-id="forrt-replication-database-fred-entry">3.9 FORRT Replication Database (FReD) Entry</h2>
+<p>Please disclose whether your results have already been entered into the replication database. To check it, you can enter the DOI of the target study here: <a href="https://forrt.org/apps/fred_annotator.html" class="uri">https://forrt.org/apps/fred_annotator.html</a>. If they are, we will link this report to the entry. If they are not, we invite you to enter them in the spreadsheet or in case of a low number of replication effects here: <a href="https://docs.google.com/forms/d/e/1FAIpQLSeMCwdtP0TPgL55stniuyyTxnNwyC34mO4VUuLcQwYrLI89sQ/viewform" class="uri">https://docs.google.com/forms/d/e/1FAIpQLSeMCwdtP0TPgL55stniuyyTxnNwyC34mO4VUuLcQwYrLI89sQ/viewform</a>.</p>
+</section>
+</section>
+<section id="evaluation" class="level1">
+<h1>(4) Evaluation</h1>
+<p>Please describe everything you learned from your reproduction. This may include acknowledging strengths and limitations of the original or reproduction study or materials, recommendations for future research on the topic, or how the findings are related to other studies in the area or previous reproduction studies. The evaluation should further cover computational reproducibility, robustness, and optionally external validity.</p>
+<section id="feedback-from-the-original-studys-authors-optional" class="level2">
+<h2 class="anchored" data-anchor-id="feedback-from-the-original-studys-authors-optional">4.1 Feedback from the original study’s authors (optional)</h2>
+<p>You may reach out to the original authors. In this case, we recommend adhering to the “golden rule of reproductions: treat others and their work, as you would like others to treat you and your work!” <span class="citation" data-cites="berkeleyinitiativefortransparencyinthesocialsciencesteam2020">(<a href="#ref-berkeleyinitiativefortransparencyinthesocialsciencesteam2020" role="doc-biblioref">Berkeley Initiative for Transparency in the Social SciencesTeam 2020</a>)</span>. For email templates, see the ACRE guide: <a href="https://bitss.github.io/ACRE/comunications.html#for-reproducers-contacting-the-authors-of-the-original-study" class="uri">https://bitss.github.io/ACRE/comunications.html#for-reproducers-contacting-the-authors-of-the-original-study</a></p>
+<p>Original authors were contacted on [date].<br>
+Their response:<br>
+[ ] Comments appended / [ ] Declined to comment / [ ] No response after 4 weeks.<br>
+If no response, editors may independently solicit feedback.</p>
+</section>
+<section id="limitations-and-recommendations-for-future-replications" class="level2">
+<h2 class="anchored" data-anchor-id="limitations-and-recommendations-for-future-replications">4.2 Limitations and Recommendations for Future Replications</h2>
+<p>Discuss your study’s limitations (e.g., in terms of validity) and make recommendations for what future studies related to this topic should consider.</p>
+</section>
+<section id="brief-evaluation" class="level2">
+<h2 class="anchored" data-anchor-id="brief-evaluation">4.3 Brief Evaluation</h2>
+<p>Describe in up to two sentences the level of reproducibility. If you use a specific metric such as reproducibility score, describe that metric.</p>
+<div style="page-break-after: always;"></div>
+<p>Other information required for submission, not for review</p>
+</section>
+</section>
+<section id="contribution-statement" class="level1">
+<h1>Contribution Statement</h1>
+<p>Please list all contributions towards this manuscript, including the contributions of all individuals who helped to conduct the data (who may also not be an author of a potential publication regarding this study), including their roles and affiliations at the time of data collection. We explicitly encourage you to include students or research assistants if they were involved in designing or conducting the study.</p>
+</section>
+<section id="ethical-statement" class="level1">
+<h1>Ethical Statement</h1>
+<p>Please provide an appropriate ethical statement if your work involves live subjects (human or animal). For example, the research should have been conducted in accordance with the <a href="https://www.wma.net/policies-post/wma-declaration-of-helsinki-ethical-principles-for-medical-research-involving-human-subjects/">Declaration of Helsinki</a> and local requirements.</p>
+</section>
+<section id="acknowledgements" class="level1">
+<h1>Acknowledgements</h1>
+<p>Please add any relevant acknowledgements to anyone else who supported the project in which the data was collected, but did not work directly on the data itself.</p>
+</section>
+<section id="conflicts-of-interest" class="level1">
+<h1>Conflicts of interest</h1>
+<p>are defined as “when authors, reviewers, or editors have interests that are not fully apparent and that may influence their judgments on what is published. They have been described as those which, when revealed later, would make a reasonable reader feel misled or deceived” (COPE, 2003). Please note any potential conflict of interests, including but not limited to direct or indirect financial gains or non-financial implications. If you have no conflicts to declare, please state explicitly: “The author(s) declare no conflict of interest associated with the publication of this manuscript.</p>
+</section>
+<section id="funding-statement" class="level1">
+<h1>Funding statement</h1>
+<p>If the data, or the project from which it came, required funding, please provide clear detail of this here. For example, if funded by a research council this would include the year of successful receipt of funding, the name of the funding council, and the grant number.</p>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="references" class="level1">
+<h1>References</h1>
+<p>Please enter references (preferably in the APA style) and include a DOI where available.</p>
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-ankel-peters_protocol_2025" class="csl-entry" role="listitem">
+Ankel-Peters, Jörg, Abel Brodeur, Anna Dreber, Magnus Johannesson, Florian Neubauer, and Julian Rose. 2025. <span>“A Protocol for Structured Robustness Reproductions and Replicability Assessments.”</span> <em>Q Open</em> 5 (3): qoaf004. <a href="https://doi.org/10.1093/qopen/qoaf004">https://doi.org/10.1093/qopen/qoaf004</a>.
+</div>
+<div id="ref-berkeleyinitiativefortransparencyinthesocialsciencesteam2020" class="csl-entry" role="listitem">
+Berkeley Initiative for Transparency in the Social SciencesTeam. 2020. <em>Guide for Advancing Computational Reproducibility in the Social Sciences</em>. <a href="https://bitss.github.io/ACRE/">https://bitss.github.io/ACRE/</a>.
+</div>
+<div id="ref-brandt_replication_2014" class="csl-entry" role="listitem">
+Brandt, Mark J., Hans IJzerman, Ap Dijksterhuis, et al. 2014. <span>“The <span>Replication</span> <span>Recipe</span>: <span>What</span> Makes for a Convincing Replication?”</span> <em>Journal of Experimental Social Psychology</em> 50 (January): 217–24. <a href="https://doi.org/10.1016/j.jesp.2013.10.005">https://doi.org/10.1016/j.jesp.2013.10.005</a>.
+</div>
+<div id="ref-evans_journal_2024" class="csl-entry" role="listitem">
+Evans, Thomas R. 2024. <em>Journal of <span>Open</span> <span>Psychology</span> <span>Data</span> - <span>Data</span> <span>Paper</span> <span>Template</span></em>. PsyArXiv. <a href="https://doi.org/10.31234/osf.io/9ms7h">https://doi.org/10.31234/osf.io/9ms7h</a>.
+</div>
+<div id="ref-roseler_handbook_2025" class="csl-entry" role="listitem">
+Röseler, Lukas, Lukas Wallrich, Helena Hartmann, et al. 2025. <em>Handbook for <span>Reproduction</span> and <span>Replication</span> <span>Studies</span></em>. <a href="https://forrt.org/replication-handbook/">https://forrt.org/replication-handbook/</a>.
+</div>
+</div></section></div></main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
