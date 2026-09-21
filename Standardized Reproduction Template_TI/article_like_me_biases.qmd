@@ -80,6 +80,22 @@ Although the overall ‘like me’ effect was small, with mean values of around 
 
 The recent study "Exploration of Animacy in the "Like-Me" Effect" [@halpern] aimed at replicating the original study by Brough et al. (2024) "to see if the Like-Me Effect would occur on the axis of gender, if the characters presented were animated." [@halpern]. This study failed to replicate a significant overall "Like-Me" effect, but found a significant effect of Gender. Male participants were more likely to produce a "Like-Me" bias than female participants [@halperna]. Moreover they found that men were more likely to produce a "Like-Me" bias in the animated condition whereas there was not a difference between women and men in the Mixed condition to produce a "Like-Me" response[@halpernb]. One limitation of the replication is, that the sample was not diverse and consisted of 32 students who were all registered in the psychology department at Florida State University [@halperna].
 
+## Motivation for the present study
+
+To our knowledge the study has not been reproduced. The original study provides open access to their data, stimuli and R scripts as well as to their preregistrations and reviews.
+
+Moreover, as we did have access to the preregistrations, we noticed that the reported models in the paper for Study 2 differ considerably from the models that were preregistered and that the preregistered models for Study 3 differ from the models reported in the article in that they include gender and race as fixed effects. Therefore we performed robustness checks by computing the preregistered models using the provided data.
+
+In Study 4, the authors indicate that the observed ‘like me’ gender effects may be smaller in Chinese because of including two possibly gender neutral chinese names ( 霍普 \[Hope\] and 贝斯 \]Beth\]). Therefore we decided to rerun the analysis for Study 4 with a subset of the data that excluded these two neutral names. We noticed that the main claim made on the basis of these data relies on a GLMM in which the ‘like me’ effect is modelled as a numeric predictor ranging from -1 to 0. However, this variable only has three possible values that, somewhat counterintuitively, correspond to the following: 
+
+- -1 = highest me-likeness (i.e. both race and gender match participant demographic)
+
+- 0 (only race or gender matches participant demographic)
+
+- 1 = lowest me-likeness (neither race nor gender match participant demographic
+
+We believe that this variable would be better modelled as an ordinal categorical variable, hence we reran the reported model with the independent variable modelled as an ordered factor.
+
 ## Original and Reproduction Study References
 
 <!--# Provide references with DOIs for the original and reproduction study that adhere to your field’s standard (e.g., APA citation style). If the reproduction study has not yet been published, provide a link to a repository where results and materials are stored (e.g., Zenodo.org, OSF.io). -->
