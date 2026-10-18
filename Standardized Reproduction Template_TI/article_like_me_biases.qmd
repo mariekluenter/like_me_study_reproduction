@@ -164,7 +164,7 @@ For the Multi-Study analysis, which combines the data across Studies 1 through 3
 >
 > \[...\]
 >
-> The main omnibus analyses used mixed-effects regressions of the form LikeMe \~ 1 + Participant Gender × Participant Race + (1\|subject) + (1 + Participant Gender × Participant Race\|event). Predictors were contrast coded, and separate models were fit to the race and gender trials. The analysis of trial type (using data from all four production studies) had the form LikeMe \~ 1 + Trial Type \[Gender versus Race-focused\] + (1 + Trial Type\|subject) + (1 + Trial Type\|event)” (p. 1713f.).
+> The main omnibus analyses used mixed-effects regressions of the form LikeMe \~ 1 + Participant Gender × Participant Race + (1\|subject) + (1 + Participant Gender × Participant Race\|event). Predictors were contrast coded, and separate models were fit to the race and gender trials. The analysis of trial type (using data from all four production studies) had the form LikeMe \~ 1 + Trial Type \[Gender versus Race-focused\] + (1 + Trial Type\|subject) + (1 + Trial Type\|event)” [-@brough2024: 1713f.].
 
 These regression models can be found in the code provided by the auhors `R_scipts/scripts_and_data_original/Data_Analysis_Original/OSF_Analyses.r` ( <!--# ELF: Add file path plus name here, M: did add it -->) and match the descriptions in the paper. We successfully reproduced the results of these analyses.
 
@@ -174,11 +174,15 @@ These regression models can be found in the code provided by the auhors `R_scipt
 
 **Table 1** *Differences Between the Original and the Reproduction Study*
 
-| Study Feature | Original Study | Reproduction Study | Justification and Possible Effect on Interpretability |
-|------------------|------------------|------------------|------------------|
-| Software and versions |  |  |  |
-| Functions |  |  |  |
-| ... | ... | ... | \[press Tab here to add new rows\] |
++-----------------------+----------------+--------------------+-------------------------------------------------------+
+| Study Feature         | Original Study | Reproduction Study | Justification and Possible Effect on Interpretability |
++=======================+================+====================+=======================================================+
+| Software and versions |                |                    |                                                       |
++-----------------------+----------------+--------------------+-------------------------------------------------------+
+| Functions             |                |                    |                                                       |
++-----------------------+----------------+--------------------+-------------------------------------------------------+
+| ...                   | ...            | ...                | \[press Tab here to add new rows\]                    |
++-----------------------+----------------+--------------------+-------------------------------------------------------+
 
 ## Involvement of Original Authors
 
@@ -203,6 +207,128 @@ Did original authors provide:
 | Original     |                      |
 | Study number |                      |
 
+<!--# M: Auflistung der preregistrations unter 2.1.1 und nicht in der Tabelle.-->
+
+### Discrepancies Between Pre-analysis Plan and Article
+
+The first challenge in comparing the preregistered analyses with the analyses reported in the article consisted in matching the preregistrations with the relevant study and results. We begin this section by reporting on our understanding of these matches before proceeding with a study-by-study comparison of pre-analysis plans and reported analyses.
+
+#### 2.1.1 Overview of preregistrations
+
+The article provides links to the following Experimental Study preregistrations:
+
+- Study 1: <https://osf.io/bfhrn> (06 June 2019)
+
+- Study 2: <https://osf.io/t928m> (10 February 2020)
+
+- Study 3 (passives): <https://osf.io/drb6f/overview> (11 October 2021)
+
+Study 4 (Chinese Study) was not preregistered and is reported as such in the paper [-@brough2024: 1712] . In addition, a secondary analysis of the memory naming task (that was part of Studies 1–3) was preregistered a few years later: <https://aspredicted.org/jf9cn.pdf> (17 November 2023)
+
+The preregistrations for the Rating Studies are distributed across three documents:
+
+- Agency Study, transitive condition: “Does mention order influence perceptions of agency in conjoined phrases?” registered on 10 December 2020 at <https://osf.io/zp5d4/overview>. The second hypothesis (“Based off the previous experiment, we also predict that participants will be more likely to rate the first-mentioned name as agentive if it is a man’s name rather an a woman’s name.”) as well as the interaction between the gender of the first-mentioned name and participant gender were not tested in the available analysis scripts and not reported in the paper.
+
+- Agency Study, conjoined condition: “Does mention order influence perceptions of agency?” registered on 23 November 2020 at <https://osf.io/rh9sd/overview>
+
+- Agency Study, passive condition and Empathy Study: “Intuitions analysis for Like Me study” (Study 1: judgements of agency in passive constructions; Study 2: judgements of empathy in conjoined, transitive, and passive sentences), registered on 21 November 2023 at <https://aspredicted.org/7698v.pdf>
+
+Although each preregistration document was clearly formulated, the distribution of the preregistered studies and conditions did not correspond to the organisation of the Rating Studies in the paper, making it challenging for us to reconstruct the mapping between the preregistered analyses and the reported results.
+
+#### 2.1.2 Pre-analysis plan of Study 1
+
+For Study 1, we found that the analysis code matches the descriptions of the analysis plan in the preregistration (<https://osf.io/bfhrn>). Brough et al. [-@brough2024] created two subsets for each gender and race trials, computing four separate generalized linear mixed-effect models (GLMM) with \`syntax\` as a fixed predictor. Although the exact syntax of these models is not provided in the preregistration, the code for the GLMMs reflects the description:
+
+OverallLikeMe \~ 1 + syntax + (1+syntax\|subject) + (1+syntax\|event)
+
+This model is applied to the overall data, to each gender and race trials and to all possible gender and race subsets (white man, white woman, black man, black woman). The preregistered inference criteria reads: “We will use the standard p \< .05 criteria for determining if the regressions suggest that the results are significantly different from those expected if the null hypothesis were correct.” Given that a total of seven GLMMs were conducted on the same dataset or subsets of the data, we were surprised that no mention was made of any p-value corrections.
+
+#### 2.1.3 Pre-analysis plan of Study 2
+
+For Study 2, the analysis code differs from the preregistration (<https://osf.io/t928m>) in several ways. The provided code replicates the same models from Study 1 for the new data collected with improved stimuli in Study 2. A generalized linear mixed model was built for the overall data, for each race and gender trials, and for the gender and race subsets. The Methods section for Study 2 in the paper [-@brough2024: 1712] explains that the same regression models were used as in Study 1. The preregistration, however, describes a more complex modeling strategy. Several preregistered analyses, including valence effects, questionnaire-based regressions, interaction tests and secondary control analyses, were not implemented in the available code. For the primary analysis, the authors preregistered an iterative approach to model building, looking at predictors of using the dominant group (man or white person) first. They start by including participant race and gender (a), then trial type (b), and finally syntax (c) as predictors of first mention of the dominant group:
+
+1.  Man First/White First \~ Participant Gender \* Participant Race + (1 \| Subject) + (1 + Participant Gender + Participant Race \| Event).
+
+2.  Man First/White First \~ Participant Gender \* Participant Race \* \[Gender Trial Type or Race Trial Type\] + (1 + \[Gender Trial Type or Race Trial Type\] \| Subject) + (1 + Participant Gender + Participant Race \| Event).
+
+3.  Man First/White First \~ Participant Gender \* Participant Race \* \[Gender Trial Type or Race Trial Type\] \* Syntax + (1 + \[Gender Trial Type or Race Trial Type\] + Syntax \| Subject) + (1 + Participant Gender + Participant Race \| Event).
+
+None of these models, however, are provided in the analysis code and they are not mentioned in the paper.
+
+In terms of the ‘Like me’ analysis, the preregistered analysis plan specified mixed-effects logistic regression models including participant gender, participant race, trial type, syntax, and their interactions in a similar iterative approach:
+
+4.  Like Me Gender/Race \~ Participant Gender \* Participant Race + (1 \| Subject) + (1 + Participant Gender + Participant Race \| Event).
+
+5.  Like Me Gender/Race \~ Participant Gender \* Participant Race \* \[Gender Trial Type or Race Trial Type\] + (1 + \[Gender Trial Type or Race Trial Type\] \| Subject) + (1 + Participant Gender + Participant Race \| Event).
+
+6.  Like Me Gender/Race \~ Participant Gender \* Participant Race \* \[Gender Trial Type or Race Trial Type\] \* Syntax + (1 + \[Gender Trial Type or Race Trial Type\] + Syntax \| Subject) + (1 + Participant Gender + Participant Race \| Event).
+
+However, the analyses in the provided code only include syntax as the sole fixed effect, with participant demographics and trial type addressed only via data subsetting rather than factorial modeling:
+
+OverallLikeMe \~ 1 + Syntax + (1 + Syntax \| Subject) + (1 + Syntax \| Event)
+
+For both of the described analyses, the authors preregistered additional models with valence condition as a fixed effect, along participant gender, participant race, trial type and syntax, as predictors of the man first, white first, Like Me Gender and Like Me Race biases. These models are neither provided in the analysis code, nor mentioned in the paper.
+
+For the final analysis of Study 2, Brough et al. [-@brough2024] preregistered regression models to analyse questionnaire data that contains participants’ attitude towards homosexual and interracial relations, using them as predictors of demonstrating Like Me Race bias. As far as we could see, these models are not in the provided code either. As with Study 1, neither the preregistration nor the code or the paper seem to make any provisions to correct for the multiple testing problem.
+
+#### 2.1.3 Pre-analysis plan of Study 3
+
+For Study 3, the preregistration (<https://osf.io/drb6f/>) differs considerably from the conducted Study. As a first difference, the authors preregistered valence as an independent variable with the levels intimate, casual and negative. As far as we can tell, this variable is not mentioned in the article. The authors also preregistered “exploratory models for each of the valence conditions” which we were unable to locate in the code or paper.
+
+The authors preregistered two regression models to test their primary hypotheses of “Man First” and “White First”:
+
+1.  Man First \~ Participant Gender \* Syntax + (1 + Syntax \| Subject) + (1 + Participant Gender \| Event)
+
+2.  White First \~ Participant Race \* Syntax + (1 + Syntax \| Subject) + (1 + Participant Race \| Event)
+
+Similar to Study 2, these models are not reported in the article and, as far as we could tell, nor are they implemented in the analysis code.
+
+Regarding the ‘like me’ effect, the models reported in the article and implemented/ present in the code test whether participants show a ‘like me’ effect in gender/race trials. The authors preregistered mixed-effects regression models with gender and race as fixed effects to test whether the ‘like me’ effect depends on participant gender or race (that is, whether one gender shows a stronger ‘like me’ than the other gender/race) and, additionally, whether that effect is moderated by \`syntax\` (interaction of gender and syntax):
+
+1.  Like Me Gender \~ Participant Gender \* Syntax + (1 + Syntax \| Subject) + (1 + Participant Gender \| Event)
+
+2.  Like Me Race \~ Participant Race \* Syntax + (1 + Syntax \| Subject) + (1 + Participant Race \| Event)
+
+However, these models were not reported in the article. Similar to Study 2, the analysis in the provided code includes \`syntax\` as the only fixed effect:
+
+OverallLikeMe \~ 1 + syntax + (1+syntax\|subject) + (1+syntax\|event)
+
+Instead, the authors performed and reported subgroup analyses for the groups of black women, black men, white women, and white men. As they preregistered, they expected that each participant would most likely mention the figure first that matches their group.
+
+The preregistration also includes preregistered analyses of questionnaire data which we were not able to locate in the analysis code.
+
+#### 2.1.4 Pre-analysis plan of the Rating Studies
+
+Our recreation of the empathy analysis data on the basis of the preprocessing script (`Data Preprocessing /EmpathyStudy/process_data.R`) and the raw data (`Data Preprocessing /EmpathyStudy/full_empathy_data`) confirmed that the dataset was derived from the original 128 participants, with 19 participants who failed 2 or more catch trials excluded. This differs from the preregistration (<https://aspredicted.org/7698v.pdf>), which specified excluding participants who answered more than 2 catch trials incorrectly. No additional exclusion criteria appear to have been applied. This potentially differs from the preregistration, which stated that trials with response times more than 3 SD from the mean, participants whose self-reported gender did not match Prolific records, and participants who had reported not to have lived in the UK for the last five years would be excluded. While these additional exclusion criteria might not have been relevant or may have been applied earlier on in the process, the preprocessing code of the Empathy Rating Study does not check for them.
+
+By contrast, all of these preregistered exclusion criteria are applied in the processing scripts for the Rating Studies featuring transitive and conjoint constructions, except that, as with the Empathy Study, the exclusion criteria for failed catch trials implemented in the preprocessing scripts is also \> 2 rather than ≥ 2 failed catch trials as specified in the corresponding preregistrations ([https://osf.io/rh9sd/](https://osf.io/rh9sd/overview) and <https://osf.io/zp5d4/>). The processing script for the passive Rating Study does not include checks for any potential exclusion based on demographics.
+
+The main claims of the paper are based on comparisons of models made with aggregated data from the various Rating Studies. As far as we can tell, these were not preregistered.
+
+#### 2.1.5 Pre-analysis plan of the Omnibus Studies
+
+For the Multi-Study analyses, the preregistration does not appear to match the actual methodology for the analyses conducted across the first four Studies. The preregistration plan on AsPredicted (<https://aspredicted.org/jf9cn.pdf>) describes a different experiment that is part of the paper, namely the study on participants’ reaction times, where the authors measure whether the participants’ response speed is predicted by whether the character matches the participant in either race or gender. The actual preregistration contains the following analyses:
+
+For each accurate 8AFC response with RT \< 10s, we predict logged RT in a mixed effects model by
+
+1\) Whether the character matches the participant's race \_and\_ gender (coded 1 in a dummy variable) or not (coded 0), i.e.,
+
+lmer(log(rt) \~ OverallLikeMe + (1+OverallLikeMe\|id)
+
+2\) Whether the character matches the participant's race i.e.,
+
+lmer(log(rt) \~ like_me_race + (1+like_me_race\|id)
+
+3\) Whether the character matches the participant's gender i.e.,
+
+lmer(log(rt) \~ like_me_gender + (1+like_me_gender\|id)
+
+3\) Whether the character matches the participant's gender and race exactly (coded 1), matches only one feature (coded 0), or matches no features (coded -1)
+
+lmer(log(rt) \~ like_me_graded + (1+like_me_gender\|id)
+
+Although these analyses are conducted in a different section of the paper, the main omnibus analyses reported in the paper (see [-@brough2024: 1714]for model formula) appear not to have been preregistered.
+
 ## Availability of Materials
 
 <!--# Provide an overview of all materials (raw and processed data, code), where to find them (e.g., openly accessible, shared upon request, accessible via a specific institution, access protocol), and, if applicable, what license they are under. -->
@@ -213,12 +339,17 @@ Did original authors provide:
 
 ## Original key statistical result and interpretation
 
-| Claim | Key results and interpretation | Reproduction result |
-|------------------------|------------------------|------------------------|
-| Please provide the original |  |  |
-| authors’ claim and page number | Key statistical result from the original report |  |
-| Correlations between variables of interest | Table 1 | Table 2 |
-| Relationship between variable x, y, and z | Figure 4 | Figure 2 |
++--------------------------------------------+-------------------------------------------------+---------------------+
+| Claim                                      | Key results and interpretation                  | Reproduction result |
++============================================+=================================================+=====================+
+| Please provide the original                |                                                 |                     |
++--------------------------------------------+-------------------------------------------------+---------------------+
+| authors’ claim and page number             | Key statistical result from the original report |                     |
++--------------------------------------------+-------------------------------------------------+---------------------+
+| Correlations between variables of interest | Table 1                                         | Table 2             |
++--------------------------------------------+-------------------------------------------------+---------------------+
+| Relationship between variable x, y, and z  | Figure 4                                        | Figure 2            |
++--------------------------------------------+-------------------------------------------------+---------------------+
 
 ## Comparison of Results Between Original Study and Reproduction
 
@@ -227,6 +358,118 @@ Did original authors provide:
 ## Further results
 
 <!--# If you conducted any sort of robustness checks, extensions or auxiliary/exploratory analyses, you can report them here. Include a justification for each robustness check. Beyond individual checks, you can also include specification curves. -->
+
+### Robustness Checks
+
+We conducted a total of 4 robustness checks. <!--# M: Robustness checks von Study 2-4 gekürzt, noch unklar, wie ich auf den Report verweisen soll, da wir ihn bisher nicht veröffentlicht haben -->
+
+For Study 2, we ran the preregistered 2\*2 models on each the gender trial data subset and the race trial subset: Like Me Gender/Race \~ Participant Gender\* Participant Race + (1 \| Subject) + (1 + Participant Gender + Participant Race \| Event).
+
+In both cases, the maximal random-effects structure specified in the preregistration failed to converge.In line with the preregistration, which specified that random effects accounting for the least variance and interactions preventing convergence would be iteratively removed, we simplified the random-effects structure by first removing the random slopes for participant gender and participant race at the event level, since the event-level slopes have near-zero variances:
+
+Like Me Gender/Race \~ Participant Gender \* Participant Race + (1 \| Subject) + (1 \| Event)
+
+Despite these adjustments and the use of the “bobyqa” optimizer, the model continued to exhibit singularity warnings, indicating that the remaining random-effects structure was still unsupported by the data. Only after removing all random effects did the model converge. However, we deem this simplification as highly problematic, as it eliminates the ability to account for individual variance within participants and systematic differences across verbs. Nonetheless, we used the converged model as an approximation to the preregistered analyses. To facilitate interpretation of the fixed effects and to allow comparison with the reported descriptive results, we computed estimated marginal means using the emmeans package. For the race trial subset, the preregistered mixed-effects model failed to converge as well. Convergence could, again, only be achieved by eliminating all random effects resulting in a fixed-effects-only logistic regression. The model output (Table 3) indicates that this model explains virtually no variance in the data (Tjur’s R2 = 0.000). None of the fixed effects, i.e. participant gender, participant race, or their interaction, significantly predict the likelihood of showing a ‘like me’ effect on race trials. This suggests that, under the preregistered modeling framework, there is no detectable evidence for systematic variation in ‘like me’ biases on race trials across participant groups.
+
+For Study 3 we performed a robustness check by computing the preregistered models using the provided data. For gender trials, the preregistered model yielded almost identical results to the model reported in the article. In both the preregistered and the reported model, participants chose the same-gender character first in 55.9% of trials. The intercept was significant, confirming an overall ‘like me’ effect in gender trials (i.e. both men and women were, on average, biased toward their own gender). Fixed effects (participant gender, syntax and their interaction) had no significant effects, in line with Brough et al.’s [@brough2024 : 1709] statement that there was no significant difference between men and women concerning their ‘like me’ effect and no difference between active and passive sentences.
+
+The analogous preregistered race model, fit to race trials, showed no clear evidence for a ‘like me’ effect. Again, the values computed by the preregistered model match closely the ones reported by the authors (Table 4). Participant race and syntax were not significant, neither was their interaction, indicating no significant difference between White and Black participants and no difference between active and passive in race trials.
+
+The maximal preregistered models only converged when using the “bobyqa” optimizer and produced boundary (singular) fit warnings, indicating that the random effects explain little to no variance. This may explain why the authors decided not to report the preregistered models.
+
+In sum, implementing the preregistered model as a robustness check of Study 3 had no effect on the magnitude or the statistical significance of the main point estimate.
+
+For Study 4 we excluded neutral chinese names as the authors indicate that the observed ‘like me’ gender effects may be smaller in Chinese because of including two possibly gender neutral chinese names ( 霍普 \[Hope\] and 贝斯 \]Beth\]). Indeed, when excluding neutral names, the ‘like me’ effect are larger than those reported in the paper.
+
+#### Robustness check (Study 5): Memory naming task
+
+We noticed that the main claim made on the basis of these data relies on a GLMM in which the ‘like me’ effect is modelled as a numeric predictor ranging from -1 to 0. However, this variable only has three possible values that, somewhat counterintuitively, correspond to the following: 
+
+- -1 = highest me-likeness (i.e. both race and gender match participant demographic)
+
+- 0 (only race or gender matches participant demographic)
+
+- 1 = lowest me-likeness (neither race nor gender match participant demographic
+
+We believe that this variable would be better modelled as an ordinal categorical variable, hence we reran the reported model with the independent variable modelled as an ordered factor.
+
+The coefficient of interest turns out to be robust to this manipulation. It is of a similar size than the reported coefficient and also statistically significant (see Table 6). Note that in both the model reported in the paper and this additional model, the LikeMeFeature predictor accounts for just 0.01% of the variance in participants’ recall times. This statistic is not reported in the paper.
+
+|                        |             |               |             |
+|------------------------|-------------|---------------|-------------|
+| *Predictors*           | *Estimates* | *CI*          | *p*         |
+| (Intercept)            | 7.92        | 7.90 – 7.94   | **\<0.001** |
+| LikeMeFeatureNumeric L | 0.03        | 0.02 – 0.04   | **\<0.001** |
+| LikeMeFeatureNumeric Q | -0.01       | -0.02 – -0.00 | **0.038**   |
+
+| *Random Effects*              |               |
+|-------------------------------|---------------|
+| σ²                            | 0.18          |
+| τ~00 id~                      | 0.07          |
+| τ~11 id.LikeMeFeatureNumeric~ | 0.00E         |
+| ρ~01 id~                      | 0.11          |
+| ICC                           | 0.28          |
+| N ~id~                        | 622           |
+| Observations                  | 22482         |
+| Marginal R² / Conditional R²  | 0.001 / 0.283 |
+
+: Table 6: Summary of model with ordered factor predictor variable **log(rt)**
+
+<!--# M: nicht sicher wo das log(rt) genau hingehört? In dem report steht es unter der Überschrift und über CI in der Tabelle (S. 21) -->
+
+In the original analysis of the memory naming task, the authors removed trials for which participants needed longer than 10 s to name the images (as preregistered). Below are the descriptive statistics of the response time variable for the trials that were included in this analysis (i.e. first guesses only, correct responses only, and excluding participants with strong biases). It turns out that 10,000 ms is much longer than most people needed to recall the names:
+
+|      |         |        |      |         |         |
+|------|---------|--------|------|---------|---------|
+| Min. | 1st Qu. | Median | Mean | 3rd Qu. | Max     |
+| 298  | 1891    | 2627   | 3663 | 4040    | 1234104 |
+
+At the same time, we noted that the overall_memory_analysis.R script produces a plot which illustrates the difference in response time across the four conditions. This plot, which is not included in the final version of the paper, shows that the differences in mean response times are very small, that the confidence intervals overlap, and that there is considerable variation across the entire dataset (see Fig. 1). In fact, not all of this variation is visible as the plot cuts the x-axis off at 4,500 ms, thereby removing 366 data points.
+
+When we visualise all the data points entered into the reported model as boxplots, a rather different picture emerges (see Fig. 2). The pattern in median response time does not match the reported effect.
+
+![**Fig. 1: Visualisation showing response time across the four conditions (as coded in original analysis script)**](images/memory_subj_original.svg)
+
+![**Fig. 2: Our own visualisation showing response time across the four conditions**](images/memory_subj_boxplots.svg)
+
+Bearing in mind the outliers visible in Fig. 2, we reran the analysis with a more conservative cut-off point of 6 s than that of 10 s preregistered and applied by the authors (corresponding to 91% of the trials analysed by authors) to test the robustness of the reported effect. The differences in both observed and predicted mean reaction times across the three conditions are smaller than those reported, but remain nonetheless significant. We also reran the model on this subset of the data. The results remain broadly the same (see Table 7).
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+----------------------+
+| **Claim in the original study\                                                                                                                                              | **Computational reproduction** | **Robustness check** |
+| (as reported on p. 1709-1710)**                                                                                                                                             |                                |                      |
++=============================================================================================================================================================================+================================+======================+
+| Response times significantly increased as demographic match decreased                                                                                                       | β = 0.020656                   | β = 0.017077         |
+|                                                                                                                                                                             |                                |                      |
+|                                                                                                                                                                             | (0.004641)                     | (0.003973)           |
+|                                                                                                                                                                             |                                |                      |
+|                                                                                                                                                                             | t(642) = 4.451                 | t(613) = 4.298       |
+|                                                                                                                                                                             |                                |                      |
+|                                                                                                                                                                             | p = 0.0000101                  | p =0.00002           |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+----------------------+
+| Participants were fastest to select names when they matched the figures on both gender and race                                                                             | 2,724 ms                       | 2,548 ms             |
+|                                                                                                                                                                             |                                |                      |
+|                                                                                                                                                                             | \[2,642–2,801\]                | \[2,488–2,612\]      |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+----------------------+
+| When participants matched the figures in gender but differed in race (and, thus, the forms of names were perfectly counterbalanced), then responses were about 90 ms slower | 2,813-2,724 = 89 ms            | 2,639-2,548 = 91 ms  |
+|                                                                                                                                                                             |                                |                      |
+|                                                                                                                                                                             | \[2,734–2,898\]                | \[2,575–2,703\]      |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+----------------------+
+| When participants matched in race but differed in gender, then responses were about 70 ms slower                                                                            | 2,794-2,724 = 70 ms            | 2,605-2,548 = 57 ms  |
+|                                                                                                                                                                             |                                |                      |
+|                                                                                                                                                                             | \[2,713–2,886\]                | \[2,538–2,673\]      |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+----------------------+
+| Finally, when participants differed from the figures in both gender and race, they were an additional 50 ms slower to name them                                             | 2,856-2,794 = 62 ms            | 2,662-2,605 = 57 ms  |
+|                                                                                                                                                                             |                                |                      |
+|                                                                                                                                                                             | \[2,769–2,946\]                | \[2,595–2,728\]      |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+----------------------+
+| **Model performance metrics**                                                                                                                                               |                                |                      |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+----------------------+
+| N                                                                                                                                                                           | 22482                          | 12311                |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+----------------------+
+| Marginal R2 / Conditional R2                                                                                                                                                | 0.001 / 0.287                  | 0.001 / 0.282        |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+----------------------+
+
+: Table 7 – Results of robustness check on naming memory task analysis
 
 ## Dataset and Materials link
 
@@ -262,10 +505,13 @@ Did original authors provide:
 
 <!--# If applicable, discuss for each deviation from the preregistration (1) how you deviated, (2) why you did so, and (3) how this might affect the results. Please also list cases where the preregistration was unspecific and you had to make decisions after data collection (e.g., no preregistered exclusion criterion, hypothesis test was not specified as one- vs. two-tailed). If you did not deviate in any way, write “We did not deviate from the preregistration in any way.” In cases where two different sets of results could be obtained (e.g., one- and two-tailed test), please describe the results for both cases. -->
 
++--------------------------+----------------------+--------------------------+
 | Description of Deviation | Reason for Deviation | Influence on the Results |
-|--------------------------|----------------------|--------------------------|
++==========================+======================+==========================+
 | ...                      | ...                  | ...                      |
++--------------------------+----------------------+--------------------------+
 |                          |                      |                          |
++--------------------------+----------------------+--------------------------+
 
 ## FORRT Replication Database (FReD) Entry
 
