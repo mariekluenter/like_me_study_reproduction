@@ -2,15 +2,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.31">
+<meta name="generator" content="quarto-1.9.30">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="ADD NAMES">
-<meta name="dcterms.date" content="2026-10-18">
+<meta name="author" content="Marie Klünter, Rose Hörsting, Luca Leppert, Gina Reinhard &amp; Elen Le Foll">
+<meta name="dcterms.date" content="2026-10-24">
 
-<title>A comment on “Cognitive causes of ‘like me’ race and gender biases in human language production” (Brough et al.&nbsp;2024)</title>
+<title>Computational reproduction and robustness tests of “Cognitive causes of ‘like me’ race and gender biases in human language production” (Brough et al.&nbsp;2024)</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -26,7 +29,6 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
-  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -52,10 +54,10 @@ div.csl-indent {
 <script src="article_like_me_biases_files/libs/quarto-html/tippy.umd.min.js"></script>
 <script src="article_like_me_biases_files/libs/quarto-html/anchor.min.js"></script>
 <link href="article_like_me_biases_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="article_like_me_biases_files/libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="article_like_me_biases_files/libs/quarto-html/quarto-syntax-highlighting-b6a8276bf55561bdbc268162d41bd1f7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="article_like_me_biases_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="article_like_me_biases_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="article_like_me_biases_files/libs/bootstrap/bootstrap-81267100e462c21b3d6c0d5bf76a3417.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="article_like_me_biases_files/libs/bootstrap/bootstrap-138a6193a3bd40baf1e627da441a4734.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -68,7 +70,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">A comment on “Cognitive causes of ‘like me’ race and gender biases in human language production” (Brough et al.&nbsp;2024)</h1>
+<h1 class="title">Computational reproduction and robustness tests of “Cognitive causes of ‘like me’ race and gender biases in human language production” (Brough et al.&nbsp;2024)</h1>
 </div>
 
 
@@ -76,16 +78,16 @@ div.csl-indent {
 <div class="quarto-title-meta">
 
     <div>
-    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-heading">Authors</div>
     <div class="quarto-title-meta-contents">
-             <p>ADD NAMES </p>
+             <p>Marie Klünter, Rose Hörsting, Luca Leppert, Gina Reinhard &amp; Elen Le Foll </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 18, 2026</p>
+      <p class="date">October 24, 2026</p>
     </div>
   </div>
   
@@ -97,34 +99,13 @@ div.csl-indent {
 </header>
 
 
-<p>This is a <a href="https://osf.io/brxtd/files/wyxd3">template</a> that you can use to report results from reproduction studies in the social sciences. A reproduction is the repeated analysis of a published finding using the same data. Please ensure that the study you intend to report adheres to the following criteria.</p>
-<p><strong>Reproduction is assigned to one original study that tested at least one identical hypothesis.</strong></p>
-<ul class="task-list">
-<li><p><label><input type="checkbox">Reproduction is not “only” a numerical reproduction of the original report’s results but has some added feature (e.g., different software, code, robustness analyses).</label></p></li>
-<li><p><label><input type="checkbox">No original authors have co-authored the reproduction: While involvement of the original authors in the form of consultancy is accepted, <em>Replication Research</em> does not publish reproductions co-authored by any of the original author.</label></p></li>
-<li><p><label><input type="checkbox">A dataset from the original study is analysed. If <em>different</em> data is used, please use the template for replication studies instead: <a href="https://osf.io/3jgxd" class="uri">https://osf.io/3jgxd</a>.</label></p></li>
-<li><p><label><input type="checkbox">This is the most recent version of this document (check here: <a href="https://osf.io/wyxd3" class="uri">https://osf.io/wyxd3</a>).</label></p></li>
-</ul>
-<p>To complete this template, please provide the information underneath each heading for your study. You need to use a single template for each reproduction study that you want to report. The paper has four main sections: (1) Background; (2) Methods; (3) Results; (4) Evaluation. This template is heavily based on the data paper template by <span class="citation" data-cites="evans_journal_2024">Evans (<a href="#ref-evans_journal_2024" role="doc-biblioref">2024</a>)</span>. Some parts (e.g., reproduction closeness) are based on suggestions by <span class="citation" data-cites="brandt_replication_2014">Brandt et al. (<a href="#ref-brandt_replication_2014" role="doc-biblioref">2014</a>)</span>. Before publishing your report, please delete the instructions that are written in blue.</p>
-<p>Completed reports can be submitted to the non-peer reviewed <a href="https://zenodo.org/communities/r2/">Zenodo Replication Research Community</a> or to the peer reviewed journal <a href="https://replicationresearch.org">Replication Research</a>.</p>
-<section id="license" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="license">License</h2>
-<p>If you are using this template <span class="citation" data-cites="roseler_handbook_2025">(<a href="#ref-roseler_handbook_2025" role="doc-biblioref">Röseler et al. 2025</a>)</span> or parts of this template to structure your report, please cite it:</p>
-<p>Röseler, L., Hein, M., &amp; Oppong Boakye, P. (2025). StaRT Reports.<br>
-https://doi.org/10.17605/OSF.IO/BRXTD</p>
-<div style="page-break-after: always;"></div>
-</section>
-<section id="title" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="title">Title</h2>
-<!--# Describe what phenomenon or finding you have attempted to reproduce (e.g., “Reproduction of Anchoring Effects using River Lengths”). -->
-</section>
 <section id="abstract" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="abstract">Abstract</h2>
 <!--# Describe the type of the reproduction, that is, whether it is an assessment of computational reproducibility, a recreation of the script, whether partly different data are being used, and whether robustness checks are planned (see for example @ankel-peters_protocol_2025). The type of reproduction should be justified by the goals of this project (e.g., to test for a false-positive or examine generalizability). -->
 <p>The original study by Brough et al. <span class="citation" data-cites="brough2024">(<a href="#ref-brough2024" role="doc-biblioref">2024</a>)</span> investigates how social biases may influence automatic word retrieval mechanisms during sentence production. Across four experiments, the authors observe significant ‘like me’ effects, whereby speakers preferentially mention people who share their own race and gender before naming out‑group members (β = 0.16, SE = 0.02, z&nbsp;= 7.7, p &lt; 0.001). Psycholinguistic manipulations show that the effect does not vary across grammatical constructions (χ²(2) = 0.65, p = 0.721).</p>
 <p>We conducted a computational reproduction using the authors’ original raw data and R scripts, supplemented by reconstruction of some missing scripts/steps, and performed multiple robustness checks (alternative model specifications, alternative exclusion criteria, etc.). Full reproduction of the original statistics was achieved for Studies  1–3. The statistical results of Study 4 were also reproduced except for a sign error.</p>
 <p>We conclude that the findings reported in Brough et al. <span class="citation" data-cites="brough2024">(<a href="#ref-brough2024" role="doc-biblioref">2024</a>)</span> are computationally reproducible using the authors’ scripts with some minor adjustments and additions. We also found them to be robust to our modifications. To facilitate future repetitive research and cumulative endeavours, we recommend that multi‑study papers provide detailed README files.</p>
-<p>(172 words)</p>
+<!--# 172 words -->
 </section>
 <section id="keywords" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="keywords">Keywords</h2>
@@ -267,10 +248,10 @@ https://doi.org/10.17605/OSF.IO/BRXTD</p>
 <p><strong>Table 1</strong> <em>Differences Between the Original and the Reproduction Study</em></p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
+<col style="width: 20%">
+<col style="width: 14%">
+<col style="width: 17%">
+<col style="width: 46%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -434,9 +415,9 @@ https://doi.org/10.17605/OSF.IO/BRXTD</p>
 <h2 data-number="4.1" class="anchored" data-anchor-id="original-key-statistical-result-and-interpretation"><span class="header-section-number">4.1</span> Original key statistical result and interpretation</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
+<col style="width: 38%">
+<col style="width: 42%">
+<col style="width: 18%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -476,6 +457,210 @@ https://doi.org/10.17605/OSF.IO/BRXTD</p>
 <section id="further-results" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="further-results"><span class="header-section-number">4.3</span> Further results</h2>
 <!--# If you conducted any sort of robustness checks, extensions or auxiliary/exploratory analyses, you can report them here. Include a justification for each robustness check. Beyond individual checks, you can also include specification curves. -->
+<section id="robustness-checks" class="level3" data-number="4.3.1">
+<h3 data-number="4.3.1" class="anchored" data-anchor-id="robustness-checks"><span class="header-section-number">4.3.1</span> Robustness Checks</h3>
+<p>We conducted a total of 4 robustness checks. <!--# M: Robustness checks von Study 2-4 gekürzt, noch unklar, wie ich auf den Report verweisen soll, da wir ihn bisher nicht veröffentlicht haben --></p>
+<p>For Study 2, we ran the preregistered 2*2 models on each the gender trial data subset and the race trial subset: Like Me Gender/Race ~ Participant Gender* Participant Race + (1 | Subject) + (1 + Participant Gender + Participant Race | Event).</p>
+<p>In both cases, the maximal random-effects structure specified in the preregistration failed to converge.In line with the preregistration, which specified that random effects accounting for the least variance and interactions preventing convergence would be iteratively removed, we simplified the random-effects structure by first removing the random slopes for participant gender and participant race at the event level, since the event-level slopes have near-zero variances:</p>
+<p>Like Me Gender/Race ~ Participant Gender * Participant Race + (1 | Subject) + (1 | Event)</p>
+<p>Despite these adjustments and the use of the “bobyqa” optimizer, the model continued to exhibit singularity warnings, indicating that the remaining random-effects structure was still unsupported by the data. Only after removing all random effects did the model converge. However, we deem this simplification as highly problematic, as it eliminates the ability to account for individual variance within participants and systematic differences across verbs. Nonetheless, we used the converged model as an approximation to the preregistered analyses. To facilitate interpretation of the fixed effects and to allow comparison with the reported descriptive results, we computed estimated marginal means using the emmeans package. For the race trial subset, the preregistered mixed-effects model failed to converge as well. Convergence could, again, only be achieved by eliminating all random effects resulting in a fixed-effects-only logistic regression. The model output (Table 3) indicates that this model explains virtually no variance in the data (Tjur’s R2 = 0.000). None of the fixed effects, i.e.&nbsp;participant gender, participant race, or their interaction, significantly predict the likelihood of showing a ‘like me’ effect on race trials. This suggests that, under the preregistered modeling framework, there is no detectable evidence for systematic variation in ‘like me’ biases on race trials across participant groups.</p>
+<p>For Study 3 we performed a robustness check by computing the preregistered models using the provided data. For gender trials, the preregistered model yielded almost identical results to the model reported in the article. In both the preregistered and the reported model, participants chose the same-gender character first in 55.9% of trials. The intercept was significant, confirming an overall ‘like me’ effect in gender trials (i.e.&nbsp;both men and women were, on average, biased toward their own gender). Fixed effects (participant gender, syntax and their interaction) had no significant effects, in line with Brough et al.’s <span class="citation" data-cites="brough2024">(<a href="#ref-brough2024" role="doc-biblioref">Brough et al. 2024</a> : 1709)</span> statement that there was no significant difference between men and women concerning their ‘like me’ effect and no difference between active and passive sentences.</p>
+<p>The analogous preregistered race model, fit to race trials, showed no clear evidence for a ‘like me’ effect. Again, the values computed by the preregistered model match closely the ones reported by the authors (Table 4). Participant race and syntax were not significant, neither was their interaction, indicating no significant difference between White and Black participants and no difference between active and passive in race trials.</p>
+<p>The maximal preregistered models only converged when using the “bobyqa” optimizer and produced boundary (singular) fit warnings, indicating that the random effects explain little to no variance. This may explain why the authors decided not to report the preregistered models.</p>
+<p>In sum, implementing the preregistered model as a robustness check of Study 3 had no effect on the magnitude or the statistical significance of the main point estimate.</p>
+<p>For Study 4 we excluded neutral chinese names as the authors indicate that the observed ‘like me’ gender effects may be smaller in Chinese because of including two possibly gender neutral chinese names ( 霍普 [Hope] and 贝斯 ]Beth]). Indeed, when excluding neutral names, the ‘like me’ effect are larger than those reported in the paper.</p>
+<section id="robustness-check-study-5-memory-naming-task" class="level4" data-number="4.3.1.1">
+<h4 data-number="4.3.1.1" class="anchored" data-anchor-id="robustness-check-study-5-memory-naming-task"><span class="header-section-number">4.3.1.1</span> Robustness check (Study 5): Memory naming task</h4>
+<p>We noticed that the main claim made on the basis of these data relies on a GLMM in which the ‘like me’ effect is modelled as a numeric predictor ranging from -1 to 0. However, this variable only has three possible values that, somewhat counterintuitively, correspond to the following:&nbsp;</p>
+<ul>
+<li><p>-1 = highest me-likeness (i.e.&nbsp;both race and gender match participant demographic)</p></li>
+<li><p>0 (only race or gender matches participant demographic)</p></li>
+<li><p>1 = lowest me-likeness (neither race nor gender match participant demographic</p></li>
+</ul>
+<p>We believe that this variable would be better modelled as an ordinal categorical variable, hence we reran the reported model with the independent variable modelled as an ordered factor.</p>
+<p>The coefficient of interest turns out to be robust to this manipulation. It is of a similar size than the reported coefficient and also statistically significant (see Table 6). Note that in both the model reported in the paper and this additional model, the LikeMeFeature predictor accounts for just 0.01% of the variance in participants’ recall times. This statistic is not reported in the paper.</p>
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td><em>Predictors</em></td>
+<td><em>Estimates</em></td>
+<td><em>CI</em></td>
+<td><em>p</em></td>
+</tr>
+<tr class="even">
+<td>(Intercept)</td>
+<td>7.92</td>
+<td>7.90 – 7.94</td>
+<td><strong>&lt;0.001</strong></td>
+</tr>
+<tr class="odd">
+<td>LikeMeFeatureNumeric L</td>
+<td>0.03</td>
+<td>0.02 – 0.04</td>
+<td><strong>&lt;0.001</strong></td>
+</tr>
+<tr class="even">
+<td>LikeMeFeatureNumeric Q</td>
+<td>-0.01</td>
+<td>-0.02 – -0.00</td>
+<td><strong>0.038</strong></td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<caption>Table 6: Summary of model with ordered factor predictor variable <strong>log(rt)</strong></caption>
+<thead>
+<tr class="header">
+<th><em>Random Effects</em></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>σ²</td>
+<td>0.18</td>
+</tr>
+<tr class="even">
+<td>τ<sub>00&nbsp;id</sub></td>
+<td>0.07</td>
+</tr>
+<tr class="odd">
+<td>τ<sub>11&nbsp;id.LikeMeFeatureNumeric</sub></td>
+<td>0.00E</td>
+</tr>
+<tr class="even">
+<td>ρ<sub>01&nbsp;id</sub></td>
+<td>0.11</td>
+</tr>
+<tr class="odd">
+<td>ICC</td>
+<td>0.28</td>
+</tr>
+<tr class="even">
+<td>N <sub>id</sub></td>
+<td>622</td>
+</tr>
+<tr class="odd">
+<td>Observations</td>
+<td>22482</td>
+</tr>
+<tr class="even">
+<td>Marginal R² / Conditional R²</td>
+<td>0.001 / 0.283</td>
+</tr>
+</tbody>
+</table>
+<!--# M: nicht sicher wo das log(rt) genau hingehört? In dem report steht es unter der Überschrift und über CI in der Tabelle (S. 21) -->
+<p>In the original analysis of the memory naming task, the authors removed trials for which participants needed longer than 10&nbsp;s to name the images (as preregistered). Below are the descriptive statistics of the response time variable for the trials that were included in this analysis (i.e.&nbsp;first guesses only, correct responses only, and excluding participants with strong biases). It turns out that 10,000 ms is much longer than most people needed to recall the names:</p>
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td>Min.</td>
+<td>1st Qu.</td>
+<td>Median</td>
+<td>Mean</td>
+<td>3rd Qu.</td>
+<td>Max</td>
+</tr>
+<tr class="even">
+<td>298</td>
+<td>1891</td>
+<td>2627</td>
+<td>3663</td>
+<td>4040</td>
+<td>1234104</td>
+</tr>
+</tbody>
+</table>
+<p>At the same time, we noted that the overall_memory_analysis.R script produces a plot which illustrates the difference in response time across the four conditions. This plot, which is not included in the final version of the paper, shows that the differences in mean response times are very small, that the confidence intervals overlap, and that there is considerable variation across the entire dataset (see Fig.&nbsp;1). In fact, not all of this variation is visible as the plot cuts the x-axis off at 4,500 ms, thereby removing 366 data points.</p>
+<p>When we visualise all the data points entered into the reported model as boxplots, a rather different picture emerges (see Fig. 2). The pattern in median response time does not match the reported effect.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/memory_subj_original.svg" class="img-fluid figure-img"></p>
+<figcaption><strong>Fig. 1: Visualisation showing response time across the four conditions (as coded in original analysis script)</strong></figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/memory_subj_boxplots.svg" class="img-fluid figure-img"></p>
+<figcaption><strong>Fig. 2: Our own visualisation showing response time across the four conditions</strong></figcaption>
+</figure>
+</div>
+<p>Bearing in mind the outliers visible in Fig. 2, we reran the analysis with a more conservative cut-off point of 6 s than that of 10 s preregistered and applied by the authors (corresponding to 91% of the trials analysed by authors) to test the robustness of the reported effect. The differences in both observed and predicted mean reaction times across the three conditions are smaller than those reported, but remain nonetheless significant. We also reran the model on this subset of the data. The results remain broadly the same (see Table 7).</p>
+<table class="caption-top table">
+<caption>Table 7 – Results of robustness check on naming memory task analysis</caption>
+<colgroup>
+<col style="width: 75%">
+<col style="width: 14%">
+<col style="width: 9%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Claim in the original study<br>
+(as reported on p.&nbsp;1709-1710)</strong></th>
+<th><strong>Computational reproduction</strong></th>
+<th><strong>Robustness check</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Response times significantly increased as demographic match decreased</td>
+<td><p>β = 0.020656</p>
+<p>(0.004641)</p>
+<p>t(642) = 4.451</p>
+<p>p = 0.0000101</p></td>
+<td><p>β = 0.017077</p>
+<p>(0.003973)</p>
+<p>t(613) = 4.298</p>
+<p>p =0.00002</p></td>
+</tr>
+<tr class="even">
+<td>Participants were fastest to select names when they matched the figures on both gender and race</td>
+<td><p>2,724 ms</p>
+<p>[2,642–2,801]</p></td>
+<td><p>2,548 ms</p>
+<p>[2,488–2,612]</p></td>
+</tr>
+<tr class="odd">
+<td>When participants matched the figures in gender but differed in race (and, thus, the forms of names were perfectly counterbalanced), then responses were about 90 ms slower</td>
+<td><p>2,813-2,724 = 89 ms</p>
+<p>[2,734–2,898]</p></td>
+<td><p>2,639-2,548 = 91 ms</p>
+<p>[2,575–2,703]</p></td>
+</tr>
+<tr class="even">
+<td>When participants matched in race but differed in gender, then responses were about 70 ms slower</td>
+<td><p>2,794-2,724 = 70 ms</p>
+<p>[2,713–2,886]</p></td>
+<td><p>2,605-2,548 = 57 ms</p>
+<p>[2,538–2,673]</p></td>
+</tr>
+<tr class="odd">
+<td>Finally, when participants differed from the figures in both gender and race, they were an additional 50 ms slower to name them</td>
+<td><p>2,856-2,794 = 62&nbsp;ms</p>
+<p>[2,769–2,946]</p></td>
+<td><p>2,662-2,605 = 57&nbsp;ms</p>
+<p>[2,595–2,728]</p></td>
+</tr>
+<tr class="even">
+<td><strong>Model performance metrics</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>N</td>
+<td>22482</td>
+<td>12311</td>
+</tr>
+<tr class="even">
+<td>Marginal R2 / Conditional R2</td>
+<td>0.001 / 0.287</td>
+<td>0.001 / 0.282</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
 </section>
 <section id="dataset-and-materials-link" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="dataset-and-materials-link"><span class="header-section-number">4.4</span> Dataset and Materials link</h2>
@@ -510,9 +695,9 @@ https://doi.org/10.17605/OSF.IO/BRXTD</p>
 <!--# If applicable, discuss for each deviation from the preregistration (1) how you deviated, (2) why you did so, and (3) how this might affect the results. Please also list cases where the preregistration was unspecific and you had to make decisions after data collection (e.g., no preregistered exclusion criterion, hypothesis test was not specified as one- vs. two-tailed). If you did not deviate in any way, write “We did not deviate from the preregistration in any way.” In cases where two different sets of results could be obtained (e.g., one- and two-tailed test), please describe the results for both cases. -->
 <table class="caption-top table">
 <colgroup>
-<col style="width: 35%">
+<col style="width: 34%">
 <col style="width: 29%">
-<col style="width: 35%">
+<col style="width: 34%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -577,7 +762,7 @@ Their response:<br>
 </section>
 <section id="acknowledgements" class="level1 unnumbered">
 <h1 class="unnumbered">Acknowledgements</h1>
-<p>Please add any relevant acknowledgements to anyone else who supported the project in which the data was collected, but did not work directly on the data itself.</p>
+<p>We thank the organisers of the November 2025 Replication Games in Münster for their encouragement and feedback on this reproduction project. The structure of this article is based on a reproduction report template presented in <span class="citation" data-cites="roseler_handbook_2025">Röseler et al. (<a href="#ref-roseler_handbook_2025" role="doc-biblioref">2025</a>)</span>.</p>
 </section>
 <section id="conflicts-of-interest" class="level1 unnumbered">
 <h1 class="unnumbered">Conflicts of interest</h1>
@@ -585,39 +770,33 @@ Their response:<br>
 </section>
 <section id="funding-statement" class="level1 unnumbered">
 <h1 class="unnumbered">Funding statement</h1>
-<p>If the data, or the project from which it came, required funding, please provide clear detail of this here. For example, if funded by a research council this would include the year of successful receipt of funding, the name of the funding council, and the grant number.</p>
+<!--#  If the data, or the project from which it came, required funding, please provide clear detail of this here. For example, if funded by a research council this would include the year of successful receipt of funding, the name of the funding council, and the grant number. -->
+<p>This study was partly funded by the German Science Foundation (DFG) via the the CRC 1252 “Prominence in Language”.</p>
 <div style="page-break-after: always;"></div>
 </section>
 <section id="references" class="level1 unnumbered">
-<h1 class="unnumbered">References</h1>
-<p>Please enter references (preferably in the APA style) and include a DOI where available.</p>
+
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
 <div id="ref-axt2025" class="csl-entry" role="listitem">
 Axt, Jordan, Valentina Palacio Posada, Eliane Roy, and Jeffrey To. 2025. <span>“Revisiting the Policy Implications of Implicit Social Cognition.”</span> <em>Social Issues and Policy Review</em> 19 (1): e70003. <a href="https://doi.org/10.1111/sipr.70003">https://doi.org/10.1111/sipr.70003</a>.
 </div>
 <div id="ref-berkeleyinitiativefortransparencyinthesocialsciencesteam2020" class="csl-entry" role="listitem">
 Berkeley Initiative for Transparency in the Social SciencesTeam. 2020. <em>Guide for Advancing Computational Reproducibility in the Social Sciences</em>. <a href="https://bitss.github.io/ACRE/">https://bitss.github.io/ACRE/</a>.
 </div>
-<div id="ref-brandt_replication_2014" class="csl-entry" role="listitem">
-Brandt, Mark J., Hans IJzerman, Ap Dijksterhuis, Frank J. Farach, Jason Geller, Roger Giner-Sorolla, James A. Grange, Marco Perugini, Jeffrey R. Spies, and Anna van ’t Veer. 2014. <span>“The <span>Replication</span> <span>Recipe</span>: <span>What</span> Makes for a Convincing Replication?”</span> <em>Journal of Experimental Social Psychology</em> 50 (January): 217–24. <a href="https://doi.org/10.1016/j.jesp.2013.10.005">https://doi.org/10.1016/j.jesp.2013.10.005</a>.
-</div>
 <div id="ref-brough2024" class="csl-entry" role="listitem">
 Brough, Jessica, Lasana T. Harris, Shi Hui Wu, Holly P. Branigan, and Hugh Rabagliati. 2024. <span>“Cognitive Causes of <span>‘</span>Like Me<span>’</span> Race and Gender Biases in Human Language Production.”</span> <em>Nature Human Behaviour</em> 8 (9): 1706–15. <a href="https://doi.org/10.1038/s41562-024-01943-3">https://doi.org/10.1038/s41562-024-01943-3</a>.
 </div>
-<div id="ref-evans_journal_2024" class="csl-entry" role="listitem">
-Evans, Thomas R. 2024. <span>“Journal of <span>Open</span> <span>Psychology</span> <span>Data</span> - <span>Data</span> <span>Paper</span> <span>Template</span>.”</span> PsyArXiv. <a href="https://doi.org/10.31234/osf.io/9ms7h">https://doi.org/10.31234/osf.io/9ms7h</a>.
-</div>
 <div id="ref-halpern" class="csl-entry" role="listitem">
-Halpern, Rebekka Jeanne Elisabeth. n.d. <span>“Exploration of Animacy in the <span>"</span>Like-Me<span>"</span> Effect.”</span> <a href="https://doi.org/10.33009/FSU_f151ee87-6323-450c-a8df-c6e26ae41025">https://doi.org/10.33009/FSU_f151ee87-6323-450c-a8df-c6e26ae41025</a>.
+Halpern, Rebekka Jeanne Elisabeth. n.d. <em>Exploration of Animacy in the <span>"</span>Like-Me<span>"</span> Effect</em>. <a href="https://doi.org/10.33009/FSU_f151ee87-6323-450c-a8df-c6e26ae41025">https://doi.org/10.33009/FSU_f151ee87-6323-450c-a8df-c6e26ae41025</a>.
 </div>
 <div id="ref-hermann2025" class="csl-entry" role="listitem">
 Hermann, Erik, Julian De Freitas, and Stefano Puntoni. 2025. <span>“Reducing Prejudice with Counter<span>-</span>Stereotypical AI.”</span> <em>Consumer Psychology Review</em> 8 (1): 75–86. <a href="https://doi.org/10.1002/arcp.1102">https://doi.org/10.1002/arcp.1102</a>.
 </div>
 <div id="ref-roseler_handbook_2025" class="csl-entry" role="listitem">
-Röseler, Lukas, Lukas Wallrich, Helena Hartmann, Luisa Altegoer, Veronica Boyce, Sarahanne M. Field, Janik Goltermann, et al. 2025. <span>“Handbook for <span>Reproduction</span> and <span>Replication</span> <span>Studies</span>.”</span> <a href="https://forrt.org/replication-handbook/">https://forrt.org/replication-handbook/</a>.
+Röseler, Lukas, Lukas Wallrich, Helena Hartmann, et al. 2025. <em>Handbook for <span>Reproduction</span> and <span>Replication</span> <span>Studies</span></em>. <a href="https://forrt.org/replication-handbook/">https://forrt.org/replication-handbook/</a>.
 </div>
 </div></section></div></main>
 <!-- /main column -->
@@ -672,13 +851,14 @@ Röseler, Lukas, Lukas Wallrich, Helena Hartmann, Luisa Altegoer, Veronica Boyce
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
