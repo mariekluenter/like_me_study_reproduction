@@ -28,7 +28,8 @@ ci.high <- function(x,na.rm=T) {
 ```
 
 ```{r}
-memory = read_csv(here("R_scripts", "scripts_reproduction" ,"Data_Preprocessing_reproduction", "reproduced_data", "studies1_2_3_memory.csv"))
+library(here)
+memory = read_csv(here("R_scripts", "scripts_reproduction" ,"Data_Preprocessing_reproduction", "reproduced_data", "studies1_2_3_memory_reproduction.csv"))
 
 ```
 
@@ -178,6 +179,8 @@ numeric.ordinal = lmer(log(rt) ~ ordered(LikeMeFeatureNumeric) + (1+LikeMeFeatur
                        control = lmerControl(optimizer = "bobyqa"),
                data = memory %>% filter(first_guess == "TRUE" & rt < 10000 & correct_response == 1))
 
+#saveRDS(numeric.ordinal, here("R_scripts", "scripts_reproduction" ,"Data_Analysis_reproduction", "Rdata", "memory-ordinal-robustness-model.rds"))
+
 summary(numeric.ordinal)
 
 emmeans(object = numeric.ordinal, 
@@ -188,10 +191,12 @@ emmeans(object = numeric.ordinal,
 In the original analysis, the authors removed trials for which participants needed longer than 10 s to name the images (as preregistered). Below are the descriptive statistics of the response time variable for the trials that are included in this analysis (first guesses only and correct responses only). It turns out that 10,000 is much longer than most people needed:
 
 ```{r}
-memory |> 
+rt_summary <- memory |> 
   filter(first_guess == "TRUE" & correct_response == 1) |> 
   pull(rt) |> 
   summary()
+
+#saveRDS(rt_summary, here("R_scripts", "scripts_reproduction" ,"Data_Analysis_reproduction", "Rdata", "rt_summary.rds"))
 ```
 
 In our robustness test, we exclude trials for which the response time was longer than 5,000 ms, which corresponds to a bit more than what is displayed on the descriptive plot included in this script (see above).
@@ -264,7 +269,5 @@ summary(ordered.robustness)
 emmeans(object = ordered.robustness, 
         specs = "LikeMeFeatureNumeric",
         infer = TRUE)
-
-
 ```
 
