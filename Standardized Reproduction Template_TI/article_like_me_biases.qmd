@@ -110,15 +110,15 @@ Although every preregistration document was available to us, the distribution of
 
 #### Pre-analysis Plan of Study 1
 
-For Study 1, we found that the analysis code matches the descriptions of the analysis plan in the preregistration (<https://osf.io/bfhrn>). The authors created two subsets for each gender and race trials, computing four separate generalized linear mixed-effect models (GLMM) with `syntax` as a fixed predictor. Although the exact syntax of these models is not provided in the preregistration, the code for the GLMMs reflects the description:
+For Study 1, we found that the analysis code matches the descriptions of the analysis plan in the preregistration (<https://osf.io/bfhrn>). The authors created two subsets for each of the gender and race trials, computing four separate generalised linear mixed-effect models (GLMMs) with `syntax` as a fixed predictor. Although the exact syntax of these models is not provided in the preregistration, the code for the GLMMs reflects the description:
 
 > OverallLikeMe \~ 1 + syntax + (1+syntax\|subject) + (1+syntax\|event)
 
-This model was applied to the overall data, to each gender and race trials, and to all possible gender and race subsets (white man, white woman, black man, black woman). The preregistered inference criteria reads: “We will use the standard *p* \< .05 criteria for determining if the regressions suggest that the results are significantly different from those expected if the null hypothesis were correct.” Given that a total of seven GLMMs were conducted on the same dataset or subsets of the data, we were surprised that no mention was made of any *p*-value corrections.
+This model was applied to the overall data, separately to the gender and the race trials, and to all possible gender and race subsets (white man, white woman, black man, black woman). <!--#RH: I changed "each" to "separately", as "each" needs a singular noun.--> The preregistered inference criteria reads: “We will use the standard *p* \< .05 criteria for determining if the regressions suggest that the results are significantly different from those expected if the null hypothesis were correct.” Given that a total of seven GLMMs were conducted on the same dataset or subsets of the data, we were surprised that no mention was made of any *p*-value corrections.
 
 #### Pre-analysis Plan of Study 2
 
-For Study 2, the analysis code differs from the preregistration (<https://osf.io/t928m>) in several ways. The provided code replicates the same models from Study 1 for the new data collected with improved stimuli in Study 2. A generalized linear mixed-effects model was fitted for the overall data, for each race and gender trials, and for the gender and race subsets. The Methods section for Study 2 [@brough2024: 1712] explains that the same regression models were used as in Study 1. The preregistration, however, describes a more complex modelling strategy. Several preregistered analyses, including valence effects, questionnaire-based regressions, interaction tests, and secondary control analyses, were not implemented in the available code. For the primary analysis, the authors preregistered an iterative approach to model building, looking at predictors of using the dominant group (man or white person) first. They start by including participant race and gender (a), then trial type (b), and finally syntax (c) as predictors of first mention of the dominant group:
+For Study 2, the analysis code differs from the preregistration (<https://osf.io/t928m>) in several ways. The provided code replicates the same models from Study 1 for the new data collected with improved stimuli in Study 2. A generalised linear mixed-effects model was fitted to the overall data, separately to the race and the gender trials, and to the gender and race subsets. The Methods section for Study 2 [@brough2024: 1712] explains that the same regression models as in Study 1 were used. The preregistration, however, describes a more complex modelling strategy. Several preregistered analyses, including valence effects, questionnaire-based regressions, interaction tests, and secondary control analyses, were not implemented in the available code. For the primary analysis, the authors preregistered an iterative approach to model building, looking at predictors of using the dominant group (man or white person) first. They start by including participant race and gender (a), then trial type (b), and finally syntax (c) as predictors of first mention of the dominant group:
 
 > Man First/White First \~ Participant Gender \* Participant Race + (1 \| Subject) + (1 + Participant Gender + Participant Race \| Event)
 >
@@ -128,7 +128,7 @@ For Study 2, the analysis code differs from the preregistration (<https://osf.io
 
 None of these models, however, are provided in the analysis code and they are not mentioned in the paper.
 
-Concerning the ‘like-me’ analysis, the preregistered analysis plan specified mixed-effects logistic regression models including participant gender, participant race, trial type, syntax, and their interactions in a similar iterative approach:
+Concerning the ‘like-me’ analysis, the preregistered analysis plan specified mixed-effects logistic regression models including participant gender, participant race, trial type, syntax, and their interactions in a similar iterative approach: <!-- RH: I noticed that we are sometimes using 'like me' and sometimes 'like-me' (with a hyphen). I suggest we stick to the version without the hyphen, as written by the original authors.-->
 
 > Like Me Gender/Race \~ Participant Gender \* Participant Race + (1 \| Subject) + (1 + Participant Gender + Participant Race \| Event)
 >
@@ -144,7 +144,7 @@ For both of the described analyses, the authors preregistered additional models 
 
 For the final analysis of Study 2, @brough2024 preregistered regression models to analyse questionnaire data that contains participants’ attitude towards homosexual and interracial relations, using them as predictors of demonstrating Like Me Race bias. As far as we could see, these models are not in the provided code either. As with Study 1, neither the preregistration nor the code or the paper seem to make any provisions to correct for multiple testing.
 
-#### Pre-analysis plan of Study 3
+#### Pre-analysis Plan of Study 3
 
 For Study 3, the preregistration (<https://osf.io/drb6f/>) differs considerably from the reported analysis. The authors preregistered valence as an independent variable with the levels intimate, casual and negative. As far as we can tell, this variable is not mentioned in the article. The authors also preregistered “exploratory models for each of the valence conditions” which we were unable to locate in the code or paper.
 
