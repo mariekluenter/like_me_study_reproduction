@@ -148,31 +148,31 @@ For the final analysis of Study 2, @brough2024 preregistered regression models t
 
 For Study 3, the preregistration (<https://osf.io/drb6f/>) differs considerably from the reported analysis. The authors preregistered valence as an independent variable with the levels intimate, casual and negative. As far as we can tell, this variable is not mentioned in the article. The authors also preregistered “exploratory models for each of the valence conditions” which we were unable to locate in the code or paper.
 
-Two regression models were preregistered, designed to test the primary hypotheses of “Man First” and “White First”:
+The primary hypotheses concern whether participants first mention the figure belonging to what the original authors describe in the preregistration as the "more socially dominant group", that is, the man or the white figure. For the 'man first' analysis, male participants were expected to mention the man before the woman more often than chance, whereas female participants were expected to be significantly less likely to do so. Following the same logic, the 'white first' analysis predicted that white participants would mention the white figure first more often than chance, whereas black participants would be less likely to do so. Two regression models were preregistered to test these hypotheses:
 
 > Man First \~ Participant Gender \* Syntax + (1 + Syntax \| Subject) + (1 + Participant Gender \| Event)
 >
 > White First \~ Participant Race \* Syntax + (1 + Syntax \| Subject) + (1 + Participant Race \| Event)
 
-Similar to Study 2, these models are not reported in the article and, as far as we could tell, nor are they implemented in the analysis code.
+Similar to Study 2, these models are not reported in the article nor, as far as we could tell, implemented in the analysis code.
 
-Regarding the ‘like me’ effect, the models reported in the article and implemented in the code test whether participants show a ‘like me’ effect in gender/race trials. The authors preregistered two mixed-effects regression models with participant gender or participant race, respectively, as a fixed effect. These were designed to test whether the ‘like me’ effect depends on participant gender/race (that is, whether one gender/race shows a stronger ‘like me’ effect than the other) and, additionally, whether that effect is moderated by `syntax` (interaction of participant gender/race and syntax):
+Regarding the ‘like me’ effect, the original authors preregistered their hypothesis that participants would most likely first mention the figure that matches their gender (which, according to the authors, would indicate a 'like me' gender bias) or their race (demonstrating a 'like me' race bias). To test this, they specified two mixed-effects regression models with participant gender or participant race, respectively, as a fixed effect. These were designed to test whether the ‘like me’ effect depends on participant gender/race (that is, whether one gender/race shows a stronger ‘like me’ effect than the other) and, additionally, whether that effect is moderated by `syntax` (interaction of participant gender/race and syntax).
 
 > Like Me Gender \~ Participant Gender \* Syntax + (1 + Syntax \| Subject) + (1 + Participant Gender \| Event)
 >
 > Like Me Race \~ Participant Race \* Syntax + (1 + Syntax \| Subject) + (1 + Participant Race \| Event)
 
-However, these models were not reported in the article. Similar to Study 2, the analysis in the provided code includes `syntax` as the only fixed effect:
+However, these models were not reported in the article. Similar to Study 2, the analysis in the provided code includes `syntax` as the only fixed effect:
 
 > OverallLikeMe \~ 1 + syntax + (1+syntax\|subject) + (1+syntax\|event)
 
-Instead, the authors performed and reported subgroup analyses for the groups of black women, black men, white women, and white men. As they preregistered, they expected that each participant would most likely first mention the figure that matches their group. <!--# ELF: I am not sure I understand this last sentence. Do you mean that the authors pregistered this hypothesis? -->
+Instead, the authors performed and reported subgroup analyses for the groups of black women, black men, white women, and white men. <!--# ELF: I am not sure I understand this last sentence. Do you mean that the authors pregistered this hypothesis? RH: I deleted this sentence and added some explanations on the hypotheses in the respective paragraphs of this section.-->
 
 The preregistration also includes preregistered analyses of questionnaire data, which we were not able to locate in the analysis code and which are not discussed in the published article.
 
-#### Pre-analysis plan of the Rating Studies
+#### Pre-analysis Plan of the Rating Studies
 
-Our recreation of the empathy analysis data on the basis of the preprocessing script (`Data Preprocessing /EmpathyStudy/process_data.R`) and the raw data (`Data Preprocessing /EmpathyStudy/full_empathy_data`) confirmed that the dataset was derived from the original 128 participants, with 19 participants who failed 2 or more catch trials excluded. This differs from the preregistration (<https://aspredicted.org/7698v.pdf>), which specified excluding participants who answered more than 2 catch trials incorrectly. No additional exclusion criteria appear to have been applied. This potentially differs from the preregistration, which stated that trials with response times more than 3 SD from the mean, participants whose self-reported gender did not match Prolific records, and participants who had reported not to have lived in the UK for the last five years would be excluded. While these additional exclusion criteria might not have been relevant or may have been applied earlier on in the process, we note that preprocessing code of the Empathy Rating Study does not check for them.
+Our recreation of the empathy analysis data on the basis of the preprocessing script (`Data Preprocessing/EmpathyStudy/process_data.R`) and the raw data (`Data Preprocessing/EmpathyStudy/full_empathy_data`) confirmed that the dataset was derived from the original 128 participants, with 19 participants who failed 2 or more catch trials excluded. This differs from the preregistration (<https://aspredicted.org/7698v.pdf>), which specified excluding participants who answered more than 2 catch trials incorrectly. No additional exclusion criteria appear to have been applied. This potentially differs from the preregistration, which stated that trials with response times more than 3 SD from the mean, participants whose self-reported gender did not match Prolific records, and participants who had reported not to have lived in the UK for the last five years would be excluded. While these additional exclusion criteria might not have been relevant or may have been applied earlier on in the process, we note that the preprocessing code of the Empathy Rating Study does not check for them.
 
 By contrast, all of these preregistered exclusion criteria are applied in the processing scripts for the Rating Studies featuring transitive and conjoint constructions, except that, as with the Empathy Study, the exclusion criteria for failed catch trials implemented in the preprocessing scripts is also \> 2 rather than ≥ 2 failed catch trials as specified in the corresponding preregistrations ([https://osf.io/rh9sd/](https://osf.io/rh9sd/overview) and <https://osf.io/zp5d4/>). The processing script for the passive Rating Study does not include checks for any potential exclusion based on demographics.
 
