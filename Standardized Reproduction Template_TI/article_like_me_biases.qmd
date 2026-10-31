@@ -156,7 +156,7 @@ Two regression models were preregistered, designed to test the primary hypothese
 
 Similar to Study 2, these models are not reported in the article and, as far as we could tell, nor are they implemented in the analysis code.
 
-Regarding the ‘like me’ effect, the models reported in the article and implemented/ present in the code test whether participants show a ‘like me’ effect in gender/race trials. The authors preregistered mixed-effects regression models with gender and race as fixed effects to test whether the ‘like me’ effect depends on participant gender or race (that is, whether one gender shows a stronger ‘like me’ than the other gender/race) and, additionally, whether that effect is moderated by `syntax` (interaction of gender and syntax):
+Regarding the ‘like me’ effect, the models reported in the article and implemented in the code test whether participants show a ‘like me’ effect in gender/race trials. The authors preregistered two mixed-effects regression models with participant gender or participant race, respectively, as a fixed effect. These were designed to test whether the ‘like me’ effect depends on participant gender/race (that is, whether one gender/race shows a stronger ‘like me’ effect than the other) and, additionally, whether that effect is moderated by `syntax` (interaction of participant gender/race and syntax):
 
 > Like Me Gender \~ Participant Gender \* Syntax + (1 + Syntax \| Subject) + (1 + Participant Gender \| Event)
 >
@@ -168,7 +168,7 @@ However, these models were not reported in the article. Similar to Study 2, the
 
 Instead, the authors performed and reported subgroup analyses for the groups of black women, black men, white women, and white men. As they preregistered, they expected that each participant would most likely first mention the figure that matches their group. <!--# ELF: I am not sure I understand this last sentence. Do you mean that the authors pregistered this hypothesis? -->
 
-The preregistration also includes preregistered analyses of questionnaire data, which we were not able to locate in the analysis code and which is not discussed in the published article.
+The preregistration also includes preregistered analyses of questionnaire data, which we were not able to locate in the analysis code and which are not discussed in the published article.
 
 #### Pre-analysis plan of the Rating Studies
 
