@@ -324,7 +324,7 @@ The coefficient of interest turns out to be robust to this manipulation. It is o
 
 ```{r}
 #| echo: false
-#| eval: false
+#| eval: true
 #| label: tbl-ModelOrdered
 #| tbl-cap: Summary of model with ordered factor predictor variable
 
