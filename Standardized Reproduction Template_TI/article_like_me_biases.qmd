@@ -338,6 +338,27 @@ parameters::model_parameters(numeric.robustness) |>
   gsub("Table: # (Fixed Effects|Random Effects)", "", x = _)
 ```
 
+```{r}
+#| echo: false
+#| eval: true
+#| label: tbl-XXX
+#| tbl-cap: Caption II
+
+##GR: if you want to use two different "tbl-cap", separate the fixed+random effects results:
+
+model_results <- parameters::model_parameters(numeric.robustness)
+
+#fixed:
+#model_results |>
+#  dplyr::filter(Effects == "fixed") |> 
+#  print_md()
+
+#random:
+model_results |>
+  dplyr::filter(Effects == "random") |> 
+  print_md()
+```
+
 ::: {#tbl-ModelOrdered tbl-colwidths="[40,20,20,20]"}
 +-------------------------------------+---------------+---------------+-------------+
 |                                     |               |               |             |
@@ -500,9 +521,9 @@ For authors of similar studies:
 
 For future replications of this research:
 
-- Conduct independent replications with larger and more diverse samples than the one used by @halpern, and with additional languages, to test the claim that the 'like me' effect is independent of language and social group.
-- Use stimuli and names that have been previously tested for unambiguous gender neutrality or gender markedness in the target language.
-- Preregister analyses together with a smallest effect size of interest.
+-   Conduct independent replications with larger and more diverse samples than the one used by @halpern, and with additional languages, to test the claim that the 'like me' effect is independent of language and social group.
+-   Use stimuli and names that have been previously tested for unambiguous gender neutrality or gender markedness in the target language.
+-   Preregister analyses together with a smallest effect size of interest.
 
 Future studies could also attempt to test the effect in other tasks and in more naturalistic production settings to examine whether the incrementality-and-accessibility account holds beyond the memory naming paradigm.
 
