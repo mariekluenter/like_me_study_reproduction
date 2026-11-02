@@ -186,7 +186,7 @@ The preprocessing script filters participants but does not export the resulting 
 ```{r, message=FALSE}
 #| label: additional code to reconstruct data frame
 
-write.csv(test, file = "reproduced_data/empathy_study/empathy_data_test.csv", row.names = FALSE)
+write.csv(test, file = "R_scripts/scripts_reproduction/Data_Preprocessing_reproduction/reproduced_data/empathy_study/empathy_data_test.csv", row.names = FALSE)
 
 empathy_study_data_original <- read_csv(here("R_scripts", "scripts_and_data_original", "Data_Analysis_original", "empathy_study_data.csv")) #This is the data used by the authors in their analysis (in the analysis script R_scripts/scripts_and_data_original/Data_Analysis_original/OSF_Analyses.r)
 
@@ -201,7 +201,7 @@ reconstructed_df <- test |>
 
 supposed_ids <- reconstructed_df |> distinct(id)
 
-write_csv(reconstructed_df, file = "reproduced_data/empathy_study/reconstructed_df.csv")
+write_csv(reconstructed_df, file = "R_scripts/scripts_reproduction/Data_Preprocessing_reproduction/reproduced_data/empathy_study/reconstructed_df.csv")
 ```
 
 Result: We successfully recreated the dataframe that the authors used in the analysis. However, this procedure confirmed that the data used in the analysis were the data from the original 128 participant minus the 19 that the authors excluded due to catch trials. Therefore, no other exclusion criteria mentioned in the preregistration appear to have been applied by the authors. The preregistration stated that trials with response times more than 3 SD from the mean, participants whose self-reported gender did not match Prolific records, and participants who had reported not to have lived in the UK for the last five years would be excluded. These additional exclusion criteria might not have been relevant, however, the shared preprocessing code of this rating study does not check for them.
