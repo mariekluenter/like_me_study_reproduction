@@ -334,7 +334,8 @@ numeric.robustness <- readRDS(here("Rdata", "memory-ordinal-robustness-model.rds
 
 library(parameters)
 parameters::model_parameters(numeric.robustness) |> 
-  print_md()
+  print_md() |>
+  gsub("Table: # (Fixed Effects|Random Effects)", "", x = _)
 ```
 
 ::: {#tbl-ModelOrdered tbl-colwidths="[40,20,20,20]"}
@@ -441,13 +442,13 @@ Results of robustness check on naming memory task analysis
 
 - [ ] Codebook includes:
 
-  - [ ] Variable names Description
-  - [ ] Valid ranges
-  - [ ] Missing codes
+    -   [ ] Variable names Description
+    -   [ ] Valid ranges
+    -   [ ] Missing codes
 
-- [ ] Metadata uses standard schema (e.g., Datacite, CodeMeta)
+-   [ ] Metadata uses standard schema (e.g., Datacite, CodeMeta)
 
-- [ ] File formats are non-proprietary (e.g., .csv, .txt, .R)
+-   [ ] File formats are non-proprietary (e.g., .csv, .txt, .R)
 
 <!-- ## FORRT Replication Database (FReD) Entry -->
 
