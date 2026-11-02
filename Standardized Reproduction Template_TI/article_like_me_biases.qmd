@@ -543,6 +543,10 @@ The computational reproducibility of @brough2024 is high: all main results and p
 
 <!--# ELF: If anyone used AI as part of this project, can you please add a sentence here explaining how. -->
 
+<!--# GR: If/when the others add it, we should probably combine all into one general paragraph-->
+
+<!--# GR: used to help improve grammar, sentence structure, as well as to assist in resolving errors in R code. All outputs were critically reviewed, verified, and edited. (OpenAI + DeepL) -->
+
 # Acknowledgements {.unnumbered}
 
 We thank the organisers of the November 2025 Replication Games in Münster for their encouragement and feedback on this reproduction project. The structure of this article is based on a reproduction report template presented in @roseler_handbook_2025.
