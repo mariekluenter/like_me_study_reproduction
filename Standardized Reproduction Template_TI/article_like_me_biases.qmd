@@ -154,7 +154,7 @@ The primary hypotheses concern whether participants first mention the figure bel
 >
 > White First \~ Participant Race \* Syntax + (1 + Syntax \| Subject) + (1 + Participant Race \| Event)
 
-Similar to Study 2, these models are not reported in the article nor, as far as we could tell, implemented in the analysis code.
+Similar to Study 2, these models are not reported in the article, nor are they, as far as we could tell, implemented in the analysis code.
 
 Regarding the ‘like me’ effect, the original authors preregistered their hypothesis that participants would most likely first mention the figure that matches their gender (which, according to the authors, would indicate a 'like me' gender bias) or their race (demonstrating a 'like me' race bias). To test this, they specified two mixed-effects regression models with participant gender or participant race, respectively, as a fixed effect. These were designed to test whether the ‘like me’ effect depends on participant gender/race (that is, whether one gender/race shows a stronger ‘like me’ effect than the other) and, additionally, whether that effect is moderated by `syntax` (interaction of participant gender/race and syntax).
 
@@ -175,6 +175,8 @@ The preregistration also includes preregistered analyses of questionnaire data, 
 Our recreation of the empathy analysis data on the basis of the preprocessing script (`Data Preprocessing/EmpathyStudy/process_data.R`) and the raw data (`Data Preprocessing/EmpathyStudy/full_empathy_data`) confirmed that the dataset was derived from the original 128 participants, with 19 participants who failed 2 or more catch trials excluded. This differs from the preregistration (<https://aspredicted.org/7698v.pdf>), which specified excluding participants who answered more than 2 catch trials incorrectly. No additional exclusion criteria appear to have been applied. This potentially differs from the preregistration, which stated that trials with response times more than 3 SD from the mean, participants whose self-reported gender did not match Prolific records, and participants who had reported not to have lived in the UK for the last five years would be excluded. While these additional exclusion criteria might not have been relevant or may have been applied earlier on in the process, we note that the preprocessing code of the Empathy Rating Study does not check for them.
 
 By contrast, all of these preregistered exclusion criteria are applied in the processing scripts for the Rating Studies featuring transitive and conjoint constructions, except that, as with the Empathy Study, the exclusion criteria for failed catch trials implemented in the preprocessing scripts is also \> 2 rather than ≥ 2 failed catch trials as specified in the corresponding preregistrations ([https://osf.io/rh9sd/](https://osf.io/rh9sd/overview) and <https://osf.io/zp5d4/>). The processing script for the passive Rating Study does not include checks for any potential exclusion based on demographics.
+
+<!--# LL: For me, the "≥" sign in the paragraph above does not appear in the rendered version. Unfortunately, I have no idea how to fix that. Does anyone know? -->
 
 The main claims of the paper are based on comparisons of models made with aggregated data from the various Rating Studies. As far as we can tell, these were not preregistered.
 
@@ -228,9 +230,9 @@ Summary of our computational reproduction
 
 We were also able to successfully reproduce all of the plots presented in the paper (see `OSF_Analyses_reproduction.qmd`).
 
-### Studies 1-3
+### Studies 1–3
 
-We were able to computationally reproduce the results of Studies 1-3 with the code provided by the authors. The only noticeable difference was a slight change in the numbers of the 95% bootstrapped confidence intervals with a maximal difference of ±0.2, which we believe is due to the way random seeds were set in the R scripts. The function `set.seed()`, by default, in R only applies to the next operation that involves randomisation. The authors only set a seed at the top of the script, which only controlled the randomisation for the first function.
+We were able to computationally reproduce the results of Studies 1–3 with the code provided by the authors. The only noticeable difference was a slight change in the numbers of the 95% bootstrapped confidence intervals with a maximal difference of ±0.2, which we believe is due to the way random seeds were set in the R scripts. The function `set.seed()`, by default, in R only applies to the next operation that involves randomisation. The authors only set a seed at the top of the script, which only controlled the randomisation for the first function.
 
 We successfully recreated the processed dataset necessary for the analysis of the memory naming task (`studies1_2_3_memory.csv`) based on the raw data using the script `overall_memory_data_processing.R`; however, we noted that this script – which is over 1000 lines long – appears to repeat many of the data processing steps completed in earlier data processing scripts. This is particularly true of the removal of trials and participants according to the exclusion criteria; the latter of which is achieved by filtering out hard-coded participant IDs, which were presumably identified via the visual analysis of the tables produced in the script. It also includes some interactive elements (where the user needs to change a variable multiple times to check various subsets of the data) and many repeated code chunks within the script, too, making it difficult to check for consistency. In spite of the presence of comments in the code, the logic of the various data wrangling steps is not obvious. As delivered, this preprocessing script is not reproducible.
 
@@ -272,7 +274,7 @@ These regression models can be found in the code provided by the authors in `OSF
 
 <!--# If you conducted any sort of robustness checks, extensions or auxiliary/exploratory analyses, you can report them here. Include a justification for each robustness check. Beyond individual checks, you can also include specification curves. -->
 
-We conducted a total of four robustness checks. In the following, we briefly report on the outcomes of the first three (for further details, see our full reproduction report in @kluenterEA2026 and supplementary materials), before focusing on our final robustness check concerning the memory naming task on which the main claims of the article are based. <!--# M: Robustness checks von Study 2-4 gekürzt, noch unklar, wie ich auf den Report verweisen soll, da wir ihn bisher nicht veröffentlicht haben. ELF: I have added an entry for the Zenodo report in the references.bib file which I will complete as soon as its published. You can now start adding references to it using the key @kluenterEA2026. I think we can assume that the page numbers will no longer change. -->.
+We conducted a total of four robustness checks. In the following, we briefly report on the outcomes of the first three (for further details, see our full reproduction report in @kluenterEA2026 and supplementary materials), before focusing on our final robustness check concerning the memory naming task on which the main claims of the article are based. <!--# M: Robustness checks von Study 2-4 gekürzt, noch unklar, wie ich auf den Report verweisen soll, da wir ihn bisher nicht veröffentlicht haben. ELF: I have added an entry for the Zenodo report in the references.bib file which I will complete as soon as its published. You can now start adding references to it using the key @kluenterEA2026. I think we can assume that the page numbers will no longer change. -->
 
 ### Reanalysis of the Study 2 with the Preregistered Models
 
