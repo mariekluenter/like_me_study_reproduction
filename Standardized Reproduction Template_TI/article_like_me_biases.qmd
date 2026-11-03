@@ -551,6 +551,8 @@ The computational reproducibility of @brough2024 is high: all main results and p
 
 <!--# GR: used to help improve grammar, sentence structure, as well as to assist in resolving errors in R code. All outputs were critically reviewed, verified, and edited. (OpenAI + DeepL) ELF: By OpenAI, do you mean ChatGPT? And by DeepL do you mean DeepL Translate and/or Write?-->
 
+<!--# LL: Same goes for me: Back then I used ChatGPT to assist in resolving errors in R code, which has been done very critically and only in order to help resolve error messages in the code, and I used DeepL write to edit my wording and sentence structure.
+
 # Acknowledgements {.unnumbered}
 
 We thank the organisers of the November 2025 Replication Games in Münster for their encouragement and feedback on this reproduction project. The structure of this article is based on a reproduction report template presented in @roseler_handbook_2025.
