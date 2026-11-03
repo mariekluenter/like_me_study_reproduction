@@ -412,6 +412,31 @@ At the same time, we noted that the `overall_memory_analysis.R script` produces 
 
 When we visualise all the data points entered into the reported model as boxplots, a rather different picture emerges (see Fig. 2). The pattern in median response time does not match the reported effect. <!--# ELF: Could these plots please be inserted as R chunks rather than as images? This would allow much more flexible formatting, e.g. font size, which is currently way too large. -->
 
+```{r}
+#| echo: true
+#| label: plot 1
+
+library(tidyverse)
+library(cowplot)
+
+memory.plot <- readRDS(here("Rdata", "memory-plot.rds"))
+
+ggplot(memory.plot,
+       aes(x = LikeMeFeature,
+           y = rt.m,
+           color = LikeMeFeature))+
+  geom_boxplot(outliers = FALSE)+  
+  geom_jitter(alpha = 0.1, width = 0.2)+
+  #scale_y_continuous(trans='log2')+
+  coord_flip()+
+  theme_cowplot()+ 
+  theme(legend.position = "none")+
+  scale_x_discrete(limits=rev)+
+  ylab("Time to choose name (ms)")+xlab("")
+
+```
+
+
 ![**Fig. 1: Visualisation showing response time across the four conditions (as coded in original analysis script)**](images/memory_subj_original.svg)
 
 ![**Fig. 2: Our own visualisation showing response time across the four conditions**](images/memory_subj_boxplots.svg)
