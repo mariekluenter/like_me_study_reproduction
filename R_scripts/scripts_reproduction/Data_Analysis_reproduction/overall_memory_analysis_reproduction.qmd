@@ -181,6 +181,8 @@ numeric.ordinal = lmer(log(rt) ~ ordered(LikeMeFeatureNumeric) + (1+LikeMeFeatur
 
 #saveRDS(numeric.ordinal, here("R_scripts", "scripts_reproduction" ,"Data_Analysis_reproduction", "Rdata", "memory-ordinal-robustness-model.rds"))
 
+#saveRDS(numeric.ordinal, here("Standardized Reproduction Template_TI", "Rdata", "memory-ordinal-robustness-model.rds"))
+
 summary(numeric.ordinal)
 
 emmeans(object = numeric.ordinal, 
@@ -246,6 +248,9 @@ ggplot(memory_subj.robustness,
   theme(legend.position = "none")+
   scale_x_discrete(limits=rev)+
   ylab("Time to choose name (ms)")+xlab("")
+
+#saveRDS(memory_subj.robustness, here("Standardized Reproduction Template_TI", "Rdata", "memory-plot.rds"))
+
 
 ```
 
