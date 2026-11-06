@@ -50,7 +50,7 @@ Although the overall ‘like me’ effect was small, with mean values of around 
 
 ## Motivation for the present study
 
-Although recently published, the original study can be said to have been influential as it has already been cited in an article on 'Revisiting the policy implications of implicit social cognition' [@axt2025], which concludes with a hope that more studies will examine the large phenomenon of implicit biases in the future. Moreover, it has been in cited in recent AI-related publications, e.g. on how interactions with counter-stereotypical AI systems can be used to shift our stereotypical representations [@hermann2025] and on social perceptions of faces in vision-language models [@hausladen2025].
+Although recently published, the original study can be said to have been influential as it has already been cited in an article on 'Revisiting the policy implications of implicit social cognition' [@axt2025], which concludes with a hope that more studies will examine the large phenomenon of implicit biases in the future. Moreover, it has been cited in recent AI-related publications, e.g., on how interactions with counter-stereotypical AI systems can be used to shift our stereotypical representations [@hermann2025] and on social perceptions of faces in vision-language models [@hausladen2025].
 
 In a recent Bachelor thesis, @halpern_exploration_2026 attempted to replicate the 'like me' bias finding using animated characters in addition to still image stimuli as in the original study. The study failed to replicate a significant overall 'like me' effect, but reported a significant gender effect. Male participants were more likely to produce a 'like me' bias than female participants. Moreover, men were more likely to produce a 'like me' bias in the animated condition, whereas there was no difference between women and men in the mixed condition. A major limitation of this replication is its small and WEIRD [@andringaSamplingBiasProblem2020a; @henrichMostPeopleAre2010] sample, which consisted of only 32 psychology students from Florida State University [@halpern_exploration_2026]. <!--# ELF: Please add a date to this reference in the .bib and also ensure that it is clearly labelled as a Bachelor thesis with the university at which it was submitted. Also please add page number where the sample size is mentioned. M: keine Seitenzahlen in dem Dokument vorhanden --> <!--#RH: Perhaps it could be helpful to add a footnote briefly explaining the WEIRD acronym, as not all readers may be familiar with it. ELF: @MK, could you do that please?-->
 
@@ -68,7 +68,7 @@ Our robustness checks test the robustness of the findings used to support hypoth
 
 <!--# Describe the type of the reproduction, that is, whether it is an assessment of computational reproducibility, a recreation of the script, whether partly different data are being used, and whether robustness checks are planned (see for example @ankel-peters_protocol_2025). The type of reproduction should be justified by the goals of this project (e.g., to test for a false-positive or examine generalizability). -->
 
-The present study started as an exact computational reproduction, which we conducted in R, the programming language also used by the original authors, based on the authors' original raw data and - as far as possible (see @sec-CompRepro) original preprocessing and analysis scripts.
+The present study started as an exact computational reproduction, which we conducted in R, the programming language also used by the original authors, based on the authors' original raw data and - as far as possible (see @sec-CompRepro) - original preprocessing and analysis scripts.
 
 Examining the preregistrations of the original studies (see @sec-Preregistration), we noticed that the reported models in Studies 2 and 3 differ considerably from the models that were preregistered. We therefore decided to perform robustness checks by fitting the preregistered models to the original data provided by the authors. In addition, we decided to test the claim made in the discussion of the results of Study 4 that the observed ‘like me’ gender effects may be smaller in Chinese due to the inclusion of two potentially gender-neutral Chinese names in the experiment [@brough2024: 1713] by rerunning the authors' analysis with a subset of the data that excludes these two names. We compare the results of the reanalyses with the published results and report whether our results are consistent with the claims made in the article.
 
@@ -154,7 +154,7 @@ The primary hypotheses concern whether participants first mention the figure bel
 >
 > White First \~ Participant Race \* Syntax + (1 + Syntax \| Subject) + (1 + Participant Race \| Event)
 
-Similar to Study 2, these models are not reported in the article nor, as far as we could tell, implemented in the analysis code.
+Similar to Study 2, these models are not reported in the article, nor are they, as far as we could tell, implemented in the analysis code.
 
 Regarding the ‘like me’ effect, the original authors preregistered their hypothesis that participants would most likely first mention the figure that matches their gender (which, according to the authors, would indicate a 'like me' gender bias) or their race (demonstrating a 'like me' race bias). To test this, they specified two mixed-effects regression models with participant gender or participant race, respectively, as a fixed effect. These were designed to test whether the ‘like me’ effect depends on participant gender/race (that is, whether one gender/race shows a stronger ‘like me’ effect than the other) and, additionally, whether that effect is moderated by `syntax` (interaction of participant gender/race and syntax).
 
@@ -175,6 +175,8 @@ The preregistration also includes preregistered analyses of questionnaire data, 
 Our recreation of the empathy analysis data on the basis of the preprocessing script (`Data Preprocessing/EmpathyStudy/process_data.R`) and the raw data (`Data Preprocessing/EmpathyStudy/full_empathy_data`) confirmed that the dataset was derived from the original 128 participants, with 19 participants who failed 2 or more catch trials excluded. This differs from the preregistration (<https://aspredicted.org/7698v.pdf>), which specified excluding participants who answered more than 2 catch trials incorrectly. No additional exclusion criteria appear to have been applied. This potentially differs from the preregistration, which stated that trials with response times more than 3 SD from the mean, participants whose self-reported gender did not match Prolific records, and participants who had reported not to have lived in the UK for the last five years would be excluded. While these additional exclusion criteria might not have been relevant or may have been applied earlier on in the process, we note that the preprocessing code of the Empathy Rating Study does not check for them.
 
 By contrast, all of these preregistered exclusion criteria are applied in the processing scripts for the Rating Studies featuring transitive and conjoint constructions, except that, as with the Empathy Study, the exclusion criteria for failed catch trials implemented in the preprocessing scripts is also \> 2 rather than ≥ 2 failed catch trials as specified in the corresponding preregistrations ([https://osf.io/rh9sd/](https://osf.io/rh9sd/overview) and <https://osf.io/zp5d4/>). The processing script for the passive Rating Study does not include checks for any potential exclusion based on demographics.
+
+<!--# LL: For me, the "≥" sign in the paragraph above does not appear in the rendered version. Unfortunately, I have no idea how to fix that. Does anyone know? -->
 
 The main claims of the paper are based on comparisons of models made with aggregated data from the various Rating Studies. As far as we can tell, these were not preregistered.
 
@@ -228,9 +230,9 @@ Summary of our computational reproduction
 
 We were also able to successfully reproduce all of the plots presented in the paper (see `OSF_Analyses_reproduction.qmd`).
 
-### Studies 1-3
+### Studies 1–3
 
-We were able to computationally reproduce the results of Studies 1-3 with the code provided by the authors. The only noticeable difference was a slight change in the numbers of the 95% bootstrapped confidence intervals with a maximal difference of ±0.2, which we believe is due to the way random seeds were set in the R scripts. The function `set.seed()`, by default, in R only applies to the next operation that involves randomisation. The authors only set a seed at the top of the script, which only controlled the randomisation for the first function.
+We were able to computationally reproduce the results of Studies 1–3 with the code provided by the authors. The only noticeable difference was a slight change in the numbers of the 95% bootstrapped confidence intervals with a maximal difference of ±0.2, which we believe is due to the way random seeds were set in the R scripts. The function `set.seed()`, by default, in R only applies to the next operation that involves randomisation. The authors only set a seed at the top of the script, which only controlled the randomisation for the first function.
 
 We successfully recreated the processed dataset necessary for the analysis of the memory naming task (`studies1_2_3_memory.csv`) based on the raw data using the script `overall_memory_data_processing.R`; however, we noted that this script – which is over 1000 lines long – appears to repeat many of the data processing steps completed in earlier data processing scripts. This is particularly true of the removal of trials and participants according to the exclusion criteria; the latter of which is achieved by filtering out hard-coded participant IDs, which were presumably identified via the visual analysis of the tables produced in the script. It also includes some interactive elements (where the user needs to change a variable multiple times to check various subsets of the data) and many repeated code chunks within the script, too, making it difficult to check for consistency. In spite of the presence of comments in the code, the logic of the various data wrangling steps is not obvious. As delivered, this preprocessing script is not reproducible.
 
@@ -272,7 +274,7 @@ These regression models can be found in the code provided by the authors in `OSF
 
 <!--# If you conducted any sort of robustness checks, extensions or auxiliary/exploratory analyses, you can report them here. Include a justification for each robustness check. Beyond individual checks, you can also include specification curves. -->
 
-We conducted a total of four robustness checks. In the following, we briefly report on the outcomes of the first three (for further details, see our full reproduction report in @kluenterEA2026 and supplementary materials), before focusing on our final robustness check concerning the memory naming task on which the main claims of the article are based. <!--# M: Robustness checks von Study 2-4 gekürzt, noch unklar, wie ich auf den Report verweisen soll, da wir ihn bisher nicht veröffentlicht haben. ELF: I have added an entry for the Zenodo report in the references.bib file which I will complete as soon as its published. You can now start adding references to it using the key @kluenterEA2026. I think we can assume that the page numbers will no longer change. -->.
+We conducted a total of four robustness checks. In the following, we briefly report on the outcomes of the first three (for further details, see our full reproduction report in @kluenterEA2026 and supplementary materials), before focusing on our final robustness check concerning the memory naming task on which the main claims of the article are based. <!--# M: Robustness checks von Study 2-4 gekürzt, noch unklar, wie ich auf den Report verweisen soll, da wir ihn bisher nicht veröffentlicht haben. ELF: I have added an entry for the Zenodo report in the references.bib file which I will complete as soon as its published. You can now start adding references to it using the key @kluenterEA2026. I think we can assume that the page numbers will no longer change. -->
 
 ### Reanalysis of the Study 2 with the Preregistered Models
 
@@ -382,16 +384,70 @@ Summary of model with ordered factor predictor variable
 :::
 ::::
 
-In the original analysis of the memory naming task, the authors removed trials for which participants needed longer than 10 s to name the images (as preregistered). Below are the descriptive statistics of the response time variable for the trials that were included in this analysis (i.e. first guesses only, correct responses only, and excluding participants with strong biases). It turns out that 10,000 ms is much longer than most people needed to recall the names:
+
+In the original analysis of the memory naming task, the authors removed trials for which participants needed longer than 10 s to name the images (as preregistered). Below are the descriptive statistics of the response time variable for the trials that were included in this analysis (i.e. first guesses only, correct responses only, and excluding participants with strong biases). It turns out that 10,000 ms is much longer than most people needed to recall the names.
 
 ```{r}
 #| echo: false
 rt_summary <- readRDS(here("Rdata", "rt_summary.rds"))
+rt_summary 
 ```
 
 At the same time, we noted that the `overall_memory_analysis.R script` produces a plot which illustrates the difference in response time across the four conditions. This plot, which is not included in the final version of the paper, shows that the differences in mean response times are very small, that the confidence intervals overlap, and that there is considerable variation across the entire dataset (see Fig. 1). In fact, not all of this variation is visible as the plot cuts the *x*-axis off at 4,500 ms, thereby removing 366 data points.
 
 When we visualise all the data points entered into the reported model as boxplots, a rather different picture emerges (see Fig. 2). The pattern in median response time does not match the reported effect. <!--# ELF: Could these plots please be inserted as R chunks rather than as images? This would allow much more flexible formatting, e.g. font size, which is currently way too large. -->
+
+```{r}
+#| echo: false
+#| eval: true
+#| label: plot 2
+#| fig-cap: Fig. 2: Our own visualisation showing response time across the four conditions
+
+library(tidyverse)
+library(cowplot)
+
+memory_original <- readRDS(here("Rdata", "memory-subj_original.rds"))
+
+ggplot(memory_original,
+       aes(x = LikeMeFeature,
+           y = rt.m,
+           color = LikeMeFeature))+
+  geom_boxplot(outliers = FALSE)+  
+  geom_jitter(alpha = 0.1, width = 0.2)+
+  #scale_y_continuous(trans='log2')+
+  coord_flip()+
+  theme_cowplot()+ 
+  theme(legend.position = "none")+
+  scale_x_discrete(limits=rev)+
+  ylab("Time to choose name (ms)")+xlab("")
+
+```
+
+```{r}
+#| echo: false
+#| eval: true
+#| label: plot 2
+#| fig-cap: Fig. 2: Our own visualisation showing response time across the four conditions
+
+library(tidyverse)
+library(cowplot)
+
+memory.plot_original <- readRDS(here("Rdata", "memory-plot_original.rds"))
+
+ggplot(memory.plot_original,
+       aes(x = LikeMeFeature,
+           y = rt.m,
+           color = LikeMeFeature))+
+  geom_boxplot(outliers = FALSE)+  
+  geom_jitter(alpha = 0.1, width = 0.2)+
+  #scale_y_continuous(trans='log2')+
+  coord_flip()+
+  theme_cowplot()+ 
+  theme(legend.position = "none")+
+  scale_x_discrete(limits=rev)+
+  ylab("Time to choose name (ms)")+xlab("")
+
+```
 
 ![**Fig. 1: Visualisation showing response time across the four conditions (as coded in original analysis script)**](images/memory_subj_original.svg)
 
@@ -533,6 +589,8 @@ The computational reproducibility of @brough2024 is high: all main results and p
 <!--# GR: If/when the others add it, we should probably combine all into one general paragraph-->
 
 <!--# GR: used to help improve grammar, sentence structure, as well as to assist in resolving errors in R code. All outputs were critically reviewed, verified, and edited. (OpenAI + DeepL) ELF: By OpenAI, do you mean ChatGPT? And by DeepL do you mean DeepL Translate and/or Write?-->
+
+<!--# LL: Same goes for me: Back then I used ChatGPT to assist in resolving errors in R code, which has been done very critically and only in order to help resolve error messages in the code, and I used DeepL write to edit my wording and sentence structure.-->
 
 # Acknowledgements {.unnumbered}
 

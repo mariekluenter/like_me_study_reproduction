@@ -147,6 +147,8 @@ ggplot(memory_subj,
   ylab("Time to choose name (ms)")+xlab("")
 
 #ggsave(file = here("R_scripts", "scripts_reproduction", "Data_Analysis_reproduction", "Plots","memory_subj_original.svg"))
+
+#saveRDS(memory_subj, here("Standardized Reproduction Template_TI", "Rdata", "memory-subj_original.rds"))
 ```
 
 ## Reproduction team: Robustness tests
@@ -168,6 +170,8 @@ ggplot(memory_subj,
   ylab("Time to choose name (ms)")+xlab("")
 
 #ggsave(file = here("R_scripts", "scripts_reproduction", "Data_Analysis_reproduction", "Plots","memory_subj_boxplots.svg"))
+
+#saveRDS(memory_subj.robustness, here("Standardized Reproduction Template_TI", "Rdata", "memory_subj_boxplots.rds"))
 ```
 
 We decided to model the LikeMeFeature as an ordinal categorical variable rather than as a numeric variable. The model does not converge unless we use an optimizer. As above, we also added a comparison of the predicted means using the {emmeans} package. The results match closely those of the original analysis.
@@ -180,6 +184,8 @@ numeric.ordinal = lmer(log(rt) ~ ordered(LikeMeFeatureNumeric) + (1+LikeMeFeatur
                data = memory %>% filter(first_guess == "TRUE" & rt < 10000 & correct_response == 1))
 
 #saveRDS(numeric.ordinal, here("R_scripts", "scripts_reproduction" ,"Data_Analysis_reproduction", "Rdata", "memory-ordinal-robustness-model.rds"))
+
+#saveRDS(numeric.ordinal, here("Standardized Reproduction Template_TI", "Rdata", "memory-ordinal-robustness-model.rds"))
 
 summary(numeric.ordinal)
 
@@ -246,6 +252,8 @@ ggplot(memory_subj.robustness,
   theme(legend.position = "none")+
   scale_x_discrete(limits=rev)+
   ylab("Time to choose name (ms)")+xlab("")
+
+
 
 ```
 
