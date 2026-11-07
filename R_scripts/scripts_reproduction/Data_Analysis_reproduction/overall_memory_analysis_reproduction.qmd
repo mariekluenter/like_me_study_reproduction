@@ -103,6 +103,8 @@ numeric_base = lmer(log(rt) ~ 1 + (1|id),
 
 anova(numeric,numeric_base)
 
+#saveRDS(numeric, here("Standardized Reproduction Template_TI", "Rdata", "numeric_table.rds"))
+
 ```
 
 ```{r}
@@ -148,7 +150,9 @@ ggplot(memory_subj,
 
 #ggsave(file = here("R_scripts", "scripts_reproduction", "Data_Analysis_reproduction", "Plots","memory_subj_original.svg"))
 
-#saveRDS(memory_subj, here("Standardized Reproduction Template_TI", "Rdata", "memory-subj_original.rds"))
+#saveRDS(memory_subj, here("Standardized Reproduction Template_TI", "Rdata", "memory_subj_original.rds"))
+
+#saveRDS(memory_means, here("Standardized Reproduction Template_TI", "Rdata", "memory_means_original.rds"))
 ```
 
 ## Reproduction team: Robustness tests
@@ -171,7 +175,6 @@ ggplot(memory_subj,
 
 #ggsave(file = here("R_scripts", "scripts_reproduction", "Data_Analysis_reproduction", "Plots","memory_subj_boxplots.svg"))
 
-#saveRDS(memory_subj.robustness, here("Standardized Reproduction Template_TI", "Rdata", "memory_subj_boxplots.rds"))
 ```
 
 We decided to model the LikeMeFeature as an ordinal categorical variable rather than as a numeric variable. The model does not converge unless we use an optimizer. As above, we also added a comparison of the predicted means using the {emmeans} package. The results match closely those of the original analysis.

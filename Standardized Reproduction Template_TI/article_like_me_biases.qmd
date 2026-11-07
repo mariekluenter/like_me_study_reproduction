@@ -345,8 +345,7 @@ tbl_regression(numeric.robustness,
 `Residual.sd__Observation` = "Residual SD"))
 ```
 
-::: {.content-hidden unless-format="html"}
-
+:::: {.content-hidden unless-format="html"}
 ::: {#tbl-ModelOrdered tbl-colwidths="[40,20,20,20]"}
 +-------------------------------------+---------------+---------------+-------------+
 |                                     |               |               |             |
@@ -389,12 +388,47 @@ Summary of model with ordered factor predictor variable
 rt_summary <- readRDS(here("Rdata", "rt_summary.rds"))
 ```
 
-
 In the original analysis of the memory naming task, the authors removed trials for which participants needed longer than 10 s to name the images (as preregistered). Below are the descriptive statistics of the response time variable for the trials that were included in this analysis (i.e. first guesses only, correct responses only, and excluding participants with strong biases). It turns out that 10,000 ms is much longer than most people needed to recall the names (Q1 = `r rt_summary[["1st Qu."]]` ms, median = `r rt_summary[["Median"]]` ms, mean = `r rt_summary[["Mean"]]` ms, Q3 = `r rt_summary[["3rd Qu."]]` ms).
 
-At the same time, we noted that the `overall_memory_analysis.R script` produces a plot which illustrates the difference in response time across the four conditions. This plot, which is not included in the final version of the paper, shows that the differences in mean response times are very small, that the confidence intervals overlap, and that there is considerable variation across the entire dataset (see @fig-XX). In fact, not all of this variation is visible as the plot cuts the *x*-axis off at 4,500 ms, thereby removing 366 data points.
 
-When we visualise all the data points entered into the reported model as boxplots, a rather different picture emerges (see @fig-XX). The pattern in median response time does not match the reported effect. <!--# ELF: Could these plots please be inserted as R chunks rather than as images? This would allow much more flexible formatting, e.g. font size, which is currently way too large. -->
+At the same time, we noted that the `overall_memory_analysis.R script` produces a plot which illustrates the difference in response time across the four conditions. This plot, which is not included in the final version of the paper, shows that the differences in mean response times are very small, that the confidence intervals overlap, and that there is considerable variation across the entire dataset (see @fig-plot2b). In fact, not all of this variation is visible as the plot cuts the *x*-axis off at 4,500 ms, thereby removing 366 data points.
+
+
+When we visualise all the data points entered into the reported model as boxplots, a rather different picture emerges (see @fig-viz4conditions). The pattern in median response time does not match the reported effect. 
+
+```{r}
+#| echo: false
+#| eval: true
+#| label: fig-plot2b
+#| fig-cap: "Visualisation showing response time across the four conditions (as coded in original analysis script"
+
+library(tidyverse)
+library(cowplot)
+
+memory.plot_original <- readRDS(here("Rdata", "memory_subj_original.rds"))
+
+memory_means <- readRDS(here("Rdata", "memory_means_original.rds"))
+
+ggplot(memory.plot_original,
+       aes(x = LikeMeFeature,
+           y = rt.m,
+           color = LikeMeFeature))+
+  geom_jitter(alpha = 0.05)+
+  #scale_y_continuous(trans='log2')+
+  coord_flip()+
+  theme_cowplot()+ 
+  theme(legend.position = "none")+
+  #geom_point(data = memory_means, size = 3)+
+  ylim(c(1800,4500))+
+  scale_x_discrete(limits=rev)+
+  geom_crossbar(data = memory_means,aes(ymin = rt.m, ymax = rt.m), 
+                width = 0.7)+
+  geom_linerange(data = memory_means,aes(ymin = rt.m - ci.norm, 
+                                         ymax = rt.m + ci.norm),
+                 lwd = 1)+
+  ylab("Time to choose name (ms)")+xlab("")
+
+```
 
 ```{r}
 #| echo: false
@@ -402,12 +436,9 @@ When we visualise all the data points entered into the reported model as boxplot
 #| label: fig-viz4conditions
 #| fig-cap: "Our own visualisation showing response time across the four conditions"
 
-library(tidyverse)
-library(cowplot)
+memory_reproduction<- readRDS(here("Rdata", "memory_subj_original.rds"))
 
-memory_original <- readRDS(here("Rdata", "memory-subj_original.rds"))
-
-ggplot(memory_original,
+ggplot(memory_reproduction,
        aes(x = LikeMeFeature,
            y = rt.m,
            color = LikeMeFeature))+
@@ -422,35 +453,6 @@ ggplot(memory_original,
 
 ```
 
-```{r}
-#| echo: false
-#| eval: true
-#| label: fig-plot2b
-#| fig-cap: "Our own visualisation showing response time across the four conditions"
-
-library(tidyverse)
-library(cowplot)
-
-memory.plot_original <- readRDS(here("Rdata", "memory-plot_original.rds"))
-
-ggplot(memory.plot_original,
-       aes(x = LikeMeFeature,
-           y = rt.m,
-           color = LikeMeFeature))+
-  geom_boxplot(outliers = FALSE)+  
-  geom_jitter(alpha = 0.1, width = 0.2)+
-  #scale_y_continuous(trans='log2')+
-  coord_flip()+
-  theme_cowplot()+ 
-  theme(legend.position = "none")+
-  scale_x_discrete(limits=rev)+
-  ylab("Time to choose name (ms)")+xlab("")
-
-```
-
-![**Fig. 1: Visualisation showing response time across the four conditions (as coded in original analysis script)**](images/memory_subj_original.svg)
-
-![**Fig. 2: Our own visualisation showing response time across the four conditions**](images/memory_subj_boxplots.svg)
 
 Bearing in mind the outliers visible in Fig. 2, we reran the analysis with a more conservative cut-off point of 6 s than that of 10 s preregistered and applied by the authors (corresponding to 91% of the trials analysed by authors) to test the robustness of the reported effect. The differences in both observed and predicted mean reaction times across the three conditions are smaller than those reported, but remain nonetheless significant. We also reran the model on this subset of the data. The results remain broadly the same (see @tbl-Comparison).
 
