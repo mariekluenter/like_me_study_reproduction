@@ -54,7 +54,7 @@ Although recently published, the original study can be said to have been influen
 
 In a recent Bachelor thesis, @halpern_exploration_2026 attempted to replicate the 'like me' bias finding using animated characters in addition to still image stimuli as in the original study. The study failed to replicate a significant overall 'like me' effect, but reported a significant gender effect. Male participants were more likely to produce a 'like me' bias than female participants. Moreover, men were more likely to produce a 'like me' bias in the animated condition, whereas there was no difference between women and men in the mixed condition. A major limitation of this replication is its small and WEIRD [@andringaSamplingBiasProblem2020a; @henrichMostPeopleAre2010] sample, which consisted of only 32 psychology students from Florida State University [@halpern_exploration_2026]. <!--# ELF: Please add a date to this reference in the .bib and also ensure that it is clearly labelled as a Bachelor thesis with the university at which it was submitted. Also please add page number where the sample size is mentioned. M: keine Seitenzahlen in dem Dokument vorhanden --> <!--#RH: Perhaps it could be helpful to add a footnote briefly explaining the WEIRD acronym, as not all readers may be familiar with it. ELF: @MK, could you do that please?-->
 
-To the best of our knowledge, the five studies presented in @brough2024 have not yet been reproduced although this is feasible because the authors uploaded their data, stimuli, and R scripts on the OSF under <https://osf.io/87vew/> (28 November 2028). <!--# ELF: Please add URL and the day of the Replication Game (28 Nov 2025) as the access date -->. In addition, we were able to consult the preregistrations, as well as the peer review reports, which the journal, *Nature Human Behaviour*, published alongside the article. We began working on the computational reproduction part of our analyses as part of the Replications Games organised by the Institute for Replication at the University of Münster on 28 November 2025.
+To the best of our knowledge, the five studies presented in @brough2024 have not yet been reproduced although this is feasible because the authors uploaded their data, stimuli, and R scripts on the OSF under <https://osf.io/87vew/> (28 November 2028). In addition, we were able to consult the preregistrations, as well as the peer review reports, which the journal, *Nature Human Behaviour*, published alongside the article. We began working on the computational reproduction part of our analyses as part of the Replications Games organised by the Institute for Replication at the University of Münster on 28 November 2025.
 
 ## Reproduced Study, Hypothesis, and Findings
 
@@ -288,7 +288,36 @@ In both cases, the maximal random-effects structure specified in the preregistra
 
 > Like Me Gender/Race \~ Participant Gender \* Participant Race + (1 \| Subject) + (1 \| Event)
 
-Despite these adjustments and the use of the “bobyqa” optimizer, the function returned singularity warnings, indicating that the remaining random-effects structure was still unsupported by the data. Only after removing all random effects did the models converge with no singularity warning. However, we deem this simplification as highly problematic, as it eliminates the ability to account for individual variance within participants and systematic differences across verbs. Nonetheless, we interpret the converged models as the closest we could reach to the preregistered analyses. To facilitate the interpretation of the fixed effects and to allow comparison with the reported descriptive results, we computed estimated marginal means using the emmeans package. The model output for the race 'like me' effect (Table 3) <!--# ELF: Where is this table? --> indicates that this model explains virtually no variance in the data (Tjur’s R^2^ = 0.000). None of the fixed effects, i.e. participant gender, participant race, or their interaction, significantly predict the likelihood of showing a ‘like me’ effect on race trials. This suggests that, under the preregistered modelling framework, there is no detectable evidence for systematic variation in ‘like me’ biases on race trials across participant groups.
+Despite these adjustments and the use of the “bobyqa” optimizer, the function returned singularity warnings, indicating that the remaining random-effects structure was still unsupported by the data. Only after removing all random effects did the models converge with no singularity warning. However, we deem this simplification as highly problematic, as it eliminates the ability to account for individual variance within participants and systematic differences across verbs. Nonetheless, we interpret the converged models as the closest we could reach to the preregistered analyses. To facilitate the interpretation of the fixed effects and to allow comparison with the reported descriptive results, we computed estimated marginal means using the emmeans package. The model output for the race 'like me' effect @tbl-mod1_race_converge indicates that this model explains virtually no variance in the data (Tjur’s R^2^ = 0.000). None of the fixed effects, i.e. participant gender, participant race, or their interaction, significantly predict the likelihood of showing a ‘like me’ effect on race trials. This suggests that, under the preregistered modelling framework, there is no detectable evidence for systematic variation in ‘like me’ biases on race trials across participant groups.
+
+```{r}
+#| echo: false
+#| eval: true
+#| label: tbl-mod1_race_converge
+#| tbl-cap: Results of the preregistered ‘Like me’ model for race trials (convergence-adjusted)
+
+prereg_mod1_race_converge <- readRDS(here("Rdata", "prereg_mod1_race_converge.rds"))
+
+library(gtsummary)
+
+tbl_regression(
+  prereg_mod1_race_converge,
+  intercept = TRUE,
+  exponentiate = TRUE,
+  tidy_fun = broom::tidy,
+  show_single_row = NULL,
+  label = list(
+    `(Intercept)` = "(Intercept)",
+    ppt_genderwoman = "Participant Gender Woman",
+    ppt_racewhite = "Participant Race White",
+    `ppt_genderwoman:ppt_racewhite` =
+      "Participant Gender Woman X Participant Race White"))
+  
+  
+```
+
+<!--# M: in der Tabelle sind Spalten drinnen, die leer sind, bei denen ich noch nicht weiß, wie ich sie raus bekomme -->)
+
 
 ### Reanalysis of the Study 3 with the Preregistered Models
 
@@ -390,11 +419,9 @@ rt_summary <- readRDS(here("Rdata", "rt_summary.rds"))
 
 In the original analysis of the memory naming task, the authors removed trials for which participants needed longer than 10 s to name the images (as preregistered). Below are the descriptive statistics of the response time variable for the trials that were included in this analysis (i.e. first guesses only, correct responses only, and excluding participants with strong biases). It turns out that 10,000 ms is much longer than most people needed to recall the names (Q1 = `r rt_summary[["1st Qu."]]` ms, median = `r rt_summary[["Median"]]` ms, mean = `r rt_summary[["Mean"]]` ms, Q3 = `r rt_summary[["3rd Qu."]]` ms).
 
-
 At the same time, we noted that the `overall_memory_analysis.R script` produces a plot which illustrates the difference in response time across the four conditions. This plot, which is not included in the final version of the paper, shows that the differences in mean response times are very small, that the confidence intervals overlap, and that there is considerable variation across the entire dataset (see @fig-plot2b). In fact, not all of this variation is visible as the plot cuts the *x*-axis off at 4,500 ms, thereby removing 366 data points.
 
-
-When we visualise all the data points entered into the reported model as boxplots, a rather different picture emerges (see @fig-viz4conditions). The pattern in median response time does not match the reported effect. 
+When we visualise all the data points entered into the reported model as boxplots, a rather different picture emerges (see @fig-viz4conditions). The pattern in median response time does not match the reported effect.
 
 ```{r}
 #| echo: false
@@ -452,7 +479,6 @@ ggplot(memory_reproduction,
   ylab("Time to choose name (ms)")+xlab("")
 
 ```
-
 
 Bearing in mind the outliers visible in Fig. 2, we reran the analysis with a more conservative cut-off point of 6 s than that of 10 s preregistered and applied by the authors (corresponding to 91% of the trials analysed by authors) to test the robustness of the reported effect. The differences in both observed and predicted mean reaction times across the three conditions are smaller than those reported, but remain nonetheless significant. We also reran the model on this subset of the data. The results remain broadly the same (see @tbl-Comparison).
 

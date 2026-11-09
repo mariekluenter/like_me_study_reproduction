@@ -865,6 +865,8 @@ tab_model(prereg_mod1_gender_converge)
 emmeans(prereg_mod1_gender_converge, ~ ppt_gender + ppt_race, type = "response")
 pairs(emmeans(prereg_mod1_gender_converge, ~ ppt_gender + ppt_race, type = "response"))
 
+
+
 ```
 
 ```{r}
@@ -885,6 +887,8 @@ prereg_mod1_race_converge <- glm(OverallLikeMe ~ ppt_gender * ppt_race,
 
 summary(prereg_mod1_race_converge)
 tab_model(prereg_mod1_race_converge)
+
+#saveRDS(prereg_mod1_race_converge, here("Standardized Reproduction Template_TI", "Rdata", "prereg_mod1_race_converge.rds"))
 
 ```
 
