@@ -124,6 +124,8 @@ memory_means = memory %>%
                    rt.high = ci.high(rt)) # Remember that the bootstrapped CIs do not account for within subjects design
 memory_means
 
+#saveRDS(memory_means, here("Standardized Reproduction Template_TI", "Rdata", "memory_means.rds"))
+
 memory_subj = memory %>%
   filter(first_guess == "TRUE" & rt < 10000 & correct_response == 1) %>%
   dplyr::group_by(id, LikeMeFeature) %>%
@@ -206,6 +208,7 @@ rt_summary <- memory |>
   summary()
 
 #saveRDS(rt_summary, here("R_scripts", "scripts_reproduction" ,"Data_Analysis_reproduction", "Rdata", "rt_summary.rds"))
+
 ```
 
 In our robustness test, we exclude trials for which the response time was longer than 5,000 ms, which corresponds to a bit more than what is displayed on the descriptive plot included in this script (see above).
@@ -238,6 +241,8 @@ memory.robustness_means = memory.robustness %>%
                    rt.high = ci.high(rt)) # Remember that the bootstrapped CIs do not account for within subjects design
 
 memory.robustness_means # The results are consistent with the reported findings.
+
+#saveRDS(memory.robustness_means, here("Standardized Reproduction Template_TI", "Rdata", "memory.robustness_means.rds"))
 
 memory_subj.robustness = memory.robustness |> 
   dplyr::group_by(id, LikeMeFeature) |> 
@@ -276,6 +281,7 @@ ordered.robustness = lmer(log(rt) ~ ordered(LikeMeFeatureNumeric) + (1+LikeMeFea
      data = memory.robustness)
 
 summary(ordered.robustness)
+
 
 emmeans(object = ordered.robustness, 
         specs = "LikeMeFeatureNumeric",

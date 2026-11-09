@@ -46,6 +46,7 @@ library(wesanderson)
 library(cowplot)
 library(magick)
 library(ggrepel)
+library(emmeans)
 
 # From Mike Frank
 theta <- function(x,xdata,na.rm=T) {mean(xdata[x],na.rm=na.rm)}
@@ -862,6 +863,8 @@ prereg_mod1_gender_converge <- glm(OverallLikeMe ~ ppt_gender * ppt_race,
 summary(prereg_mod1_gender_converge)
 tab_model(prereg_mod1_gender_converge)
 
+
+
 emmeans(prereg_mod1_gender_converge, ~ ppt_gender + ppt_race, type = "response")
 pairs(emmeans(prereg_mod1_gender_converge, ~ ppt_gender + ppt_race, type = "response"))
 
@@ -942,9 +945,13 @@ data4_overallAnalysis_gender = summary(glmer(OverallLikeMe ~ 1 + syntax + (1+syn
                                              data = subset(data4, TrialType != "RaceTrial"), family = "binomial"))
 data4_overallAnalysis_gender
 
+#saveRDS(data4_overallAnalysis_gender, here("Standardized Reproduction Template_TI", "Rdata", "model_gender_original_study3.rds"))
+
 data4_overallAnalysis_race = summary(glmer(OverallLikeMe ~ 1 + syntax + (1+syntax|subject) + (1+syntax|event), 
                                            data = subset(data4, TrialType == "RaceTrial"), family = "binomial"))
 data4_overallAnalysis_race
+
+#saveRDS(data4_overallAnalysis_race, here("Standardized Reproduction Template_TI", "Rdata", "model_race_original_study3.rds"))
 
 data4_syntax = data4 %>% 
   dplyr::group_by(syntax,subject) %>% 
@@ -968,6 +975,8 @@ summary(model_gender_prereg)
 
 tab_model(model_gender_prereg)
 
+#saveRDS(model_gender_prereg, here("Standardized Reproduction Template_TI", "Rdata", "model_gender_prereg_study3.rds"))
+
 ```
 
 ```{r}
@@ -981,6 +990,8 @@ model_race_prereg <- glmer(OverallLikeMe ~  ppt_race * syntax + (1 + syntax | su
 summary(model_race_prereg)
 
 tab_model(model_race_prereg)
+
+#saveRDS(model_race_prereg, here("Standardized Reproduction Template_TI", "Rdata", "model_race_prereg_study3.rds"))
 ```
 
 ```{r}
@@ -1008,6 +1019,8 @@ summary(model_gender_prereg2)
 
 tab_model(model_gender_prereg2)
 
+#saveRDS(model_gender_prereg2, here("Standardized Reproduction Template_TI", "Rdata", "model_gender_prereg2_study3.rds"))
+
 ```
 
 ```{r}
@@ -1021,6 +1034,8 @@ model_race_prereg2 <- glmer(OverallLikeMe ~  ppt_race * syntax + (1 + syntax | s
 summary(model_race_prereg2)
 
 tab_model(model_race_prereg2)
+
+#saveRDS(model_race_prereg2, here("Standardized Reproduction Template_TI", "Rdata", "model_race_prereg2_study3.rds"))
 ```
 
 ### Chinese study

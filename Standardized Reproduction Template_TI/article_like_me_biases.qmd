@@ -294,7 +294,7 @@ Despite these adjustments and the use of the “bobyqa” optimizer, the functio
 #| echo: false
 #| eval: true
 #| label: tbl-mod1_race_converge
-#| tbl-cap: Results of the preregistered ‘Like me’ model for race trials (convergence-adjusted)
+#| tbl-cap: Study 2 Results of the preregistered ‘Like me’ model for race trials (convergence-adjusted)
 
 prereg_mod1_race_converge <- readRDS(here("Rdata", "prereg_mod1_race_converge.rds"))
 
@@ -306,18 +306,28 @@ tbl_regression(
   exponentiate = TRUE,
   tidy_fun = broom::tidy,
   show_single_row = NULL,
-  label = list(
-    `(Intercept)` = "(Intercept)",
+  label = list(`(Intercept)` = "(Intercept)",
     ppt_genderwoman = "Participant Gender Woman",
     ppt_racewhite = "Participant Race White",
     `ppt_genderwoman:ppt_racewhite` =
-      "Participant Gender Woman X Participant Race White"))
-  
+      "Participant Gender Woman X Participant Race White")) |>
+  modify_table_body(
+    ~ .x |>
+      dplyr::filter(
+        !label %in% c(
+          "ppt_gender",
+          "ppt_race",
+          "ppt_gender * ppt_race"
+        )
+      )
+  )
+
   
 ```
 
-<!--# M: in der Tabelle sind Spalten drinnen, die leer sind, bei denen ich noch nicht weiß, wie ich sie raus bekomme -->)
+<!--# M: in der Tabelle hat die label = list, die Namen nicht geändert, mir ist aber unklar, wieso nicht.  -->
 
+)
 
 ### Reanalysis of the Study 3 with the Preregistered Models
 
@@ -326,6 +336,36 @@ For Study 3 we performed a robustness check by computing the preregistered model
 The analogous preregistered race model, fit to race trials, showed no clear evidence for a ‘like me’ effect. Again, the values computed by the preregistered model match closely the ones reported by the authors (Table 4 <!--# ELF: This table also appears to be missing -->). Participant race and syntax were not significant, neither was their interaction, indicating no significant difference between white and Black participants and no difference between active and passive in race trials.
 
 The maximal preregistered models only converged when using the “bobyqa” optimizer and produced boundary (singular) fit warnings, indicating that the random effects explain little to no variance. This may explain why the authors decided not to report the preregistered models. In sum, implementing the preregistered model as a robustness check of Study 3 had no effect on the magnitude or the statistical significance of the main point estimates.
+
+```{r}
+#| echo: false
+#| eval: false
+#| label: tbl-prereg_study_3
+#| tbl-cap: ‘Like me’ effect in Preregistered Gender and Race Models
+
+
+model_gender_original_study3 <- readRDS(here("Rdata", "model_gender_original_study3.rds"))
+
+model_race_original_study3 <- readRDS(here("Rdata", "model_race_original_study3.rds"))
+
+model_gender_prereg_study3 <- readRDS(here("Rdata", "model_gender_prereg_study3.rds"))
+
+model_race_prereg_study3 <- readRDS(here("Rdata", "model_race_prereg_study3.rds"))
+
+model_gender_prereg2_study3 <- readRDS(here("Rdata", "model_gender_prereg2_study3.rds"))
+
+model_race_prereg2_study3 <- readRDS(here("Rdata", "model_race_prereg2_study3.rds"))
+
+tbl_merge(
+  tbls = list(tbl_regression(model_gender_original_study3),
+    tbl_regression(model_race_original_study3),
+    tbl_regression(model_gender_prereg_study3),
+    tbl_regression(model_race_prereg_study3),
+    tbl_regression(model_gender_prereg2_study3),
+    tbl_regression(model_race_prereg2_study3)
+  ))
+
+```
 
 ### Reanalysis of the Study 4 excluding two potentially problematic stimuli
 
@@ -481,6 +521,20 @@ ggplot(memory_reproduction,
 ```
 
 Bearing in mind the outliers visible in Fig. 2, we reran the analysis with a more conservative cut-off point of 6 s than that of 10 s preregistered and applied by the authors (corresponding to 91% of the trials analysed by authors) to test the robustness of the reported effect. The differences in both observed and predicted mean reaction times across the three conditions are smaller than those reported, but remain nonetheless significant. We also reran the model on this subset of the data. The results remain broadly the same (see @tbl-Comparison).
+
+```{r}
+#| echo: false
+#| eval: false
+#| label: tbl-Comparison
+#| tbl-cap: Results of robustness check on naming memory task analysis
+
+memory_means<- readRDS(here("Rdata", "memory_means.rds"))
+
+memory.robustness_menas<- readRDS(here("Rdata", "memory.robustness_means.rds"))
+
+
+```
+
 
 ::: {#tbl-Comparison tbl-colwidths="[50,25,25]"}
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+----------------------+
