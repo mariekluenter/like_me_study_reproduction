@@ -672,7 +672,7 @@ The computational reproducibility of @brough2024 is high: all main results and p
 
 <!--# LL: Same goes for me: Back then I used ChatGPT to assist in resolving errors in R code, which has been done very critically and only in order to help resolve error messages in the code, and I used DeepL write to edit my wording and sentence structure.-->
 
-<!--# RH: I used Claude (by Anthropic) to check grammar and refine the wording in the section "Pre-analysis Plan of Study 3".-->
+<!--# RH: I used Claude Opus 5.5 (by Anthropic) to check grammar and refine the wording in the section "Pre-analysis Plan of Study 3".-->
 
 # Acknowledgements {.unnumbered}
 
