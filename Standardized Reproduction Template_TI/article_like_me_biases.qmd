@@ -212,7 +212,7 @@ The original data and code were made available on the OSF ([https://osf.io/87vew
 
 ## Computational Reproducibility
 
-In the preprocessing scripts for Studies 1–3 (`Process_Study1_Data.R`, `Process_Study2_Data.R`, `Process_Study3_Data.R`) the authors mention that, due to a technical issue involving an unbacked-up computer, the authors no longer have access to all the initial raw data <!--# ELF: Where do the authors mention this? Please add ref.  -->. However, they provide full access to data files which have apparently only been manually corrected for minor spelling errors (e.g. 'Rth' instead of 'Ruth'). We therefore classified these files as “raw data provided” in the summary of our computational reproduction (@tbl-SummaryRepro).
+In the preprocessing scripts for Studies 1–3 (`Process_Study1_Data.R`, `Process_Study2_Data.R`, `Process_Study3_Data.R; lines 3-6`) the authors mention that, due to a technical issue involving an unbacked-up computer, the authors no longer have access to all the initial raw data <!--# ELF: Where do the authors mention this? Please add ref. M: in allen 3 genannten Scripts wird es erwähnt, ich habe die Code-Zeilen ergänzt  -->. However, they provide full access to data files which have apparently only been manually corrected for minor spelling errors (e.g. 'Rth' instead of 'Ruth'). We therefore classified these files as “raw data provided” in the summary of our computational reproduction (@tbl-SummaryRepro).
 
 ::: {#tbl-SummaryRepro}
 |                                 |           |             |        |
@@ -274,7 +274,7 @@ These regression models can be found in the code provided by the authors in `OSF
 
 <!--# If you conducted any sort of robustness checks, extensions or auxiliary/exploratory analyses, you can report them here. Include a justification for each robustness check. Beyond individual checks, you can also include specification curves. -->
 
-We conducted a total of four robustness checks. In the following, we briefly report on the outcomes of the first three (for further details, see our full reproduction report in @kluenterEA2026 and supplementary materials), before focusing on our final robustness check concerning the memory naming task on which the main claims of the article are based. <!--# M: Robustness checks von Study 2-4 gekürzt, noch unklar, wie ich auf den Report verweisen soll, da wir ihn bisher nicht veröffentlicht haben. ELF: I have added an entry for the Zenodo report in the references.bib file which I will complete as soon as its published. You can now start adding references to it using the key @kluenterEA2026. I think we can assume that the page numbers will no longer change. -->
+We conducted a total of four robustness checks. In the following, we briefly report on the outcomes of the first three (for further details, see our full reproduction report in @kluenterEA2026 and supplementary materials), before focusing on our final robustness check concerning the memory naming task on which the main claims of the article are based.
 
 ### Reanalysis of the Study 2 with the Preregistered Models
 
@@ -310,7 +310,10 @@ tbl_regression(
     ppt_genderwoman = "Participant Gender Woman",
     ppt_racewhite = "Participant Race White",
     `ppt_genderwoman:ppt_racewhite` =
-      "Participant Gender Woman X Participant Race White")) |>
+      "Participant Gender Woman X Participant Race White",
+    ppt_gender = "ppt_gender",
+    ppt_race = "ppt_race",
+    `ppt_gender * ppt_race` = "ppt_gender * ppt_race")) |>
   modify_table_body(
     ~ .x |>
       dplyr::filter(
@@ -333,39 +336,37 @@ tbl_regression(
 
 For Study 3 we performed a robustness check by computing the preregistered models using the original data. For the gender trials, the preregistered model yielded almost identical results to the model reported in the article. In both the preregistered and the reported model, participants chose the same-gender character first in 55.9% of trials. The intercept was significant, confirming an overall ‘like me’ effect in gender trials (i.e. both men and women were, on average, biased toward their own gender). Fixed effects (participant gender, syntax and their interaction) had no significant effects, in line with @brough2024 [: 1709]'s statement that there was no significant difference between men and women concerning their ‘like me’ effect and no difference between active and passive sentences.
 
-The analogous preregistered race model, fit to race trials, showed no clear evidence for a ‘like me’ effect. Again, the values computed by the preregistered model match closely the ones reported by the authors (Table 4 <!--# ELF: This table also appears to be missing -->). Participant race and syntax were not significant, neither was their interaction, indicating no significant difference between white and Black participants and no difference between active and passive in race trials.
+The analogous preregistered race model, fit to race trials, showed no clear evidence for a ‘like me’ effect. Again, the values computed by the preregistered model match closely the ones reported by the authors @tbl-Prereg-models. Participant race and syntax were not significant, neither was their interaction, indicating no significant difference between white and Black participants and no difference between active and passive in race trials.
 
 The maximal preregistered models only converged when using the “bobyqa” optimizer and produced boundary (singular) fit warnings, indicating that the random effects explain little to no variance. This may explain why the authors decided not to report the preregistered models. In sum, implementing the preregistered model as a robustness check of Study 3 had no effect on the magnitude or the statistical significance of the main point estimates.
 
-```{r}
-#| echo: false
-#| eval: false
-#| label: tbl-prereg_study_3
-#| tbl-cap: ‘Like me’ effect in Preregistered Gender and Race Models
+::: {#tbl-Prereg-models}
++----------------------+------------------------------------------+-------------------------------------------+--------------------------------------------------------------------------+
+| **Model Trial Type** | **‘like me’ effect original study**      | **‘like me’ effect preregistered models** | **‘like me’ effect preregistered models without random effect of event** |
+|                      |                                          |                                           |                                                                          |
+|                      |                                          | **(robustness check)**                    |                                                                          |
++======================+==========================================+===========================================+==========================================================================+
+| Gender               | M = 55.9% \[53.9 – 57.7\],               | M = 55.9% \[53.8 – 57.6\],                | M = 55.9% \[53.8 – 57.6\] ,                                              |
+|                      |                                          |                                           |                                                                          |
+|                      | β = 0.28 (0.05), z = 5.2, p \< 0.001     | β = 0.28 (0.05), z = 5.3, p \< 0.001      | β = 0.28 (0.04), z = 6.3, p \< 0.001                                     |
+|                      |                                          |                                           |                                                                          |
+|                      | \                                        | \                                         | \                                                                        |
+|                      |                                          |                                           |                                                                          |
+|                      | Marginal R2/ Conditional R2: 0.000/0.199 | Marginal R2/ Conditional R2: 0.001/ NA    | Marginal R2/ Conditional R2:                                             |
+|                      |                                          |                                           |                                                                          |
+|                      |                                          |                                           | 0.001/ 0.195                                                             |
++----------------------+------------------------------------------+-------------------------------------------+--------------------------------------------------------------------------+
+| Race                 | M = 51.2% \[49.6 – 52.9\],               | M = 51.2% \[49.6 – 52.8\],                | M = 51.2% \[49.6 – 52.8\],                                               |
+|                      |                                          |                                           |                                                                          |
+|                      | β = 0.06 (0.04), z = 1.6, p = 0.096      | β = 0.06 (0.04), z = 1.7, p = 0.086       | β = 0.06 (0.04), z = 1.7, p = 0.085                                      |
+|                      |                                          |                                           |                                                                          |
+|                      | Marginal R2/ Conditional R2: 0.000/0.199 | Marginal R2/ Conditional R2:              | Marginal R2/ Conditional R2:                                             |
+|                      |                                          |                                           |                                                                          |
+|                      |                                          | 0.002/ NA                                 | 0.002/ 0.167                                                             |
++----------------------+------------------------------------------+-------------------------------------------+--------------------------------------------------------------------------+
 
-
-model_gender_original_study3 <- readRDS(here("Rdata", "model_gender_original_study3.rds"))
-
-model_race_original_study3 <- readRDS(here("Rdata", "model_race_original_study3.rds"))
-
-model_gender_prereg_study3 <- readRDS(here("Rdata", "model_gender_prereg_study3.rds"))
-
-model_race_prereg_study3 <- readRDS(here("Rdata", "model_race_prereg_study3.rds"))
-
-model_gender_prereg2_study3 <- readRDS(here("Rdata", "model_gender_prereg2_study3.rds"))
-
-model_race_prereg2_study3 <- readRDS(here("Rdata", "model_race_prereg2_study3.rds"))
-
-tbl_merge(
-  tbls = list(tbl_regression(model_gender_original_study3),
-    tbl_regression(model_race_original_study3),
-    tbl_regression(model_gender_prereg_study3),
-    tbl_regression(model_race_prereg_study3),
-    tbl_regression(model_gender_prereg2_study3),
-    tbl_regression(model_race_prereg2_study3)
-  ))
-
-```
+: Study 3: ‘Like me’ effect in Preregistered Gender and Race Models
+:::
 
 ### Reanalysis of the Study 4 excluding two potentially problematic stimuli
 
@@ -377,9 +378,9 @@ In their discussion of Study 4, @brough2024 [: 1713] indicate – presumably in 
 - 0 (only race or gender matches participant demographic)
 - 1 = lowest me-likeness (neither race nor gender match participant demographic
 
-We believe that this variable would be better modelled as an ordinal categorical variable, hence we also reran the reported model with this predictor encoded as an ordered factor. Our results confirm that, when excluding neutral names, the ‘like me’ effect are larger than those reported in the paper <!--# ELF: Add comparison of numerical results -->.
+We believe that this variable would be better modelled as an ordinal categorical variable, hence we also reran the reported model with this predictor encoded as an ordered factor. Our results confirm that, when excluding neutral names, the ‘like me’ effect are larger than those reported in the paper. Indeed, when excluding neutral names, the ‘like me’ effect are larger than those reported in the paper (Overall ‘like-me’ (condition = Chinese): **Including neutral names:** M = 56.2% of trials \[53.8–59.0\], β = 0.23 (0.06), z = 4.1, p \< 0.001; **Excluding neutral names (robustness check)** M = 57.7% of trials \[54.8-61.2\], β = 0.290 (0.064), z = 4.544,  p \< 0.001). For further details, see our full reproduction report in @kluenterEA2026 and supplementary materials.
 
-### Reanalysis of Study 5
+### Reanalysis of Study 5
 
 <!--# ELF: There is no "Study 5" in any of the earlier sections which is a bit confusing... Can someone please clarify this? Consistent study naming would be highly desirable! MK: in dem report ist es unter  "Robustness check (Study 5): Memory naming task" zu finden. ELF: Studies 1-3 are all memory naming tasks so this is not helpful... We need to be able to match this section to earlier sections.-->
 
@@ -391,7 +392,7 @@ We noticed that the main claim made on the basis of these data relies on a GLMM 
 
 We believe that this variable would be better modelled as an ordinal categorical variable, hence we reran the reported model with the independent variable modelled as an ordered factor.
 
-The coefficient of interest turns out to be robust to this manipulation. It is of a similar size to the reported coefficient and also statistically significant (see @tbl-ModelOrdered <!--# ELF: Please ensure that all Tables and Figures captions are not manually numbered and that cross-references to these tables and figures are dynamic. I have already added some examples -->). Note that, in both the model reported in the paper and this additional model, the `LikeMeFeature` predictor accounts for just 0.1% of the variance in participants’ recall times. We were surprised that this important statistic was not reported in the paper.
+The coefficient of interest turns out to be robust to this manipulation. It is of a similar size to the reported coefficient and also statistically significant (see @tbl-ModelOrdered ). Note that, in both the model reported in the paper and this additional model, the `LikeMeFeature` predictor accounts for just 0.1% of the variance in participants’ recall times. We were surprised that this important statistic was not reported in the paper.
 
 ```{r}
 #| echo: false
@@ -521,19 +522,6 @@ ggplot(memory_reproduction,
 ```
 
 Bearing in mind the outliers visible in Fig. 2, we reran the analysis with a more conservative cut-off point of 6 s than that of 10 s preregistered and applied by the authors (corresponding to 91% of the trials analysed by authors) to test the robustness of the reported effect. The differences in both observed and predicted mean reaction times across the three conditions are smaller than those reported, but remain nonetheless significant. We also reran the model on this subset of the data. The results remain broadly the same (see @tbl-Comparison).
-
-```{r}
-#| echo: false
-#| eval: false
-#| label: tbl-Comparison
-#| tbl-cap: Results of robustness check on naming memory task analysis
-
-memory_means<- readRDS(here("Rdata", "memory_means.rds"))
-
-memory.robustness_menas<- readRDS(here("Rdata", "memory.robustness_means.rds"))
-
-
-```
 
 ::: {#tbl-Comparison tbl-colwidths="[50,25,25]"}
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------+----------------------+
