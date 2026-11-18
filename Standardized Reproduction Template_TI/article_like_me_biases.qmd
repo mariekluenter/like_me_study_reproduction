@@ -52,7 +52,9 @@ Although the overall ‘like me’ effect was small, with mean values of around 
 
 Although recently published, the original study can be said to have been influential as it has already been cited in an article on 'Revisiting the policy implications of implicit social cognition' [@axt2025], which concludes with a hope that more studies will examine the large phenomenon of implicit biases in the future. Moreover, it has been cited in recent AI-related publications, e.g., on how interactions with counter-stereotypical AI systems can be used to shift our stereotypical representations [@hermann2025] and on social perceptions of faces in vision-language models [@hausladen2025].
 
-In a recent Bachelor thesis, @halpern_exploration_2026 attempted to replicate the 'like me' bias finding using animated characters in addition to still image stimuli as in the original study. The study failed to replicate a significant overall 'like me' effect, but reported a significant gender effect. Male participants were more likely to produce a 'like me' bias than female participants. Moreover, men were more likely to produce a 'like me' bias in the animated condition, whereas there was no difference between women and men in the mixed condition. A major limitation of this replication is its small and WEIRD [@andringaSamplingBiasProblem2020a; @henrichMostPeopleAre2010] sample, which consisted of only 32 psychology students from Florida State University [@halpern_exploration_2026]. <!--# ELF: Please add a date to this reference in the .bib and also ensure that it is clearly labelled as a Bachelor thesis with the university at which it was submitted. Also please add page number where the sample size is mentioned. M: keine Seitenzahlen in dem Dokument vorhanden --> <!--#RH: Perhaps it could be helpful to add a footnote briefly explaining the WEIRD acronym, as not all readers may be familiar with it. ELF: @MK, could you do that please?-->
+In a recent Bachelor thesis, @halpern_exploration_2026 attempted to replicate the 'like me' bias finding using animated characters in addition to still image stimuli as in the original study. The study failed to replicate a significant overall 'like me' effect, but reported a significant gender effect. Male participants were more likely to produce a 'like me' bias than female participants. Moreover, men were more likely to produce a 'like me' bias in the animated condition, whereas there was no difference between women and men in the mixed condition. A major limitation of this replication is its small and WEIRD[^1] [@andringaSamplingBiasProblem2020a; @henrichMostPeopleAre2010] sample, which consisted of only 32 psychology students from Florida State University [@halpern_exploration_2026].
+
+[^1]: WEIRD = Western, Educated, Industrialized, Rich, Democratic
 
 To the best of our knowledge, the five studies presented in @brough2024 have not yet been reproduced although this is feasible because the authors uploaded their data, stimuli, and R scripts on the OSF under <https://osf.io/87vew/> (28 November 2028). In addition, we were able to consult the preregistrations, as well as the peer review reports, which the journal, *Nature Human Behaviour*, published alongside the article. We began working on the computational reproduction part of our analyses as part of the Replications Games organised by the Institute for Replication at the University of Münster on 28 November 2025.
 
@@ -60,7 +62,7 @@ To the best of our knowledge, the five studies presented in @brough2024 have not
 
 We set out to computationally reproduce all the descriptive and inferential statistics, statistical models, and plots reported in the original publication.
 
-Our robustness checks test the robustness of the findings used to support hypothesis.... <!--# ELF: Add which hypotheses we conducted robustness checks on. -->
+Our robustness checks test the robustness of the findings used to support hypothesis that speakers preferentially mention people who share their own race and gender first and faster than out‑group members. <!--# ELF: Add which hypotheses we conducted robustness checks on. M: done-->
 
 <!--# If the original article reported multiple studies, hypotheses, or effects (e.g., for different items or sub-samples) please describe which of these you reproduced and provide its number in the original paper (e.g., 1 or 2A). -->
 
@@ -166,7 +168,7 @@ However, these models were not reported in the article. Similar to Study 2, the 
 
 > OverallLikeMe \~ 1 + syntax + (1+syntax\|subject) + (1+syntax\|event)
 
-Instead, the authors performed and reported subgroup analyses for the groups of Black women, Black men, white women, and white men. <!--# ELF: I am not sure I understand this last sentence. Do you mean that the authors pregistered this hypothesis? RH: I deleted this sentence and added some explanations on the hypotheses in the respective paragraphs of this section.-->
+Instead, the authors performed and reported subgroup analyses for the groups of Black women, Black men, white women, and white men.
 
 The preregistration also includes preregistered analyses of questionnaire data, which we were not able to locate in the analysis code and which are not discussed in the published article.
 
@@ -370,9 +372,9 @@ The maximal preregistered models only converged when using the “bobyqa” opti
 
 ### Reanalysis of the Study 4 excluding two potentially problematic stimuli
 
-In their discussion of Study 4, @brough2024 [: 1713] indicate – presumably in response to a comment from a reviewer[^1] – that the observed ‘like me’ gender effects may be smaller in Chinese due to the inclusion of two potentially gender-neutral Chinese names in the experiment (霍普 \[Hope\] and 贝斯 \[Beth\]). We therefore decided to rerun the authors' original analysis for Study 4 with a subset of the data that excludes these two neutral names. We also noticed that the main claim made on the basis of these data relies on a GLMM in which the ‘like me’ effect is modelled as a numeric predictor ranging from -1 to 0. However, this variable only has three possible values that, somewhat counterintuitively, correspond to the following:
+In their discussion of Study 4, @brough2024 [: 1713] indicate – presumably in response to a comment from a reviewer[^2] – that the observed ‘like me’ gender effects may be smaller in Chinese due to the inclusion of two potentially gender-neutral Chinese names in the experiment (霍普 \[Hope\] and 贝斯 \[Beth\]). We therefore decided to rerun the authors' original analysis for Study 4 with a subset of the data that excludes these two neutral names. We also noticed that the main claim made on the basis of these data relies on a GLMM in which the ‘like me’ effect is modelled as a numeric predictor ranging from -1 to 0. However, this variable only has three possible values that, somewhat counterintuitively, correspond to the following:
 
-[^1]: The peer review files are available on <https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41562-024-01943-3/MediaObjects/41562_2024_1943_MOESM2_ESM.pdf> (last access 24 October 2026).
+[^2]: The peer review files are available on <https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41562-024-01943-3/MediaObjects/41562_2024_1943_MOESM2_ESM.pdf> (last access 24 October 2026).
 
 - -1 = highest me-likeness (i.e. both race and gender match participant demographic)
 - 0 (only race or gender matches participant demographic)
@@ -382,7 +384,7 @@ We believe that this variable would be better modelled as an ordinal categorical
 
 ### Reanalysis of Study 5
 
-<!--# ELF: There is no "Study 5" in any of the earlier sections which is a bit confusing... Can someone please clarify this? Consistent study naming would be highly desirable! MK: in dem report ist es unter  "Robustness check (Study 5): Memory naming task" zu finden. ELF: Studies 1-3 are all memory naming tasks so this is not helpful... We need to be able to match this section to earlier sections.-->
+<!--# ELF: There is no "Study 5" in any of the earlier sections which is a bit confusing... Can someone please clarify this? Consistent study naming would be highly desirable! MK: in dem report ist es unter  "Robustness check (Study 5): Memory naming task" zu finden. ELF: Studies 1-3 are all memory naming tasks so this is not helpful... We need to be able to match this section to earlier sections. M: in den R-Scripts ist es als "Overall memory analysis" gelistet.-->
 
 We noticed that the main claim made on the basis of these data relies on a GLMM in which the ‘like me’ effect is modelled as a numeric predictor ranging from -1 to 0. However, this variable only has three possible values that, somewhat counterintuitively, correspond to the following: 
 
