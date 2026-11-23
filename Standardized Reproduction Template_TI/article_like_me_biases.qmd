@@ -382,7 +382,7 @@ In their discussion of Study 4, @brough2024 [: 1713] indicate – presumably in 
 
 We believe that this variable would be better modelled as an ordinal categorical variable, hence we also reran the reported model with this predictor encoded as an ordered factor. Our results confirm that, when excluding neutral names, the ‘like me’ effect are larger than those reported in the paper. Indeed, when excluding neutral names, the ‘like me’ effect are larger than those reported in the paper (Overall ‘like-me’ (condition = Chinese): **Including neutral names:** M = 56.2% of trials \[53.8–59.0\], β = 0.23 (0.06), z = 4.1, p \< 0.001; **Excluding neutral names (robustness check)** M = 57.7% of trials \[54.8-61.2\], β = 0.290 (0.064), z = 4.544,  p \< 0.001). For further details, see our full reproduction report in @kluenterEA2026 and supplementary materials.
 
-### Reanalysis of Study 5
+### Reanalysis of the memory naming tasks 1-3 
 
 <!--# ELF: There is no "Study 5" in any of the earlier sections which is a bit confusing... Can someone please clarify this? Consistent study naming would be highly desirable! MK: in dem report ist es unter  "Robustness check (Study 5): Memory naming task" zu finden. ELF: Studies 1-3 are all memory naming tasks so this is not helpful... We need to be able to match this section to earlier sections. M: in den R-Scripts ist es als "Overall memory analysis" gelistet.-->
 
@@ -419,22 +419,37 @@ tbl_regression(numeric.robustness,
 
 :::: {.content-hidden unless-format="html"}
 ::: {#tbl-ModelOrdered tbl-colwidths="[40,20,20,20]"}
++-------------------------------------+---------------+---------------+-------------+
 |                                     |               |               |             |
-|-------------------------------------|---------------|---------------|-------------|
++=====================================+===============+===============+=============+
 | *Predictors*                        | *Estimates*   | *CI*          | *p*         |
++-------------------------------------+---------------+---------------+-------------+
 | (Intercept)                         | 7.92          | 7.90 – 7.94   | **\<0.001** |
++-------------------------------------+---------------+---------------+-------------+
 | LikeMeFeatureNumeric L              | 0.03          | 0.02 – 0.04   | **\<0.001** |
++-------------------------------------+---------------+---------------+-------------+
 | LikeMeFeatureNumeric Q              | -0.01         | -0.02 – -0.00 | **0.038**   |
++-------------------------------------+---------------+---------------+-------------+
 |                                     |               |               |             |
++-------------------------------------+---------------+---------------+-------------+
 | *Random Effects*                    |               |               |             |
++-------------------------------------+---------------+---------------+-------------+
 | $\sigma$²                           | 0.18          |               |             |
++-------------------------------------+---------------+---------------+-------------+
 | $\tau$ ~00 id~                      | 0.07          |               |             |
++-------------------------------------+---------------+---------------+-------------+
 | $\tau$ ~11 id.LikeMeFeatureNumeric~ | 0.00E         |               |             |
++-------------------------------------+---------------+---------------+-------------+
 | $\rho$ ~01 id~                      | 0.11          |               |             |
++-------------------------------------+---------------+---------------+-------------+
 | ICC                                 | 0.28          |               |             |
++-------------------------------------+---------------+---------------+-------------+
 | N ~id~                              | 622           |               |             |
++-------------------------------------+---------------+---------------+-------------+
 | Observations                        | 22482         |               |             |
++-------------------------------------+---------------+---------------+-------------+
 | Marginal R² / Conditional R²        | 0.001 / 0.283 |               |             |
++-------------------------------------+---------------+---------------+-------------+
 
 Summary of model with ordered factor predictor variable
 :::
@@ -456,6 +471,7 @@ When we visualise all the data points entered into the reported model as boxplot
 #| eval: true
 #| label: fig-plot2b
 #| fig-cap: "Visualisation showing response time across the four conditions (as coded in original analysis script"
+#| fig-pos: H
 
 library(tidyverse)
 library(cowplot)
@@ -490,6 +506,7 @@ ggplot(memory.plot_original,
 #| eval: true
 #| label: fig-viz4conditions
 #| fig-cap: "Our own visualisation showing response time across the four conditions"
+#| fig-pos: H
 
 memory_reproduction<- readRDS(here("Rdata", "memory_subj_original.rds"))
 
