@@ -32,15 +32,11 @@ The original study by @brough2024 investigates how social biases may influence a
 
 <!--# Abstract word count: 211-->
 
-**Keywords**: language production, psycholinguistics, race bias, gender bias, lexical retrieval
-
-<!--# Provide a maximum of 5 keywords to help quickly communicate the research foci of the reproduction, separated by a semicolon. -->
+**Keywords**: language production; psycholinguistics; race bias; gender bias; lexical retrieval
 
 {{< pagebreak >}}
 
 # Background
-
-<!--# Provide background to the reproduction. This might include a description of the original phenomenon/effect, focal studies about the phenomenon, references where theoretical backgrounds are covered in-depth, whether there have already been reproduction attempts and what their outcomes were, what research rests upon the reproducibility of the phenomenon, or why a reproduction on the topic is informative. Discuss the importance of testing the robustness and reliability of findings via alternate methods. -->
 
 In “Cognitive causes of ‘like me’ race and gender biases in human language production”, @brough2024 describe how speakers are more likely to mention individuals who resemble their social group first. They demonstrate that the names of individuals who are more similar to the participants are more accessible to the participants and conclude that this ‘like me’ effect is due to “(...) automatized mechanisms by which humans retrieve words from memory to produce sentences” [@brough2024: 1706].
 
@@ -56,19 +52,15 @@ In a recent Bachelor thesis, @halpern_exploration_2026 attempted to replicate th
 
 [^1]: WEIRD = Western, Educated, Industrialized, Rich, Democratic
 
-To the best of our knowledge, the five studies presented in @brough2024 have not yet been reproduced although this is feasible because the authors uploaded their data, stimuli, and R scripts on the OSF under <https://osf.io/87vew/> (28 November 2028). In addition, we were able to consult the preregistrations, as well as the peer review reports, which the journal, *Nature Human Behaviour*, published alongside the article. We began working on the computational reproduction part of our analyses as part of the Replications Games organised by the Institute for Replication at the University of Münster on 28 November 2025.
+To the best of our knowledge, the five studies presented in @brough2024 have not yet been reproduced although this is feasible because the authors uploaded their data, stimuli, and R scripts on the OSF under <https://osf.io/87vew/>. In addition, we were able to consult the preregistrations, as well as the peer review reports, which the journal, *Nature Human Behaviour*, published alongside the article. We began working on the computational reproduction part of our analyses as part of the Replications Games organised by the Institute for Replication at the University of Münster on 28 November 2025.
 
 ## Reproduced Study, Hypothesis, and Findings
 
 We set out to computationally reproduce all the descriptive and inferential statistics, statistical models, and plots reported in the original publication.
 
-Our robustness checks test the robustness of the findings used to support hypothesis that speakers preferentially mention people who share their own race and gender first and faster than out‑group members. <!--# ELF: Add which hypotheses we conducted robustness checks on. M: done-->
-
-<!--# If the original article reported multiple studies, hypotheses, or effects (e.g., for different items or sub-samples) please describe which of these you reproduced and provide its number in the original paper (e.g., 1 or 2A). -->
+Our robustness checks test the robustness of the findings used to support hypothesis that speakers preferentially mention people who share their own race and gender first and faster than out‑group members.
 
 # Methods
-
-<!--# Describe the type of the reproduction, that is, whether it is an assessment of computational reproducibility, a recreation of the script, whether partly different data are being used, and whether robustness checks are planned (see for example @ankel-peters_protocol_2025). The type of reproduction should be justified by the goals of this project (e.g., to test for a false-positive or examine generalizability). -->
 
 The present study started as an exact computational reproduction, which we conducted in R, the programming language also used by the original authors, based on the authors' original raw data and - as far as possible (see @sec-CompRepro) - original preprocessing and analysis scripts.
 
@@ -77,8 +69,6 @@ Examining the preregistrations of the original studies (see @sec-Preregistration
 We document all of our reproduction and robustness checks efforts in Quarto documents for full transparency, as well as to allow other researchers to examine our results and conduct their own robustness checks.
 
 ## Original and Reproduction Study Features
-
-<!--# Provide a clear overview of the hypothesis, original study, and reproduction study. Describe all differences between the studies using the table below, highlighting any changes or enhancements in the analysis procedures from the original work. -->
 
 We used the same functions and R packages as the original authors to ensure maximal comparability. However, the original study does not report the versions of R or of the R packages used, which prevents a direct version-to-version comparison. To facilitate future reproducibility efforts, we provide a full list of the R version, package versions, and system information in our supplementary materials. No substantive differences in the analysis procedures were introduced; any minor adjustments or reconstructions of missing scripts are described above.
 
@@ -176,11 +166,9 @@ The preregistration also includes preregistered analyses of questionnaire data, 
 
 Our recreation of the empathy analysis data on the basis of the preprocessing script (`Data Preprocessing/EmpathyStudy/process_data.R`) and the raw data (`Data Preprocessing/EmpathyStudy/full_empathy_data`) confirmed that the dataset was derived from the original 128 participants, with 19 participants who failed 2 or more catch trials excluded. This differs from the preregistration (<https://aspredicted.org/7698v.pdf>), which specified excluding participants who answered more than 2 catch trials incorrectly. No additional exclusion criteria appear to have been applied. This potentially differs from the preregistration, which stated that trials with response times more than 3 SD from the mean, participants whose self-reported gender did not match Prolific records, and participants who had reported not to have lived in the UK for the last five years would be excluded. While these additional exclusion criteria might not have been relevant or may have been applied earlier on in the process, we note that the preprocessing code of the Empathy Rating Study does not check for them.
 
-By contrast, all of these preregistered exclusion criteria are applied in the processing scripts for the Rating Studies featuring transitive and conjoint constructions, except that, as with the Empathy Study, the exclusion criteria for failed catch trials implemented in the preprocessing scripts is also \> 2 rather than ≥ 2 failed catch trials as specified in the corresponding preregistrations ([https://osf.io/rh9sd/](https://osf.io/rh9sd/overview) and <https://osf.io/zp5d4/>). The processing script for the passive Rating Study does not include checks for any potential exclusion based on demographics.
+By contrast, all of these preregistered exclusion criteria are applied in the processing scripts for the Rating Studies featuring transitive and conjoint constructions, except that, as with the Empathy Study, the exclusion criteria for failed catch trials implemented in the preprocessing scripts is also \> 2 rather than 2 or more failed catch trials as specified in the corresponding preregistrations ([https://osf.io/rh9sd/](https://osf.io/rh9sd/overview) and <https://osf.io/zp5d4/>). The processing script for the passive Rating Study does not include checks for any potential exclusion based on demographics.
 
-<!--# LL: For me, the "≥" sign in the paragraph above does not appear in the rendered version. Unfortunately, I have no idea how to fix that. Does anyone know? -->
-
-The main claims of the paper are based on comparisons of models made with aggregated data from the various Rating Studies. As far as we can tell, these were not preregistered.
+The main claims of the paper are based on comparisons of models made with combined data from the three Rating Studies. As far as we can tell, these were not preregistered.
 
 #### Pre-analysis Plan of the Omnibus Studies
 
@@ -210,11 +198,9 @@ Although these analyses are conducted in a different section of the paper, the m
 
 The original data and code were made available on the OSF ([https://osf.io/87vew](https://osf.io/87vew/overview){.uri}). The repository includes a large number of raw and analysis data files, as well as data processing and analysis scripts in R. Given that the original publication comprises fives studies, we first spent a considerable amount of time matching studies to subdirectories and files. The absence of a README file made navigating the multitude of replication packages challenging.
 
-<!--# Provide an overview of all materials (raw and processed data, code), where to find them (e.g., openly accessible, shared upon request, accessible via a specific institution, access protocol), and, if applicable, what license they are under. -->
-
 ## Computational Reproducibility
 
-In the preprocessing scripts for Studies 1–3 (`Process_Study1_Data.R`, `Process_Study2_Data.R`, `Process_Study3_Data.R; lines 3-6`) the authors mention that, due to a technical issue involving an unbacked-up computer, the authors no longer have access to all the initial raw data <!--# ELF: Where do the authors mention this? Please add ref. M: in allen 3 genannten Scripts wird es erwähnt, ich habe die Code-Zeilen ergänzt  -->. However, they provide full access to data files which have apparently only been manually corrected for minor spelling errors (e.g. 'Rth' instead of 'Ruth'). We therefore classified these files as “raw data provided” in the summary of our computational reproduction (@tbl-SummaryRepro).
+In the preprocessing scripts for Studies 1–3 (`Process_Study1_Data.R`, `Process_Study2_Data.R`, `Process_Study3_Data.R; lines 3-6`) the authors mention that, due to a technical issue involving an unbacked-up computer, the authors no longer have access to all the initial raw data. However, they provide full access to data files which have apparently only been manually corrected for minor spelling errors (e.g. 'Rth' instead of 'Ruth'). We therefore classified these files as “raw data provided” in the summary of our computational reproduction (@tbl-SummaryRepro).
 
 ::: {#tbl-SummaryRepro}
 |                                 |           |             |        |
@@ -274,8 +260,6 @@ These regression models can be found in the code provided by the authors in `OSF
 
 ## Robustness Checks
 
-<!--# If you conducted any sort of robustness checks, extensions or auxiliary/exploratory analyses, you can report them here. Include a justification for each robustness check. Beyond individual checks, you can also include specification curves. -->
-
 We conducted a total of four robustness checks. In the following, we briefly report on the outcomes of the first three (for further details, see our full reproduction report in @kluenterEA2026 and supplementary materials), before focusing on our final robustness check concerning the memory naming task on which the main claims of the article are based.
 
 ### Reanalysis of the Study 2 with the Preregistered Models
@@ -326,13 +310,9 @@ tbl_regression(
         )
       )
   )
-
-  
 ```
 
 <!--# M: in der Tabelle hat die label = list, die Namen nicht geändert, mir ist aber unklar, wieso nicht.  -->
-
-)
 
 ### Reanalysis of the Study 3 with the Preregistered Models
 
@@ -382,7 +362,7 @@ In their discussion of Study 4, @brough2024 [: 1713] indicate – presumably in 
 
 We believe that this variable would be better modelled as an ordinal categorical variable, hence we also reran the reported model with this predictor encoded as an ordered factor. Our results confirm that, when excluding neutral names, the ‘like me’ effect are larger than those reported in the paper. Indeed, when excluding neutral names, the ‘like me’ effect are larger than those reported in the paper (Overall ‘like-me’ (condition = Chinese): **Including neutral names:** M = 56.2% of trials \[53.8–59.0\], β = 0.23 (0.06), z = 4.1, p \< 0.001; **Excluding neutral names (robustness check)** M = 57.7% of trials \[54.8-61.2\], β = 0.290 (0.064), z = 4.544,  p \< 0.001). For further details, see our full reproduction report in @kluenterEA2026 and supplementary materials.
 
-### Reanalysis of the memory naming tasks 1-3 
+### Reanalysis of the memory naming tasks 1-3
 
 <!--# ELF: There is no "Study 5" in any of the earlier sections which is a bit confusing... Can someone please clarify this? Consistent study naming would be highly desirable! MK: in dem report ist es unter  "Robustness check (Study 5): Memory naming task" zu finden. ELF: Studies 1-3 are all memory naming tasks so this is not helpful... We need to be able to match this section to earlier sections. M: in den R-Scripts ist es als "Overall memory analysis" gelistet.-->
 
