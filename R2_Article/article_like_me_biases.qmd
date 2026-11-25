@@ -594,9 +594,11 @@ Future studies could also attempt to test the effect in other tasks and in more 
 
 The computational reproducibility of @brough2024 is high: all main results and plots could be reproduced from the shared materials, with only minor numerical discrepancies and a few unreproducible values that do not affect the article's claims. The main findings were also robust to our re-analyses, although the effect is very small, *p*-values were seemingly not corrected for multiple testing, and several preregistered analyses were not implemented or reported.
 
+\clearpage
+
 # Social Impact & Responsibility {.unnumbered}
 
-As this research concerns race and gender differences in language production, we are mindful that such findings have historically been misused to justify discrimination. Our reproduction confirms the computational robustness of the original analyses, but it speaks only to statistical reproducibility, not to real-world impact: small average effects in highly controlled tasks do not mean that social biases in language are inconsequential, nor should they be cited as showing that such biases are inevitable or biologically hardwired. The original participant samples and therefore our reproduction are limited in generalisability. As such, the results may not extend across more diverse participants, cultures, languages, or real-world interactional settings. Our recommendations for transparent reporting aim to ensure that such findings are evaluated accurately and used responsibly.
+As this research concerns race and gender differences in language production, we are mindful that such findings have historically been misused to justify discrimination. Whilst our reproduction confirms the statistical robustness of the original analyses, it does not speak to their real-world impact. Small average effects in highly controlled tasks do not mean that social biases in language are inconsequential, nor should they be cited as showing that such biases are inevitable or biologically hardwired. The relatively small original participant samples and therefore our reproduction are limited in generalisability. As such, the results may not extend across different or more diverse participants, cultures, languages, or real-world interactional settings. Our recommendations for transparent reporting aim to ensure that such findings are evaluated accurately and used responsibly.
 
 # Contribution Statement {.unnumbered}
 
